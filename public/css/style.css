@@ -1,90 +1,92 @@
-body {
-    font-family: Arial;
-    font-size: 14px;
+/*  Imported Google Fonts
+*   font-family: 'Anton', sans-serif;
+*   font-family: 'Open Sans Condensed', sans-serif;
+*   font-family: 'Roboto', sans-serif;
+*
+*
+*
+*/
+
+
+html, body, p, ul, li, h1, h2, h3, h4, a, button{
+    padding:0;
+    margin:0;
 }
-.logo {
-    font-size: 100px;
-    font-weight: bolder;
-    letter-spacing: -6px;
-    color: #222;
-    margin: 20px 30px;
+
+body{
+
+    font-family: 'Open Sans Condensed', sans-serif;
 }
-.logo .number {
-    color: #222;
-    opacity: 0.1;
+
+button{
+    font-family: 'Roboto', sans-serif;
 }
-.navigation {
-    margin-left: 33px;
+
+label{
+    font-family: 'Roboto', sans-serif;
 }
-.navigation a {
-    display: inline-block;
-    padding: 10px 15px;
-    text-decoration: none;
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: bold;
-    border: 2px solid #222;
-    background: #222;
-    color: #fff;
+
+a{
+    text-decoration:none;
 }
-.navigation a:hover {
-    color: #222;
-    background: transparent;
+
+a:hover{
+    text-decoration:none;
 }
-.container {
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 33px;
+a:visted{
+    text-decoration:none;
 }
-.container a {
-    color: #222;
+a:active{
+    text-decoration:none;
 }
-.container table {
-    font-size: 11px;
-    margin-top: 20px;
+/*
+*
+*   Header Elements
+*
+*/
+
+.logoContainer{
+    padding-top:10px;
+    padding-bottom:10px;
 }
-.container table thead td {
-    background-color: #f5f5f5;
-    padding: 4px 10px;
+.logoText{
+    font-size:4rem;
 }
-.container table tbody td {
-    padding: 4px 10px;
+
+.logoLink{
+    font-size:2rem;
+    margin-right:10px;
+    margin-top:15px;
 }
-.container .box {
-    border-top: 1px solid #ddd;
-    padding-top: 10px;
-    margin-top: 30px;
+
+.logoContainer{
+    background-color:black;
+    color:white;
+    font-family: 'Anton', sans-serif;
 }
-.container input {
-    background-color: #f5f5f5;
-    border: 0;
-    padding: 5px 10px;
+
+.logoContainer a{
+    color:white;
 }
-.container input[type="submit"] {
-    background-color: #ccc;
-    cursor: pointer;
+/*
+*
+*   Header Elements End
+*
+*/
+
+
+/*
+*
+*   Main Container Elements
+*
+*/
+
+.mainContainer{
+    margin-top:30px;
 }
-.container input[type="submit"]:hover {
-    background-color: #222;
-    color: #fff;
-}
-.container button {
-    background-color: #ccc;
-    border: 0;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-.container button:hover {
-    background-color: #222;
-    color: #fff;
-}
-.footer {
-    padding: 20px;
-    margin: 33px;
-    text-align: right;
-    font-size: 11px;
-    opacity: 0.5;
-}
-.footer a {
-    color: #454545;
-}
+
+/*
+*
+*   Main Container Elements End
+*
+*/

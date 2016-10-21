@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
-    <title>MINI</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Gatorpartments</title>
 
-    <!-- JS -->
-    <!-- please note: The JavaScript files are loaded in the footer to speed up page construction -->
-    <!-- See more here: http://stackoverflow.com/q/2105327/1114320 -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Open+Sans+Condensed:300|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 
-    <!-- CSS -->
-    <link href="<?php echo URL; ?>css/style.css" rel="stylesheet">
-</head>
-<body>
-    <!-- logo -->
-    <div class="logo">
-        MINI
-    </div>
-
-    <!-- navigation -->
-    <div class="navigation">
-        <a href="<?php echo URL; ?>">home</a>
-        <a href="<?php echo URL; ?>home/exampleone">subpage</a>
-        <a href="<?php echo URL; ?>home/exampletwo">subpage 2</a>
-        <a href="<?php echo URL; ?>songs">songs</a>
-    </div>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+      <header>
+          <div class="logoContainer">
+              <div class="container">
+                <div class="logo">
+                    <a class="logoText" href="index.php">Gatorparments</a>
+                    <a class="logoLink pull-right" href="">Login</a>
+                    <a class="logoLink pull-right" href="">Contact</a>
+                </div>
+              </div>
+          </div>
+      </header>
