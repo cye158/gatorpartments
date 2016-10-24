@@ -90,3 +90,37 @@ a:active{
 *   Main Container Elements End
 *
 */
+
+
+.listing{
+  font-size:1.8rem;
+  border:1px solid black;
+  border-radius:5px;
+  margin-bottom:10px;
+  padding:10px;
+
+}
+
+.listingHeader{
+
+  color:#2D97BA;
+  font-weight:600;
+
+}
+
+.listingDescription{
+
+  font-size:1.6rem;
+
+}
+
+
+
+.img{
+
+  width:180px;
+  height:180px;
+
+}
+
+

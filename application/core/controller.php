@@ -11,6 +11,7 @@ class Controller
      * @var null Model
      */
     public $model = null;
+    public $listingModel = null;
 
     /**
      * Whenever controller is created, open a database connection too and load "the model".
@@ -44,7 +45,9 @@ class Controller
     public function loadModel()
     {
         require APP . 'model/model.php';
+        require APP . 'model/listingModel.php';
         // create new "model" (and pass the database connection)
         $this->model = new Model($this->db);
+        $this->listingModel = new ListingModel($this->db);
     }
 }
