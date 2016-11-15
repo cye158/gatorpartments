@@ -57,28 +57,28 @@
 				  <!-- Collect the nav links, forms, and other content for toggling -->
 				  <div class="collapse navbar-collapse navbar-ex1-collapse">
 				    <ul class="nav navbar-nav">
-						<li><a href="listings.html" class="first">For sale</a></li>
-						<li><a href="map_properties.html">To rent</a></li>
-						<li><a href="compare.html">New homes</a></li>
-						<li><a href="property.html">Property of the day</a></li>
+						<li><a href="<?php echo URL;?>home/listings" class="first">For sale</a></li>
+						<li><a href="<?php echo URL;?>home/map_properties">To rent</a></li>
+						<li><a href="<?php echo URL;?>home/compare">New homes</a></li>
+						<li><a href="<?php echo URL;?>home/property">Property of the day</a></li>
 
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Property pages <b class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="listings.html">Property listings</a></li>
-								<li><a href="map_properties.html">Properties map</a></li>
-								<li><a href="property.html">Single property</a></li>
-								<li><a href="compare.html">Compare properties</a></li>
+								<li><a href="<?php echo URL;?>home/listings">Property listings</a></li>
+								<li><a href="<?php echo URL;?>home/map_properties">Properties map</a></li>
+								<li><a href="<?php echo URL;?>home/property">Single property</a></li>
+								<li><a href="<?php echo URL;?>home/compare">Compare properties</a></li>
 							</ul>
 						</li>
                         
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Other pages <b class="caret"></b></a>
 							<ul class="dropdown-menu">
-                                <li><a href="typography.html">Typography</a></li>
-                                <li><a href="terms.html">Terms and conditions</a></li>
-                                <li><a href="contact.html">Contact us</a></li>
-                                <li><a href="about.html">About us</a></li>
+                                <li><a href="<?php echo URL;?>home/typography">Typography</a></li>
+                                <li><a href="<?php echo URL;?>home/terms">Terms and conditions</a></li>
+                                <li><a href="<?php echo URL;?>home/contact">Contact us</a></li>
+                                <li><a href="<?php echo URL;?>home/about">About us</a></li>
 							</ul>
 						</li>
 				    </ul>
@@ -88,7 +88,7 @@
 									<li class="dropdown">
 										<a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign Up<strong class="caret"></strong></a>
 										<div class="dropdown-menu">
-											<form action="index.html" method="post">
+											<form action="<?php echo URL;?>home/index" method="post">
 												<input type="text" name="user[username]" placeholder="Full name" size="30" />
 												<input type="password" name="user[password]" placeholder="Email" size="30" />
 												<input type="password" name="user[password]" placeholder="Password" size="30" />
@@ -101,7 +101,7 @@
 									<li class="dropdown">
 										<a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
 										<div class="dropdown-menu">
-											<form action="index.html" method="post">
+											<form action="<?php echo URL;?>home/index" method="post">
 												<input type="text" name="user[username]" placeholder="Username or email" size="30" /><br class="visible-xs"/>
 												<input type="password" name="user[password]" placeholder="Password" size="30" /><br class="visible-xs"/>
 												<input id="remember_me" type="checkbox" name="user[remember_me]" value="1" />
@@ -281,36 +281,36 @@
                     
                     <div class="col-sm-3 col-xs-6 no_padding_right">
                         <div class="thumbnail mini_property">
-                            <a href="map_properties.html"><img src="css/images/houses/house_1.jpg" alt=""></a>
+                            <a href="<?php echo URL;?>home/map_properties"><img src="<?php echo URL;?>home/css/images/houses/house_1.jpg" alt=""></a>
                             <h5>Price : &pound;3,350,000</h5>
-                            <p><a href="map_properties.html">7 bedroom house</a><br />The Vineyard, Richmond, TW10</p>
+                            <p><a href="<?php echo URL;?>home/map_properties">7 bedroom house</a><br />The Vineyard, Richmond, TW10</p>
                         </div>
                     </div>
 
                     
                     <div class="col-sm-3 col-xs-6 no_padding_right">
                         <div class="thumbnail mini_property">
-                            <a href="map_properties.html"><img src="css/images/houses/house_2.jpg" alt=""></a>
+                            <a href="<?php echo URL;?>home/map_properties"><img src="<?php echo URL;?>home/css/images/houses/house_2.jpg" alt=""></a>
                             <h5>Price : &pound;229,950</h5>
-                            <p><a href="map_properties.html">1 bedroom flat</a><br />Lower Mortlake Road, North Sheen</p>
+                            <p><a href="<?php echo URL;?>home/map_properties">1 bedroom flat</a><br />Lower Mortlake Road, North Sheen</p>
                         </div>
                     </div>
 
                     
                     <div class="col-sm-3 col-xs-6 no_padding_right">
                         <div class="thumbnail mini_property">
-                            <a href="map_properties.html"><img src="css/images/houses/house_3.jpg" alt=""></a>
+                            <a href="<?php echo URL;?>home/map_properties"><img src="<?php echo URL;?>home/css/images/houses/house_3.jpg" alt=""></a>
                             <h5>Price : &pound;520,000</h5>
-                            <p><a href="map_properties.html">2 bedroom apartment</a><br />Mount Ararat Road, Richmond</p>
+                            <p><a href="<?php echo URL;?>home/map_properties">2 bedroom apartment</a><br />Mount Ararat Road, Richmond</p>
                         </div>
                     </div>
 
                     
                     <div class="col-sm-3 col-xs-6 no_padding_right">
                         <div class="thumbnail mini_property">
-                            <a href="map_properties.html"><img src="css/images/houses/house_4.jpg" alt=""></a>
+                            <a href="<?php echo URL;?>home/map_properties"><img src="<?php echo URL;?>home/css/images/houses/house_4.jpg" alt=""></a>
                             <h5>Price : &pound;550,000</h5>
-                            <p><a href="map_properties.html">2 bedroom house</a><br />The Shakespeare</p>
+                            <p><a href="<?php echo URL;?>home/map_properties">2 bedroom house</a><br />The Shakespeare</p>
                         </div>
                     </div>
 
@@ -333,7 +333,7 @@
         <p class="visible-md visible-lg"><br />
             <a data-toggle="modal" href="#myMapModal">View larger map</a><br />
             <a data-toggle="modal" href="#myStreetModal">Street view</a><br />
-            <a href="compare.html">Compare this property with others</a>
+            <a href="<?php echo URL;?>home/compare">Compare this property with others</a>
         </p>
         <hr class="hidden-xs"/>
 
@@ -341,7 +341,7 @@
     <div id="contact_agent" class="center">
         <div id="contact_agent_wrapper">
 
-            <a href="listings.html"><img alt="" src="css/images/remax-logo-color.jpg" /></a>
+            <a href="<?php echo URL;?>home/listings"><img alt="" src="css/images/remax-logo-color.jpg" /></a>
             <p>RE/MAX properties, inc.<br />61 Walton Road, East Molesey, KT8 0DP</p>
 
             <h4>Contact this agent</h4><br />
