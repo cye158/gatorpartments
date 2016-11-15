@@ -20,6 +20,8 @@
     <![endif]-->
   </head>
   <body>
+
+      <!-- from vertical prototype testing phase
       <header>
           <div class="logoContainer">
               <div class="container">
@@ -31,3 +33,4 @@
               </div>
           </div>
       </header>
+      -->
