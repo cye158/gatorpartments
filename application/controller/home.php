@@ -63,7 +63,7 @@ class Home extends Controller
         require APP . 'view/_templates/footer.php';
 
     }
-    public function home()
+    public function home_html()
     {
         if(isset($_POST['submitSearch'])){ 
                 $search = $_POST['searchInput'];
@@ -80,7 +80,7 @@ class Home extends Controller
         if(isset($_POST['submitSearch'])){ 
                 $search = $_POST['searchInput'];
             $listing = $this->listingModel->getListing($search);
-        }
+map_properties        }
         // load views
         require APP . 'view/_templates/header.php';
         require APP . 'view/home/listings.html';

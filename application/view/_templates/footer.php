@@ -6,6 +6,10 @@
     <!-- Gatorpartment's Javascript file -->
     <script src="js/application.js"></script>
 
+    <!-- RealEstate BootStrap JS -->
+    <script src="js/global.js"></script>
+    <script src="js/.js"></script>
+    <script src="js/application.js"></script>
 
 </body>
 </html>
