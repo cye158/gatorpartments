@@ -16,6 +16,17 @@ class Home extends Controller
         require APP . 'view/_templates/footer.php';
     }
 
+   public function login()
+    {
+        // load views
+	require APP . 'view/users/login.php';
+    }
+
+    public function addMessage()
+    {
+	// load views
+	require APP . 'view/users/writeMessage.php';
+    }
 }
 
 ?>

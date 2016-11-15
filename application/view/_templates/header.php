@@ -25,7 +25,7 @@
               <div class="container">
                 <div class="logo">
                     <a class="logoText" href="index.php">Gatorparments</a>
-                    <a class="logoLink pull-right" href="">Login</a>
+                    <a class="logoLink pull-right" href="<?php echo URL . 'home/login' ?>">Login</a>
                     <a class="logoLink pull-right" href="">Contact</a>
                 </div>
               </div>
