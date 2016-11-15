@@ -2,17 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <title>gatorpartments</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Gatorpartments</title>
-
-    <!-- Latest compiled and minified CSS -->
-    <!--
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="description" content="">
+    <meta name="author" content="">
     
-    <link href="https://fonts.googleapis.com/css?family=Anton|Open+Sans+Condensed:300|Roboto" rel="stylesheet">
-    -->
+
 
     <!-- CSS Bootstrap -->
 
@@ -31,6 +28,11 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
 
   </head>
 
