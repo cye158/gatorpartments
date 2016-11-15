@@ -11,9 +11,9 @@ class Home extends Controller
     	    $listing = $this->listingModel->getListing($search);
         }
         // load views
-        //require APP . 'view/_templates/header.php';
+        require APP . 'view/_templates/header.php';
         require APP . 'view/home/index.html';
-        //require APP . 'view/_templates/footer.php';
+        require APP . 'view/_templates/footer.php';
     }
 
 }
