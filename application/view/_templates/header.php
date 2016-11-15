@@ -8,11 +8,22 @@
     <title>Gatorpartments</title>
 
     <!-- Latest compiled and minified CSS -->
+    <!--
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
     <link href="https://fonts.googleapis.com/css?family=Anton|Open+Sans+Condensed:300|Roboto" rel="stylesheet">
+    -->
+
+    <!-- CSS Bootstrap -->
+
+
+    <link href="<?php echo URL; ?>boostrap/css/boostrap.min.css" rel="stylesheet">
+
+    <link id="switch_style" href="<?php echo URL; ?>css/real_estate" rel="stylesheet">
+    <link href="<?php echo URL; ?>css/theme.css" rel="stylesheet">
+
     <!-- <link rel="stylesheet" href="css/style.css"> -->
 
-    <link rel="stylesheet" href="css/real_estate.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,7 +31,9 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
   </head>
+
   <body>
 
       <!-- from vertical prototype testing phase
