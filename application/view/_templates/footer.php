@@ -1,5 +1,6 @@
 
    /*
+
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <!-- Bootstrap's Javascript file -->
@@ -12,6 +13,45 @@
     <script src="js/.js"></script>
     <script src="js/application.js"></script>
     **/
+
+    <footer>
+    <hr />  
+    <p class="pull-right"><a href="#">Back to top</a></p>
+    <p>
+        <a href="index.html">Home</a> |
+        <a href="about.html">About</a> |
+        <a href="typography.html">Typography</a> |
+        <a href="terms.html">Terms and Conditions</a> |
+        <a href="contact.html">Contact Us</a><br />
+        All content &copy; 2014 | <a href="about.html">Built with Twitter Bootstrap</a> | <a href="https://wrapbootstrap.com/">WrapBootstrap</a>.
+    </p>
+    </footer>
+
+    </div> <!-- /container -->
+
+    <div id="theme_switcher">
+        <div class="btn-group">
+            <a class="btn btn-success dropdown-toggle" data-toggle="dropdown" href="#">Switch theme <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#" data-theme="real_estate">Real Estate</a></li>
+                <li><a href="#" data-theme="cerulean">Cerulean</a></li>
+                <li><a href="#" data-theme="lumen">Lumen</a></li>
+                <li><a href="#" data-theme="slate">Slate</a></li>
+                <li><a href="#" data-theme="united">United</a></li>
+                <li><a href="#" data-theme="cyborg">Cyborg</a></li>
+                <li><a href="#" data-theme="spacelab">Spacelab</a></li>
+                <li><a href="#" data-theme="journal">Journal</a></li>
+                <li><a href="#" data-theme="simplex">Simplex</a></li>
+                <li><a href="#" data-theme="superhero">Superhero</a></li>
+                <li><a href="#" data-theme="amelia">Amelia</a></li>            
+                <li><a href="#" data-theme="cosmo">Cosmo</a></li>
+                <li><a href="#" data-theme="flatly">Flatly</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
 
     <!-- JQuery Minified -->
     <script type="text/javascript" src="<?php echo URL;?>js/jquery-1.11.0.min.js"></script>
