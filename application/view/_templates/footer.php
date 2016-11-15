@@ -1,6 +1,6 @@
 
-   /*
-
+ 
+    <!--
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <!-- Bootstrap's Javascript file -->
@@ -12,7 +12,7 @@
     <script src="js/global.js"></script>
     <script src="js/.js"></script>
     <script src="js/application.js"></script>
-    **/
+    -->
 
     <!-- JQuery Minified -->
     <script type="text/javascript" src="<?php echo URL;?>js/jquery-1.11.0.min.js"></script>
