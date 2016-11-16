@@ -2,15 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <title>gatorpartments</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Gatorpartments</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Anton|Open+Sans+Condensed:300|Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+
+    <!-- CSS Bootstrap -->
+
+
+    <link href="<?php echo URL; ?>boostrap/css/boostrap.min.css" rel="stylesheet">
+
+    <link id="switch_style" href="<?php echo URL; ?>css/real_estate" rel="stylesheet">
+    <link href="<?php echo URL; ?>css/theme.css" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,8 +28,17 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
   </head>
+
   <body>
+
+      <!-- from vertical prototype testing phase
       <header>
           <div class="logoContainer">
               <div class="container">
@@ -31,3 +50,4 @@
               </div>
           </div>
       </header>
+      -->
