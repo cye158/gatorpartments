@@ -12,12 +12,10 @@
 
 
   <!-- CSS Bootstrap -->
-
-
   <link href="<?php echo URL; ?>boostrap/css/boostrap.min.css" rel="stylesheet">
-
-  <link id="switch_style" href="<?php echo URL; ?>css/real_estate" rel="stylesheet">
   <link href="<?php echo URL; ?>css/theme.css" rel="stylesheet">
+
+
 
   <!-- <link rel="stylesheet" href="css/style.css"> -->
 
@@ -35,3 +33,4 @@
 
 
 </head>
+<body>

@@ -1,4 +1,4 @@
-<body>
+
 	<div class="container">
 	<?php require APP . 'view/_templates/navbar.php'; ?>
 <div class="row">
