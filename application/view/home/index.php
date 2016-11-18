@@ -1,5 +1,23 @@
-<link href="<?php echo URL; ?>public/css/boostrap.css" rel="stylesheet">
-<link href="<?php echo URL; ?>public/css/theme.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>gatorpartments</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+
+
+  <!-- CSS Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>public/css/boostrap.css"  />
+  <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>public/css/theme.css" />
+
+
+</head>
+<body>
 
 	<div class="container">
 	<?php require APP . 'view/_templates/navbar.php'; ?>
