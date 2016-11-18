@@ -1,5 +1,5 @@
-<body>
-  <div class="container">
+
+  
   <div class="row"><!-- start header -->
     <div class="col-sm-4 col-xs-6 logo">
       <a href="<?php echo URL;?>home/index">
