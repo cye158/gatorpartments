@@ -37,12 +37,18 @@ class MessageModel
 	$parameters = array(':id' => $id);
 
 	$query->execute($parameters);
-	return $query->fetch()->username;
+   	return $query->fetch()->username;
     } 
 
-   public function showMessage($userId, $toId, $content)
+   public function showMessage($userId)
    {
-     }
+        $sql = "select u.username, m.content from users u, messages m where u.id = m.toId and m.userId = :userId";
+	$query = $this->db->prepare($sql);
+        $parameters = array(':userId' => $userId);
+
+	$query->execute($parameters);
+	return $query->fetchAll(); 
+    }
 }
 ?>
 
