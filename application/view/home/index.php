@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>gatorpartments</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <meta name="description" content="">
-  <meta name="author" content="">
+<html lang="en"><head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Real estate - Bootstrap</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-
-
-  <!-- CSS Bootstrap -->
-  <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>public/css/boostrap.css"  />
-  <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>public/css/theme.css" />
-
+	<link id="switch_style" href="<?php echo URL;?>css/real_estate.css" rel="stylesheet">
+	<link href="<?php echo URL;?>css/theme.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 
 </head>
-<body>
 
-	<div class="container">
+<body>
+    <div class="container">
+		<div class="row">
 	<?php require APP . 'view/_templates/navbar.php'; ?>
 <div class="row">
 
