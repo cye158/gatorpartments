@@ -1,7 +1,6 @@
 
-    <div class="container">
-		<div class="row">
-	<?php require APP . 'view/_templates/navbar.php'; ?>
+  
+
 <div class="row">
 
 	<div class="col-sm-5 hidden-xs home_form">
