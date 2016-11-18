@@ -12,8 +12,8 @@
 
 
   <!-- CSS Bootstrap -->
-  <link href="css/boostrap.css" rel="stylesheet">
-  <link href="css/theme.css" rel="stylesheet">
+  <link href="<?php echo URL; ?>public/css/boostrap.css" rel="stylesheet">
+  <link href="<?php echo URL; ?>public/css/theme.css" rel="stylesheet">
 
 
 </head>

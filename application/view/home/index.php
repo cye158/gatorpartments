@@ -1,3 +1,5 @@
+<link href="<?php echo URL; ?>public/css/boostrap.css" rel="stylesheet">
+<link href="<?php echo URL; ?>public/css/theme.css" rel="stylesheet">
 
 	<div class="container">
 	<?php require APP . 'view/_templates/navbar.php'; ?>
