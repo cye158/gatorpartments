@@ -83,10 +83,7 @@ function test_input($data) {
   <br><br>
   -->
   <h3>Location</h3>
-  Name: <input type="text" name="name" value="<?php echo $name;?>">
-  <span class="error">* <?php echo $nameErr;?></span>
-  <br><br>
-  
+
   Address: <input type="text" name="address" value="<?php echo $address;?>">
   <span class="error">* <?php echo $addressErr;?></span>
   <br><br>
@@ -95,6 +92,15 @@ function test_input($data) {
   <span class="error">* <?php echo $cityErr;?></span>
   <br><br>
 
+  State: <select name="state">
+    <option value=""></option>
+    <option value="AL">AL</option>
+    <option value="CA">CA</option>
+    <option value="NM">NM</option>
+    <option value="WY">WY</option>
+  </select>
+  <span class="error">* <?php echo $stateErr;?></span>
+  <br><br>
 
   <!-- button for form submission usage-->
   <input type="submit" name="submit" value="Submit">
