@@ -90,7 +90,6 @@ function test_input($data) {
 
   City: <input type="text" name="city" value="<?php echo $city;?>">
   <span class="error">* <?php echo $cityErr;?></span>
-  <br><br>
 
   State: <select name="state">
     <option value=""></option>
