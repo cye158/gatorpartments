@@ -8,6 +8,7 @@ $addressErr = $cityErr = $stateErr = $zip_codeErr = $complexErr = $termErr = $pr
 $address = $city = $state = $zip_code = $complex = $term = $price = $square_feet = $number_of_bedroom = $number_of_bath = $utilies_provided = $building_accomodation = $building_restriction = $availability_date = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+/*
   if (empty($_POST["name"])) {
     $nameErr = "Name is required";
   } else {
@@ -49,6 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $gender = test_input($_POST["gender"]);
   }
+  */
 }
 
 function test_input($data) {
@@ -62,6 +64,7 @@ function test_input($data) {
 <h2>PHP Form Validation Example</h2>
 <p><span class="error">* required field.</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+  <!--
   Name: <input type="text" name="name" value="<?php echo $name;?>">
   <span class="error">* <?php echo $nameErr;?></span>
   <br><br>
@@ -78,7 +81,11 @@ function test_input($data) {
   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
   <span class="error">* <?php echo $genderErr;?></span>
   <br><br>
+  -->
+  
+  <!-- button for form submission usage-->
   <input type="submit" name="submit" value="Submit">
+
 </form>
 
 <!--
