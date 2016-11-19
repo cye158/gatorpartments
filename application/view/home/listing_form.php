@@ -74,7 +74,7 @@ function test_input($data) {
   Address: <input type="text" name="address" value="<?php echo $address;?>">
   <span class="error">* <?php echo $addressErr;?></span>
   <br><br>
-  
+
   <h3>Space</h3>
   <h3>Others</h3>
   <!--
@@ -102,3 +102,15 @@ function test_input($data) {
 
   <input type="submit" name="submit" value="Submit">
 </form>
+<?php
+echo "<h2>Your Input:</h2>";
+echo $name;
+echo "<br>";
+echo $email;
+echo "<br>";
+echo $website;
+echo "<br>";
+echo $comment;
+echo "<br>";
+echo $gender;
+?>
