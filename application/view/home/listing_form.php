@@ -8,14 +8,6 @@ $addressErr = $cityErr = $stateErr = $zip_codeErr = $complexErr = $termErr = $pr
 $address = $city = $state = $zip_code = $complex = $term = $price = $square_feet = $number_of_bedroom = $number_of_bath = $utilies_provided = $building_accomodation = $building_restriction = $availability_date = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-  if(empty($_POST["address"]))
-  {
-    $addressErr = "Address is required";
-  } else {
-    $address = test_input($_POST["address"]);
-  }
-  /*
   if (empty($_POST["name"])) {
     $nameErr = "Name is required";
   } else {
@@ -58,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $gender = test_input($_POST["gender"]);
   }
 }
-*/
+
 function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
@@ -67,37 +59,28 @@ function test_input($data) {
 }
 ?>
 
-<h2>Post A Listing</h2>
+<h2>PHP Form Validation Example</h2>
 <p><span class="error">* required field.</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-
-  Address: <input type="text" name="address" value="<?php echo $address;?>">
-  <span class="error">* <?php echo $addressErr;?></span>
-  <br><br>
-
   Name: <input type="text" name="name" value="<?php echo $name;?>">
   <span class="error">* <?php echo $nameErr;?></span>
   <br><br>
-
   E-mail: <input type="text" name="email" value="<?php echo $email;?>">
   <span class="error">* <?php echo $emailErr;?></span>
   <br><br>
-
   Website: <input type="text" name="website" value="<?php echo $website;?>">
   <span class="error"><?php echo $websiteErr;?></span>
   <br><br>
-
   Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
   <br><br>
-
   Gender:
   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
   <span class="error">* <?php echo $genderErr;?></span>
   <br><br>
-
   <input type="submit" name="submit" value="Submit">
 </form>
+
 <?php
 echo "<h2>Your Input:</h2>";
 echo $name;
