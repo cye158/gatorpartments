@@ -70,14 +70,11 @@ function test_input($data) {
 <h2>Post A Listing</h2>
 <p><span class="error">* required field.</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-  <h3>Location</h3>
+
   Address: <input type="text" name="address" value="<?php echo $address;?>">
   <span class="error">* <?php echo $addressErr;?></span>
   <br><br>
 
-  <h3>Space</h3>
-  <h3>Others</h3>
-  <!--
   Name: <input type="text" name="name" value="<?php echo $name;?>">
   <span class="error">* <?php echo $nameErr;?></span>
   <br><br>
@@ -98,7 +95,6 @@ function test_input($data) {
   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
   <span class="error">* <?php echo $genderErr;?></span>
   <br><br>
-  -->
 
   <input type="submit" name="submit" value="Submit">
 </form>
