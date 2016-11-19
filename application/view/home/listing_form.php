@@ -99,8 +99,12 @@ function test_input($data) {
     <option value="WY">WY</option>
   </select>
   <span class="error">* <?php echo $stateErr;?></span>
-  <br><br>
 
+  Zip Code: <input type="text" name="zip_code" value="<?php echo $zip_code;?>">
+  <span class="error">* <?php echo $zip_codeErr;?></span>
+  <br></br>
+
+  <h3>Space</h3>
   <!-- button for form submission usage-->
   <input type="submit" name="submit" value="Submit">
 
