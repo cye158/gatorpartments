@@ -82,7 +82,16 @@ function test_input($data) {
   <span class="error">* <?php echo $genderErr;?></span>
   <br><br>
   -->
+  <h3>Location</h3>
+  Address: <input type="text" name="address" value="<?php echo $address;?>">
+  <span class="error">* <?php echo $addressErr;?></span>
+  <br><br>
+
+  City: <input type="text" name="city" value="<?php echo $city;?>">
+  <span class="error">* <?php echo $cityErr;?></span>
+  <br><br>
   
+
   <!-- button for form submission usage-->
   <input type="submit" name="submit" value="Submit">
 
