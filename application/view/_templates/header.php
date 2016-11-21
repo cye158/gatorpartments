@@ -26,6 +26,11 @@
                 <div class="logo">
                     <a class="logoText" href="index.php">Gatorparments</a>
                     <a class="logoLink pull-right" href="<?php echo URL . 'home/login' ?>">Login</a>
+		    <?php  if ($_SESSION['loggedIn']) {
+				echo  $_SESSION['userName'];
+				echo  $_SESSION['userID'];
+			  }
+		   ?>
                     <a class="logoLink pull-right" href="">Contact</a>
                 </div>
               </div>

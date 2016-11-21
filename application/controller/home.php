@@ -28,11 +28,6 @@ class Home extends Controller
 	require APP . 'view/users/writeMessage.php';
     }
 
-   public function inputUserName() // after using session please delete this function
-  {
-        // load views
-	require APP. 'view/users/inputUserName.php';
-  }
 }
 
 ?>
