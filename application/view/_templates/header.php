@@ -21,11 +21,22 @@
   </head>
   <body>
       <header>
+	  <?php
+		if(isset($_SESSION['loggedIn'])) {
+			if($_SESSION['loggedIn'] == true) {
+				echo "Welcome {$_SESSION['userId']} from index";
+			} else {
+				echo "Welcome Stranger from index";
+			}
+		} else {
+			echo "Welcome Stranger from index";
+		}
+	  ?>
           <div class="logoContainer">
               <div class="container">
                 <div class="logo">
                     <a class="logoText" href="index.php">Gatorparments</a>
-                    <a class="logoLink pull-right" href="">Login</a>
+                    <a class="logoLink pull-right" href="<?php echo URL . 'user'; ?>">Login</a>
                     <a class="logoLink pull-right" href="">Contact</a>
                 </div>
               </div>
