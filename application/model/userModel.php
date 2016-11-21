@@ -10,7 +10,7 @@ class UserModel {
 		}
 
 		public function register($username, $password, $email) {
-			$sql = "INSERT INTO user (username, password, email) VALUES (:username, :password, :email)";
+			$sql = "INSERT INTO user (username, password, email, landlord) VALUES (:username, :password, :email, 0)";
 			$query = $this->db->prepare($sql);
 
 			$query->bindParam(':username', $username);
@@ -35,16 +35,17 @@ class UserModel {
 
 			  $query->execute();
         $result = $query->fetchAll();
-        print_r($result);
-            
+	print_r($result);
+
         // checks if username and password are the same
         if(!$result) {
 				    // return false, lets view output error message
             echo "Error, username or password does not match";
         } else {
             // Creates a session to store the users ID, and make them always log in upon visiting the site 
-            $_SESSION['userID'] = $result[0]->username;
+            $_SESSION['userId'] = $result[0]->username;
             $_SESSION['loggedIn'] = true;
+	    $_SESSION['landlord'] = $result[0]->landlord;
             echo "Success!";
         }
     }
@@ -66,6 +67,15 @@ class UserModel {
         // Destroy the session.
         session_destroy();
     }
+
+	public function checkStatus($userId) {
+		
+	}
+
+	public function displayMessage($message) {
+		echo $message;
+		// return $message;
+	}
 }
 
 ?>

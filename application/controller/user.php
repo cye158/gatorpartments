@@ -21,6 +21,10 @@
 
 			      return $this->userModel->register($username, $password, $email);
         }
+	public function authenticateMessage() {
+		$message = $_POST['message'];
+		$this->userModel->displayMessage($message);
+	}
     }
     
 ?>
