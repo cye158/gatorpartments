@@ -91,7 +91,7 @@ function test_input($data) {
     <listinglabel>City: </listinglabel><input type="text" name="city" value="<?php echo $city;?>">
     <span class="error">* <?php echo $cityErr;?></span>
 
-    <listinglabel>State: </listinglabel><select name="state">
+    <listinglabel>  State: </listinglabel><select name="state">
       <option value=""></option>
       <option value="AL">AL</option>
       <option value="AK">AK</option>
@@ -146,7 +146,7 @@ function test_input($data) {
     </select>
     <span class="error">* <?php echo $stateErr;?></span>
 
-    <listinglabel>Zip Code: </listinglabel><input type="text" name="zip_code" value="<?php echo $zip_code;?>">
+    <listinglabel>  Zip Code: </listinglabel><input type="text" name="zip_code" value="<?php echo $zip_code;?>">
     <span class="error">* <?php echo $zip_codeErr;?></span>
     <br></br>
 
@@ -181,16 +181,15 @@ function test_input($data) {
     <br></br>
 
   <h3>Building Info</h3>
+    <br>
 
     <h4>Utilities Provided:</h4>
-    <br>
     <input type="checkbox" name="utilities_provided" <?php if (isset($utilities_provided) && $utilities_provided=="electricity") echo "checked";?> value="electricity"><listinglabel>Electricity</listinglabel>
     <input type="checkbox" name="utilities_provided" <?php if (isset($utilities_provided) && $utilities_provided=="water") echo "checked";?> value="water"><listinglabel>Water</listinglabel>
     <input type="checkbox" name="utilities_provided" <?php if (isset($utilities_provided) && $utilities_provided=="gas") echo "checked";?> value="gas"><listinglabel>Gas</listinglabel>
     <br><br>
 
-    Buidling Accomodations
-    <br>
+    <h4>Buidling Accomodations</h4>
     <input type="checkbox" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="parking") echo "checked";?> value="parking">Parking
     <input type="checkbox" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="laundry") echo "checked";?> value="laundry">Laundry
     <input type="checkbox" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="elevator") echo "checked";?> value="elevator">Elevator
@@ -199,8 +198,7 @@ function test_input($data) {
     <input type="checkbox" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="pool") echo "checked";?> value="pool">Pool
     <br><br>
 
-    Buidling Restrictions
-    <br>
+    <h4>Building Restrictions</h4>
     <input type="checkbox" name="building_restriction" <?php if (isset($building_restriction) && $building_restriction=="smoking") echo "checked";?> value="smoking">Smoking
     <input type="checkbox" name="building_restriction" <?php if (isset($building_restriction) && $building_restriction=="dogs") echo "checked";?> value="dogs">Dogs
     <input type="checkbox" name="building_restriction" <?php if (isset($building_restriction) && $building_restriction=="cats") echo "checked";?> value="cats">Cats
