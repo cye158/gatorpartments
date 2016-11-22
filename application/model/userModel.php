@@ -40,7 +40,8 @@ class UserModel {
 
         // checks if username and password are the same
         if(!$result) {
-				    // return false, lets view output error message
+	    // return false, outputs error message
+	    echo "<meta http-equiv=\"refresh\" content=\"5;url=".$_SERVER['HTTP_REFERER']."\"/>";
             echo "Error, username or password does not match";
         } else {
             // Creates a session to store the users ID, and make them always log in upon visiting the site 
