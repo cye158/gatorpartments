@@ -182,11 +182,11 @@ function test_input($data) {
 
   <h3>Building Info</h3>
 
-    Utilities Provided:
+    <h4>Utilities Provided:</h4>
     <br>
-    <input type="checkbox" name="utilities_provided" <?php if (isset($utilities_provided) && $utilities_provided=="electricity") echo "checked";?> value="electricity">Electricity
-    <input type="checkbox" name="utilities_provided" <?php if (isset($utilities_provided) && $utilities_provided=="water") echo "checked";?> value="water">Water
-    <input type="checkbox" name="utilities_provided" <?php if (isset($utilities_provided) && $utilities_provided=="gas") echo "checked";?> value="gas">Gas
+    <input type="checkbox" name="utilities_provided" <?php if (isset($utilities_provided) && $utilities_provided=="electricity") echo "checked";?> value="electricity"><listinglabel>Electricity</listinglabel>
+    <input type="checkbox" name="utilities_provided" <?php if (isset($utilities_provided) && $utilities_provided=="water") echo "checked";?> value="water"><listinglabel>Water</listinglabel>
+    <input type="checkbox" name="utilities_provided" <?php if (isset($utilities_provided) && $utilities_provided=="gas") echo "checked";?> value="gas"><listinglabel>Gas</listinglabel>
     <br><br>
 
     Buidling Accomodations
