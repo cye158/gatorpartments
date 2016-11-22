@@ -206,7 +206,7 @@ function test_input($data) {
       <input type="text" name="building_restriction" value="<?php echo $building_restriction;?>">
     <br><br>
 
-    Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
+    <listinglabel>Comment: </listinglabel><br><textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
     <br><br>
 
   <!-- button for form submission usage-->
