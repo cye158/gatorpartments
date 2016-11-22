@@ -11,35 +11,8 @@
 	<link id="switch_style" href="<?php echo URL;?>css/real_estate.css" rel="stylesheet">
 	<link href="<?php echo URL;?>css/theme.css" rel="stylesheet">
     <!--[if lt IE 9]>
-<<<<<<< HEAD
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-      <header>
-	  <?php
-		if(isset($_SESSION['loggedIn'])) {
-			if($_SESSION['loggedIn'] == true) {
-				echo "Welcome {$_SESSION['userId']} from index";
-			} else {
-				echo "Welcome Stranger from index";
-			}
-		} else {
-			echo "Welcome Stranger from index";
-		}
-	  ?>
-          <div class="logoContainer">
-              <div class="container">
-                <div class="logo">
-                    <a class="logoText" href="index.php">Gatorparments</a>
-                    <a class="logoLink pull-right" href="<?php echo URL . 'user'; ?>">Login</a>
-                    <a class="logoLink pull-right" href="">Contact</a>
-                </div>
-              </div>
-=======
 		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+    <![endif]-->
 
 </head>
 
@@ -54,7 +27,7 @@
         <div class="row">
           <div class="col-sm-3 hidden-xs logo-img">
             <img src="<?php echo URL;?>css/images/Home-green-48.png" alt=""/>
->>>>>>> 36d14ed4f2aa1b3a6931a336015c0b01be759fb5
+
           </div>
           <div class="col-sm-9 logo-text">
             <h1><small>Bootstrap</small><br /><span>Real</span> estate</h1>
@@ -118,10 +91,11 @@
                   <li class="dropdown">
                     <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign Up<strong class="caret"></strong></a>
                     <div class="dropdown-menu">
-                      <form action="<?php echo URL;?>home/index" method="post">
-                        <input type="text" name="user[username]" placeholder="Full name" size="30" />
-                        <input type="password" name="user[password]" placeholder="Email" size="30" />
-                        <input type="password" name="user[password]" placeholder="Password" size="30" />
+                      <form action="<?php echo URL;?>user/register" method="post">
+			<input type="text" name="username" placeholder="Username" size="30" />
+                        <input type="text" name="name" placeholder="Full name" size="30" />
+                        <input type="text" name="email" placeholder="Email" size="30" />
+                        <input type="password" name="password" placeholder="Password" size="30" />
 
                         <input class="btn btn-primary" type="submit" name="commit" value="Sign Up" />
                       </form>
@@ -131,10 +105,10 @@
                   <li class="dropdown">
                     <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
                     <div class="dropdown-menu">
-                      <form action="<?php echo URL;?>home/index" method="post">
-                        <input type="text" name="user[username]" placeholder="Username or email" size="30" /><br class="visible-xs"/>
-                        <input type="password" name="user[password]" placeholder="Password" size="30" /><br class="visible-xs"/>
-                        <input id="remember_me" type="checkbox" name="user[remember_me]" value="1" />
+                      <form action="<?php echo URL;?>user/authenticateLogin" method="post">
+                        <input type="text" name="username" placeholder="Username or email" size="30" /><br class="visible-xs"/>
+                        <input type="password" name="password" placeholder="Password" size="30" /><br class="visible-xs"/>
+                        <input id="remember_me" type="checkbox" name="remember_me" value="1" />
                         <label class="string optional"> Remember me</label>
 
                         <input class="btn btn-primary" type="submit" name="commit" value="Sign In" />
