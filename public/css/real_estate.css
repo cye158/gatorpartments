@@ -142,6 +142,14 @@ input::-moz-focus-inner {
 }
 input {
   line-height: normal;
+  width: 13px;
+  height: 13px;
+  padding: 0;
+  margin:0;
+  vertical-align: bottom;
+  position: relative;
+  top: -1px;
+  *overflow: hidden;
 }
 input[type="checkbox"],
 input[type="radio"] {
@@ -1655,8 +1663,7 @@ listinglabel{
     width:100px;
 }
 listingbox{
-    display:inline-block;
-    width:100px;
+
 }
 input[type="search"] {
   -webkit-box-sizing: border-box;
