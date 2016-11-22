@@ -29,7 +29,7 @@
             <img src="<?php echo URL;?>css/images/Home-green-48.png" alt=""/>
           </div>
           <div class="col-sm-9 logo-text">
-            <h1><small>Bootstrap</small><br /><span>Real</span> estate</h1>
+            <h1><small>Gator</small><br /><span>Real</span> estate</h1>
           </div>
         </div>
         </a>
@@ -59,17 +59,31 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-            <li><a href="<?php echo URL;?>home/index" class="first">LOGO</a></li>
-            <li><a href="<?php echo URL;?>home/index">To post</a></li>
-            <li><a href="<?php echo URL;?>home/compare">Search
-							<form name="searchbox" method="post" action="<?php echo URL;?>home/listings">
-								<input name="search" type="text" size="40" maxlength="600px"/>
-								<input type="submit" name="Submit" value="Search">
-							</form>
-								</a>
-						</li>
-            <li>""</li>
-          </ul>
+            <li><a href="<?php echo URL;?>home/listings" class="first">For sale</a></li>
+            <li><a href="<?php echo URL;?>home/map_properties">To rent</a></li>
+            <li><a href="<?php echo URL;?>home/compare">New homes</a></li>
+            <li><a href="<?php echo URL;?>home/property">Property of the day</a></li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Property pages <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="<?php echo URL;?>home/listings">Property listings</a></li>
+                <li><a href="<?php echo URL;?>home/map_properties">Properties map</a></li>
+                <li><a href="<?php echo URL;?>home/property">Single property</a></li>
+                <li><a href="<?php echo URL;?>home/compare">Compare properties</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other pages <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                                <li><a href="<?php echo URL;?>home/typography">Typography</a></li>
+                                <li><a href="<?php echo URL;?>home/terms">Terms and conditions</a></li>
+                                <li><a href="<?php echo URL;?>home/contact">Contact us</a></li>
+                                <li><a href="<?php echo URL;?>home/about">About us</a></li>
+              </ul>
+            </li>
+            </ul>
 
                       <ul class="nav navbar-nav navbar-right">
 
