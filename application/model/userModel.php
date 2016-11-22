@@ -9,7 +9,7 @@ class UserModel {
 			}
 		}
 
-		public function register($username, $password, $email) {
+		public function register($username, $password, $email, $name) {
 			$sql = "INSERT INTO user (username, password, email, landlord, name) VALUES (:username, :password, :email, 0, :name)";
 			$query = $this->db->prepare($sql);
 
