@@ -194,7 +194,7 @@ function test_input($data) {
     <input type="checkbox" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="parking") echo "checked";?> value="parking">Parking
     <input type="checkbox" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="laundry") echo "checked";?> value="laundry">Laundry
     <input type="checkbox" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="elevator") echo "checked";?> value="elevator">Elevator
-    <input type="rcheckbox" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="wheelchair_accessibility") echo "checked";?> value="wheelchair_accesibility">Wheelchair Accessibility
+    <input type="checkbox" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="wheelchair_accessibility") echo "checked";?> value="wheelchair_accesibility">Wheelchair Accessibility
     <input type="checkbox" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="outdoor_space") echo "checked";?> value="outdoor_space">Outdoor Space
     <input type="checkbox" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="pool") echo "checked";?> value="pool">Pool
     <br><br>
