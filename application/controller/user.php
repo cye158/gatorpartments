@@ -18,7 +18,7 @@
 		$username = trim($_POST['username'], ' ');
 		$password = $_POST['password'];
 		$email = $_POST['email'];
-		$name = $_pOST['name'];
+		$name = $_POST['name'];
 
 		return $this->userModel->register($username, $password, $email, $name);
         }
