@@ -208,6 +208,13 @@ function test_input($data) {
       <input type="text" name="building_restriction" value="<?php echo $building_restriction;?>">
     <br><br>
 
+    <fieldset>
+      <legend>Please select one of the following</legend>
+      <input type="radio" name="action" id="track" value="track" /><label for="track">Track Submission</label><br />
+      <input type="radio" name="action" id="event" value="event"  /><label for="event">Events and Artist booking</label><br />
+      <input type="radio" name="action" id="message" value="message" /><label for="message">Message us</label><br />
+    </fieldset>
+
   <!-- button for form submission usage-->
   <input type="submit" name="submit" value="Submit">
 
