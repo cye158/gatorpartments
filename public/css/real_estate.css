@@ -1662,9 +1662,6 @@ listinglabel{
     display:inline-block;
     width:100px;
 }
-listingbox{
-
-}
 input[type="search"] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
