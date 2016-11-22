@@ -1651,8 +1651,8 @@ label {
   font-weight: bold;
 }
 listinglabel{
-    display:inline-block;
-    width:25px;
+    display: inline-block;
+    width: 50px;
 }
 input[type="search"] {
   -webkit-box-sizing: border-box;
