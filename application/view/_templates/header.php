@@ -87,7 +87,9 @@
             </ul>
 
                       <ul class="nav navbar-nav navbar-right">
-
+<?php
+	if(!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] == false) {
+?>
                   <li class="dropdown">
                     <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign Up<strong class="caret"></strong></a>
                     <div class="dropdown-menu">
@@ -115,7 +117,15 @@
                       </form>
                     </div>
                   </li>
+<?php
+	} else {
 
+		echo "Welcome " . $_SESSION['name'];
+?>
+		<a href="<?php echo URL;?> user/logout">Logout</a>
+<?php
+	}
+?>
                 </ul>
 
           </div><!-- /.navbar-collapse -->
