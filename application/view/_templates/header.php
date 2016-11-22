@@ -63,6 +63,7 @@
             <li><a href="<?php echo URL;?>home/map_properties">To rent</a></li>
             <li><a href="<?php echo URL;?>home/compare">New homes</a></li>
             <li><a href="<?php echo URL;?>home/property">Property of the day</a></li>
+						<li><a href="<?php echo URL;?>home/listing_form">Post</a></li>
 
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Property pages <b class="caret"></b></a>

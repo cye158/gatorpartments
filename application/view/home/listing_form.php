@@ -152,6 +152,27 @@ function test_input($data) {
 
   <h3>Space</h3>
 
+  Complex: <select name="term">
+    <option value=""></option>
+    <option value="condo">condo</option>
+    <option value="apartment">apartment</option>
+    <option value="singlehome">single home</option>
+    <option value="townhome">townhome</option>
+  </select>
+  <span class="error">* <?php echo $complexErr;?></span>
+
+  Term: <select name="term">
+    <option value=""></option>
+    <option value="lease">lease</option>
+    <option value="monthtomonth">month to month</option>
+  </select>
+  <span class="error">* <?php echo $termErr;?></span>
+
+  Price: <input type="text" name="price" value="<?php echo $price;?>">
+  <span class="error">* <?php echo $priceErr;?></span>
+  <br></br>
+
+  <h3>Building Info</h3>
 
   <!-- button for form submission usage-->
   <input type="submit" name="submit" value="Submit">
