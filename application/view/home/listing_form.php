@@ -84,7 +84,7 @@ function test_input($data) {
   -->
   <h3>Location</h3>
 
-  Address: <input type="text" name="address" value="<?php echo $address;?>">
+  <listing_label>Address:</lisiting_label> <input type="text" name="address" value="<?php echo $address;?>">
   <span class="error">* <?php echo $addressErr;?></span>
   <br><br>
 
@@ -158,6 +158,7 @@ function test_input($data) {
 
 </form>
 
+<!-- footer below -->
 <div>
   <footer>
   	<hr />
@@ -172,6 +173,7 @@ function test_input($data) {
   	</p>
   </footer>
 </div>
+
 <!--
 <?php
 echo "<h2>Your Input:</h2>";

@@ -8,6 +8,10 @@ iframe {
   border: none;
   padding: 0;
 }
+listing_label{
+    display:inline-block;
+    width:100px;
+}
 .navbar-inner .container {
   width: auto;
 }
