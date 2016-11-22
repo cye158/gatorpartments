@@ -61,7 +61,7 @@ function test_input($data) {
 }
 ?>
 
-<h2>PHP Form Validation Example</h2>
+<h2>Post A Listing</h2>
 <p><span class="error">* required field.</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
   <!--
@@ -231,6 +231,7 @@ function test_input($data) {
 </div>
 
 <!--
+<h2>PHP Form Validation Example</h2>
 <?php
 echo "<h2>Your Input:</h2>";
 echo $name;
