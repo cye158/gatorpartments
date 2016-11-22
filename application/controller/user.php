@@ -23,6 +23,10 @@
 		return $this->userModel->register($username, $password, $email, $name);
         }
 
+	public function logout() {
+		$this->userModel->logout();
+	}
+
 	public function authenticateMessage() {
 		$message = $_POST['message'];
 		$this->userModel->displayMessage($message);
