@@ -68,10 +68,12 @@
 
 						<!-- Search bar -->
 						<li>
+							<a>
 								<form name="searchbox" method="post" action="<?php echo URL;?>home/listings">
 									<input type="text" name="search" placeholder="Search by Location of or Point of Interest" size="50" maxlength="600px"/>
 									<input type="submit" name="submit" value="Search">
 								</form>
+							</a>
 						</li>
             <li></li>
           </ul>
