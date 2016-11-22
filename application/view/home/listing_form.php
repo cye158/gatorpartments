@@ -230,18 +230,16 @@ function test_input($data) {
   </footer>
 </div>
 
-<!--
+
 <h2>PHP Form Validation Example</h2>
 <?php
 echo "<h2>Your Input:</h2>";
-echo $name;
+echo $address;
 echo "<br>";
-echo $email;
+echo $city;
 echo "<br>";
-echo $website;
+echo $state;
 echo "<br>";
-echo $comment;
+echo $zip_code;
 echo "<br>";
-echo $gender;
 ?>
--->
