@@ -84,14 +84,14 @@ function test_input($data) {
   -->
   <h3>Location</h3>
 
-    Address: <input type="text" name="address" value="<?php echo $address;?>">
+    <listinglabel>Address: </listinglabel><input type="text" name="address" value="<?php echo $address;?>">
     <span class="error">* <?php echo $addressErr;?></span>
     <br><br>
 
-    City: <input type="text" name="city" value="<?php echo $city;?>">
+    <listinglabel>City: </listinglabel><input type="text" name="city" value="<?php echo $city;?>">
     <span class="error">* <?php echo $cityErr;?></span>
 
-    State: <select name="state">
+    <listinglabel>State: </listinglabel><select name="state">
       <option value=""></option>
       <option value="AL">AL</option>
       <option value="AK">AK</option>
@@ -146,7 +146,7 @@ function test_input($data) {
     </select>
     <span class="error">* <?php echo $stateErr;?></span>
 
-    Zip Code: <input type="text" name="zip_code" value="<?php echo $zip_code;?>">
+    <listinglabel>Zip Code: </listinglabel><input type="text" name="zip_code" value="<?php echo $zip_code;?>">
     <span class="error">* <?php echo $zip_codeErr;?></span>
     <br></br>
 
