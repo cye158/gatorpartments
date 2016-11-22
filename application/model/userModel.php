@@ -25,7 +25,7 @@ class UserModel {
 
 		}
 
-    public function login($username, $password) {
+    public function login($username, $password, $rememberMe) {
 			  $sql = "SELECT * FROM user WHERE username=:username AND password=:password ;";
 			  $query = $this->db->prepare($sql);
       
@@ -46,7 +46,10 @@ class UserModel {
         } else {
             // Creates a session to store the users ID, and make them always log in upon visiting the site 
             $_SESSION['name'] = $result[0]->name;
-            $_SESSION['loggedIn'] = true;
+	    // echo "rememberMe is: " . rememberMe;
+	    if($rememberMe == 1) {
+            	$_SESSION['loggedIn'] = true;
+	    }
 	    $_SESSION['landlord'] = $result[0]->landlord;
 
 	    // start redirect to page user was at previously
