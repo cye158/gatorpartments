@@ -91,7 +91,7 @@ function test_input($data) {
     <listinglabel>City: </listinglabel><input type="text" name="city" value="<?php echo $city;?>">
     <span class="error">* <?php echo $cityErr;?></span>
 
-    <listinglabel>  State: </listinglabel><select name="state">
+    <listinglabel>State: </listinglabel><select name="state">
       <option value=""></option>
       <option value="AL">AL</option>
       <option value="AK">AK</option>
@@ -146,7 +146,7 @@ function test_input($data) {
     </select>
     <span class="error">* <?php echo $stateErr;?></span>
 
-    <listinglabel>  Zip Code: </listinglabel><input type="text" name="zip_code" value="<?php echo $zip_code;?>">
+    <listinglabel>Zip Code: </listinglabel><input type="text" name="zip_code" value="<?php echo $zip_code;?>">
     <span class="error">* <?php echo $zip_codeErr;?></span>
     <br></br>
 
@@ -206,6 +206,8 @@ function test_input($data) {
       <input type="text" name="building_restriction" value="<?php echo $building_restriction;?>">
     <br><br>
 
+    Description: <textarea name="comment" rows="5" cols="40"><?php echo $description;?></textarea>
+    <br><br>
 
   <!-- button for form submission usage-->
   <input type="submit" name="submit" value="Submit">
