@@ -15,12 +15,14 @@
 		    }
 
         public function register() {
-			      $username = trim($_POST['username'], ' ');
-			      $password = $_POST['password'];
-		        $email = $_POST['email'];
+		$username = trim($_POST['username'], ' ');
+		$password = $_POST['password'];
+		$email = $_POST['email'];
+		$name = $_pOST['name'];
 
-			      return $this->userModel->register($username, $password, $email);
+		return $this->userModel->register($username, $password, $email, $name);
         }
+
 	public function authenticateMessage() {
 		$message = $_POST['message'];
 		$this->userModel->displayMessage($message);
