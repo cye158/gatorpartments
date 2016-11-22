@@ -36,7 +36,7 @@ class UserModel {
 
 			  $query->execute();
         $result = $query->fetchAll();
-	print_r($result);
+	// print_r($result);
 
         // checks if username and password are the same
         if(!$result) {
@@ -47,7 +47,10 @@ class UserModel {
             $_SESSION['name'] = $result[0]->name;
             $_SESSION['loggedIn'] = true;
 	    $_SESSION['landlord'] = $result[0]->landlord;
-            echo "Success!";
+
+	    // start redirect to page user was at previously
+	    echo "<meta http-equiv=\"refresh\" content=\"5;url=".$_SERVER['HTTP_REFERER']."\"/>";
+            echo "Successfully logged in! Please wait 5s before redirect......";
         }
     }
    
