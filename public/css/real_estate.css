@@ -142,14 +142,6 @@ input::-moz-focus-inner {
 }
 input {
   line-height: normal;
-  width: 13px;
-  height: 13px;
-  padding: 125px;
-  margin:0;
-  vertical-align: bottom;
-  position: relative;
-  top: -1px;
-  *overflow: hidden;
 }
 input[type="checkbox"],
 input[type="radio"] {
