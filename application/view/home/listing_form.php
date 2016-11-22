@@ -158,6 +158,20 @@ function test_input($data) {
 
 </form>
 
+<div>
+  <footer>
+  	<hr />
+  	<p class="pull-right"><a href="#">Back to top</a></p>
+  	<p>
+  		<a href="<?php echo URL;?>home/index">Home</a> |
+  		<a href="<?php echo URL;?>home/about">About</a> |
+  		<a href="<?php echo URL;?>home/typography">Typography</a> |
+  		<a href="<?php echo URL;?>home/terms">Terms and Conditions</a> |
+  		<a href="<?php echo URL;?>home/contact">Contact Us</a><br />
+  		All content &copy; 2014 | <a href="<?php echo URL;?>home/about">Built with Twitter Bootstrap</a> | <a href="https://wrapbootstrap.com/">WrapBootstrap</a>.
+  	</p>
+  </footer>
+</div>
 <!--
 <?php
 echo "<h2>Your Input:</h2>";
