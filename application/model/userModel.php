@@ -10,15 +10,16 @@ class UserModel {
 		}
 
 		public function register($username, $password, $email) {
-			$sql = "INSERT INTO user (username, password, email, landlord) VALUES (:username, :password, :email, 0)";
+			$sql = "INSERT INTO user (username, password, email, landlord, name) VALUES (:username, :password, :email, 0, :name)";
 			$query = $this->db->prepare($sql);
 
 			$query->bindParam(':username', $username);
-      // hash the password using sha256 and stores into the db
-      $password1 = hash('sha256', $password);
-   
+      			// hash the password using sha256 and stores into the db
+      			$password1 = hash('sha256', $password);
+
 			$query->bindParam(':password', $password1);
 			$query->bindParam(':email', $email);
+			$query->bindParam(':name', $name);
 
 			$query->execute();
 
