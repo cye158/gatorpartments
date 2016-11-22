@@ -29,7 +29,7 @@
             <img src="<?php echo URL;?>css/images/Home-green-48.png" alt=""/>
           </div>
           <div class="col-sm-9 logo-text">
-            <h1><small>Bootstrap</small><br /><span>Real</span> estate</h1>
+            <h1><small>Team 4</small><br />Gatorpartments</h1>
           </div>
         </div>
         </a>
@@ -59,16 +59,21 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-            <li><a href="<?php echo URL;?>home/index" class="first">LOGO</a></li>
-            <li><a href="<?php echo URL;?>home/index">To post</a></li>
-            <li><a href="<?php echo URL;?>home/compare">Search
-							<form name="searchbox" method="post" action="<?php echo URL;?>home/listings">
-								<input name="search" type="text" size="40" maxlength="600px"/>
-								<input type="submit" name="Submit" value="Search">
-							</form>
-								</a>
+
+						<!-- Logo/Home button -->
+						<li><a href="<?php echo URL;?>home/index" class="first">LOGO</a></li>
+
+						<!-- Post a Listing -->
+						<li><a href="<?php echo URL;?>home/index">To post</a></li>
+
+						<!-- Search bar -->
+						<li>
+								<form name="searchbox" method="post" action="<?php echo URL;?>home/listings">
+									<input type="text" name="search" placeholder="Search by Location of or Point of Interest" size="50" maxlength="600px"/>
+									<input type="submit" name="submit" value="Search">
+								</form>
 						</li>
-            <li>""</li>
+            <li></li>
           </ul>
 
                       <ul class="nav navbar-nav navbar-right">
