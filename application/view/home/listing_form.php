@@ -184,36 +184,30 @@ function test_input($data) {
 
     Utilities Provided:
     <br>
-    <input type="radio" name="utilities_provided" <?php if (isset($utilities_provided) && $utilities_provided=="electricity") echo "checked";?> value="electricity">Electricity
-    <input type="radio" name="utilities_provided" <?php if (isset($utilities_provided) && $utilities_provided=="water") echo "checked";?> value="water">Water
-    <input type="radio" name="utilities_provided" <?php if (isset($utilities_provided) && $utilities_provided=="gas") echo "checked";?> value="gas">Gas
+    <input type="checkbox" name="utilities_provided" <?php if (isset($utilities_provided) && $utilities_provided=="electricity") echo "checked";?> value="electricity">Electricity
+    <input type="checkbox" name="utilities_provided" <?php if (isset($utilities_provided) && $utilities_provided=="water") echo "checked";?> value="water">Water
+    <input type="checkbox" name="utilities_provided" <?php if (isset($utilities_provided) && $utilities_provided=="gas") echo "checked";?> value="gas">Gas
     <br><br>
 
     Buidling Accomodations
     <br>
-    <input type="radio" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="parking") echo "checked";?> value="parking">Parking
-    <input type="radio" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="laundry") echo "checked";?> value="laundry">Laundry
-    <input type="radio" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="elevator") echo "checked";?> value="elevator">Elevator
-    <input type="radio" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="wheelchair_accessibility") echo "checked";?> value="wheelchair_accesibility">Wheelchair Accessibility
-    <input type="radio" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="outdoor_space") echo "checked";?> value="outdoor_space">Outdoor Space
-    <input type="radio" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="pool") echo "checked";?> value="pool">Pool
+    <input type="checkbox" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="parking") echo "checked";?> value="parking">Parking
+    <input type="checkbox" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="laundry") echo "checked";?> value="laundry">Laundry
+    <input type="checkbox" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="elevator") echo "checked";?> value="elevator">Elevator
+    <input type="rcheckbox" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="wheelchair_accessibility") echo "checked";?> value="wheelchair_accesibility">Wheelchair Accessibility
+    <input type="checkbox" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="outdoor_space") echo "checked";?> value="outdoor_space">Outdoor Space
+    <input type="checkbox" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="pool") echo "checked";?> value="pool">Pool
     <br><br>
 
     Buidling Restrictions
     <br>
-    <input type="radio" name="building_restriction" <?php if (isset($building_restriction) && $building_restriction=="smoking") echo "checked";?> value="smoking">Smoking
-    <input type="radio" name="building_restriction" <?php if (isset($building_restriction) && $building_restriction=="dogs") echo "checked";?> value="dogs">Dogs
-    <input type="radio" name="building_restriction" <?php if (isset($building_restriction) && $building_restriction=="cats") echo "checked";?> value="cats">Cats
-    <input type="radio" name="building_restriction" <?php if (isset($building_restriction) && $building_restriction=="other") echo "checked";?> value="other">Other
+    <input type="checkbox" name="building_restriction" <?php if (isset($building_restriction) && $building_restriction=="smoking") echo "checked";?> value="smoking">Smoking
+    <input type="checkbox" name="building_restriction" <?php if (isset($building_restriction) && $building_restriction=="dogs") echo "checked";?> value="dogs">Dogs
+    <input type="checkbox" name="building_restriction" <?php if (isset($building_restriction) && $building_restriction=="cats") echo "checked";?> value="cats">Cats
+    <input type="checkbox" name="building_restriction" <?php if (isset($building_restriction) && $building_restriction=="other") echo "checked";?> value="other">Other
       <input type="text" name="building_restriction" value="<?php echo $building_restriction;?>">
     <br><br>
 
-    <fieldset>
-      <legend>Please select one of the following</legend>
-      <input type="radio" name="action" id="track" value="track" /><label for="track">Track Submission</label><br />
-      <input type="radio" name="action" id="event" value="event"  /><label for="event">Events and Artist booking</label><br />
-      <input type="radio" name="action" id="message" value="message" /><label for="message">Message us</label><br />
-    </fieldset>
 
   <!-- button for form submission usage-->
   <input type="submit" name="submit" value="Submit">
