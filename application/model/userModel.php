@@ -44,7 +44,7 @@ class UserModel {
             echo "Error, username or password does not match";
         } else {
             // Creates a session to store the users ID, and make them always log in upon visiting the site 
-            $_SESSION['userId'] = $result[0]->username;
+            $_SESSION['name'] = $result[0]->name;
             $_SESSION['loggedIn'] = true;
 	    $_SESSION['landlord'] = $result[0]->landlord;
             echo "Success!";
