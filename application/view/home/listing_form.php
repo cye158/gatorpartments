@@ -214,6 +214,20 @@ function test_input($data) {
 
 </form>
 
+<!-- echo user input -->
+<h2>PHP Form Validation Example</h2>
+<?php
+echo "<h2>Your Input:</h2>";
+echo $address;
+echo "<br>";
+echo $city;
+echo "<br>";
+echo $state;
+echo "<br>";
+echo $zip_code;
+echo "<br>";
+?>
+
 <!-- footer below -->
 <div>
   <footer>
@@ -229,17 +243,3 @@ function test_input($data) {
   	</p>
   </footer>
 </div>
-
-
-<h2>PHP Form Validation Example</h2>
-<?php
-echo "<h2>Your Input:</h2>";
-echo $address;
-echo "<br>";
-echo $city;
-echo "<br>";
-echo $state;
-echo "<br>";
-echo $zip_code;
-echo "<br>";
-?>
