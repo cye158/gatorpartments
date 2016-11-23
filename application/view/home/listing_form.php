@@ -8,6 +8,27 @@ $addressErr = $cityErr = $stateErr = $zip_codeErr = $complexErr = $termErr = $pr
 $address = $city = $state = $zip_code = $complex = $term = $price = $square_feet = $number_of_bedroom = $number_of_bath = $utilities_provided = $building_accomodation = $building_restriction = $availability_date = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+  if (empty($_POST["address"])) {
+    $addressErr = "address is required";
+  } else {
+    $address = test_input($_POST["address"]);
+    // check if name only contains letters, numbers, and whitespace
+    if (!preg_match("/^[a-zA-Z0-9 ]*$/",$address)) {
+      $addressErr = "Only letters, numbers, and white space allowed";
+    }
+  }
+
+  if (empty($_POST["city"])) {
+    $cityErr = "city is required";
+  } else {
+    $city = test_input($_POST["city"]);
+    // check if name only contains letters, numbers, and whitespace
+    if (!preg_match("/^[a-zA-Z0-9 ]*$/",$city)) {
+      $cityErr = "Only letters and white space allowed";
+    }
+  }
+
 /*
   if (empty($_POST["name"])) {
     $nameErr = "Name is required";
