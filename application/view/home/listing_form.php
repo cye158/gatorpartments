@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $addressErr = "address is required";
   } else {
     $address = test_input($_POST["address"]);
-    // check if name only contains letters, numbers, and whitespace
+    // check if address only contains letters, numbers, and whitespace
     if (!preg_match("/^[a-zA-Z0-9 ]*$/",$address)) {
       $addressErr = "Only letters, numbers, and white space allowed";
     }
@@ -23,12 +23,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cityErr = "city is required";
   } else {
     $city = test_input($_POST["city"]);
-    // check if name only contains letters, numbers, and whitespace
+    // check if city only contains letters, numbers, and whitespace
     if (!preg_match("/^[a-zA-Z0-9 ]*$/",$city)) {
       $cityErr = "Only letters and white space allowed";
     }
   }
 
+  if (empty($_POST["state"])) {
+    $stateErr = "state is required";
+  } else {
+    $state = test_input($_POST["state"]);
+    // check if state is selected
+    if (!preg_match("/^[a-zA-Z ]*$/",$state)) {
+      $stateErr = "State has not been selected";
+    }
+  }
+
+  if (empty($_POST["zip_code"])) {
+    $zip_codeErr = "zip code is required";
+  } else {
+    $zip_code = test_input($_POST["zip_code"]);
+    // check if zip code only contains numbers
+    if (!preg_match("/^[0-9]*$/",$zip_code)) {
+      $zip_codeErr = "Only numbers allowed";
+    }
+  }
 /*
   if (empty($_POST["name"])) {
     $nameErr = "Name is required";
