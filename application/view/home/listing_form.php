@@ -369,6 +369,8 @@ function test_input($data) {
   <tr>
     <th class="lf">Utilities Provided</th>
   </tr>
+</table>
+<table class="lf" border="1">
   <tr>
     <td class="lf"><input type="checkbox" name="utilities_provided" <?php if (isset($utilities_provided) && $utilities_provided=="electricity") echo "checked";?> value="electricity">Electricity</td>
     <td class="lf"><input type="checkbox" name="utilities_provided" <?php if (isset($utilities_provided) && $utilities_provided=="water") echo "checked";?> value="water">Water</td>
