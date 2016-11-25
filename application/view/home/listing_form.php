@@ -309,6 +309,7 @@ function test_input($data) {
 </table>
 
 <h3>Space</h3>
+<!--row 1 -->
 <table class="lf" border="1">
   <tr>
     <th class="lf">Complex</th>
@@ -340,14 +341,22 @@ function test_input($data) {
     </td>
   </tr>
 </table>
-
-Square Feet: <input type="text" name="price" value="<?php echo $price;?>">
-<span class="error">* <?php echo $square_feetErr;?></span>
-# Of Bedroom(s): <input type="text" name="number_of_bedroom" value="<?php echo $number_of_bedroom;?>">
-<span class="error">* <?php echo $number_of_bedroomErr;?></span>
-# Of Bath(s): <input type="text" name="number_of_bath" value="<?php echo $number_of_bath;?>">
-<span class="error">* <?php echo $number_of_bathErr;?></span>
-<br></br>
+<!-- row 2 -->
+<table class="lf" border="1">
+  <tr>
+    <th class="lf">Square Feet</th>
+    <th class="lf"># Of Bedroom(s)</th>
+    <th class="lf"># Of Bath(s)</th>
+  </tr>
+  <tr>
+    <td class="lf"><input type="text" name="price" value="<?php echo $price;?>">
+    <span class="error">* <?php echo $square_feetErr;?></span><td>
+    <td class="lf"><input type="text" name="number_of_bedroom" value="<?php echo $number_of_bedroom;?>">
+    <span class="error">* <?php echo $number_of_bedroomErr;?></span><td>
+    <td class="lf"><input type="text" name="number_of_bath" value="<?php echo $number_of_bath;?>">
+    <span class="error">* <?php echo $number_of_bathErr;?></span><td>
+  </tr>
+</table>
 
   <!-- button for form submission usage-->
   <input type="submit" name="submit" value="Submit">
