@@ -365,6 +365,7 @@ function test_input($data) {
 </table>
 
 <h3>Building Info</h3>
+<!-- utilities -->
 <table class="lf" border="1">
   <tr>
     <th class="lf">Utilities Provided</th>
@@ -377,6 +378,24 @@ function test_input($data) {
     <td class="lf"><input type="checkbox" name="utilities_provided" <?php if (isset($utilities_provided) && $utilities_provided=="gas") echo "checked";?> value="gas">Gas</td>
   </tr>
 </table>
+<!-- accomodation -->
+<table class="lf" border="1">
+  <tr>
+    <th class="lf">Building Accomodation</th>
+  </tr>
+</table>
+<table class="lf" border="1">
+  <tr>
+    <td class="lf"><input type="checkbox" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="parking") echo "checked";?> value="parking">Parking</td>
+    <td class="lf"><input type="checkbox" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="laundry") echo "checked";?> value="laundry">Laundry</td>
+    <td class="lf"><input type="checkbox" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="elevator") echo "checked";?> value="elevator">Elevator</td>
+    <td class="lf"><input type="checkbox" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="wheelchair_accessibility") echo "checked";?> value="wheelchair_accesibility">Wheelchair Accessibility</td>
+    <td class="lf"><input type="checkbox" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="outdoor_space") echo "checked";?> value="outdoor_space">Outdoor Space</td>
+    <td class="lf"><input type="checkbox" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="pool") echo "checked";?> value="pool">Pool</td>
+  </tr>
+</table>
+<!-- -->
+
 
 <br>
   <!-- button for form submission usage-->
