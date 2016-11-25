@@ -1401,7 +1401,8 @@ pre code {
 }
 table.lf {
   border-collapse: separate;
-  border-spacing: 10px 0px;
+  border-spacing: 5px 5px;
+  border: 0px solid #ddd;
 }
 table {
   max-width: 100%;
