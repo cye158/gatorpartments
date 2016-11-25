@@ -232,20 +232,20 @@ function test_input($data) {
     <listinglabel>Comment: </listinglabel><br><textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
     <br><br>
 -->
-<table>
+<table class="lf" border="1">
   <tr>
-    <th>Adress</th>
+    <th>Address</th>
   </tr>
   <tr>
     <td><input type="text" name="address" value="<?php echo $address;?>"></><span class="error">* <?php echo $addressErr;?></span></td>
   </tr>
 </table>
 
-<table>
+<table class="lf" border="1">
   <tr>
-    <th>city</th>
-    <th>state</th>
-    <th>zip code</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip Code</th>
   </tr>
   <tr>
     <td><input type="text" name="city" value="<?php echo $city;?>"></><span class="error">* <?php echo $cityErr;?></span></td>
