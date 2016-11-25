@@ -411,6 +411,18 @@ function test_input($data) {
   </tr>
 </table>
 
+<!-- comment -->
+<table class="lf" border="1">
+  <tr>
+    <th class="lf">Comment</th>
+  </tr>
+</table>
+<table class="lf" border="1">
+  <tr>
+    <td class="lf"><textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea></td>
+  </tr>
+</table>
+
 <br>
   <!-- button for form submission usage-->
   <input type="submit" name="submit" value="Submit">
