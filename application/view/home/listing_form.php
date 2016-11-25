@@ -378,6 +378,7 @@ function test_input($data) {
     <td class="lf"><input type="checkbox" name="utilities_provided" <?php if (isset($utilities_provided) && $utilities_provided=="gas") echo "checked";?> value="gas">Gas</td>
   </tr>
 </table>
+
 <!-- accomodation -->
 <table class="lf" border="1">
   <tr>
@@ -394,8 +395,21 @@ function test_input($data) {
     <td class="lf"><input type="checkbox" name="building_accomodation" <?php if (isset($building_accomodation) && $building_accomodation=="pool") echo "checked";?> value="pool">Pool</td>
   </tr>
 </table>
-<!-- -->
-
+<!-- restriction -->
+<table class="lf" border="1">
+  <tr>
+    <th class="lf">Building Restriction</th>
+  </tr>
+</table>
+<table class="lf" border="1">
+  <tr>
+    <td class="lf"><input type="checkbox" name="building_restriction" <?php if (isset($building_restriction) && $building_restriction=="smoking") echo "checked";?> value="smoking">Smoking</td>
+    <td class="lf"><input type="checkbox" name="building_restriction" <?php if (isset($building_restriction) && $building_restriction=="dogs") echo "checked";?> value="dogs">Dogs</td>
+    <td class="lf"><input type="checkbox" name="building_restriction" <?php if (isset($building_restriction) && $building_restriction=="cats") echo "checked";?> value="cats">Cats</td>
+    <td class="lf"><input type="checkbox" name="building_restriction" <?php if (isset($building_restriction) && $building_restriction=="other") echo "checked";?> value="other">Other
+      <input type="text" name="building_restriction" value="<?php echo $building_restriction;?>"></td>
+  </tr>
+</table>
 
 <br>
   <!-- button for form submission usage-->
