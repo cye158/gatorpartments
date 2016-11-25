@@ -234,22 +234,22 @@ function test_input($data) {
 -->
 <table class="lf" border="1">
   <tr>
-    <th>Address</th>
+    <th class="lf">Address</th>
   </tr>
   <tr>
-    <td><input type="text" name="address" value="<?php echo $address;?>"></><span class="error">* <?php echo $addressErr;?></span></td>
+    <td class="lf"><input type="text" name="address" value="<?php echo $address;?>"></><span class="error">* <?php echo $addressErr;?></span></td>
   </tr>
 </table>
 
 <table class="lf" border="1">
   <tr>
-    <th>City</th>
-    <th>State</th>
-    <th>Zip Code</th>
+    <th class="lf">City</th>
+    <th class="lf">State</th>
+    <th class="lf">Zip Code</th>
   </tr>
   <tr>
-    <td><input type="text" name="city" value="<?php echo $city;?>"></><span class="error">* <?php echo $cityErr;?></span></td>
-    <td><select name="state">
+    <td class="lf"><input type="text" name="city" value="<?php echo $city;?>"></><span class="error">* <?php echo $cityErr;?></span></td>
+    <td class="lf"><select name="state">
       <option value=""></option>
       <option value="AL">AL</option>
       <option value="AK">AK</option>
