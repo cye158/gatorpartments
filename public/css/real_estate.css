@@ -1401,7 +1401,7 @@ pre code {
 }
 table.lf {
   border-collapse: separate;
-  border-spacing: 5px 5px;
+  border-spacing: 0px 5px;
   border: 0px solid #ddd;
 }
 td.lf,
