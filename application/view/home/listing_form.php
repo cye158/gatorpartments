@@ -104,9 +104,9 @@ function test_input($data) {
 <h2>Post A Listing</h2>
 <p><span class="error">* required field.</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-
-  <h3>Location</h3>
 <!--
+  <h3>Location</h3>
+
     <listinglabel>Address: </listinglabel><input type="text" name="address" value="<?php echo $address;?>"></>
     <span class="error">* <?php echo $addressErr;?></span>
     <br><br>
@@ -232,6 +232,7 @@ function test_input($data) {
     <listinglabel>Comment: </listinglabel><br><textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
     <br><br>
 -->
+<h3>Location</h3>
 <table class="lf" border="1">
   <tr>
     <th class="lf">Address</th>
@@ -306,6 +307,47 @@ function test_input($data) {
     <td class="lf"><input type="text" name="zip_code" value="<?php echo $zip_code;?>"></><span class="error">* <?php echo $zip_codeErr;?></span></td>
   </tr>
 </table>
+
+<h3>Space</h3>
+<table class="lf" border="1">
+  <tr>
+    <th class="lf">Complex</th>
+    <th class="lf">Term</th>
+    <th class="lf">Price</th>
+  </tr>
+    <td class="lf">
+      <select name="term">
+        <option value=""></option>
+        <option value="condo">condo</option>
+        <option value="apartment">apartment</option>
+        <option value="singlehome">single home</option>
+        <option value="townhome">town home</option>
+      </select>
+      <span class="error">* <?php echo $complexErr;?></span>
+    </td>
+    <td class="lf">
+      <select name="term">
+        <option value=""></option>
+        <option value="lease">lease</option>
+        <option value="monthtomonth">month to month</option>
+      </select>
+      <span class="error">* <?php echo $termErr;?></span>
+    </td>
+    <td class="lf">
+      <input type="text" name="price" value="<?php echo $price;?>">
+      <span class="error">* <?php echo $priceErr;?></span>
+    </td>
+  <tr>
+  </tr>
+</table>
+
+Square Feet: <input type="text" name="price" value="<?php echo $price;?>">
+<span class="error">* <?php echo $square_feetErr;?></span>
+# Of Bedroom(s): <input type="text" name="number_of_bedroom" value="<?php echo $number_of_bedroom;?>">
+<span class="error">* <?php echo $number_of_bedroomErr;?></span>
+# Of Bath(s): <input type="text" name="number_of_bath" value="<?php echo $number_of_bath;?>">
+<span class="error">* <?php echo $number_of_bathErr;?></span>
+<br></br>
 
   <!-- button for form submission usage-->
   <input type="submit" name="submit" value="Submit">
