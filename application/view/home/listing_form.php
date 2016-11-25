@@ -349,12 +349,18 @@ function test_input($data) {
     <th class="lf"># Of Bath(s)</th>
   </tr>
   <tr>
-    <td class="lf"><input type="text" name="price" value="<?php echo $price;?>">
-    <span class="error">* <?php echo $square_feetErr;?></span><td>
-    <td class="lf"><input type="text" name="number_of_bedroom" value="<?php echo $number_of_bedroom;?>">
-    <span class="error">* <?php echo $number_of_bedroomErr;?></span><td>
-    <td class="lf"><input type="text" name="number_of_bath" value="<?php echo $number_of_bath;?>">
-    <span class="error">* <?php echo $number_of_bathErr;?></span><td>
+    <td class="lf">
+      <input type="text" name="square_feet" value="<?php echo $square_feet;?>">
+      <span class="error">* <?php echo $square_feetErr;?></span>
+    </td>
+    <td class="lf">
+      <input type="text" name="number_of_bedroom" value="<?php echo $number_of_bedroom;?>">
+      <span class="error">* <?php echo $number_of_bedroomErr;?></span>
+    </td>
+    <td class="lf">
+      <input type="text" name="number_of_bath" value="<?php echo $number_of_bath;?>">
+      <span class="error">* <?php echo $number_of_bathErr;?></span>
+    </td>
   </tr>
 </table>
 
