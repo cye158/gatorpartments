@@ -241,6 +241,18 @@ function test_input($data) {
   </tr>
 </table>
 
+<table>
+  <tr>
+    <th>city</th>
+    <th>state</th>
+    <th>zip code</th>
+  </tr>
+  <tr>
+    <td><input type="text" name="address" value="<?php echo $address;?>"></></td>
+    <td><input type="text" name="address" value="<?php echo $address;?>"></></td>
+    <td><input type="text" name="address" value="<?php echo $address;?>"></></td>
+  </tr>
+</table>
 
   <!-- button for form submission usage-->
   <input type="submit" name="submit" value="Submit">
