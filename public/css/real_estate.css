@@ -1401,12 +1401,12 @@ pre code {
 }
 table.lf {
   border-collapse: separate;
-  border-spacing: 0px 5px;
-  border: 0px solid #ddd;
+  border-spacing: 0px 0px;
+  border: 0px solid #FFFFFF;
 }
 td.lf,
 th.lf {
-  padding: 15px;
+  padding: 0px;
   border: 0px solid #FFFFFF;
 }
 th.lf {
