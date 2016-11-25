@@ -237,7 +237,7 @@ function test_input($data) {
     <th>Adress</th>
   </tr>
   <tr>
-    <td><input type="text" name="address" value="<?php echo $address;?>"></></td>
+    <td><input type="text" name="address" value="<?php echo $address;?>"></><span class="error">* <?php echo $addressErr;?></span></td>
   </tr>
 </table>
 
