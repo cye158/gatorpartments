@@ -364,6 +364,19 @@ function test_input($data) {
   </tr>
 </table>
 
+<h3>Building Info</h3>
+<table class="lf" border="1">
+  <tr>
+    <th class="lf">Utilities Provided</th>
+  </tr>
+  <tr>
+    <input type="checkbox" name="utilities_provided" <?php if (isset($utilities_provided) && $utilities_provided=="electricity") echo "checked";?> value="electricity">Electricity
+    <input type="checkbox" name="utilities_provided" <?php if (isset($utilities_provided) && $utilities_provided=="water") echo "checked";?> value="water">Water
+    <input type="checkbox" name="utilities_provided" <?php if (isset($utilities_provided) && $utilities_provided=="gas") echo "checked";?> value="gas">Gas
+  </tr>
+</table>
+
+<br>
   <!-- button for form submission usage-->
   <input type="submit" name="submit" value="Submit">
 
