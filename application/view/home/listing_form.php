@@ -315,6 +315,7 @@ function test_input($data) {
     <th class="lf">Term</th>
     <th class="lf">Price</th>
   </tr>
+  <tr>
     <td class="lf">
       <select name="term">
         <option value=""></option>
@@ -337,7 +338,6 @@ function test_input($data) {
       <input type="text" name="price" value="<?php echo $price;?>">
       <span class="error">* <?php echo $priceErr;?></span>
     </td>
-  <tr>
   </tr>
 </table>
 
