@@ -1404,6 +1404,14 @@ table.lf {
   border-spacing: 5px 5px;
   border: 0px solid #ddd;
 }
+td.lf,
+th.lf {
+  padding: 15px;
+  border: 0px solid #FFFFFF;
+}
+th.lf {
+  text-align:left;
+}
 table {
   max-width: 100%;
   background-color: transparent;

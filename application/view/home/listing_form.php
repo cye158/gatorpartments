@@ -303,7 +303,7 @@ function test_input($data) {
       <option value="WY">WY</option>
     </select></>
     <span class="error">* <?php echo $stateErr;?></span></td>
-    <td><input type="text" name="zip_code" value="<?php echo $zip_code;?>"></><span class="error">* <?php echo $zip_codeErr;?></span></td>
+    <td class="lf"><input type="text" name="zip_code" value="<?php echo $zip_code;?>"></><span class="error">* <?php echo $zip_codeErr;?></span></td>
   </tr>
 </table>
 
