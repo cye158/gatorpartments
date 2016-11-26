@@ -1,4 +1,6 @@
+<!-- filter,map,listing,ads -->
 <div class="row">
+
 	<!-- filterOption -->
 	<div class="col-sm-3">
 		<div class="row">
@@ -135,9 +137,46 @@
 	</div>
 	<!-- end filterOption -->
 
+	<!-- map -->
+	<div class="col-sm-6">
+		<div id="map" class="col-sm-12 well-map">
+			<script>
+				function initMap() {
+					var uluru = {lat:  37.773972, lng: -122.431297};
+					var map = new google.maps.Map(document.getElementById('map'), {
+						zoom: 13,
+						center: uluru
+					});
+					var marker = new google.maps.Marker({
+						position: uluru,
+						map: map
+					});
+				}
+			</script>
+		</div>
+	</div>
+	<!-- end map -->
+
 	<div class="col-sm-8">
-		<script>var map_locations = [{"lat":51.461311,"lng":-0.303742,"title":"7 bedroom house","street":"The Vineyard, Richmond, TW10","price":"3,350,000"},{"lat":51.451311,"lng":-0.313742,"title":"1 bedroom flat","street":"Lower Mortlake Road, North Sheen","price":"229,950"},{"lat":51.462311,"lng":-0.323742,"title":"2 bedroom apartment","street":"Mount Ararat Road, Richmond","price":"520,000"},{"lat":51.443821,"lng":-0.300747,"title":"2 bedroom house","street":"The Shakespeare","price":"550,000"},{"lat":51.452212,"lng":-0.298291,"title":"3 bedroom terraced house","street":"London, TW9","price":"615,000"},{"lat":51.466506,"lng":-0.294333,"title":"3 bedroom semi-detached house","street":"Beaumont Avenue, Richmond","price":"1,100,000"},{"lat":51.462213,"lng":-0.293045,"title":"2 bedroom flat","street":"The Lodge, Courtlands, Sheen Road, Richmond","price":"399,950"},{"lat":51.462161,"lng":-0.292494,"title":"1 bedroom flat","street":"Sheen Road, Richmond, TW9","price":"219,950"},{"lat":51.47357,"lng":-0.281727,"title":"5 bedroom flat","street":"Chelwood Gardens","price":"1,250,000"},{"lat":51.466213,"lng":-0.293998,"title":"4 bedroom house","street":"Lower Mortlake Road, Richmond, TW9","price":"435,000"}]</script>
-		<div id="map_canvas"></div><br />
+		<!-- map -->
+		<div class="col-sm-6">
+			<div id="map" class="col-sm-12 well-map">
+				<script>
+					function initMap() {
+						var uluru = {lat:  37.773972, lng: -122.431297};
+						var map = new google.maps.Map(document.getElementById('map'), {
+							zoom: 13,
+							center: uluru
+						});
+						var marker = new google.maps.Marker({
+							position: uluru,
+							map: map
+						});
+					}
+				</script>
+			</div>
+		</div>
+		<!-- end map -->
 
 		<div class="row">
 			<div class="col-sm-4 col-xs-12 select_height">	Showing 1 - 16 of 255 results</div>
