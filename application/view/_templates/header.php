@@ -12,7 +12,7 @@
 	<link href="<?php echo URL;?>css/theme.css" rel="stylesheet">
     <!--[if lt IE 9]>
 		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+    <![endif]-->
 
 </head>
 
@@ -27,6 +27,7 @@
         <div class="row">
           <div class="col-sm-3 hidden-xs logo-img">
             <img src="<?php echo URL;?>css/images/Home-green-48.png" alt=""/>
+
           </div>
           <div class="col-sm-9 logo-text">
             <h1><small>Bootstrap</small><br /><span>Real</span> estate</h1>
@@ -90,10 +91,11 @@
                   <li class="dropdown">
                     <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign Up<strong class="caret"></strong></a>
                     <div class="dropdown-menu">
-                      <form action="<?php echo URL;?>home/index" method="post">
-                        <input type="text" name="user[username]" placeholder="Full name" size="30" />
-                        <input type="password" name="user[password]" placeholder="Email" size="30" />
-                        <input type="password" name="user[password]" placeholder="Password" size="30" />
+                      <form action="<?php echo URL;?>user/register" method="post">
+			<input type="text" name="username" placeholder="Username" size="30" />
+                        <input type="text" name="name" placeholder="Full name" size="30" />
+                        <input type="text" name="email" placeholder="Email" size="30" />
+                        <input type="password" name="password" placeholder="Password" size="30" />
 
                         <input class="btn btn-primary" type="submit" name="commit" value="Sign Up" />
                       </form>
@@ -103,10 +105,10 @@
                   <li class="dropdown">
                     <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
                     <div class="dropdown-menu">
-                      <form action="<?php echo URL;?>home/index" method="post">
-                        <input type="text" name="user[username]" placeholder="Username or email" size="30" /><br class="visible-xs"/>
-                        <input type="password" name="user[password]" placeholder="Password" size="30" /><br class="visible-xs"/>
-                        <input id="remember_me" type="checkbox" name="user[remember_me]" value="1" />
+                      <form action="<?php echo URL;?>user/authenticateLogin" method="post">
+                        <input type="text" name="username" placeholder="Username or email" size="30" /><br class="visible-xs"/>
+                        <input type="password" name="password" placeholder="Password" size="30" /><br class="visible-xs"/>
+                        <input id="remember_me" type="checkbox" name="remember_me" value="1" />
                         <label class="string optional"> Remember me</label>
 
                         <input class="btn btn-primary" type="submit" name="commit" value="Sign In" />
