@@ -304,7 +304,7 @@ function test_input($data) {
 
 <br>
   <!-- button for form submission usage-->
-  <input type="submit" name="submit" value="POST">
+  <input type="submit" name="POST" value="Post">
 
 </form>
 
