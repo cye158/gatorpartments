@@ -1,5 +1,22 @@
 <?php
 
+/*
+*  Example to use listings
+*
+*  $listing = getAllListing();
+*
+*  foreach($listing as $row){
+*   echo $row->address_1
+*      . $row->state
+*      . $row->zip_code ;
+*  }
+*
+*  $listing data field, 
+*    id, title, room_size, price, description, address_1, address_2, city, state, zip_code, landlord_id,
+*    phone,image_main, images.
+*
+*/
+
 class ListingModel
 {
   //Connectes and creates db object
