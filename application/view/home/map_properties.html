@@ -2,10 +2,10 @@
 <div class="row">
 
 	<!-- filterOption -->
-	<div class="col-sm-3">
+	<div class="col-sm-3" style="height: 600px;">
 		<div class="row">
 			<h4 class="col-sm-12 well" data-toggle="collapse" data-target="#criteria">Criteria Option</h4>
-			<div class="col-sm-12 well" id="criteria" class="collapse">
+			<div class="col-sm-12 well collapse in" id="criteria" style="height: auto;">
 				<form class="form-horizontal mini" style="margin-bottom: 0px;">
 					<fieldset>
 
@@ -32,9 +32,9 @@
 							<label class="col-sm-3 control-label">Property</label>
 							<div class="col-sm-8">
 								<select class="form-control col-sm-12">
-								<option>Any</option>
-								<option>Houses</option>
-								<option>Flats/ Apartments</option>
+									<option>Any</option>
+									<option>Houses</option>
+									<option>Flats/ Apartments</option>
 								</select>
 							</div>
 						</div>
@@ -95,7 +95,7 @@
 							<label class="col-sm-3 control-label">Price</label>
 							<div class="col-sm-8">
 								<div class="col-sm-6 col-xs-6 no_padding_left no_margin_right">
-									<select class="form-control col-sm-12" >
+									<select class="form-control col-sm-12">
 										<option selected="selected" value="">Min</option>
 										<option value="50000">50,000</option>
 										<option value="60000">60,000</option>
@@ -107,7 +107,7 @@
 									</select>
 								</div>
 								<div class="col-sm-6 col-xs-6  no_padding_right pull-right">
-									<select class="form-control col-sm-12 " >
+									<select class="form-control col-sm-12 ">
 										<option selected="selected" value="">Max</option>
 										<option value="50000">50,000</option>
 										<option value="60000">60,000</option>
@@ -127,7 +127,7 @@
 								<button class="btn btn-primary pull-right" type="submit">Filter</button>
 							</div>
 						</div>
-						<!-- end filter btn -->
+						<!-- /filter btn -->
 
 
 					</fieldset>
@@ -135,193 +135,190 @@
 			</div>
 		</div>
 	</div>
-	<!-- end filterOption -->
+	<!-- /filterOption -->
 
 	<!-- map -->
 	<div class="col-sm-6">
-		<div id="map" class="col-sm-12 well-map">
+		<div id="map_canvas" class="col-sm-12 well-map" style="position: relative; overflow: hidden; width: 100%;">
 			<script>
-				function initMap() {
-					var uluru = {lat:  37.773972, lng: -122.431297};
-					var map = new google.maps.Map(document.getElementById('map'), {
-						zoom: 13,
-						center: uluru
-					});
-					var marker = new google.maps.Marker({
-						position: uluru,
-						map: map
-					});
-				}
+			function initMap() {
+				var uluru = {lat:  37.773972, lng: 122.431297};
+				var map = new google.maps.Map(document.getElementById('map'), {
+					zoom: 13,
+					center: uluru
+				});
+				var marker = new google.maps.Marker({
+					position: uluru,
+					map: map
+				});
+			}
 			</script>
 		</div>
 	</div>
-	<!-- end map -->
+	<!-- /map -->
 
 	<!-- listing -->
-	<div class="row col-sm-2">
+	<div class=" row col-sm-2" style="position:relative; width: relative;">
 		<div class="row">
-			<h4 class="col-sm-12 well well-sm"><center>Listings within the area</center></h4>
-			<div class="col-sm-12" style="height: 345px; overflow: scroll;">
+			<h4 class="well well-sm"><center>Listings within the area</center></h4>
+			<div class="col-sm-12 well well-sm" style="height:379px; width:auto; overflow: scroll;">
 
-					<div class="mini_property_wrapper">
-						<div class="thumbnail mini_property">
-							<a href="property.html" class="img_holder"><img src="<?php echo URL;?>css/images/houses/house_1.jpg" alt=""></a>
-							<h5>Price : &pound;3,350,000</h5>
-							<p><a href="property.html">7 bedroom house</a><br />The Vineyard, Richmond, TW10					</p>
-						</div>
-					</div>
-
-
-					<div class="mini_property_wrapper">
-						<div class="thumbnail mini_property">
-							<a href="property.html" class="img_holder"><img src="<?php echo URL;?>css/images/houses/house_2.jpg" alt=""></a>
-							<h5>Price : &pound;229,950</h5>
-							<p><a href="property.html">1 bedroom flat</a><br />Lower Mortlake Road, North Sheen					</p>
-						</div>
-					</div>
-
-
-					<div class="mini_property_wrapper">
-						<div class="thumbnail mini_property">
-							<a href="property.html" class="img_holder"><img src="<?php echo URL;?>css/images/houses/house_3.jpg" alt=""></a>
-							<h5>Price : &pound;520,000</h5>
-							<p><a href="property.html">2 bedroom apartment</a><br />Mount Ararat Road, Richmond					</p>
-						</div>
-					</div>
-
-
-					<div class="mini_property_wrapper">
-						<div class="thumbnail mini_property">
-							<a href="property.html" class="img_holder"><img src="<?php echo URL;?>css/images/houses/house_4.jpg" alt=""></a>
-							<h5>Price : &pound;550,000</h5>
-							<p><a href="property.html">2 bedroom house</a><br />The Shakespeare					</p>
-						</div>
-					</div>
-
-
-					<div class="mini_property_wrapper">
-						<div class="thumbnail mini_property">
-							<a href="property.html" class="img_holder"><img src="<?php echo URL;?>css/images/houses/house_5.jpg" alt=""></a>
-							<h5>Price : &pound;615,000</h5>
-							<p><a href="property.html">3 bedroom terraced house</a><br />London, TW9					</p>
-						</div>
-					</div>
-
-
-					<div class="mini_property_wrapper">
-						<div class="thumbnail mini_property">
-							<a href="property.html" class="img_holder"><img src="<?php echo URL;?>css/images/houses/house_6.jpg" alt=""></a>
-							<h5>Price : &pound;1,100,000</h5>
-							<p><a href="property.html">3 bedroom semi-detached house</a><br />Beaumont Avenue, Richmond					</p>
-						</div>
-					</div>
-
-
-					<div class="mini_property_wrapper">
-						<div class="thumbnail mini_property">
-							<a href="property.html" class="img_holder"><img src="<?php echo URL;?>css/images/houses/house_7.jpg" alt=""></a>
-							<h5>Price : &pound;399,950</h5>
-							<p><a href="property.html">2 bedroom flat</a><br />The Lodge, Courtlands, Sheen Road, Richmond					</p>
-						</div>
-					</div>
-
-
-					<div class="mini_property_wrapper">
-						<div class="thumbnail mini_property">
-							<a href="property.html" class="img_holder"><img src="<?php echo URL;?>css/images/houses/house_8.jpg" alt=""></a>
-							<h5>Price : &pound;219,950</h5>
-							<p><a href="property.html">1 bedroom flat</a><br />Sheen Road, Richmond, TW9					</p>
-						</div>
-					</div>
-
-
-					<div class="mini_property_wrapper">
-						<div class="thumbnail mini_property">
-							<a href="property.html" class="img_holder"><img src="<?php echo URL;?>css/images/houses/house_9.jpg" alt=""></a>
-							<h5>Price : &pound;1,250,000</h5>
-							<p><a href="property.html">5 bedroom flat</a><br />Chelwood Gardens					</p>
-						</div>
+				<div class="mini_property_wrapper">
+					<div class="thumbnail mini_property">
+						<a href="property.html" class="img_holder"><img src="//sfsuswe.com/~cye0105/gatorpartments/css/images/houses/house_1.jpg" alt=""></a>
+						<h5>Price : £3,350,000</h5>
+						<p><a href="property.html">7 bedroom house</a><br>The Vineyard, Richmond, TW10					</p>
 					</div>
 				</div>
 
+
+				<div class="mini_property_wrapper">
+					<div class="thumbnail mini_property">
+						<a href="property.html" class="img_holder"><img src="//sfsuswe.com/~cye0105/gatorpartments/css/images/houses/house_2.jpg" alt=""></a>
+						<h5>Price : £229,950</h5>
+						<p><a href="property.html">1 bedroom flat</a><br>Lower Mortlake Road, North Sheen					</p>
+					</div>
+				</div>
+
+
+				<div class="mini_property_wrapper">
+					<div class="thumbnail mini_property">
+						<a href="property.html" class="img_holder"><img src="//sfsuswe.com/~cye0105/gatorpartments/css/images/houses/house_3.jpg" alt=""></a>
+						<h5>Price : £520,000</h5>
+						<p><a href="property.html">2 bedroom apartment</a><br>Mount Ararat Road, Richmond					</p>
+					</div>
+				</div>
+
+
+				<div class="mini_property_wrapper">
+					<div class="thumbnail mini_property">
+						<a href="property.html" class="img_holder"><img src="//sfsuswe.com/~cye0105/gatorpartments/css/images/houses/house_4.jpg" alt=""></a>
+						<h5>Price : £550,000</h5>
+						<p><a href="property.html">2 bedroom house</a><br>The Shakespeare					</p>
+					</div>
+				</div>
+
+
+				<div class="mini_property_wrapper">
+					<div class="thumbnail mini_property">
+						<a href="property.html" class="img_holder"><img src="//sfsuswe.com/~cye0105/gatorpartments/css/images/houses/house_5.jpg" alt=""></a>
+						<h5>Price : £615,000</h5>
+						<p><a href="property.html">3 bedroom terraced house</a><br>London, TW9					</p>
+					</div>
+				</div>
+
+
+				<div class="mini_property_wrapper">
+					<div class="thumbnail mini_property">
+						<a href="property.html" class="img_holder"><img src="//sfsuswe.com/~cye0105/gatorpartments/css/images/houses/house_6.jpg" alt=""></a>
+						<h5>Price : £1,100,000</h5>
+						<p><a href="property.html">3 bedroom semi-detached house</a><br>Beaumont Avenue, Richmond					</p>
+					</div>
+				</div>
+
+
+				<div class="mini_property_wrapper">
+					<div class="thumbnail mini_property">
+						<a href="property.html" class="img_holder"><img src="//sfsuswe.com/~cye0105/gatorpartments/css/images/houses/house_7.jpg" alt=""></a>
+						<h5>Price : £399,950</h5>
+						<p><a href="property.html">2 bedroom flat</a><br>The Lodge, Courtlands, Sheen Road, Richmond					</p>
+					</div>
+				</div>
+
+
+				<div class="mini_property_wrapper">
+					<div class="thumbnail mini_property">
+						<a href="property.html" class="img_holder"><img src="//sfsuswe.com/~cye0105/gatorpartments/css/images/houses/house_8.jpg" alt=""></a>
+						<h5>Price : £219,950</h5>
+						<p><a href="property.html">1 bedroom flat</a><br>Sheen Road, Richmond, TW9					</p>
+					</div>
+				</div>
+
+
+				<div class="mini_property_wrapper">
+					<div class="thumbnail mini_property">
+						<a href="property.html" class="img_holder"><img src="//sfsuswe.com/~cye0105/gatorpartments/css/images/houses/house_9.jpg" alt=""></a>
+						<h5>Price : £1,250,000</h5>
+						<p><a href="property.html">5 bedroom flat</a><br>Chelwood Gardens					</p>
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</div>
-	<!-- end listing -->
+	<!-- /listing -->
 
 	<!-- ads -->
-	<div class="col-sm-1 bg-success pull-right" style="height: 380px;">
-		<br/><br/><br/><br/><br/><br/><br/><br/><br/>ADS
+	<div class="col-sm-1 bg-success pull-right" style="height: 600px;">
+		<br><br><br><br><br><br><br><br><br>ADS
 	</div>
-	<!-- end ads -->
+	<!-- /ads -->
 
 	<!-- slideshow-carousel -->
-	<div class="row">
-		<div class="col-sm-4"></div>
-		<div class="row col-sm-4">
-			<div id="carousel-home" class="carousel slide" data-ride="carousel">
+	<div class="col-sm-8" style="height:;">
+		<div id="carousel-home" class="carousel slide well well-sm" data-ride="carousel">
 
-				<div class="showcase-arrow-next" href="#carousel-home" data-slide="next" style="display: none;"></div>
-				<div class="showcase-arrow-previous" href="#carousel-home" data-slide="next" style="display: none;"></div>
+			<div class="showcase-arrow-next" href="#carousel-home" data-slide="next" style="display: none;"></div>
+			<div class="showcase-arrow-previous" href="#carousel-home" data-slide="next" style="display: none;"></div>
 
-				<!-- Wrapper for slides -->
-				<div class="carousel-inner">
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
 
-					<div class="item active">
-						<img src="<?php echo URL;?>css/images/carousel_1.jpg" alt="">
-						<div class="carousel-caption">
-							<a href="<?php echo URL;?>home/map_properties"><h4>Map of properties</h4>
+				<div class="item active">
+					<img src="//sfsuswe.com/~cye0105/gatorpartments/css/images/carousel_1.jpg" alt="">
+					<div class="carousel-caption">
+						<a href="//sfsuswe.com/~cye0105/gatorpartments/home/map_properties"><h4>Map of properties</h4>
 							<p>Interested in buying a flat or house in Richmond?</p></a>
 						</div>
 					</div>
 
-					<div class="item ">
-						<img src="<?php echo URL;?>css/images/carousel_2.jpg" alt="">
+					<div class="item">
+						<img src="//sfsuswe.com/~cye0105/gatorpartments/css/images/carousel_2.jpg" alt="">
 						<div class="carousel-caption">
-							<a href="<?php echo URL;?>home/listings"><h4>Search listings</h4>
-							<p>View a listing of all the homes according to your taste, wherever you want</p></a>
+							<a href="//sfsuswe.com/~cye0105/gatorpartments/home/listings"><h4>Search listings</h4>
+								<p>View a listing of all the homes according to your taste, wherever you want</p></a>
+							</div>
 						</div>
-					</div>
 
-					<div class="item ">
-						<img src="<?php echo URL;?>css/images/carousel_3.jpg" alt="">
-						<div class="carousel-caption">
-							<a href="<?php echo URL;?>home/property"><h4>View a property</h4>
-							<p>This is our featured house of the day, good value and spacious enough for a family of 5</p></a>
+						<div class="item">
+							<img src="//sfsuswe.com/~cye0105/gatorpartments/css/images/carousel_3.jpg" alt="">
+							<div class="carousel-caption">
+								<a href="//sfsuswe.com/~cye0105/gatorpartments/home/property"><h4>View a property</h4>
+									<p>This is our featured house of the day, good value and spacious enough for a family of 5</p></a>
+								</div>
+							</div>
+
 						</div>
+						<!-- /slides -->
 					</div>
-
 				</div>
-				<!-- end slides -->
+				<!-- /slideshow-carousel -->
+
+
 			</div>
-			</div>
-			<div class="col-sm-4"></div>
-	</div>
-	<!-- end of slideshow-carousel -->
+
+			<!-- footer -->
+			<footer class="row">
+				<hr>
+				<p class="pull-right"><a href="#">Back to top</a></p>
+				<p>
+					<a href="//sfsuswe.com/~cye0105/gatorpartments/home/index">Home</a> |
+					<a href="//sfsuswe.com/~cye0105/gatorpartments/home/about">About</a> |
+					<a href="//sfsuswe.com/~cye0105/gatorpartments/home/typography">Typography</a> |
+					<a href="//sfsuswe.com/~cye0105/gatorpartments/home/terms">Terms and Conditions</a> |
+					<a href="//sfsuswe.com/~cye0105/gatorpartments/home/contact">Contact Us</a><br>
+					All content © 2014 | <a href="//sfsuswe.com/~cye0105/gatorpartments/home/about">Built with Twitter Bootstrap</a> | <a href="https://wrapbootstrap.com/">WrapBootstrap</a>.
+				</p>
+			</footer>
+			<!-- /footer -->
+
+		</div>
+		<!-- /container -->
 
 
-</div>
+		<!-- map api key -->
+		<script type="text/javascript" async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbTAiniS56gZ1ZGGWK9oU1mZ2S0488wJs&amp;callback=initMap"></script>
+		<!-- /map api key -->
 
-<!-- footer -->
-<footer class="row">
-	<hr />
-	<p class="pull-right"><a href="#">Back to top</a></p>
-	<p>
-		<a href="<?php echo URL;?>home/index">Home</a> |
-		<a href="<?php echo URL;?>home/about">About</a> |
-		<a href="<?php echo URL;?>home/typography">Typography</a> |
-		<a href="<?php echo URL;?>home/terms">Terms and Conditions</a> |
-		<a href="<?php echo URL;?>home/contact">Contact Us</a><br />
-		All content &copy; 2014 | <a href="<?php echo URL;?>home/about">Built with Twitter Bootstrap</a> | <a href="https://wrapbootstrap.com/">WrapBootstrap</a>.
-	</p>
-</footer>
-<!-- footer -->
-
-</div> <!-- /container -->
-
-
-<!-- map api key -->
-<script type="text/javascript" async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbTAiniS56gZ1ZGGWK9oU1mZ2S0488wJs&callback=initMap"></script>
-<!-- end map api key -->
-
-</body>
-</html>
+	</body>
+	</html>
