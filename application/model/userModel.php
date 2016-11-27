@@ -9,8 +9,12 @@ class UserModel {
     }
   }
 
-  public function register($username, $password, $email, $name) {
-    $sql = "INSERT INTO user (username, password, email, landlord, name) VALUES (:username, :password, :email, 0, :name)";
+
+  //Creates a new User account
+  //For now, only takes Username, password, email, name, and landlord
+  //Landlord will take true or false value.
+  public function register($username, $password, $email, $name, $landlord) {
+    $sql = "INSERT INTO user (username, password, email, name, isLandlord) VALUES (:username, :password, :email, :name, :landlord)";
     $query = $this->db->prepare($sql);
 
     $query->bindParam(':username', $username);
@@ -20,11 +24,14 @@ class UserModel {
     $query->bindParam(':password', $password1);
     $query->bindParam(':email', $email);
     $query->bindParam(':name', $name);
+    $query->bindParam(':landlord', $landlord);
 
     $query->execute();
 
   }
 
+  //Checks if the username and hashed password matches
+  //If yes, it will store user's information into Sessions
   public function login($username, $password) {
     $sql = "SELECT * FROM user WHERE username=:username AND password=:password ;";
     $query = $this->db->prepare($sql); 
@@ -34,7 +41,7 @@ class UserModel {
     $query->bindParam(':password', $password1);
     $query->execute();
 
-    $result = $query->fetchAll();
+    $result = $query->fetch();
     // print_r($result);
 
     // checks if username and password are the same
@@ -44,9 +51,10 @@ class UserModel {
         echo "Error, username or password does not match";
     } else {
         // Creates a session to store the users ID, and make them always log in upon visiting the site 
-        $_SESSION['name'] = $result[0]->name;
+        $_SESSION['userId'] = $result->id;
+        $_SESSION['username'] = $result->username;
         $_SESSION['loggedIn'] = true;
-	$_SESSION['landlord'] = $result[0]->landlord;
+	$_SESSION['landlord'] = $result->landlord;
 
 	// start redirect to page user was at previously
 	echo "<meta http-equiv=\"refresh\" content=\"5;url=".$_SERVER['HTTP_REFERER']."\"/>";
@@ -54,6 +62,8 @@ class UserModel {
       }
     }
 
+
+  //Logs user out of site, killing session cookies
   public function logout() {
     // code obtained from : http://php.net/manual/en/function.session-destroy.php
     // Unset all of the session variables.
