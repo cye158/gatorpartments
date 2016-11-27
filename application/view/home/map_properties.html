@@ -139,8 +139,13 @@
 
 	<!-- map -->
 	<div class="col-sm-6">
-		<div id="map_canvas" class="col-sm-12 well-map" style="position: relative; overflow: hidden; width: 100%;">
+		<div id="map_canvas" class="col-sm-12 well" style="position: relative; overflow: hidden; width: 100%; padding: 1px;">
+
 			<script>
+			var map_locations = [{"lat":51.461311,"lng":-0.303742,"title":"7 bedroom house","street":"The Vineyard, Richmond, TW10","price":"3,350,000"},{"lat":51.451311,"lng":-0.313742,"title":"1 bedroom flat","street":"Lower Mortlake Road, North Sheen","price":"229,950"}]
+			</script>
+
+			<!--script
 			function initMap() {
 				var uluru = {lat:  37.773972, lng: 122.431297};
 				var map = new google.maps.Map(document.getElementById('map'), {
@@ -152,7 +157,8 @@
 					map: map
 				});
 			}
-			</script>
+			/script-->
+
 		</div>
 	</div>
 	<!-- /map -->
