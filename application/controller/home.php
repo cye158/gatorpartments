@@ -5,7 +5,6 @@ class Home extends Controller
 
     public function about()
     {
-
         // load views
         require APP . 'view/_templates/header.php';
         require APP . 'view/home/about.html';
@@ -13,7 +12,6 @@ class Home extends Controller
     }
     public function compare()
     {
-
         // load views
         require APP . 'view/_templates/header.php';
         require APP . 'view/home/compare.html';
@@ -21,7 +19,6 @@ class Home extends Controller
     }
     public function contact()
     {
-
         // load views
         require APP . 'view/_templates/header.php';
         require APP . 'view/home/contact.html';
@@ -29,7 +26,6 @@ class Home extends Controller
     }
     public function listings()
     {
-
         // load views
         require APP . 'view/_templates/header.php';
         require APP . 'view/home/listings.html';
@@ -42,9 +38,15 @@ class Home extends Controller
         require APP . 'view/home/listing_form.php';
         require APP . 'view/_templates/footer.php';
     }
+    public function listing_form_test()
+    {
+        // load views
+        require APP . 'view/_templates/header.php';
+        require APP . 'view/home/listing_form_test.php';
+        require APP . 'view/_templates/footer.php';
+    }
     public function index()
     {
-
         // load views
         require APP . 'view/_templates/header.php';
         require APP . 'view/home/index.html';
@@ -52,7 +54,6 @@ class Home extends Controller
     }
     public function map_properties()
     {
-
         // load views
         require APP . 'view/_templates/header.php';
         require APP . 'view/home/map_properties.html';
@@ -60,7 +61,6 @@ class Home extends Controller
     }
     public function property()
     {
-
         // load views
         require APP . 'view/_templates/header.php';
         require APP . 'view/home/property.html';
@@ -68,7 +68,6 @@ class Home extends Controller
     }
     public function terms()
     {
-
         // load views
         require APP . 'view/_templates/header.php';
         require APP . 'view/home/terms.html';
@@ -76,7 +75,6 @@ class Home extends Controller
     }
     public function typography()
     {
-
         // load views
         require APP . 'view/_templates/header.php';
         require APP . 'view/home/typography.html';
