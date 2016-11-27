@@ -103,7 +103,13 @@ function test_input($data) {
 
 <h2>Post A Listing</h2>
 <p><span class="error">* required field.</span></p>
+
+<!-- here is where it post -->
+<!--
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+-->
+<form method="post" action="listing_form.php">
+
 
 <h3>Location</h3>
 <table class="lf" border="1">
@@ -298,7 +304,7 @@ function test_input($data) {
 
 <br>
   <!-- button for form submission usage-->
-  <input type="submit" name="submit" value="Submit">
+  <input type="submit" name="submit" value="POST">
 
 </form>
 
