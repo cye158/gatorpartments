@@ -104,7 +104,7 @@ function display()
 {
             echo "hello".$_POST["address"];
 }
-if(isset($_POST['submit']))
+if(isset($_POST['Post']))
 {
    display();
 }
