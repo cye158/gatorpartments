@@ -9,13 +9,13 @@
     // address conditions
     if (empty($_POST["address"]))
     {
-    $addressErr = "address is required\n";
+    $addressErr = "address is required";
     } else {
       $address = $_POST['address'];
 
       // check if address only contains letters, numbers, and whitespace
       if (!preg_match("/^[a-zA-Z0-9 ]*$/",$address)) {
-      $addressErr = "Only letters, numbers, and white space allowed\n";
+      $addressErr = "Only letters, numbers, and white space allowed";
       } else {
         echo $address;
       }
@@ -24,13 +24,13 @@
     // city conditions
     if (empty($_POST["city"]))
     {
-      $cityErr = "city is required\n";
+      $cityErr = "city is required";
     } else {
       $city = $_POST['city'];
 
       // check if city only contains letters, whitespace, -, and period.
       if (!preg_match("/^[-a-zA-Z. ]*$/",$city)) {
-      $cityErr = "Only letters, whitespaces, hyphens, and periods allowed\n";
+      $cityErr = "Only letters, whitespaces, hyphens, and periods allowed";
       } else {
         echo $city;
       }
@@ -39,7 +39,7 @@
     // state conditions
     if (empty($_POST["state"]))
     {
-      $stateErr = "State is required\n";
+      $stateErr = "State is required";
     } else {
       $state = $_POST['state'];
       echo $state;
@@ -48,12 +48,12 @@
     // zip code conditions
     if (empty($_POST["zip_code"]))
     {
-      $zip_codeErr = "Zip Code is required\n";
+      $zip_codeErr = "Zip Code is required";
     } else {
       $zip_code = $_POST['zip_code'];
 
       if (!preg_match("/^[-0-9]*$/",$zip_code)) {
-      $zip_codeErr = "Only numbers & hyphens\n";
+      $zip_codeErr = "Only numbers & hyphens";
       } else {
         echo $zip_code;
       }
@@ -75,10 +75,10 @@
 <h2>Post A Listing</h2>
 
 <!-- error messages -->
-<?php echo $addressErr;?>
-<?php echo $cityErr;?>
-<?php echo $stateErr;?>
-<?php echo $zip_codeErr;?>
+<?php echo "Address: ".$addressErr."\n";?>
+<?php echo "City: ".$cityErr."\n";?>
+<?php echo "State: ".$stateErr."\n";?>
+<?php echo "Zip Code: ".$zip_codeErr."\n";?>
 
 <form method="post" action="<?php echo URL;?>home/listing_form">
 
