@@ -28,9 +28,5 @@
             $this->userModel->displayMessage($message);
 	}
 
-        public function authenticateMessage() {
-		$message = $_POST['message'];
-		$this->userModel->displayMessage($message);
-	}
 }
 ?>
