@@ -1,7 +1,7 @@
 <?php
   //defined variables for gatorpartment post
-  $addressErr = $cityErr = $stateErr = $zip_codeErr = $complexErr = $termErr = $priceErr = $feetErr = $bedroomErr = $bathErr = $utilities_providedErr = $building_accomodationErr = $building_restrictionErr = $availability_dateErr = "";
-  $address = $city = $state = $zip_code = $complex = $term = $price = $feet = $bedroom = $bath = $utilities_provided = $building_accomodation_parking = $building_accomodation_laundry = $building_accomodation_elevator = $building_accomodation_wheelchair = $building_accomodation_outdoor = $building_accomodation_pool = $building_restriction = $availability_date = "";
+  $addressErr = $cityErr = $stateErr = $zip_codeErr = $complexErr = $termErr = $priceErr = $feetErr = $bedroomErr = $bathErr = "";
+  $address = $city = $state = $zip_code = $complex = $term = $price = $feet = $bedroom = $bath = $electricity = $water = $gas = $building_accomodation_parking = $building_accomodation_laundry = $building_accomodation_elevator = $building_accomodation_wheelchair = $building_accomodation_outdoor = $building_accomodation_pool = $building_restriction = "";
 
 
   if(isset($_POST['Post']))
@@ -132,6 +132,26 @@
         echo nl2br($bath."\n");
       }
     }
+
+    // utiltiies
+      // electricity
+      if (isset($_POST["electricity"]))
+      {
+          $electricity = $_POST['electricity'];
+          echo $electricity;
+      }
+      // gas
+      if (isset($_POST["gas"]))
+      {
+          $gas = $_POST['gas'];
+          echo $gas;
+      }
+      // water
+      if (isset($_POST["water"]))
+      {
+          $water = $_POST['water'];
+          echo $water;
+      }
 
     // accomodation
       //parking
@@ -296,6 +316,20 @@
   </tr>
 </table>
 
+<!-- utilities -->
+<table class="lf" border="1">
+  <tr>
+    <td class="lf">
+      <input type="checkbox" name="electricity" value="electricity">Electricity
+    </td>
+    <td class="lf">
+      <input type="checkbox" name="gas" value="gas">Gas
+    </td>
+    <td class="lf">
+      <input type="checkbox" name="water" value="water">Water
+    </td>
+  </tr>
+</table>
 
 <input type="checkbox" name="building_accomodation_parking" value="parking">Parking
 <input type="checkbox" name="building_accomodation_laundry" <?php if (isset($building_accomodation_laundry) && $building_accomodation_laundry=="laundry") echo "checked";?> value="laundry">Laundry
