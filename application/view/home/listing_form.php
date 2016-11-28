@@ -37,7 +37,7 @@
     }
 
     // state conditions
-    if (preg_match("/^[ ]*$/")
+    if (empty($_POST["state"]))
     {
       $stateErr = "State: State is required\r\n";
     } else {
@@ -143,7 +143,7 @@
     </td>
     <td class="lf">
       <select name="state">
-        <option value=" "></option>
+        <option value=""></option>
         <option value="AL">AL</option>
         <option value="AK">AK</option>
         <option value="AZ">AZ</option>
@@ -212,7 +212,7 @@
   <tr>
     <td class="lf">
       <select name="complex">
-        <option value=" "></option>
+        <option value=""></option>
         <option value="apartment">apartment</option>
         <option value="condo">condo</option>
         <option value="single home">single home</option>
@@ -221,7 +221,7 @@
     </td>
     <td class="lf">
       <select name="term">
-        <option value=" "></option>
+        <option value=""></option>
         <option value="lease">lease</option>
         <option value="month to month">month to month</option>
       </select>
