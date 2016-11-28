@@ -168,86 +168,16 @@
 		<div class="row">
 			<h4 class="well well-sm"><center>Listings within the area</center></h4>
 			<div class="col-sm-12 well well-sm" style="height:379px; width:auto; overflow: scroll;">
-
+				<?php foreach($listing as $row){  ?>
 				<div class="mini_property_wrapper">
 					<div class="thumbnail mini_property">
-						<a href="property.html" class="img_holder"><img src="//sfsuswe.com/~cye0105/gatorpartments/css/images/houses/house_1.jpg" alt=""></a>
-						<h5>Price : £3,350,000</h5>
-						<p><a href="property.html">7 bedroom house</a><br>The Vineyard, Richmond, TW10					</p>
+						<a href="property.html" class="img_holder"><img src="<?php echo IMAGE_PATH . $row->image_main ; ?>" alt=""></a>
+						<h5>Price : <?php echo $this->formatPrice($row->price); ?></h5>
+						<p><?php echo $row->room_size ;?><br><?php echo $row->city . ", " . $row->state . " " . $row->zip_code ;?></p>
 					</div>
 				</div>
+				<?php } ?>
 
-
-				<div class="mini_property_wrapper">
-					<div class="thumbnail mini_property">
-						<a href="property.html" class="img_holder"><img src="//sfsuswe.com/~cye0105/gatorpartments/css/images/houses/house_2.jpg" alt=""></a>
-						<h5>Price : £229,950</h5>
-						<p><a href="property.html">1 bedroom flat</a><br>Lower Mortlake Road, North Sheen					</p>
-					</div>
-				</div>
-
-
-				<div class="mini_property_wrapper">
-					<div class="thumbnail mini_property">
-						<a href="property.html" class="img_holder"><img src="//sfsuswe.com/~cye0105/gatorpartments/css/images/houses/house_3.jpg" alt=""></a>
-						<h5>Price : £520,000</h5>
-						<p><a href="property.html">2 bedroom apartment</a><br>Mount Ararat Road, Richmond					</p>
-					</div>
-				</div>
-
-
-				<div class="mini_property_wrapper">
-					<div class="thumbnail mini_property">
-						<a href="property.html" class="img_holder"><img src="//sfsuswe.com/~cye0105/gatorpartments/css/images/houses/house_4.jpg" alt=""></a>
-						<h5>Price : £550,000</h5>
-						<p><a href="property.html">2 bedroom house</a><br>The Shakespeare					</p>
-					</div>
-				</div>
-
-
-				<div class="mini_property_wrapper">
-					<div class="thumbnail mini_property">
-						<a href="property.html" class="img_holder"><img src="//sfsuswe.com/~cye0105/gatorpartments/css/images/houses/house_5.jpg" alt=""></a>
-						<h5>Price : £615,000</h5>
-						<p><a href="property.html">3 bedroom terraced house</a><br>London, TW9					</p>
-					</div>
-				</div>
-
-
-				<div class="mini_property_wrapper">
-					<div class="thumbnail mini_property">
-						<a href="property.html" class="img_holder"><img src="//sfsuswe.com/~cye0105/gatorpartments/css/images/houses/house_6.jpg" alt=""></a>
-						<h5>Price : £1,100,000</h5>
-						<p><a href="property.html">3 bedroom semi-detached house</a><br>Beaumont Avenue, Richmond					</p>
-					</div>
-				</div>
-
-
-				<div class="mini_property_wrapper">
-					<div class="thumbnail mini_property">
-						<a href="property.html" class="img_holder"><img src="//sfsuswe.com/~cye0105/gatorpartments/css/images/houses/house_7.jpg" alt=""></a>
-						<h5>Price : £399,950</h5>
-						<p><a href="property.html">2 bedroom flat</a><br>The Lodge, Courtlands, Sheen Road, Richmond					</p>
-					</div>
-				</div>
-
-
-				<div class="mini_property_wrapper">
-					<div class="thumbnail mini_property">
-						<a href="property.html" class="img_holder"><img src="//sfsuswe.com/~cye0105/gatorpartments/css/images/houses/house_8.jpg" alt=""></a>
-						<h5>Price : £219,950</h5>
-						<p><a href="property.html">1 bedroom flat</a><br>Sheen Road, Richmond, TW9					</p>
-					</div>
-				</div>
-
-
-				<div class="mini_property_wrapper">
-					<div class="thumbnail mini_property">
-						<a href="property.html" class="img_holder"><img src="//sfsuswe.com/~cye0105/gatorpartments/css/images/houses/house_9.jpg" alt=""></a>
-						<h5>Price : £1,250,000</h5>
-						<p><a href="property.html">5 bedroom flat</a><br>Chelwood Gardens					</p>
-					</div>
-				</div>
 			</div>
 
 		</div>
