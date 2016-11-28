@@ -54,7 +54,7 @@ define('URL', URL_PROTOCOL . URL_DOMAIN . URL_SUB_FOLDER);
  */
 define('DB_TYPE', 'mysql');
 define('DB_HOST', '127.0.0.1');
-define('DB_NAME', 'student_nhan');
-define('DB_USER', 'nhan');
-define('DB_PASS', 'compaq');
+define('DB_NAME', 'gatorpartments');
+define('DB_USER', 'gatorpartments');
+define('DB_PASS', 'gator');
 define('DB_CHARSET', 'utf8');
