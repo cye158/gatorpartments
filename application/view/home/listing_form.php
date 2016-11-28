@@ -10,7 +10,7 @@
   }
   if(isset($_POST['Post']))
   {
-    $address = test_input($_POST['address']);
+    $address = $_POST['address'];
     display();
   }
   function test_input($data) {
