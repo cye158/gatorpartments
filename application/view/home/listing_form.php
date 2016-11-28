@@ -27,7 +27,7 @@
 
 <form method="post" action="<?php echo URL;?>home/listing_form">
 
-  <input type="text" name="address"></><span class="error">* <?php echo $addressErr;?></span>
+  <input type="text" name="address"></>* <?php echo $addressErr;?>
 
   <!-- button for form submission usage-->
   <input type="submit" name="Post" value="Post">
