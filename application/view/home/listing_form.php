@@ -319,6 +319,9 @@
 <!-- utilities -->
 <table class="lf" border="1">
   <tr>
+    <th class="lf">Utilities Provided</th>
+  </tr>
+  <tr>
     <td class="lf">
       <input type="checkbox" name="electricity" value="electricity">Electricity
     </td>
