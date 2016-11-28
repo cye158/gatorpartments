@@ -75,10 +75,10 @@
 <h2>Post A Listing</h2>
 
 <!-- error messages -->
-<?php echo $addressErr;?>
-<?php echo $cityErr;?>
-<?php echo $stateErr;?>
-<?php echo $zip_codeErr;?>
+<?php echo nl2br($addressErr);?>
+<?php echo nl2br($cityErr);?>
+<?php echo nl2br($stateErr);?>
+<?php echo nl2br($zip_codeErr);?>
 
 <form method="post" action="<?php echo URL;?>home/listing_form">
 
