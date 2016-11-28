@@ -398,12 +398,12 @@
 </table>
 <table class="lf" border="1">
 <tr>
-  <td class="lf"><input type="checkbox" name="elevator" <?php if (isset($elevator) && $elevator=="elevator") echo "checked";?> value="elevator">Elevator</td>
-  <td class="lf"><input type="checkbox" name="laundry" <?php if (isset($laundry) && $laundry=="laundry") echo "checked";?> value="laundry room">Laundry Room</td>
-  <td class="lf"><input type="checkbox" name="outdoor" <?php if (isset($outdoor) && $outdoor=="outdoor_space") echo "checked";?> value="outdoor space">Outdoor Space</td>
+  <td class="lf"><input type="checkbox" name="elevator" value="elevator">Elevator</td>
+  <td class="lf"><input type="checkbox" name="laundry" value="laundry room">Laundry Room</td>
+  <td class="lf"><input type="checkbox" name="outdoor" value="outdoor space">Outdoor Space</td>
   <td class="lf"><input type="checkbox" name="parking" value="parking">Parking</td>
-  <td class="lf"><input type="checkbox" name="pool" <?php if (isset($pool) && $pool=="pool") echo "checked";?> value="pool">Pool</td>
-  <td class="lf"><input type="checkbox" name="wheelchair" <?php if (isset($wheelchair) && $wheelchair=="wheelchair_accessibility") echo "checked";?> value="wheelchair accesibility">Wheelchair Accessibility</td>
+  <td class="lf"><input type="checkbox" name="pool" value="pool">Pool</td>
+  <td class="lf"><input type="checkbox" name="wheelchair" value="wheelchair accesibility">Wheelchair Accessibility</td>
 </tr>
 </table>
 
@@ -414,9 +414,9 @@
 </tr>
 </table>
 <table class="lf" border="1">
-  <td class="lf"><input type="checkbox" name="cats" <?php if (isset($cats) && $cats=="cats") echo "checked";?> value="cats">Cats</td>
-  <td class="lf"><input type="checkbox" name="dogs" <?php if (isset($dogs) && $dogs=="dogs") echo "checked";?> value="dogs">Dogs</td>
-  <td class="lf"><input type="checkbox" name="smoking" <?php if (isset($smoking) && $smoking=="smoking") echo "checked";?> value="smoking">Smoking</td>
+  <td class="lf"><input type="checkbox" name="cats" value="cats">Cats</td>
+  <td class="lf"><input type="checkbox" name="dogs" value="dogs">Dogs</td>
+  <td class="lf"><input type="checkbox" name="smoking" value="smoking">Smoking</td>
 </table>
 
 <!-- comment -->
