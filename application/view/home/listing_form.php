@@ -11,7 +11,8 @@
   if(isset($_POST['Post']))
   {
     $address = $_POST['address'];
-    display();
+    echo $address;
+    //display();
   }
   function test_input($data) {
   $data = trim($data);
