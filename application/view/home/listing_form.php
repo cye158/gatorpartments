@@ -154,14 +154,42 @@
       }
 
     // accomodation
+      //elevator
+      if (isset($_POST["elevator"]))
+      {
+          $elevator = $_POST['elevator'];
+          echo $elevator;
+      }
+      //laundry
+      if (isset($_POST["laundry"]))
+      {
+          $laundry = $_POST['laundry'];
+          echo $laundry;
+      }
+      //outdoor
+      if (isset($_POST["outdoor"]))
+      {
+          $outdoor = $_POST['outdoor'];
+          echo $outdoor;
+      }
       //parking
       if (isset($_POST["parking"]))
       {
           $parking = $_POST['parking'];
           echo $parking;
       }
-      //laundry
-
+      //pool
+      if (isset($_POST["pool"]))
+      {
+          $pool = $_POST['pool'];
+          echo $pool;
+      }
+      //wheelchair
+      if (isset($_POST["wheelchair"]))
+      {
+          $wheelchair = $_POST['wheelchair'];
+          echo $wheelchair;
+      }
 
   }
 ?>
