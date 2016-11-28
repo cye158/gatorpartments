@@ -7,26 +7,26 @@
 			      require APP . 'view/_templates/footer.php';
 		    }
 
-		    public function authenticateLogin() {
-			      $username = trim($_POST['username'], ' ');
-			      $password = $_POST['password'];
+	  public function authenticateLogin() {
+	      $username = trim($_POST['username'], ' ');
+			  $password = $_POST['password'];
 
-			      $this->userModel->login($username, $password);
-		    }
+			  $this->userModel->login($username, $password);
+		}
 
-        public function register() {
-		$username = trim($_POST['username'], ' ');
-		$password = $_POST['password'];
-		$email = $_POST['email'];
-		$name = $_POST['name'];
+    public function register() {
+		    $username = trim($_POST['username'], ' ');
+		    $password = $_POST['password'];
+		    $email = $_POST['email'];
+		    $name = $_POST['name'];
 
-		return $this->userModel->register($username, $password, $email, $name);
-        }
-
-	public function authenticateMessage() {
-		$message = $_POST['message'];
-		$this->userModel->displayMessage($message);
-	}
+		    return $this->userModel->register($username, $password, $email, $name);
     }
+
+    public function authenticateMessage() {
+		    $message = $_POST['message'];
+		    $this->userModel->displayMessage($message);
+	  }
+}
     
 ?>
