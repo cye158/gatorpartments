@@ -1,7 +1,7 @@
 <?php
   //defined variables for gatorpartment post
-  $addressErr = $cityErr = $stateErr = $zip_codeErr = $complexErr = $termErr = $priceErr = $square_feetErr = $number_of_bedroomErr = $number_of_bathErr = $utilities_providedErr = $building_accomodationErr = $building_restrictionErr = $availability_dateErr = "";
-  $address = $city = $state = $zip_code = $complex = $term = $price = $square_feet = $number_of_bedroom = $number_of_bath = $utilities_provided = $building_accomodation_parking = $building_accomodation_laundry = $building_accomodation_elevator = $building_accomodation_wheelchair = $building_accomodation_outdoor = $building_accomodation_pool = $building_restriction = $availability_date = "";
+  $addressErr = $cityErr = $stateErr = $zip_codeErr = $complexErr = $termErr = $priceErr = $feetErr = $bedroomErr = $bathErr = $utilities_providedErr = $building_accomodationErr = $building_restrictionErr = $availability_dateErr = "";
+  $address = $city = $state = $zip_code = $complex = $term = $price = $feet = $bedroom = $bath = $utilities_provided = $building_accomodation_parking = $building_accomodation_laundry = $building_accomodation_elevator = $building_accomodation_wheelchair = $building_accomodation_outdoor = $building_accomodation_pool = $building_restriction = $availability_date = "";
 
 
   if(isset($_POST['Post']))
@@ -94,42 +94,42 @@
     // square feet conditions
     if (empty($_POST["feet"]))
     {
-      $square_feetErr = "Square Feet: Square feet is required\r\n";
+      $feetErr = "Square Feet: Square feet is required\r\n";
     } else {
-      $square_feet = $_POST['feet'];
+      $feet = $_POST['feet'];
 
-      if (!preg_match("/^[0-9]*$/",$square_feet)) {
-        $square_feetErr = "Square Feet: Only numbers\r\n";
+      if (!preg_match("/^[0-9]*$/",$feet)) {
+        $feetErr = "Square Feet: Only numbers\r\n";
       } else {
-        echo nl2br($square_feet."\n");
+        echo nl2br($feet."\n");
       }
     }
 
     // number of bedroom conditions
     if (empty($_POST["bedroom"]))
     {
-      $number_of_bedroomErr = "Bedroom: Bedroom is required\r\n";
+      $bedroomErr = "Bedroom: Bedroom is required\r\n";
     } else {
-      $number_of_bedroom = $_POST['bedroom'];
+      $bedroom = $_POST['bedroom'];
 
-      if (!preg_match("/^[0-9]*$/",$number_of_bedroom)) {
-        $number_of_bedroomErr = "Bedroom: Only numbers\r\n";
+      if (!preg_match("/^[0-9]*$/",$bedroom)) {
+        $bedroomErr = "Bedroom: Only numbers\r\n";
       } else {
-        echo nl2br($number_of_bedroom."\n");
+        echo nl2br($bedroom."\n");
       }
     }
 
     // number of bath conditions
     if (empty($_POST["bath"]))
     {
-      $number_of_bathErr = "Bath: Bath is required\r\n";
+      $bathErr = "Bath: Bath is required\r\n";
     } else {
-      $number_of_bath = $_POST['bath'];
+      $bath = $_POST['bath'];
 
-      if (!preg_match("/^[0-9]*$/",$number_of_bath)) {
-        $number_of_bathErr = "Bath: Only numbers\r\n";
+      if (!preg_match("/^[0-9]*$/",$bath)) {
+        $bathErr = "Bath: Only numbers\r\n";
       } else {
-        echo nl2br($number_of_bath."\n");
+        echo nl2br($bath."\n");
       }
     }
 
@@ -156,9 +156,9 @@
 <?php echo nl2br($complexErr);?>
 <?php echo nl2br($termErr);?>
 <?php echo nl2br($priceErr);?>
-<?php echo nl2br($square_feetErr);?>
-<?php echo nl2br($number_of_bedroomErr);?>
-<?php echo nl2br($number_of_bathErr);?>
+<?php echo nl2br($feetErr);?>
+<?php echo nl2br($bedroomErr);?>
+<?php echo nl2br($bathErr);?>
 
 <form method="post" action="<?php echo URL;?>home/listing_form">
 
