@@ -17,7 +17,7 @@
       if (!preg_match("/^[a-zA-Z0-9 ]*$/",$address)) {
       $addressErr = "Address: Only letters, numbers, and white space allowed\r\n";
       } else {
-        echo $address;
+        echo $address."br";
       }
     }
 
@@ -32,7 +32,7 @@
       if (!preg_match("/^[-a-zA-Z. ]*$/",$city)) {
       $cityErr = "City: Only letters, whitespaces, hyphens, and periods allowed\r\n";
       } else {
-        echo $city;
+        echo $city."br";
       }
     }
 
@@ -42,7 +42,7 @@
       $stateErr = "State: State is required\r\n";
     } else {
       $state = $_POST['state'];
-      echo $state;
+      echo $state."br";
     }
 
     // zip code conditions
@@ -55,7 +55,7 @@
       if (!preg_match("/^[-0-9]*$/",$zip_code)) {
       $zip_codeErr = "Zip Code: Only numbers & hyphens\r\n";
       } else {
-        echo $zip_code;
+        echo $zip_code."br";
       }
     }
 
