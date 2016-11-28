@@ -127,7 +127,7 @@
       $bath = $_POST['bath'];
 
       if (!preg_match('/[0-9]+\.([5]+)/',$bath)) {
-        $bathErr = "Bath: Only numbers\r\n";
+        $bathErr = "Bath: Only numbers in whole or half increments\r\n";
       } else {
         echo nl2br($bath."\n");
       }
