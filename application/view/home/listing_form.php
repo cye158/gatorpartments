@@ -5,7 +5,8 @@
 
   function display()
   {
-    echo "hello".$_POST["studentname"];
+    //echo "hello".$_POST["studentname"];
+    echo $address;
   }
   if(isset($_POST['Post']))
   {
@@ -17,7 +18,7 @@
 
 <form method="post" action="<?php echo URL;?>home/listing_form">
 
-  <input type="text" name="studentname">
+  <input type="text" name="studentname" value="<?php echo $address;?>">
 
   <!-- button for form submission usage-->
   <input type="submit" name="Post" value="Post">
