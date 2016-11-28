@@ -62,9 +62,9 @@
     // complex conditions
     if (empty($_POST["complex"]))
     {
-      $termErr = "Complex: Type of complex is required\r\n";
+      $complexErr = "Complex: Type of complex is required\r\n";
     } else {
-      $term = $_POST['complex'];
+      $complex = $_POST['complex'];
       echo nl2br($complex."\n");
     }
 
@@ -80,12 +80,12 @@
     // price conditions
     if (empty($_POST["price"]))
     {
-      $priceErr = "Zip Code: Zip Code is required\r\n";
+      $priceErr = "Price: Price is required\r\n";
     } else {
       $priceErr = $_POST['price'];
 
       if (!preg_match("/^[-0-9]*$/",$price)) {
-        $priceErr = "Zip Code: Only numbers & hyphens\r\n";
+        $priceErr = "Price: Only numbers\r\n";
       } else {
         echo nl2br($price."\n");
       }
