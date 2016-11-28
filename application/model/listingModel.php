@@ -45,7 +45,7 @@ class ListingModel
   public function getListingBySearch($search)
   {
     $search = "%$search%";
-    $sql = "SELECT * FROM listing WHERE CONCAT_WS('', address_1, city, zip_code, title, description, room_asize, price) LIKE :search";
+    $sql = "SELECT * FROM listing WHERE CONCAT_WS('', street_address, city, zip_code, title, room_size, price) LIKE :search";
     $query = $this->db->prepare($sql);
     $query->bindParam(':search', $search);
     $query->execute();

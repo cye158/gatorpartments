@@ -57,7 +57,7 @@ class Controller
     }
 	
 	//Formats values to look like prices
-	public function priceFormat($price)
+	public function formatPrice($price)
     {
 	    return money_format("$%.0n",$price);
 	}
