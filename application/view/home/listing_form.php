@@ -79,15 +79,24 @@
 
 <h2>Post A Listing</h2>
 
+<!-- error messages -->
+<?php echo $addressErr;?>
+<br>
+<?php echo $cityErr;?>
+<br>
+<?php echo $stateErr;?>
+<br>
+<?php echo $zip_codeErr;?>
+
 <form method="post" action="<?php echo URL;?>home/listing_form">
 
 <!-- address table -->
 <table class="lf" border="1">
   <tr>
-    <th class="lf">Address</th>
+    <th class="lf">Address *</th>
   </tr>
   <tr>
-    <td class="lf"><input type="text" name="address"></> <?php echo $addressErr;?></td>
+    <td class="lf"><input type="text" name="address"></></td>
   </tr>
 </table>
 
@@ -98,7 +107,7 @@
     <th class="lf">Zip Code *</th>
   </tr>
   <tr>
-    <td class="lf"><input type="text" name="city"></> <?php echo $cityErr;?></td>
+    <td class="lf"><input type="text" name="city"></></td>
     <td class="lf"><select name="state">
       <option value=" "></option>
       <option value="AL">AL</option>
@@ -151,8 +160,8 @@
       <option value="WV">WV</option>
       <option value="WI">WI</option>
       <option value="WY">WY</option>
-    </select></> <?php echo $stateErr;?></td>
-    <td class="lf"><input type="text" name="zip_code"></> <?php echo $zip_codeErr;?></td>
+    </select></></td>
+    <td class="lf"><input type="text" name="zip_code"></></td>
   </tr>
 </table>
 
