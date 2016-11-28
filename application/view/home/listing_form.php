@@ -126,7 +126,7 @@
     } else {
       $bath = $_POST['bath'];
 
-      if (!preg_match('/[0-9]+\.([0-9]+)/',$bath)) {
+      if (!preg_match('/[0-9]+\.([5]+)/',$bath)) {
         $bathErr = "Bath: Only numbers\r\n";
       } else {
         echo nl2br($bath."\n");
