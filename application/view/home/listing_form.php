@@ -10,15 +10,22 @@
   }
   if(isset($_POST['Post']))
   {
-     display();
+    $address = test_input($_POST["address"]);
+    display();
   }
+  function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
 ?>
 
 <h2>Post A Listing</h2>
 
 <form method="post" action="<?php echo URL;?>home/listing_form">
 
-  <input type="text" name="studentname" value="<?php echo $address;?>">
+  <input type="text" name="address">
 
   <!-- button for form submission usage-->
   <input type="submit" name="Post" value="Post">
