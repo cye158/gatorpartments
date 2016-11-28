@@ -1,7 +1,7 @@
 <?php
   //defined variables for gatorpartment post
   $addressErr = $cityErr = $stateErr = $zip_codeErr = $complexErr = $termErr = $priceErr = $feetErr = $bedroomErr = $bathErr = "";
-  $address = $city = $state = $zip_code = $complex = $term = $price = $feet = $bedroom = $bath = $electricity = $water = $gas = $parking = $laundry = $elevator = $wheelchair = $outdoor = $pool = $building_restriction = "";
+  $address = $city = $state = $zip_code = $complex = $term = $price = $feet = $bedroom = $bath = $electricity = $water = $gas = $parking = $laundry = $elevator = $wheelchair = $outdoor = $pool = $smoking = $dogs = $cats = "";
 
 
   if(isset($_POST['Post']))
@@ -190,6 +190,27 @@
           $wheelchair = $_POST['wheelchair'];
           echo nl2br($wheelchair."\n");
       }
+
+    //registriction
+      //cats
+      if (isset($_POST["cats"]))
+      {
+          $cats = $_POST['cats'];
+          echo nl2br($cats."\n");
+      }
+      //dogs
+      if (isset($_POST["dogs"]))
+      {
+          $dogs = $_POST['dogs'];
+          echo nl2br($dogs."\n");
+      }
+      //smoking
+      if (isset($_POST["smoking"]))
+      {
+          $smoking = $_POST['smoking'];
+          echo nl2br($smoking."\n");
+      }
+      //other
 
   }
 ?>
@@ -381,6 +402,18 @@
 </tr>
 </table>
 
+<!-- restrictions -->
+<table class="lf" border="1">
+<tr>
+  <th class="lf">Building Restrictions</th>
+</tr>
+</table>
+<table class="lf" border="1">
+  <td class="lf"><input type="checkbox" name="cats" <?php if (isset($cats) && $cats=="cats") echo "checked";?> value="cats">Cats</td>
+  <td class="lf"><input type="checkbox" name="dogs" <?php if (isset($dogs) && $dogs=="dogs") echo "checked";?> value="dogs">Dogs</td>
+  <td class="lf"><input type="checkbox" name="smoking" <?php if (isset($smoking) && $smoking=="smoking") echo "checked";?> value="smoking">Smoking</td>
+  <td class="lf"><input type="checkbox" name="other" <?php if (isset($other) && $other=="other") echo "checked";?> value="other">Other</td>
+</table>
 
 <br>
   <!-- button for form submission usage-->
