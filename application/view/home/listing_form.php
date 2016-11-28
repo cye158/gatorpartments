@@ -53,7 +53,7 @@
       $zip_code = $_POST['zip_code'];
 
       if (!preg_match("/^[-0-9]*$/",$zip_code)) {
-      $zip_codeErr = "Zip Code: Only numbers & hyphens\r\n";
+        $zip_codeErr = "Zip Code: Only numbers & hyphens\r\n";
       } else {
         echo nl2br($zip_code."\n");
       }
@@ -84,8 +84,8 @@
     } else {
       $price = $_POST['price'];
 
-      if (!preg_match("/^[0-9]*$/",$price) {
-      $priceErr = "Price: Only numbers\r\n";
+      if (!preg_match("/^[0-9 ]*$/",$price) {
+        $priceErr = "Price: Only numbers\r\n";
       } else {
         echo nl2br($price."\n");
       }
