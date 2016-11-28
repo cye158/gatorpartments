@@ -80,10 +80,10 @@
 <h2>Post A Listing</h2>
 
 <!-- error messages -->
-<?php echo $addressErr.<br>;?>
-<?php echo $cityErr.<br>;?>
-<?php echo $stateErr.<br>;?>
-<?php echo $zip_codeErr.<br>;?>
+<?php echo $addressErr.\n;?>
+<?php echo $cityErr.\n;?>
+<?php echo $stateErr.\n;?>
+<?php echo $zip_codeErr.\n;?>
 
 <form method="post" action="<?php echo URL;?>home/listing_form">
 
