@@ -13,7 +13,9 @@
 *
 *  $listing data field, 
 *    id, title, room_size, price, description, address_1, address_2, city, state, zip_code, landlord_id,
-*    phone,image_main, images.
+*    phone, image_main, images.
+*
+*  Make sure to use $this->priceFormat($row->price); to display formatted value to look like currency.
 *
 */
 
@@ -40,7 +42,7 @@ class ListingModel
 
   //Gets listings if a keyword is matched
   //Used in search button
-  public function getListing($search)
+  public function getListingBySearch($search)
   {
     $search = "%$search%";
     $sql = "SELECT * FROM listing WHERE CONCAT_WS('', address_1, city, zip_code, title, description, room_asize, price) LIKE :search";
@@ -68,10 +70,48 @@ class ListingModel
   }
 
   //Gets all listings in random order
-  public function getAllListingRandom()
+  public function getListingByRandom()
   {
     $sql = "SELECT * FROM listing ORDER BY RAND()";
     $query = $this->db->prepare($sql);
+    $query->execute();
+    return $query->fetchAll();
+  }
+  
+  //Get all listing by Lowest Price first
+  public function getListingByLowestPrice()
+  {
+    $sql = "SELECT * FROM listing ORDER BY price";
+    $query = $this->db->prepare($sql);
+    $query->execute();
+    return $query->fetchAll();
+  }
+  
+  //Get all listing by Highest Price first
+  public function getListingByHighestPrice()
+  {
+    $sql = "SELECT * FROM listing ORDER BY price DESC";
+    $query = $this->db->prepare($sql);
+    $query->execute();
+    return $query->fetchAll();
+  }
+  
+  //Gets listings given a minimum price
+  public function getListingByMinPrice($minPrice)
+  {
+    $sql = "SELECT * FROM listing WHERE price > :minPrice";
+    $query = $this->db->prepare($sql);
+    $query->bindParam(':minPrice',$minPrice);
+    $query->execute();
+    return $query->fetchAll();
+  }
+  
+  //Gets listing given max price
+  public function getListingByMaxPrice($maxPrice)
+  {
+    $sql = "SELECT * FROM listing WHERE price < :maxPrice";
+    $query = $this->db->prepare($sql);
+    $query->bindParam(':maxPrice', $maxPrice);
     $query->execute();
     return $query->fetchAll();
   }
