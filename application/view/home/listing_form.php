@@ -138,19 +138,19 @@
       if (isset($_POST["electricity"]))
       {
           $electricity = $_POST['electricity'];
-          echo $electricity;
+          echo nl2br($electricity."\n");
       }
       // gas
       if (isset($_POST["gas"]))
       {
           $gas = $_POST['gas'];
-          echo $gas;
+          echo nl2br($gas."\n");
       }
       // water
       if (isset($_POST["water"]))
       {
           $water = $_POST['water'];
-          echo $water;
+          echo nl2br($water."\n");
       }
 
     // accomodation
