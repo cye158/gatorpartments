@@ -82,7 +82,7 @@
     {
       $priceErr = "Price: Price is required\r\n";
     } else {
-      $priceErr = $_POST['price'];
+      $price = $_POST['price'];
 
       if (!preg_match("/^[-0-9]*$/",$price)) {
         $priceErr = "Price: Only numbers\r\n";
