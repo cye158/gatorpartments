@@ -158,37 +158,37 @@
       if (isset($_POST["elevator"]))
       {
           $elevator = $_POST['elevator'];
-          echo $elevator;
+          echo nl2br($elevator."\n");
       }
       //laundry
       if (isset($_POST["laundry"]))
       {
           $laundry = $_POST['laundry'];
-          echo $laundry;
+          echo nl2br($laundry."\n");
       }
       //outdoor
       if (isset($_POST["outdoor"]))
       {
           $outdoor = $_POST['outdoor'];
-          echo $outdoor;
+          echo nl2br($outdoor."\n");
       }
       //parking
       if (isset($_POST["parking"]))
       {
           $parking = $_POST['parking'];
-          echo $parking;
+          echo nl2br($parking."\n");
       }
       //pool
       if (isset($_POST["pool"]))
       {
           $pool = $_POST['pool'];
-          echo $pool;
+          echo nl2br($pool."\n");
       }
       //wheelchair
       if (isset($_POST["wheelchair"]))
       {
           $wheelchair = $_POST['wheelchair'];
-          echo $wheelchair;
+          echo nl2br($wheelchair."\n");
       }
 
   }
