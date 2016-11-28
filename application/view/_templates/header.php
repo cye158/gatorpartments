@@ -30,7 +30,7 @@
 
           </div>
           <div class="col-sm-9 logo-text">
-            <h1><small>Bootstrap</small><br /><span>Real</span> estate</h1>
+            <h1><small>Team 4</small><br />Gatorpartments</h1>
           </div>
         </div>
         </a>
@@ -60,31 +60,24 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-            <li><a href="<?php echo URL;?>home/listings" class="first">For sale</a></li>
-            <li><a href="<?php echo URL;?>home/map_properties">To rent</a></li>
-            <li><a href="<?php echo URL;?>home/compare">New homes</a></li>
-            <li><a href="<?php echo URL;?>home/property">Property of the day</a></li>
 
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Property pages <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="<?php echo URL;?>home/listings">Property listings</a></li>
-                <li><a href="<?php echo URL;?>home/map_properties">Properties map</a></li>
-                <li><a href="<?php echo URL;?>home/property">Single property</a></li>
-                <li><a href="<?php echo URL;?>home/compare">Compare properties</a></li>
-              </ul>
-            </li>
+						<!-- Logo/Home button -->
+						<li><a href="<?php echo URL;?>home/index" class="first">LOGO</a></li>
 
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other pages <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                                <li><a href="<?php echo URL;?>home/typography">Typography</a></li>
-                                <li><a href="<?php echo URL;?>home/terms">Terms and conditions</a></li>
-                                <li><a href="<?php echo URL;?>home/contact">Contact us</a></li>
-                                <li><a href="<?php echo URL;?>home/about">About us</a></li>
-              </ul>
-            </li>
-            </ul>
+						<!-- Post a Listing -->
+						<li><a href="<?php echo URL;?>home/index">To post</a></li>
+
+						<!-- Search bar -->
+						<li>
+							<a>
+								<form name="searchbox" method="post" action="<?php echo URL;?>home/map_properties">
+									<input type="search" name="search"  textarea placeholder="Search by Location of or Point of Interest" size="50" maxlength="600px" style="color: black;"/>
+									<input type="submit" name="submit" style="color: black;" value="Search">
+								</form>
+							</a>
+						</li>
+            <li></li>
+          </ul>
 
                       <ul class="nav navbar-nav navbar-right">
 
