@@ -13,8 +13,8 @@ class UserModel {
   //Creates a new User account
   //For now, only takes Username, password, email, name, and landlord
   //Landlord will take true or false value.
-  public function register($username, $password, $email, $name, $landlord) {
-    $sql = "INSERT INTO user (username, password, email, name, isLandlord) VALUES (:username, :password, :email, :name, :landlord)";
+  public function register($username, $password, $email, $name) {
+    $sql = "INSERT INTO user (username, password, email, name) VALUES (:username, :password, :email, :name)";
     $query = $this->db->prepare($sql);
 
     $query->bindParam(':username', $username);
@@ -24,7 +24,6 @@ class UserModel {
     $query->bindParam(':password', $password1);
     $query->bindParam(':email', $email);
     $query->bindParam(':name', $name);
-    $query->bindParam(':landlord', $landlord);
 
     $query->execute();
 
