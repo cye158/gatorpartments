@@ -78,7 +78,18 @@
     }
 
     // price conditions
+    if (empty($_POST["price"]))
+    {
+      $priceErr = "Zip Code: Zip Code is required\r\n";
+    } else {
+      $priceErr = $_POST['price'];
 
+      if (!preg_match("/^[-0-9]*$/",$price)) {
+        $priceErr = "Zip Code: Only numbers & hyphens\r\n";
+      } else {
+        echo nl2br($price."\n");
+      }
+    }
 
 
     // accomodation
@@ -201,7 +212,7 @@
     <th class="lf">Price *</th>
   </tr>
   <tr>
-    <td class="lf"><select name="term">
+    <td class="lf"><select name="complex">
         <option value=" "></option>
         <option value="apartment">apartment</option>
         <option value="condo">condo</option>
