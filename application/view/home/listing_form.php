@@ -84,13 +84,54 @@
     } else {
       $price = $_POST['price'];
 
-      if (!preg_match("/^[-0-9]*$/",$price)) {
+      if (!preg_match("/^[0-9]*$/",$price)) {
         $priceErr = "Price: Only numbers\r\n";
       } else {
         echo nl2br($price."\n");
       }
     }
 
+    // square feet conditions
+    if (empty($_POST["feet"]))
+    {
+      $square_feetErr = "Square Feet: Square feet is required\r\n";
+    } else {
+      $square_feet = $_POST['feet'];
+
+      if (!preg_match("/^[0-9]*$/",$square_feet)) {
+        $square_feetErr = "Square Feet: Only numbers\r\n";
+      } else {
+        echo nl2br($square_feet."\n");
+      }
+    }
+
+    // number of bedroom conditions
+    if (empty($_POST["bedroom"]))
+    {
+      $number_of_bedroomErr = "Bedroom: Bedroom is required\r\n";
+    } else {
+      $number_of_bedroom = $_POST['bedroom'];
+
+      if (!preg_match("/^[0-9]*$/",$number_of_bedroom)) {
+        $number_of_bedroomErr = "Bedroom: Only numbers\r\n";
+      } else {
+        echo nl2br($number_of_bedroom."\n");
+      }
+    }
+
+    // number of bath conditions
+    if (empty($_POST["bath"]))
+    {
+      $number_of_bathErr = "Bath: Bath is required\r\n";
+    } else {
+      $number_of_bath = $_POST['bath'];
+
+      if (!preg_match("/^[0-9]*$/",$number_of_bath)) {
+        $number_of_bathErr = "Bath: Only numbers\r\n";
+      } else {
+        echo nl2br($number_of_bath."\n");
+      }
+    }
 
     // accomodation
       //parking
@@ -115,6 +156,9 @@
 <?php echo nl2br($complexErr);?>
 <?php echo nl2br($termErr);?>
 <?php echo nl2br($priceErr);?>
+<?php echo nl2br($square_feetErr);?>
+<?php echo nl2br($number_of_bedroomErr);?>
+<?php echo nl2br($number_of_bathErr);?>
 
 <form method="post" action="<?php echo URL;?>home/listing_form">
 
@@ -228,6 +272,26 @@
     </td>
     <td class="lf">
       <input type="text" name="price"></>
+    </td>
+  </tr>
+</table>
+
+<!-- square feet bedroom bath -->
+<table class="lf" border="1">
+  <tr>
+    <th class="lf">Square Feet *</th>
+    <th class="lf"># Of Bedroom(s) *</th>
+    <th class="lf"># Of Bath(s) *</th>
+  </tr>
+  <tr>
+    <td class="lf">
+      <input type="text" name="feet"></>
+    </td>
+    <td class="lf">
+      <input type="text" name="bedroom"></>
+    </td>
+    <td class="lf">
+      <input type="text" name="bath"></>
     </td>
   </tr>
 </table>
