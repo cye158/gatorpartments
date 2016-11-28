@@ -78,18 +78,7 @@
     }
 
     // price conditions
-    if (empty($_POST["price"]))
-    {
-      $priceErr = "Price: Price is required\r\n";
-    } else {
-      $price = $_POST['price'];
 
-      if (!preg_match("/^[0-9 ]*$/",$price) {
-        $priceErr = "Price: Only numbers\r\n";
-      } else {
-        echo nl2br($price."\n");
-      }
-    }
 
 
     // accomodation
