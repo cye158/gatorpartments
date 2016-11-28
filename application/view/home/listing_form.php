@@ -1,7 +1,7 @@
 <?php
   //defined variables for gatorpartment post
   $addressErr = $cityErr = $stateErr = $zip_codeErr = $complexErr = $termErr = $priceErr = $square_feetErr = $number_of_bedroomErr = $number_of_bathErr = $utilities_providedErr = $building_accomodationErr = $building_restrictionErr = $availability_dateErr = "";
-  $address = $city = $state = $zip_code = $complex = $term = $price = $square_feet = $number_of_bedroom = $number_of_bath = $utilities_provided = $building_accomodation = $building_restriction = $availability_date = "";
+  $address = $city = $state = $zip_code = $complex = $term = $price = $square_feet = $number_of_bedroom = $number_of_bath = $utilities_provided = $building_accomodation_parking = $building_accomodation_laundry = $building_accomodation_elevator = $building_accomodation_wheelchair = $building_accomodation_outdoor = $building_accomodation_pool = $building_restriction = $availability_date = "";
 
 
   if(isset($_POST['Post']))
@@ -23,7 +23,7 @@
 
     if (empty($_POST["state"]))
     {
-      $state = "state is required";
+      $stateErr = "state is required";
     } else {
       $state = $_POST['state'];
 
@@ -33,6 +33,17 @@
         echo $state;
       }
     }
+
+    // accomodation
+      //parking
+      if (isset($_POST["building_accomodation_parking"]))
+      {
+          $building_accomodation_parking = $_POST['building_accomodation_parking'];
+          echo $building_accomodation_parking
+      }
+      //laundry
+
+
   }
 ?>
 
@@ -95,6 +106,15 @@
       <option value="WI">WI</option>
       <option value="WY">WY</option>
     </select></>* <?php echo $stateErr;?>
+<br>
+
+<input type="checkbox" name="building_accomodation_parking" <?php if (isset($building_accomodation_parking) && $building_accomodation_parking=="parking") echo "checked";?> value="parking">Parking
+<input type="checkbox" name="building_accomodation_laundry" <?php if (isset($building_accomodation_laundry) && $building_accomodation_laundry=="laundry") echo "checked";?> value="laundry">Laundry
+<input type="checkbox" name="building_accomodation_elevator" <?php if (isset($building_accomodation_elevator) && $building_accomodation_elevator=="elevator") echo "checked";?> value="elevator">Elevator
+<input type="checkbox" name="building_accomodation_wheelchair" <?php if (isset($building_accomodation_wheelchair) && $building_accomodation_wheelchair=="wheelchair_accessibility") echo "checked";?> value="wheelchair_accesibility">Wheelchair Accessibility
+<input type="checkbox" name="building_accomodation_outdoor" <?php if (isset($building_accomodation_outdoor) && $building_accomodation_outdoor=="outdoor_space") echo "checked";?> value="outdoor_space">Outdoor Space
+<input type="checkbox" name="building_accomodation_pool" <?php if (isset($building_accomodation_pool) && $building_accomodation_pool=="pool") echo "checked";?> value="pool">Pool
+
 
   <!-- button for form submission usage-->
   <input type="submit" name="Post" value="Post">
