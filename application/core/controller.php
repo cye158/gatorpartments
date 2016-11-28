@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 class Controller
 {
     /**
@@ -12,6 +14,7 @@ class Controller
      */
     public $model = null;
     public $listingModel = null;
+    public $userModel = null;
 
     /**
      * Whenever controller is created, open a database connection too and load "the model".
@@ -46,8 +49,16 @@ class Controller
     {
         require APP . 'model/model.php';
         require APP . 'model/listingModel.php';
+	    require APP . 'model/userModel.php';
         // create new "model" (and pass the database connection)
         $this->model = new Model($this->db);
         $this->listingModel = new ListingModel($this->db);
+	    $this->userModel = new UserModel($this->db);
     }
+	
+	//Formats values to look like prices
+	public function priceFormat($price)
+    {
+	    return money_format("$%.0n",$price);
+	}
 }

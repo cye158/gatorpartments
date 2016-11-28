@@ -12,7 +12,7 @@
 	<link href="<?php echo URL;?>css/theme.css" rel="stylesheet">
     <!--[if lt IE 9]>
 		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+    <![endif]-->
 
 </head>
 
@@ -27,9 +27,10 @@
         <div class="row">
           <div class="col-sm-3 hidden-xs logo-img">
             <img src="<?php echo URL;?>css/images/Home-green-48.png" alt=""/>
+
           </div>
           <div class="col-sm-9 logo-text">
-            <h1><small>Bootstrap</small><br /><span>Real</span> estate</h1>
+            <h1><small>Team 4</small><br />Gatorpartments</h1>
           </div>
         </div>
         </a>
@@ -59,42 +60,35 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-            <li><a href="<?php echo URL;?>home/listings" class="first">For sale</a></li>
-            <li><a href="<?php echo URL;?>home/map_properties">To rent</a></li>
-            <li><a href="<?php echo URL;?>home/compare">New homes</a></li>
-            <li><a href="<?php echo URL;?>home/property">Property of the day</a></li>
-						<li><a href="<?php echo URL;?>home/listing_form">Post</a></li>
 
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Property pages <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="<?php echo URL;?>home/listings">Property listings</a></li>
-                <li><a href="<?php echo URL;?>home/map_properties">Properties map</a></li>
-                <li><a href="<?php echo URL;?>home/property">Single property</a></li>
-                <li><a href="<?php echo URL;?>home/compare">Compare properties</a></li>
-              </ul>
-            </li>
+						<!-- Logo/Home button -->
+						<li><a href="<?php echo URL;?>home/index" class="first">LOGO</a></li>
 
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other pages <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                                <li><a href="<?php echo URL;?>home/typography">Typography</a></li>
-                                <li><a href="<?php echo URL;?>home/terms">Terms and conditions</a></li>
-                                <li><a href="<?php echo URL;?>home/contact">Contact us</a></li>
-                                <li><a href="<?php echo URL;?>home/about">About us</a></li>
-              </ul>
-            </li>
-            </ul>
+						<!-- Post a Listing -->
+						<li><a href="<?php echo URL;?>home/index">To post</a></li>
+
+						<!-- Search bar -->
+						<li>
+							<a>
+								<form name="searchbox" method="post" action="<?php echo URL;?>home/map_properties">
+									<input type="search" name="search"  textarea placeholder="Search by Location of or Point of Interest" size="50" maxlength="600px" style="color: black;"/>
+									<input type="submit" name="submit" style="color: black;" value="Search">
+								</form>
+							</a>
+						</li>
+            <li></li>
+          </ul>
 
                       <ul class="nav navbar-nav navbar-right">
 
                   <li class="dropdown">
                     <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign Up<strong class="caret"></strong></a>
                     <div class="dropdown-menu">
-                      <form action="<?php echo URL;?>home/index" method="post">
-                        <input type="text" name="user[username]" placeholder="Full name" size="30" />
-                        <input type="password" name="user[password]" placeholder="Email" size="30" />
-                        <input type="password" name="user[password]" placeholder="Password" size="30" />
+                      <form action="<?php echo URL;?>user/register" method="post">
+			<input type="text" name="username" placeholder="Username" size="30" />
+                        <input type="text" name="name" placeholder="Full name" size="30" />
+                        <input type="text" name="email" placeholder="Email" size="30" />
+                        <input type="password" name="password" placeholder="Password" size="30" />
 
                         <input class="btn btn-primary" type="submit" name="commit" value="Sign Up" />
                       </form>
@@ -104,10 +98,10 @@
                   <li class="dropdown">
                     <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
                     <div class="dropdown-menu">
-                      <form action="<?php echo URL;?>home/index" method="post">
-                        <input type="text" name="user[username]" placeholder="Username or email" size="30" /><br class="visible-xs"/>
-                        <input type="password" name="user[password]" placeholder="Password" size="30" /><br class="visible-xs"/>
-                        <input id="remember_me" type="checkbox" name="user[remember_me]" value="1" />
+                      <form action="<?php echo URL;?>user/authenticateLogin" method="post">
+                        <input type="text" name="username" placeholder="Username or email" size="30" /><br class="visible-xs"/>
+                        <input type="password" name="password" placeholder="Password" size="30" /><br class="visible-xs"/>
+                        <input id="remember_me" type="checkbox" name="remember_me" value="1" />
                         <label class="string optional"> Remember me</label>
 
                         <input class="btn btn-primary" type="submit" name="commit" value="Sign In" />
