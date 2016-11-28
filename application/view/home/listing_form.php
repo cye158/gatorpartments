@@ -37,7 +37,7 @@
     }
 
     // state conditions
-    if (empty($_POST["state"]))
+    if (preg_match("/^[ ]*$/")
     {
       $stateErr = "State: State is required\r\n";
     } else {
