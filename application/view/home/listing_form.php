@@ -211,6 +211,12 @@
           echo nl2br($smoking."\n");
       }
 
+    //comment
+    if (isset($_POST["comment"]))
+    {
+        $comment = $_POST['comment'];
+        echo nl2br($comment."\n");
+    }
   }
 ?>
 
