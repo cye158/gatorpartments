@@ -109,11 +109,9 @@
 
 <!-- error messages -->
 <?php echo nl2br($addressErr);?>
-
 <?php echo nl2br($cityErr);?>
 <?php echo nl2br($stateErr);?>
 <?php echo nl2br($zip_codeErr);?>
-
 <?php echo nl2br($complexErr);?>
 <?php echo nl2br($termErr);?>
 <?php echo nl2br($priceErr);?>
@@ -212,19 +210,20 @@
     <th class="lf">Price *</th>
   </tr>
   <tr>
-    <td class="lf"><select name="complex">
+    <td class="lf">
+      <select name="complex">
         <option value=" "></option>
         <option value="apartment">apartment</option>
         <option value="condo">condo</option>
-        <option value="singlehome">single home</option>
-        <option value="townhome">town home</option>
+        <option value="single home">single home</option>
+        <option value="town home">town home</option>
       </select>
     </td>
     <td class="lf">
       <select name="term">
         <option value=" "></option>
         <option value="lease">lease</option>
-        <option value="monthtomonth">month to month</option>
+        <option value="month to month">month to month</option>
       </select>
     </td>
     <td class="lf">
