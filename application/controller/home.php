@@ -38,13 +38,6 @@ class Home extends Controller
         require APP . 'view/home/listing_form.php';
         require APP . 'view/_templates/footer.php';
     }
-    public function listing_form_test()
-    {
-        // load views
-        require APP . 'view/_templates/header.php';
-        require APP . 'view/home/listing_form_test.php';
-        require APP . 'view/_templates/footer.php';
-    }
     public function index()
     {
         // load views

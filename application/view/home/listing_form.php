@@ -6,7 +6,7 @@
 
   if(isset($_POST['Post']))
   {
-
+    // address conditions
     if (empty($_POST["address"]))
     {
     $addressErr = "address is required";
@@ -21,6 +21,22 @@
       }
     }
 
+    // city conditions
+    if (empty($_POST["citY"]))
+    {
+      $cityErr = "city is required";
+    } else {
+      $city = $_POST['city'];
+
+      // check if city only contains letters, whitespace, -, and period.
+      if (!preg_match("/^[-a-zA-Z. ]*$/",$city)) {
+      $cityErr = "Only letters, whitespaces, hyphens, and periods allowed";
+      } else {
+        echo $city;
+      }
+    }
+
+    // state conditions
     if (empty($_POST["state"]))
     {
       $stateErr = "state is required";
@@ -31,6 +47,20 @@
       $stateErr = "State has not been selected";
       } else {
         echo $state;
+      }
+    }
+
+    // zip code conditions
+    if (empty($_POST["zip_code"]))
+    {
+      $zip_codeErr = "Zip Code is required";
+    } else {
+      $zip_code = $_POST['zip_code'];
+
+      if (!preg_match("/^[-0-9]*$/",$zip_code)) {
+      $zip_codeErr = "Only numbers & hyphens";
+      } else {
+        echo $zip_code;
       }
     }
 
@@ -51,9 +81,25 @@
 
 <form method="post" action="<?php echo URL;?>home/listing_form">
 
-  <input type="text" name="address"></>* <?php echo $addressErr;?>
-  <br>
-  <select name="state">
+<!-- address table -->
+<table class="lf" border="1">
+  <tr>
+    <th class="lf">Address</th>
+  </tr>
+  <tr>
+    <td class="lf"><input type="text" name="address"></> <?php echo $addressErr;?></td>
+  </tr>
+</table>
+
+<table class="lf" border="1">
+  <tr>
+    <th class="lf">City *</th>
+    <th class="lf">State *</th>
+    <th class="lf">Zip Code *</th>
+  </tr>
+  <tr>
+    <td class="lf"><input type="text" name="city"></> <?php echo $cityErr;?></td>
+    <td class="lf"><select name="state">
       <option value=" "></option>
       <option value="AL">AL</option>
       <option value="AK">AK</option>
@@ -105,17 +151,20 @@
       <option value="WV">WV</option>
       <option value="WI">WI</option>
       <option value="WY">WY</option>
-    </select></>* <?php echo $stateErr;?>
-<br>
+    </select></> <?php echo $stateErr;?></td>
+    <td class="lf"><input type="text" name="zip_code"></> <?php echo $zip_codeErr;?></td>
+  </tr>
+</table>
 
-<input type="checkbox" name="building_accomodation_parking"  value="parking">Parking
+
+<input type="checkbox" name="building_accomodation_parking" value="parking">Parking
 <input type="checkbox" name="building_accomodation_laundry" <?php if (isset($building_accomodation_laundry) && $building_accomodation_laundry=="laundry") echo "checked";?> value="laundry">Laundry
 <input type="checkbox" name="building_accomodation_elevator" <?php if (isset($building_accomodation_elevator) && $building_accomodation_elevator=="elevator") echo "checked";?> value="elevator">Elevator
 <input type="checkbox" name="building_accomodation_wheelchair" <?php if (isset($building_accomodation_wheelchair) && $building_accomodation_wheelchair=="wheelchair_accessibility") echo "checked";?> value="wheelchair_accesibility">Wheelchair Accessibility
 <input type="checkbox" name="building_accomodation_outdoor" <?php if (isset($building_accomodation_outdoor) && $building_accomodation_outdoor=="outdoor_space") echo "checked";?> value="outdoor_space">Outdoor Space
 <input type="checkbox" name="building_accomodation_pool" <?php if (isset($building_accomodation_pool) && $building_accomodation_pool=="pool") echo "checked";?> value="pool">Pool
 
-
+<br>
   <!-- button for form submission usage-->
   <input type="submit" name="Post" value="Post">
 
