@@ -108,7 +108,7 @@
     </select></>* <?php echo $stateErr;?>
 <br>
 
-<input type="checkbox" name="building_accomodation_parking" <?php if (isset($building_accomodation_parking) && $building_accomodation_parking=="parking") echo "checked";?> value="parking">Parking
+<input type="checkbox" name="building_accomodation_parking"  value="parking">Parking
 <input type="checkbox" name="building_accomodation_laundry" <?php if (isset($building_accomodation_laundry) && $building_accomodation_laundry=="laundry") echo "checked";?> value="laundry">Laundry
 <input type="checkbox" name="building_accomodation_elevator" <?php if (isset($building_accomodation_elevator) && $building_accomodation_elevator=="elevator") echo "checked";?> value="elevator">Elevator
 <input type="checkbox" name="building_accomodation_wheelchair" <?php if (isset($building_accomodation_wheelchair) && $building_accomodation_wheelchair=="wheelchair_accessibility") echo "checked";?> value="wheelchair_accesibility">Wheelchair Accessibility
