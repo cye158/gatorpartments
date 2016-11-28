@@ -70,9 +70,9 @@
 						<!-- Search bar -->
 						<li>
 							<a>
-								<form name="searchbox" method="post" action="<?php echo URL;?>home/map_properties">
-									<input type="search" name="search"  textarea placeholder="Search by Location of or Point of Interest" size="50" maxlength="600px" style="color: black;"/>
-									<input type="submit" name="submit" style="color: black;" value="Search">
+								<form name="searchbox" method="post" action="<?php echo URL;?>home/index">
+									<input type="search" name="searchBarInput"  textarea placeholder="Search by Location of or Point of Interest" size="50" maxlength="600px" style="color: black;"/>
+									<input type="submit" name="submitSearch" style="color: black;" value="Search">
 								</form>
 							</a>
 						</li>
