@@ -1,7 +1,7 @@
 <?php
   //defined variables for gatorpartment post
   $addressErr = $cityErr = $stateErr = $zip_codeErr = $complexErr = $termErr = $priceErr = $feetErr = $bedroomErr = $bathErr = "";
-  $address = $city = $state = $zip_code = $complex = $term = $price = $feet = $bedroom = $bath = $electricity = $water = $gas = $parking = $laundry = $elevator = $wheelchair = $outdoor = $pool = $smoking = $dogs = $cats = $other = "";
+  $address = $city = $state = $zip_code = $complex = $term = $price = $feet = $bedroom = $bath = $electricity = $water = $gas = $parking = $laundry = $elevator = $wheelchair = $outdoor = $pool = $smoking = $dogs = $cats = $comment = "";
 
 
   if(isset($_POST['Post']))
@@ -210,12 +210,6 @@
           $smoking = $_POST['smoking'];
           echo nl2br($smoking."\n");
       }
-      //other
-      if (isset($_POST["other"]))
-      {
-          $other = $_POST['other'];
-          echo nl2br($other."\n");
-      }
 
   }
 ?>
@@ -417,7 +411,20 @@
   <td class="lf"><input type="checkbox" name="cats" <?php if (isset($cats) && $cats=="cats") echo "checked";?> value="cats">Cats</td>
   <td class="lf"><input type="checkbox" name="dogs" <?php if (isset($dogs) && $dogs=="dogs") echo "checked";?> value="dogs">Dogs</td>
   <td class="lf"><input type="checkbox" name="smoking" <?php if (isset($smoking) && $smoking=="smoking") echo "checked";?> value="smoking">Smoking</td>
-  <td class="lf"><input type="checkbox" name="other" <?php if (isset($other) && $other=="other") echo "checked";?> value=<input type="text" name="specify"></>></td>
+</table>
+
+<!-- comment -->
+<table class="lf" border="1">
+  <tr>
+    <th class="lf">Comment</th>
+  </tr>
+</table>
+<table class="lf" border="1">
+  <tr>
+    <td class="lf">
+      <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
+    </td>
+  </tr>
 </table>
 
 <br>
