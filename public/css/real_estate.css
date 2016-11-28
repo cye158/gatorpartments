@@ -183,7 +183,7 @@ table {
 }
 td,
 th {
-  padding: 0;
+  padding: 15px;
 }
 @media print {
   * {
@@ -1399,6 +1399,19 @@ pre code {
     margin-left: 0%;
   }
 }
+table.lf {
+  border-collapse: separate;
+  border-spacing: 10px 0px;
+  border: 0px solid #FFFFFF;
+}
+td.lf,
+th.lf {
+  padding: 0px;
+  border: 0px solid #FFFFFF;
+}
+th.lf {
+  text-align:left;
+}
 table {
   max-width: 100%;
   background-color: transparent;
@@ -1650,6 +1663,12 @@ label {
   margin-bottom: 5px;
   font-weight: bold;
 }
+/*
+listinglabel{
+    display: inline-block;
+    width: 50px;
+}
+*/
 input[type="search"] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
