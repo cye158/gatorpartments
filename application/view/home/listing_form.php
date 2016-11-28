@@ -22,7 +22,7 @@
     }
 
     // city conditions
-    if (empty($_POST["citY"]))
+    if (empty($_POST["city"]))
     {
       $cityErr = "city is required\n";
     } else {
