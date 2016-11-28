@@ -8,7 +8,7 @@
 
 <h2>Post A Listing</h2>
 
-<form method="post" action="listing_form.php">
+<form method="post" action=<?php echo URL;?>"listing_form">
 
   <input type="text" name="studentname">
 
