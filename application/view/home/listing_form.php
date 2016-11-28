@@ -39,7 +39,7 @@
       if (isset($_POST["building_accomodation_parking"]))
       {
           $building_accomodation_parking = $_POST['building_accomodation_parking'];
-          echo $building_accomodation_parking
+          echo $building_accomodation_parking;
       }
       //laundry
 
