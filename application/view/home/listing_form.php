@@ -321,6 +321,8 @@
   <tr>
     <th class="lf">Utilities Provided</th>
   </tr>
+</table>
+<table class="lf" border="1">
   <tr>
     <td class="lf">
       <input type="checkbox" name="electricity" value="electricity">Electricity
@@ -339,6 +341,8 @@
 <tr>
   <th class="lf">Building Accomodations</th>
 </tr>
+</table>
+<table class="lf" border="1">
 <tr>
   <td class="lf"><input type="checkbox" name="elevator" <?php if (isset($elevator) && $elevator=="elevator") echo "checked";?> value="elevator">Elevator</td>
   <td class="lf"><input type="checkbox" name="laundry" <?php if (isset($laundry) && $laundry=="laundry") echo "checked";?> value="laundry room">Laundry Room</td>
