@@ -142,7 +142,7 @@
 		<div id="map_canvas" class="col-sm-12 well" style="position: relative; overflow: hidden; width: 100%; padding: 1px;">
 
 			<script>
-			var map_locations = [{"lat":51.461311,"lng":-0.303742,"title":"7 bedroom house","street":"The Vineyard, Richmond, TW10","price":"3,350,000"},{"lat":51.451311,"lng":-0.313742,"title":"1 bedroom flat","street":"Lower Mortlake Road, North Sheen","price":"229,950"}]
+			var map_locations = [{"lat":37.721831,"lng":-122.4853961,"title":"SFSU","street":"1600 Holloway Avenue, San Francisco, CA 94132","price":"N/A"}]
 			</script>
 
 			<!--script
@@ -253,7 +253,7 @@
 
 
 		<!-- map api key -->
-		<script type="text/javascript" async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbTAiniS56gZ1ZGGWK9oU1mZ2S0488wJs&amp;callback=initMap"></script>
+		<script type="text/javascript" async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbTAiniS56gZ1ZGGWK9oU1mZ2S0488wJs&amp;q=1600+Holloway+94132&amp;callback=initMap"></script>
 		<!-- /map api key -->
 
 	</body>
