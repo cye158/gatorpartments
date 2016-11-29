@@ -38,6 +38,7 @@ class Home extends Controller
         require APP . 'view/home/listing_form.php';
         require APP . 'view/_templates/footer.php';
     }
+    //Home page
     public function index()
     {
       	if(isset($_POST['submitSearch'])){
@@ -51,23 +52,24 @@ class Home extends Controller
         require APP . 'view/home/index.php';
         require APP . 'view/_templates/footer.php';
     }
-    public function map_properties()
-    {
-        // load views
-        require APP . 'view/_templates/header.php';
-        require APP . 'view/home/map_properties.html';
-        require APP . 'view/_templates/footer.php';
-    }
+
+
     public function messaging(){
       require APP . 'view/_templates/header.php';
       require APP . 'view/home/messaging.html';
       require APP . 'view/_templates/footer.php';
     }
-    public function property()
+    //Individual Listing Page
+    public function property($id)
     {
-        // load views
+    	if(isset($id)){
+    	   $listing = $this->listingModel->getListingById($id);
+
+    	   $images = $this->listingModel->getImagesArray($listing->images);
+            }
+	// load views
         require APP . 'view/_templates/header.php';
-        require APP . 'view/home/property.html';
+        require APP . 'view/home/property.php';
         require APP . 'view/_templates/footer.php';
     }
     public function terms()

@@ -10,6 +10,7 @@
 
 	<link id="switch_style" href="<?php echo URL;?>css/real_estate.css" rel="stylesheet">
 	<link href="<?php echo URL;?>css/theme.css" rel="stylesheet">
+	<link href="<?php echo URL;?>css/gator.css" rel="stylesheet">
     <!--[if lt IE 9]>
 		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
