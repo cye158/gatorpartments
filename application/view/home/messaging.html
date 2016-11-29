@@ -1,3 +1,14 @@
+<script type="text/javascript">
+    function displayMessage(messageId) {
+       if(messageId=='message0001'){
+         document.getElementById('messageContent').innerHTML = "Hello, my name is Johnny Appleseed, and I'm an ideal renter.";
+       }
+       elseif(messageId=='message0002'){
+         document.getElementById('messageContent').innerHTML = "Hello, my name is Jane Estudiante, and the best tenant you'll ever have.";
+       }
+    }
+</script>
+
 <table id="table">
   <tr>
     <th id="property">Property</th>
@@ -5,20 +16,12 @@
   </tr>
   <tr>
     <td headers="property">1505 Holloway Avenue</td>
-    <td headers="messsageFrom">Johnny Appleseed</td>
+    <td headers="messsageFrom" id="message0001" onclick=displayMessage(message0001)>Johnny Appleseed</td>
   </tr>
   <tr>
     <td headers="property">1505 Holloway Avenue</td>
-    <td headers="messageFrom">Jane Estudiante</td>
+    <td headers="messageFrom" id="message0002">Jane Estudiante</td>
   </tr>
+  <div id="messageContent">
+  </div>
 </table>
-
-<script $("#table tr").click(function(){
-  $(this).addClass('selected').siblings().removeClass('selected');
-  var value=$(this).find('td:first').html();
-  alert(value);
-});
-
-$('.ok').on('click', function(e){
-  alert($("#table tr.selected td:first").html());
-}] />
