@@ -1,3 +1,4 @@
-
+.gitignore
 /public/phpmyadmin
 /application/config
+*.DS_Store
