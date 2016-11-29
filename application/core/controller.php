@@ -55,10 +55,11 @@ class Controller
         $this->listingModel = new ListingModel($this->db);
 	    $this->userModel = new UserModel($this->db);
     }
-	
-	//Formats values to look like prices
-	public function formatPrice($price)
-    {
-	    return money_format("$%.0n",$price);
-	}
+
+    //Formats values to look like prices
+    public function formatPrice($price)
+    {    
+        setlocale(LC_MONETARY, 'en_US.utf8');
+        return money_format("%.0n",$price);
+    }
 }

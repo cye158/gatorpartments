@@ -169,13 +169,15 @@
 			<h4 class="well well-sm"><center>Listings within the area</center></h4>
 			<div class="col-sm-12 well well-sm" style="height:379px; width:auto; overflow: scroll;">
 				<?php foreach($listing as $row){  ?>
-				<div class="mini_property_wrapper">
-					<div class="thumbnail mini_property">
-						<a href="property.html" class="img_holder"><img src="<?php echo IMAGE_PATH . $row->image_main ; ?>" alt=""></a>
-						<h5>Price : <?php echo $this->formatPrice($row->price); ?></h5>
-						<p><?php echo $row->room_size ;?><br><?php echo $row->city . ", " . $row->state . " " . $row->zip_code ;?></p>
+				<a href="<?php echo URL . 'home/property/' . $row->id; ?>">
+					<div class="mini_property_wrapper">
+						<div class="thumbnail mini_property">
+							<img id="listing-thumbnail" src="<?php echo IMAGE_PATH . $row->image_main ; ?>" alt="Apartment Main Image">
+							<h5>Price : <?php echo $this->formatPrice($row->price); ?></h5>
+							<p><?php echo $row->room_size ;?><br><?php echo $row->city . ", " . $row->state . " " . $row->zip_code ;?></p>
+						</div>
 					</div>
-				</div>
+				</a>
 				<?php } ?>
 
 			</div>
