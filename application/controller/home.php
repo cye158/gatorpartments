@@ -58,6 +58,11 @@ class Home extends Controller
         require APP . 'view/home/map_properties.html';
         require APP . 'view/_templates/footer.php';
     }
+    public function messaging(){
+      require APP . 'view/_templates/header.php';
+      require APP . 'view/home/messaging.html';
+      require APP . 'view/_templates/footer.php';
+    }
     public function property()
     {
         // load views

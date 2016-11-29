@@ -1,0 +1,21 @@
+<table id="table">
+  <tr>
+    <td>1505 Holloway Avenue</td>
+    <td>$1100/month</td>
+    <td>1 bedroom, 1 bath</td>
+    <td>Model monopostu stajne Scuderia Ferrari pre sezónu 2013</td>
+    <td>1</td>
+    <td>F138</td>
+    <td>Klik pr</td>
+  </tr>
+</table>
+
+<script $("#table tr").click(function(){
+  $(this).addClass('selected').siblings().removeClass('selected');
+  var value=$(this).find('td:first').html();
+  alert(value);
+});
+
+$('.ok').on('click', function(e){
+  alert($("#table tr.selected td:first").html());
+}] />
