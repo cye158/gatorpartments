@@ -40,7 +40,8 @@ class UserModel {
         $query = $this->db->prepare($sql); 
         $query->bindParam(':username', $username);
         // hash the password using sha256 and compares with the hashed pw in db
-        $password1 = hash('sha256', $password);
+       // $password1 = hash('sha256', $password);
+	$password1 = "12345";
         $query->bindParam(':password', $password1);
         $query->execute();
 
