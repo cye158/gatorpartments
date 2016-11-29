@@ -5,12 +5,12 @@
 
         <div class="row">
             <div class="col-sm-5 col-xs-8">
-                <h3>San Francisco CA</h3>
-                <h6>3 bedroom apartment</h6>
+                <h3><?php echo $listing->city . " " . $listing->state; ?></h3>
+                <h6><?php echo $listing->room_size ;?></h6>
                 <div id="people_viewing"><strong>13 people are viewing this property right now!</strong></div>
             </div>
             <div class="col-sm-3 col-xs-4 text-right pull-right">
-                <h2 class="text-right">$ 750.00</h2>
+                <h2 class="text-right"><?php echo $this->formatPrice($listing->price) ;?></h2>
             </div>
         </div>
 
@@ -21,7 +21,16 @@
 
                 </div>
                 <div id="owl-demo" class="owl-carousel owl-theme" style="display: block; opacity: 1;">
-                                        <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 11466px; left: 0px; display: block; transition: all 400ms ease; transform: translate3d(-4459px, 0px, 0px);"><div class="owl-item" style="width: 637px;"><div class="item"><img src="//sfsuswe.com/~mbain/gatorpartments/css/images/gallery/room_0.jpg" alt="0"></div></div><div class="owl-item" style="width: 637px;"><div class="item"><img src="//sfsuswe.com/~mbain/gatorpartments/css/images/gallery/room_1.jpg" alt="1"></div></div><div class="owl-item" style="width: 637px;"><div class="item"><img src="//sfsuswe.com/~mbain/gatorpartments/css/images/gallery/room_2.jpg" alt="2"></div></div><div class="owl-item" style="width: 637px;"><div class="item"><img src="//sfsuswe.com/~mbain/gatorpartments/css/images/gallery/room_3.jpg" alt="3"></div></div><div class="owl-item" style="width: 637px;"><div class="item"><img src="//sfsuswe.com/~mbain/gatorpartments/css/images/gallery/room_4.jpg" alt="4"></div></div><div class="owl-item" style="width: 637px;"><div class="item"><img src="//sfsuswe.com/~mbain/gatorpartments/css/images/gallery/room_5.jpg" alt="5"></div></div><div class="owl-item" style="width: 637px;"><div class="item"><img src="//sfsuswe.com/~mbain/gatorpartments/css/images/gallery/room_6.jpg" alt="6"></div></div><div class="owl-item" style="width: 637px;"><div class="item"><img src="//sfsuswe.com/~mbain/gatorpartments/css/images/gallery/room_7.jpg" alt="7"></div></div><div class="owl-item" style="width: 637px;"><div class="item"><img src="//sfsuswe.com/~mbain/gatorpartments/css/images/gallery/room_8.jpg" alt="8"></div></div></div></div>
+                                        <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 11466px; left: 0px; display: block; transition: all 400ms ease; transform: translate3d(-4459px, 0px, 0px);">
+						<?php foreach($images as $image){ ?>
+							<div class="owl-item" style="width: 637px;">
+								<div class="item">
+									<img src="<?php echo IMAGE_PATH . $listing->id . '/' . $image;?>" alt="0">
+								</div>
+							</div>
+						<?php } ?>
+					</div>
+		</div>
 
 
 
@@ -41,26 +50,19 @@
 				</div>
 				<div class="col-xs-10">
 					<div id="owl-gallery" class="owl-carousel owl-theme" style="display: block; opacity: 1;">
-												<div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 2250px; left: 0px; display: block; transition: all 200ms ease; transform: translate3d(-375px, 0px, 0px);"><div class="owl-item" style="width: 125px;"><div class="item">
-							<a href="#" data-slide="0"><img src="//sfsuswe.com/~mbain/gatorpartments/css/images/thumbnails/room_0.jpg" alt="01"></a>
-						</div></div><div class="owl-item" style="width: 125px;"><div class="item">
-							<a href="#" data-slide="1"><img src="//sfsuswe.com/~mbain/gatorpartments/css/images/thumbnails/room_1.jpg" alt="01"></a>
-						</div></div><div class="owl-item" style="width: 125px;"><div class="item">
-							<a href="#" data-slide="2"><img src="//sfsuswe.com/~mbain/gatorpartments/css/images/thumbnails/room_2.jpg" alt="01"></a>
-						</div></div><div class="owl-item" style="width: 125px;"><div class="item">
-							<a href="#" data-slide="3"><img src="//sfsuswe.com/~mbain/gatorpartments/css/images/thumbnails/room_3.jpg" alt="01"></a>
-						</div></div><div class="owl-item" style="width: 125px;"><div class="item">
-							<a href="#" data-slide="4"><img src="//sfsuswe.com/~mbain/gatorpartments/css/images/thumbnails/room_4.jpg" alt="01"></a>
-						</div></div><div class="owl-item" style="width: 125px;"><div class="item">
-							<a href="#" data-slide="5"><img src="//sfsuswe.com/~mbain/gatorpartments/css/images/thumbnails/room_5.jpg" alt="01"></a>
-						</div></div><div class="owl-item" style="width: 125px;"><div class="item">
-							<a href="#" data-slide="6"><img src="//sfsuswe.com/~mbain/gatorpartments/css/images/thumbnails/room_6.jpg" alt="01"></a>
-						</div></div><div class="owl-item" style="width: 125px;"><div class="item">
-							<a href="#" data-slide="7"><img src="//sfsuswe.com/~mbain/gatorpartments/css/images/thumbnails/room_7.jpg" alt="01"></a>
-						</div></div><div class="owl-item" style="width: 125px;"><div class="item">
-							<a href="#" data-slide="8"><img src="//sfsuswe.com/~mbain/gatorpartments/css/images/thumbnails/room_8.jpg" alt="01"></a>
-						</div></div></div></div>
-
+						<div class="owl-wrapper-outer">
+							<div class="owl-wrapper" style="width: 2250px; left: 0px; display: block; transition: all 200ms ease; transform: translate3d(-375px, 0px, 0px);">
+								<?php foreach($images as $image) { ?>
+									<?php $dataSlideCount = 0; ?>
+									<div class="owl-item" style="width: 125px;">
+										<div class="item">
+											<a href="#" data-slide="<?php echo $dateSlideCount ?>"><img src="<?php echo IMAGE_PATH . $listing->id . '/' . $image;?>"></a>
+										</div>
+									</div>
+									<?php $dataSlideCount++; ?>
+									<?php } ?>
+							</div>
+						</div>
 
 
 
@@ -84,13 +86,7 @@
 
         <div class="col-sm-12">
             <h4>Description</h4>
-            <p>Reflecting the status of this desirable destination a 4/5 bedroom townhouses at Terrace Yard offers contemporary living in unmatched style and elegance. With a high specification throughout, secure private undercroft parking behind remotely controlled access gates and Berkeley's quest for excellence, these are homes of unparalleled appeal. Imposing, contemporary architecture sets the scene for the sleek style of the interiors at Terrace Yard, where form blends perfectly with function to create homes beautifully designed for modern living. Living areas have been designed as fluid spaces, seamlessly linking rooms to provide an environment that's perfect for entertaining and family life alike.</p>
-
-            <p>At the heart of the home, the kitchens feature Italian designer furniture, reflecting the cutting edge, contemporary architecture. Stone worktops, glass back panelling, mood lighting and a comprehensive range of Siemens appliances enhance the appeal of this functional space creating an ultimate environment of luxury living.</p>
-
-            <p>On the third floor each home benefits from the desirable advantage of a west facing terrace. With the flexibility of the floor layouts this fabulous outdoor space can be enjoyed from either a bedroom or living area. Providing panoramic views this is the perfect place to relax and watch the sun go down.</p>
-
-
+	      <p><?php echo $listing->description ;?>  </p>
             <h4>Features</h4>
 
             <div class="row">
