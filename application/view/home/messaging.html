@@ -1,9 +1,9 @@
 <script type="text/javascript">
     function displayMessage(messageId) {
-       if(messageId=='message0001'){
+       if(messageId==1){
          document.getElementById('messageContent').innerHTML = "Hello, my name is Johnny Appleseed, and I'm an ideal renter.";
        }
-       elseif(messageId=='message0002'){
+       elseif(messageId==2){
          document.getElementById('messageContent').innerHTML = "Hello, my name is Jane Estudiante, and the best tenant you'll ever have.";
        }
     }
@@ -15,12 +15,12 @@
     <th id="messsageFrom">Message from:</th>
   </tr>
   <tr>
-    <td headers="property"><a onclick="displayMessage(message0001);">1505 Holloway Avenue</a></td>
-    <td headers="messsageFrom" id="message0001"><a onclick="displayMessage(message0001);">Johnny Appleseed</a></td>
+    <td headers="property"><a onclick="displayMessage(1);">1505 Holloway Avenue</a></td>
+    <td headers="messsageFrom" id="message0001"><a onclick="displayMessage(1);">Johnny Appleseed</a></td>
   </tr>
   <tr>
-    <td headers="property"><a onclick="displayMessage(message0001);">1505 Holloway Avenue</a></td>
-    <td headers="messageFrom" id="message0002"><a onclick="displayMessage(message0001);">Jane Estudiante</a></td>
+    <td headers="property"><a onclick="displayMessage(2);">1505 Holloway Avenue</a></td>
+    <td headers="messageFrom" id="message0002"><a onclick="displayMessage(2);">Jane Estudiante</a></td>
   </tr>
   <div id="messageContent">
   </div>
