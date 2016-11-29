@@ -1,17 +1,18 @@
-
-
 <table id="table">
   <tr>
     <th id="property">Property</th>
     <th id="messsageFrom">Message from:</th>
+    <th id="selectMessage">Click to select message</th>
   </tr>
   <tr>
     <td headers="property"><a onclick="displayMessage(1);">1505 Holloway Avenue</a></td>
     <td headers="messsageFrom" id="message0001"><a onclick="displayMessage(1);">Johnny Appleseed</a></td>
+    <td headers="selectMessage" id="message0001"><input type="button" value="Display message" onClick="displayMessage(1)"></td>
   </tr>
   <tr>
     <td headers="property"><a onclick="displayMessage(2);">1505 Holloway Avenue</a></td>
     <td headers="messageFrom" id="message0002"><a onclick="displayMessage(2);">Jane Estudiante</a></td>
+    <td headers="selectMessage" id="message0001"><input type="button" value="Display message" onClick="displayMessage(2)"></td>
   </tr>
 
 </table>
@@ -21,17 +22,15 @@
     </td>
   </tr>
 </table>
-<script type="text/javascript">
-var messageId=0;
-function displayMessage(messageId) {
-  if(messageId==1){
-    document.getElementById("messageContent").innerHTML="Hello, my name is Johnny Appleseed, and I'm an ideal renter.";
-  }
-  elseif(messageId==2){
-    document.getElementById("messageContent").innerHTML="Hello, my name is Jane Estudiante, and the best tenant you'll ever have.";
-  }
-  elseif(messageId==0){
-    document.getElementById("messageContent").innerHTML="No message selected.";
-  }
-}
+
+<script>
+ function displayMessage(messageID){
+   if(messageID==1){
+     document.getElementById("messageContent").innerHTML = "Content of message 1";
+   }
+   elseif(messageID==2){
+     document.getElementById("messageContent").innerHTML = "Conent of message 2";
+   }
+
+ };
 </script>
