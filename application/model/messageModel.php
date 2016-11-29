@@ -1,6 +1,7 @@
 <?php
 class MessageModel
 {
+    //Create Db Connection
     function __construct($db)
     {
 	try {
@@ -21,6 +22,8 @@ class MessageModel
 	return $query->fetch()->id;
     }
 
+    //creates a message onto message table in DB
+    //Takes in user's id, receipient's id, and message content
     public function addMessage($userId, $toId, $content, $listingId)
     {	
 	$sql = "INSERT INTO message (userId, toId, content, listingId, created_date) VALUES (:userId, :toId, :content, :listingId, Now())";
