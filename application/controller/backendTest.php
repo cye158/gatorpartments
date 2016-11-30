@@ -5,7 +5,10 @@ class BackendTest extends Controller{
 
   public function index(){
       $listing = $this->listingModel->getListingByMinPrice(2000);
+
+      require APP . "view/backendTest/header.php";
       require APP . "view/backendTest/index.php";
+      require APP . "view/backendTest/footer.php";
   }
 
 
