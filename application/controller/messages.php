@@ -1,4 +1,3 @@
-
 <?php
 class Messages extends Controller
 {
@@ -7,7 +6,7 @@ class Messages extends Controller
 	if ($_SESSION['loggedIn']) {
 	   if (isset($_POST["submit_add_message"])){ 
  	   // $userId = $this->messageModel->getUserId($_POST["username"]);
-	    $userId = $_SESSION['userID'];  // if using session please select this line
+	    $userId = $_SESSION['userId'];  // if using session please select this line
 	    $toId = $this->messageModel->getUserId($_POST["toname"]);
 	    $this->messageModel->addMessage($userId, $toId, $_POST["content"], $_POST["listingId"]);
 	}
@@ -22,7 +21,7 @@ class Messages extends Controller
 	   // if (isset($_POST["submit_show_message"])) {
 	//	$userId =  $this->messageModel->getUserId($_POST["username"]);
 		
-		$userId = $_SESSION['userID'];  // if using session please select this line
+		$userId = $_SESSION['userId'];  // if using session please select this line
 	        $messages = $this->messageModel->showToMessage($userId);
 		
 
@@ -34,7 +33,7 @@ class Messages extends Controller
    public function showFromMessage()
    {
 	if ($_SESSION['loggedIn']) {
-	    $userId = $_SESSION['userID'];
+	    $userId = $_SESSION['userId'];
 	    $messages = $this->messageModel->showFromMessage($userId);
 
 	    require APP .  'view/user/showFromMessage.php';
