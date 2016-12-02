@@ -2,16 +2,16 @@
 <div class="row">
 
 	<!-- filterOption -->
-	<div class="col-sm-3" style="height: 600px;">
+	<div class="col-sm-2" style="height:;">
 		<div class="row">
 			<h4 class="col-sm-12 well" data-toggle="collapse" data-target="#criteria">Criteria Option</h4>
-			<div class="col-sm-12 well collapse in" id="criteria" style="height: auto;">
+			<div class="col-sm-12 well" style="height: auto;">
 				<form class="form-horizontal mini" style="margin-bottom: 0px;">
 					<fieldset>
 
 						<div class="form-group">
 							<label class="col-sm-3 control-label">Radius</label>
-							<div class="col-sm-8">
+							<div class="col-sm-offset-5">
 								<select class="form-control col-sm-12">
 									<option>This area only</option>
 									<option>Within 1/4 mile</option>
@@ -30,7 +30,7 @@
 
 						<div class="form-group">
 							<label class="col-sm-3 control-label">Property</label>
-							<div class="col-sm-8">
+							<div class="col-sm-offset-5">
 								<select class="form-control col-sm-12">
 									<option>Any</option>
 									<option>Houses</option>
@@ -41,7 +41,7 @@
 
 						<div class="form-group">
 							<label class="col-sm-3 control-label">Bedroom</label>
-							<div class="col-sm-8">
+							<div class="col-sm-offset-5">
 								<select class="form-control col-sm-12">
 									<option>Any</option>
 									<option>1</option>
@@ -55,7 +55,7 @@
 
 						<div class="form-group">
 							<label class="col-sm-3 control-label">Rent</label>
-							<div class="col-sm-8">
+							<div class="col-sm-offset-5">
 								<select class="form-control col-sm-12">
 									<option>Any</option>
 									<option>Rent</option>
@@ -65,7 +65,7 @@
 
 						<div class="form-group">
 							<label class="col-sm-3 control-label">Extra1</label>
-							<div class="col-sm-8">
+							<div class="col-sm-offset-5">
 								<select class="form-control col-sm-12">
 									<option>Any</option>
 								</select>
@@ -74,7 +74,7 @@
 
 						<div class="form-group">
 							<label class="col-sm-3 control-label">Extra2</label>
-							<div class="col-sm-8">
+							<div class="col-sm-offset-5">
 								<select class="form-control col-sm-12">
 									<option>Any</option>
 								</select>
@@ -83,7 +83,7 @@
 
 						<div class="form-group">
 							<label class="col-sm-3 control-label">Extra3</label>
-							<div class="col-sm-8">
+							<div class="col-sm-offset-5">
 								<select class="form-control col-sm-12">
 									<option>Any</option>
 								</select>
@@ -93,8 +93,8 @@
 
 						<div class="form-group">
 							<label class="col-sm-3 control-label">Price</label>
-							<div class="col-sm-8">
-								<div class="col-sm-6 col-xs-6 no_padding_left no_margin_right">
+							<div class="col-sm-offset-5">
+								<div class="row col-sm-12 col-xs-12 pull-right" style="padding-bottom: 10px;">
 									<select class="form-control col-sm-12">
 										<option selected="selected" value="">Min</option>
 										<option value="50000">50,000</option>
@@ -106,7 +106,7 @@
 										<option value="110000">110,000</option><option value="120000">120,000</option><option value="125000">125,000</option><option value="130000">130,000</option><option value="140000">140,000</option><option value="150000">150,000</option><option value="160000">160,000</option><option value="170000">170,000</option><option value="175000">175,000</option><option value="180000">180,000</option><option value="190000">190,000</option><option value="200000">200,000</option><option value="210000">210,000</option><option value="220000">220,000</option><option value="230000">230,000</option><option value="240000">240,000</option><option value="250000">250,000</option><option value="260000">260,000</option><option value="270000">270,000</option><option value="280000">280,000</option><option value="290000">290,000</option><option value="300000">300,000</option><option value="325000">325,000</option><option value="350000">350,000</option><option value="375000">375,000</option><option value="400000">400,000</option><option value="425000">425,000</option><option value="450000">450,000</option><option value="475000">475,000</option><option value="500000">500,000</option><option value="550000">550,000</option><option value="600000">600,000</option><option value="650000">650,000</option><option value="700000">700,000</option><option value="800000">800,000</option><option value="900000">900,000</option><option value="1000000">1,000,000</option><option value="1500000">1,500,000</option><option value="2000000">2,000,000</option><option value="3000000">3,000,000</option><option value="">Min</option>
 									</select>
 								</div>
-								<div class="col-sm-6 col-xs-6  no_padding_right pull-right">
+								<div class="row col-sm-12 col-xs-12 pull-right">
 									<select class="form-control col-sm-12 ">
 										<option selected="selected" value="">Max</option>
 										<option value="50000">50,000</option>
@@ -122,9 +122,9 @@
 						</div>
 
 						<!-- filter btn -->
-						<div class="row">
-							<div class="col-sm-2 pull-right" style="margin-top: 10px;">
-								<button class="btn btn-primary pull-right" type="submit">Filter</button>
+						<div class="row pull-right">
+							<div class="col-sm-12" style="margin-top: 5px;">
+								<button class="btn btn-primary pull-right" type="submit" style="width: 9em;">Filter</button>
 							</div>
 						</div>
 						<!-- /filter btn -->
@@ -147,28 +147,28 @@
 
 			<!--script
 			function initMap() {
-				var uluru = {lat:  37.773972, lng: 122.431297};
-				var map = new google.maps.Map(document.getElementById('map'), {
-					zoom: 13,
-					center: uluru
-				});
-				var marker = new google.maps.Marker({
-					position: uluru,
-					map: map
-				});
-			}
-			/script-->
+			var uluru = {lat:  37.773972, lng: 122.431297};
+			var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 13,
+			center: uluru
+		});
+		var marker = new google.maps.Marker({
+		position: uluru,
+		map: map
+	});
+}
+/script-->
 
-		</div>
-	</div>
-	<!-- /map -->
+</div>
+</div>
+<!-- /map -->
 
-	<!-- listing -->
-	<div class=" row col-sm-2" style="position:relative; width: relative;">
-		<div class="row">
-			<h4 class="well well-sm"><center>Listings within the area</center></h4>
-			<div class="col-sm-12 well well-sm" style="height:379px; width:auto; overflow: scroll;">
-				<?php foreach($listing as $row){  ?>
+<!-- listing -->
+<div class=" row col-sm-2" style="position:relative; width: relative;">
+	<div class="row">
+		<h4 class="well well-sm"><center>Listings within the area</center></h4>
+		<div class="col-sm-12 well well-sm" style="height:379px; width:auto; overflow: scroll;">
+			<?php foreach($listing as $row){  ?>
 				<a href="<?php echo URL . 'home/property/' . $row->id; ?>">
 					<div class="mini_property_wrapper">
 						<div class="thumbnail mini_property">
