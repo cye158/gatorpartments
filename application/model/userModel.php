@@ -16,15 +16,21 @@ class UserModel {
   //Creates a new User account
   //Inserts the arguments into user table in DB
   //The password is hashed and then stored in DB
-  public function register($username, $password, $email, $name) {
-    $sql = "INSERT INTO user (username, password, email, name) VALUES (:username, :password, :email, :name)";
+  public function register($username, $password, $email, $fullName, $isLandlord, $isStudent) {
+    $sql = "INSERT INTO user (username, password, email, full_name) VALUES (:username, :password, :email, :full_name)";
     $query = $this->db->prepare($sql);
     $query->bindParam(':username', $username);
+    
     // hash the password using sha256 and stores into the db
     $password1 = hash('sha256', $password);
     $query->bindParam(':password', $password1);
     $query->bindParam(':email', $email);
-    $query->bindParam(':name', $name);
+    $query->bindParam(':full_name', $fullName);
+
+    if($isLandlord == '1'){
+      $sql = "INSERT INTO user (isLandlord) VALUES (1)";
+      $quickQuery = $this->db->prepare($sql);
+    }
     $query->execute();
   }
 
@@ -44,7 +50,8 @@ class UserModel {
     //If result is blank, then no match is found.
     if(!$result) {
       //If login fails, we redirect to home and exit() so php does not keep executing.
-      header("Location:" . URL,true,401);
+      $_SESSION['loggedIn'] = false;
+      header("Location:" . URL . "home/index", true, 401);
       exit();
     } else {
       // Creates a session to store the users ID, and make them always log in upon visiting the site 

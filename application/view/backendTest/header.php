@@ -27,7 +27,7 @@
       <div class="container">
         <ul class="list-inline">
           <li><a href="" data-toggle="modal" data-target="#loginModal"><h3>Login</h3></a></li>
-          <li><a href=""><h3>Register</h3></a></li>
+          <li><a href="<?php echo URL . 'backendTest/register' ;?>"><h3>Register</h3></a></li>
         </ul>
       </div>
     </nav>
