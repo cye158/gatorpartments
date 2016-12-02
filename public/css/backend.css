@@ -1,0 +1,22 @@
+html, body, h1, h2, h3, h4, p{
+  padding:0;
+  margin:0;
+}
+
+a:link, a:visited, a:hover, a:active{
+  text-decoration:none;
+  color:inherit;
+  outline:0;
+}
+
+
+header{
+  background-color:black;
+  color:white;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+.red{
+  color:red;
+}
