@@ -1673,6 +1673,7 @@ label.listinglabel{
     clear: left;
     width: 200px;
     text-align: right;
+    font-size: 1rem;
 }
 input.listingtext {
     width: 400px;
