@@ -20,3 +20,18 @@
         color:red;
     }
 }
+
+.thumb_property{
+  display: block;
+  margin-bottom: 1px;
+  line-height: 1;
+}
+
+.thumb {
+  position: relative;
+  padding: 1px;
+  background-color: white;
+  border: 2px solid #dddddd;
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
+}
