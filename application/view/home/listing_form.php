@@ -338,27 +338,37 @@
       </select>
     <label class="listinglabel">Price *</label><input class="listingtext" type="text" name="price"></>
   </div>
-
-
-<!-- square feet bedroom bath -->
-<table class="lf" border="1">
-  <tr>
-    <th class="lf">Square Feet *</th>
-    <th class="lf"># Of Bedroom(s) *</th>
-    <th class="lf"># Of Bath(s) *</th>
-  </tr>
-  <tr>
-    <td class="lf">
-      <input type="text" name="feet"></>
-    </td>
-    <td class="lf">
-      <input type="text" name="bedroom"></>
-    </td>
-    <td class="lf">
-      <input type="text" name="bath"></>
-    </td>
-  </tr>
-</table>
+  <div>
+    <!-- square feet bedroom bath -->
+    <label class="listinglabel">Square Feet *</label><input class="listingtext" type="text" name="feet"></>
+    <label class="listinglabel"># Of Bedroom(s) *</label>
+      <select name="bedroom">
+        <option value=""></option>
+        <option value="studio">studio</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+    <label class="listinglabel"># Of Bath(s) *</label>
+      <select name="bath">
+        <option value=""></option>
+        <option value="0.5">0.5</option>
+        <option value="1">1</option>
+        <option value="1.5">1.5</option>
+        <option value="2">2</option>
+        <option value="2.5">2.5</option>
+        <option value="3">3</option>
+        <option value="3.5">3.5</option>
+        <option value="4">4</option>
+        <option value="4.5">4.5</option>
+        <option value="5">5</option>
+        <option value="5.5">5.5</option>
+        <option value="6">6</option>
+      </select>
+  </div>
 
 <!-- utilities -->
 <table class="lf" border="1">
