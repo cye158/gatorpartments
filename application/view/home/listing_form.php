@@ -312,8 +312,8 @@
           <option value="WV">WV</option>
           <option value="WI">WI</option>
           <option value="WY">WY</option>
-        </select></><br>
-        <label class="listinglabel">Zip Code *</label><input class="listingtext" type="text" name="zip_code"></><br>
+        </select></>
+        <label class="listinglabel">Zip Code *</label><input class="listingtext" type="text" name="zip_code"></>
         <br><hr class="listingruler">
   </div>
 
