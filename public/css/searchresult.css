@@ -21,7 +21,7 @@
     }
 }
 
-.thumb_property{
+.thumb_property {
   display: block;
   margin-bottom: 1px;
   line-height: 1;
@@ -37,7 +37,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-.thumb a > image {
+.thumb a > img {
   display: block;
   max-width: 100%;
   height: 25vh;
