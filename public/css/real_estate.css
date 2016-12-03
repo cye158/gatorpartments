@@ -1679,7 +1679,10 @@ input.listingtext {
     width: 400px;
 
 }
+select.listingform {
+    width: 200px;
 
+}
 hr.listingruler {
     width: 700px;
 }
