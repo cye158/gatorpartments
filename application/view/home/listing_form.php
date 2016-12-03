@@ -260,6 +260,7 @@
         <label class="listinglabel">Address 2 *</label><input class="listingtext" type="text" name="address2"></>
         <!-- city state zipcode table -->
         <label class="listinglabel">City *</label><input class="listingtext" type="text" name="city"></>
+        <br>
         <label class="listinglabel">State *</label><select class="listingform" name="state">
           <option value=""></option>
           <option value="AL">AL</option>
