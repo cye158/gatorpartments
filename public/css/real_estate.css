@@ -1675,14 +1675,16 @@ label.listinglabel{
     text-align: right;
     font-size: 1.8rem;
 }
+select.listingform {
+    display: inline-block;
+    width: 200px;
+
+}
 input.listingtext {
     width: 400px;
 
 }
-select.listingform {
-    width: 200px;
 
-}
 hr.listingruler {
     width: 700px;
 }
