@@ -254,7 +254,7 @@
   <div>
         <!-- address -->
         <label class="listinglabel">Address 1 *</label><input class="listingtext" type="text" name="address1"></>
-        <br><hr>
+        <br><hr class="listingruler">
         <label class="listinglabel">Address 2 *</label><input class="listingtext" type="text" name="address2"></>
         <!-- city state zipcode table -->
   </div>
