@@ -24,8 +24,10 @@ class Messages extends Controller
 		$userId = $_SESSION['userId'];  // if using session please select this line
 	        $messages = $this->messageModel->showToMessage($userId);
 		
-
-	       require APP . 'view/user/showToMessage.php'; 
+               // load views
+ 	       require APP . 'view/_templates/header.php';
+	       require APP . 'view/user/showToMessage.php';
+               require APP . 'view/_templates/footer.php'; 
 	   // }
 	}
    }
@@ -35,8 +37,11 @@ class Messages extends Controller
 	if ($_SESSION['loggedIn']) {
 	    $userId = $_SESSION['userId'];
 	    $messages = $this->messageModel->showFromMessage($userId);
-
+            
+            // load views
+            require APP . 'view/_templates/header.php';
 	    require APP .  'view/user/showFromMessage.php';
+            require APP . 'view/_templates/footer.php';
 	}
    }
 }
