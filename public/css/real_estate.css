@@ -1667,7 +1667,7 @@ label {
   font-weight: bold;
 }
 
-listinglabel{
+label.listinglabel{
     display: inline-block;
     float: left;
     clear: left;
