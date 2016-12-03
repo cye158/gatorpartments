@@ -237,7 +237,8 @@
 <h2>Post A Listing</h2>
 
 <!-- error messages -->
-<?php echo nl2br($addressErr);?>
+<?php echo nl2br($address1Err);?>
+<?php echo nl2br($address2Err);?>
 <?php echo nl2br($cityErr);?>
 <?php echo nl2br($stateErr);?>
 <?php echo nl2br($zip_codeErr);?>
