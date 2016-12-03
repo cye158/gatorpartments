@@ -28,5 +28,9 @@
             $this->userModel->displayMessage($message);
 	}
 
-}
+	public function checkLoginStatus() {
+	    $this->userModel->checkLoginStatus();
+	}
+
+    }
 ?>

@@ -33,7 +33,7 @@ class UserModel {
     }
     $query->execute();
   }
-
+/*
 <<<<<<< HEAD
     //Checks if the username and hashed password matches
     //If yes, it will store user's information into Sessions
@@ -54,7 +54,7 @@ class UserModel {
 	    // return false, outputs error message
 	    echo "<meta http-equiv=\"refresh\" content=\"5;url=".$_SERVER['HTTP_REFERER']."\"/>";
              echo "Error, username or password does not match";
-=======
+======= */
   //Compares the argument's username and password in DB
   //If matches, we load user info into sessions for persistent data
   public function login($username, $password) {
@@ -74,7 +74,7 @@ class UserModel {
       $_SESSION['loggedIn'] = false;
       header("Location:" . URL . "home/index", true, 401);
       exit();
->>>>>>> nhan-dev
+//>>>>>>> nhan-dev
     } else {
       // Creates a session to store the users ID, and make them always log in upon visiting the site 
       $_SESSION['userId'] = $result->id;
@@ -114,6 +114,13 @@ class UserModel {
   public function displayMessage($message) {
     echo $message;
     // return $message;
+  }
+
+  public function checkLoginStatus() {
+    if(!isset($_SESSION) || $_SESSION['loggedIn'] == false || !$_SESSION['isLandlord']) {
+      header("Location: " . URL . "backendTest/register");
+      exit();
+    }
   }
 }
 
