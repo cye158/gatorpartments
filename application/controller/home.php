@@ -60,7 +60,7 @@ class Home extends Controller
       require APP . 'view/_templates/footer.php';
     }
     //Individual Listing Page
-    public function property($id){
+    public function property(){
     	if(isset($id)){
     	   $listing = $this->listingModel->getListingById($id);
 
