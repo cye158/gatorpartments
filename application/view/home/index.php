@@ -162,7 +162,9 @@
 		</div>
 	</div>
 	<!-- /map -->
-
+       <form action="<?php echo URL; ?>home/addMessage" method="POST">
+         <input type="submit" name="contact" value="Contact" />
+      </form>       
 	<!-- listing -->
 	<div class=" row col-sm-2" style="position:relative; width: relative;">
 		<div class="row">
@@ -183,7 +185,9 @@
 		</div>
 	</div>
 	<!-- /listing -->
-
+      <form action="<?php echo URL; ?>home/addMessage" method="POST">
+      <input type="submit" name ="contact" value="Submit" />
+     </form>
 	<!-- ads -->
 	<div class="col-sm-1 bg-success pull-right" style="height: 600px;">
 		<br><br><br><br><br><br><br><br><br>ADS
