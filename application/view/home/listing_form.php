@@ -256,11 +256,10 @@
 
   <div>
         <!-- address -->
-        <label class="listinglabel">Address 1 *</label><input class="listingtext" type="text" name="address1"></>
-        <label class="listinglabel">Address 2 *</label><input class="listingtext" type="text" name="address2"></>
+        <label class="listinglabel">Address 1 *</label><input class="listingtext" type="text" name="address1"></><br>
+        <label class="listinglabel">Address 2 *</label><input class="listingtext" type="text" name="address2"></><br>
         <!-- city state zipcode table -->
-        <label class="listinglabel">City *</label><input class="listingtext" type="text" name="city"></>
-        <br>
+        <label class="listinglabel">City *</label><input class="listingtext" type="text" name="city"></><br>
         <label class="listinglabel">State *</label><select class="listingform" name="state">
           <option value=""></option>
           <option value="AL">AL</option>
@@ -313,8 +312,8 @@
           <option value="WV">WV</option>
           <option value="WI">WI</option>
           <option value="WY">WY</option>
-        </select></>
-        <label class="listinglabel">Zip Code *</label><input class="listingtext" type="text" name="zip_code"></>
+        </select></><br>
+        <label class="listinglabel">Zip Code *</label><input class="listingtext" type="text" name="zip_code"></><br>
         <br><hr class="listingruler">
   </div>
 
