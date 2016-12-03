@@ -1,23 +1,37 @@
 <?php
   //defined variables for gatorpartment post
-  $addressErr = $cityErr = $stateErr = $zip_codeErr = $complexErr = $termErr = $priceErr = $feetErr = $bedroomErr = $bathErr = "";
-  $address = $city = $state = $zip_code = $complex = $term = $price = $feet = $bedroom = $bath = $electricity = $water = $gas = $parking = $laundry = $elevator = $wheelchair = $outdoor = $pool = $smoking = $dogs = $cats = $comment = "";
+  $address1Err = $address2Err = $cityErr = $stateErr = $zip_codeErr = $complexErr = $termErr = $priceErr = $feetErr = $bedroomErr = $bathErr = "";
+  $address1 = $address2 = $city = $state = $zip_code = $complex = $term = $price = $feet = $bedroom = $bath = $electricity = $water = $gas = $parking = $laundry = $elevator = $wheelchair = $outdoor = $pool = $smoking = $dogs = $cats = $comment = "";
 
 
   if(isset($_POST['Post']))
   {
     // address conditions
-    if (empty($_POST["address"]))
+    if (empty($_POST["address1"]))
     {
-    $addressErr = "Address: Address is required\r\n";
+    $address1Err = "Address 1: Address is required\r\n";
     } else {
-      $address = $_POST['address'];
+      $address1 = $_POST['address1'];
 
       // check if address only contains letters, numbers, and whitespace
-      if (!preg_match("/^[a-zA-Z0-9 ]*$/",$address)) {
-      $addressErr = "Address: Only letters, numbers, and white space allowed\r\n";
+      if (!preg_match("/^[a-zA-Z0-9. ]*$/",$address1)) {
+      $address1Err = "Address 1: Only letters, numbers, periods and white space allowed\r\n";
       } else {
-        echo nl2br($address."\n");
+        echo nl2br($address1."\n");
+      }
+    }
+
+    if (empty($_POST["address2"]))
+    {
+    $address2Err = "Address 2: Address is required\r\n";
+    } else {
+      $address2 = $_POST['address2'];
+
+      // check if address only contains letters, numbers, and whitespace
+      if (!preg_match("/^[a-zA-Z0-9. ]*$/",$address2)) {
+      $address2Err = "Address 2: Only letters, numbers, periods and white space allowed\r\n";
+      } else {
+        echo nl2br($address2."\n");
       }
     }
 
@@ -235,25 +249,21 @@
 <?php echo nl2br($bathErr);?>
 
 <form method="post" action="<?php echo URL;?>home/listing_form">
-
+ <!-- test - must delete later -->
   <div>
         <label class="listinglabel">Name:</label><input class="listingtext" type="text">
         <label class="listinglabel">Email Address:</label><input class="listingtext" type = "text">
         <label class="listinglabel">Description of the input value:</label><input class="listingtext" type="text">
   </div>
 
+  <div>
+        <!-- address -->
+        <label class="listinglabel">Address 1 *</label><input class="listingtext" type="text" name="address1"></>
+        <hr />
+        <label class="listinglabel">Address 2 *</label><input class="listingtext" type="text" name="address2"></>
+        <!-- city state zipcode table -->
+  </div>
 
-<!-- address table -->
-<table class="lf" border="1">
-  <tr>
-    <th class="lf">Address *</th>
-  </tr>
-  <tr>
-    <td class="lf">
-      <input type="text" name="address"></>
-    </td>
-  </tr>
-</table>
 
 <!-- city state zipcode table -->
 <table class="lf" border="1">
