@@ -66,7 +66,7 @@
 						<li><a href="<?php echo URL;?>home/index" class="first">LOGO</a></li>
 
 						<!-- Post a Listing -->
-						<li><a href="<?php echo URL;?>home/listing_form_authentication">Post</a></li>
+						<li><a href="<?php echo URL;?>user/checkLoginStatus">Post</a></li>
 
 						<!-- Search bar -->
 						<li>
