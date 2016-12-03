@@ -22,19 +22,19 @@
 }
 
 .thumb_property {
-  display: block;
-  margin-bottom: 1px;
-  line-height: 1;
+  display: block !important;
+  margin-bottom: 1px !important;
+  line-height: 1 !important;
 }
 
 .thumb {
-  display: block;
-  position: absolute;
-  padding: 5px;
-  background-color: white;
-  border: 2px solid #dddddd;
-  border-radius: 3px;
-  transition: all 0.2s ease-in-out;
+  display: block !important;
+  position: relative !important;
+  padding: 5px !important;
+  background-color: white !important;
+  border: 2px solid #dddddd !important;
+  border-radius: 3px !important;
+  transition: all 0.2s ease-in-out !important;
 }
 
 .thumb a > img {
@@ -46,11 +46,4 @@ div.centermid {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-separator {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: 0;
-  border-top: 1px solid darkgrey;
 }
