@@ -47,3 +47,10 @@ div.centermid {
     align-items: center;
     justify-content: center;
 }
+
+hor-div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 0;
+  border-top: 1px solid darkgrey;
+}
