@@ -93,6 +93,23 @@ class UserModel {
     echo $message;
     // return $message;
   }
-}
 
+  //Return user's id
+  public function getUserId(){
+    if(isset($_SESSION['userId'])){
+      return $_SESSION['userId'];
+    }
+
+    return null;
+  }
+
+  public function getUserName(){
+    if(isset($_SESSION['userName'])){
+      return $_SESSION['userName'];
+    }
+
+    return null;
+  }
+
+}
 ?>
