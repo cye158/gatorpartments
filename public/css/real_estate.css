@@ -1674,6 +1674,10 @@ label.listinglabel{
     width: 200px;
     text-align: right;
 }
+input.listingtext {
+    width: 400px;
+
+}
 
 input[type="search"] {
   -webkit-box-sizing: border-box;

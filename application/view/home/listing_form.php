@@ -237,9 +237,9 @@
 <form method="post" action="<?php echo URL;?>home/listing_form">
 
   <div>
-        <label class="listinglabel">Name:</label><input type="text">
-        <label class="listinglabel">Email Address:</label><input type = "text">
-        <label class="listinglabel">Description of the input value:</label><input type="text">
+        <label class="listinglabel">Name:</label><input class="listingtext" type="text">
+        <label class="listinglabel">Email Address:</label><input class="listingtext" type = "text">
+        <label class="listinglabel">Description of the input value:</label><input class="listingtext" type="text">
   </div>
 
 
