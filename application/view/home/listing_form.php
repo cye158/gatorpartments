@@ -250,17 +250,11 @@
 <?php echo nl2br($bathErr);?>
 
 <form method="post" action="<?php echo URL;?>home/listing_form">
- <!-- test - must delete later -->
-  <div>
-        <label class="listinglabel">Name:</label><input class="listingtext" type="text">
-        <label class="listinglabel">Email Address:</label><input class="listingtext" type = "text">
-        <label class="listinglabel">Description of the input value:</label><input class="listingtext" type="text">
-  </div>
 
   <div>
         <!-- address -->
         <label class="listinglabel">Address 1 *</label><input class="listingtext" type="text" name="address1"></>
-        <hr />
+        <br><hr>
         <label class="listinglabel">Address 2 *</label><input class="listingtext" type="text" name="address2"></>
         <!-- city state zipcode table -->
   </div>
