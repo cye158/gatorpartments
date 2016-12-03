@@ -1677,8 +1677,6 @@ label.listinglabel{
 }
 select.listingform {
     display: inline-block;
-    float: left;
-    clear: left;
     width: 200px;
 
 }
