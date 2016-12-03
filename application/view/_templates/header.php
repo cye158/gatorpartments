@@ -9,7 +9,7 @@
     <meta name="author" content="">
 
 	<link id="switch_style" href="<?php echo URL;?>css/real_estate.css" rel="stylesheet">
-	<link  href="<?php echo URL;?>css/searchresult.css" rel="stylesheet">
+	<link  href="<?php echo URL;?>css/search-result.css" rel="stylesheet">
 	<link href="<?php echo URL;?>css/theme.css" rel="stylesheet">
 	<link href="<?php echo URL;?>css/gator.css" rel="stylesheet">
     <!--[if lt IE 9]>
