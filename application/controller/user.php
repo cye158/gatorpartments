@@ -1,32 +1,40 @@
 <?php
+class User extends Controller {
 
-    class User extends Controller {
-        public function index() {
-	    require APP . 'view/_templates/header.php';
-	    require APP . 'view/user/index.php';
-	    require APP . 'view/_templates/footer.php';
-	}
+  public function register(){
+    //If the submitRegister button is clicked
+    if(isset($_POST['submitRegister'])){
+      $fullName = $_POST['fullName'];
+      $phoneNumber = $_POST['phoneNumber'];
+      $email = $_POST['email'];
+      $username = $_POST['username'];
+      $password = $_POST['password'];
 
-	public function authenticateLogin() {
-	    $username = trim($_POST['username'], ' ');
-	    $password = $_POST['password'];
+      if(isset($_POST['checkboxLandlord'])){
+        $checkboxLandlord = 1;
+      } else {
+        $checkboxLandlord = 0;
+      }
 
-	    $this->userModel->login($username, $password);
-	}
+      if(isset($_POST['checkboxStudent'])){
+        $checkboxStudent = 1;
+      } else {
+        $checkboxStudent = 0;
+      }
 
-        public function register() {
-	    $username = trim($_POST['username'], ' ');
-	    $password = $_POST['password'];
-	    $email = $_POST['email'];
-            $name = $_POST['name'];
+      $this->userModel->register($fullName, $phoneNumber, $email, $username, $password, $checkboxLandlord, $checkboxStudent);
+    }
 
-	    return $this->userModel->register($username, $password, $email, $name);
-        }
+    require APP . "view/_templates/header.php";
+    require APP . "view/user/register.php";
+    require APP . "view/_templates/footer.php";
+  }
 
-	public function authenticateMessage() {
-	    $message = $_POST['message'];
-            $this->userModel->displayMessage($message);
-	}
+  public function login(){
+    require APP . "view/_templates/header.php";
+    require APP . "view/user/login.php";
+    require APP . "view/_templates/footer.php";
+  }
 
 }
 ?>
