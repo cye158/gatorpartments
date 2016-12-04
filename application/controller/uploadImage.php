@@ -5,5 +5,9 @@
       require APP . 'view/uploadImage/index.php';
       require APP . 'view/_templates/footer.php';
     }
+
+    public function upload() {
+      $this->listingModel->uploadImage();
+    }
   }
 ?>
