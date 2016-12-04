@@ -64,14 +64,22 @@ class Home extends Controller
       require APP . 'view/home/messaging.php';
       require APP . 'view/_templates/footer.php';
     }
-
-    public function property()
+    
+   //Individual Listing Page
+    public function property($id)
     {
-        // load views
+    	if(isset($id)){
+    	   $listing = $this->listingModel->getListingById($id);
+
+    	   $images = $this->listingModel->getImagesArray($listing->images);
+           $_SESSION['listingId'] =  $listing->id;
+            }
+	// load views
         require APP . 'view/_templates/header.php';
-        require APP . 'view/home/property.html';
+        require APP . 'view/home/property.php';
         require APP . 'view/_templates/footer.php';
     }
+
     public function terms()
     {
         // load views
@@ -87,13 +95,6 @@ class Home extends Controller
         require APP . 'view/_templates/footer.php';
     }
 
-    public function addMessage()
-    {
-	// load views
-        require APP . 'view/_templates/header.php';
-	require APP . 'view/user/writeMessage.php';
-        require APP . 'view/_templates/footer.php';
-    }
 }
 
 ?>
