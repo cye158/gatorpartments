@@ -241,17 +241,17 @@
 <h2>Post A Listing</h2>
 
 <!-- error messages -->
-<strong><font color="red"><?php echo nl2br($address1Err);?></font></strong>
-<strong><font color="red"><?php echo nl2br($address2Err);?></font></strong>
-<strong><font color="red"><?php echo nl2br($cityErr);?></font></strong>
-<strong><font color="red"><?php echo nl2br($stateErr);?></font></strong>
-<strong><font color="red"><?php echo nl2br($zip_codeErr);?></font></strong>
-<strong><font color="red"><?php echo nl2br($complexErr);?></font></strong>
-<strong><font color="red"><?php echo nl2br($termErr);?></font></strong>
-<strong><font color="red"><?php echo nl2br($priceErr);?></font></strong>
-<strong><font color="red"><?php echo nl2br($feetErr);?></font></strong>
-<strong><font color="red"><?php echo nl2br($bedroomErr);?></font></strong>
-<strong><font color="red"><?php echo nl2br($bathErr);?></font></strong>
+<strong><font size="5" color="red"><?php echo nl2br($address1Err);?></font></strong>
+<strong><font size="5" color="red"><?php echo nl2br($address2Err);?></font></strong>
+<strong><font size="5" color="red"><?php echo nl2br($cityErr);?></font></strong>
+<strong><font size="5" color="red"><?php echo nl2br($stateErr);?></font></strong>
+<strong><font size="5" color="red"><?php echo nl2br($zip_codeErr);?></font></strong>
+<strong><font size="5" color="red"><?php echo nl2br($complexErr);?></font></strong>
+<strong><font size="5" color="red"><?php echo nl2br($termErr);?></font></strong>
+<strong><font size="5" color="red"><?php echo nl2br($priceErr);?></font></strong>
+<strong><font size="5" color="red"><?php echo nl2br($feetErr);?></font></strong>
+<strong><font size="5" color="red"><?php echo nl2br($bedroomErr);?></font></strong>
+<strong><font size="5" color="red"><?php echo nl2br($bathErr);?></font></strong>
 
 <form method="post" action="<?php echo URL;?>home/listing_form">
 
