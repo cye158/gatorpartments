@@ -373,6 +373,7 @@
 
 <!--  Utilities -->
   <div>
+    <br><hr class="listingruler">
     <label class="listinglabel">Utilities Included </label>
     <input type="checkbox" name="electricity" value="electricity">Electricity
     <input type="checkbox" name="gas" value="gas">Gas
