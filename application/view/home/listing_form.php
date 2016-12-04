@@ -242,16 +242,16 @@
 
 <!-- error messages -->
 <font color="red"><?php echo nl2br($address1Err);?></font>
-<?php echo nl2br($address2Err);?>
-<?php echo nl2br($cityErr);?>
-<?php echo nl2br($stateErr);?>
-<?php echo nl2br($zip_codeErr);?>
-<?php echo nl2br($complexErr);?>
-<?php echo nl2br($termErr);?>
-<?php echo nl2br($priceErr);?>
-<?php echo nl2br($feetErr);?>
-<?php echo nl2br($bedroomErr);?>
-<?php echo nl2br($bathErr);?>
+<font color="red"><?php echo nl2br($address2Err);?></font>
+<font color="red"><?php echo nl2br($cityErr);?></font>
+<font color="red"><?php echo nl2br($stateErr);?></font>
+<font color="red"><?php echo nl2br($zip_codeErr);?></font>
+<font color="red"><?php echo nl2br($complexErr);?></font>
+<font color="red"><?php echo nl2br($termErr);?></font>
+<font color="red"><?php echo nl2br($priceErr);?></font>
+<font color="red"><?php echo nl2br($feetErr);?></font>
+<font color="red"><?php echo nl2br($bedroomErr);?></font>
+<font color="red"><?php echo nl2br($bathErr);?></font>
 
 <form method="post" action="<?php echo URL;?>home/listing_form">
 
