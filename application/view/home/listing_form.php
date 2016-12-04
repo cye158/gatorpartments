@@ -379,50 +379,33 @@
     <input type="checkbox" name="gas" value="gas">Gas
     <input type="checkbox" name="water" value="water">Water
   </div>
+<!-- Accomodations -->
+  <div>
+    <br><hr class="listingruler">
+    <label class="listinglabel">Building Accomodations </label>
+      <input type="checkbox" name="elevator" value="elevator">Elevator
+      <input type="checkbox" name="laundry" value="laundry room">Laundry Room
+      <input type="checkbox" name="outdoor" value="outdoor space">Outdoor Space
+      <input type="checkbox" name="parking" value="parking">Parking
+      <input type="checkbox" name="pool" value="pool">Pool
+      <input type="checkbox" name="wheelchair" value="wheelchair accesibility">Wheelchair Accessibility
+  </div>
 
+<!-- Restrictions -->
+  <div>
+    <br><hr class="listingruler">
+    <label class="listinglabel">Building Restrictions </label>
+      <input type="checkbox" name="cats" value="cats">Cats
+      <input type="checkbox" name="dogs" value="dogs">Dogs
+      <input type="checkbox" name="smoking" value="smoking">Smoking
+  </div>
 
-<!-- accomodations -->
-<table class="lf" border="1">
-<tr>
-  <th class="lf">Building Accomodations</th>
-</tr>
-</table>
-<table class="lf" border="1">
-<tr>
-  <td class="lf"><input type="checkbox" name="elevator" value="elevator">Elevator</td>
-  <td class="lf"><input type="checkbox" name="laundry" value="laundry room">Laundry Room</td>
-  <td class="lf"><input type="checkbox" name="outdoor" value="outdoor space">Outdoor Space</td>
-  <td class="lf"><input type="checkbox" name="parking" value="parking">Parking</td>
-  <td class="lf"><input type="checkbox" name="pool" value="pool">Pool</td>
-  <td class="lf"><input type="checkbox" name="wheelchair" value="wheelchair accesibility">Wheelchair Accessibility</td>
-</tr>
-</table>
-
-<!-- restrictions -->
-<table class="lf" border="1">
-<tr>
-  <th class="lf">Building Restrictions</th>
-</tr>
-</table>
-<table class="lf" border="1">
-  <td class="lf"><input type="checkbox" name="cats" value="cats">Cats</td>
-  <td class="lf"><input type="checkbox" name="dogs" value="dogs">Dogs</td>
-  <td class="lf"><input type="checkbox" name="smoking" value="smoking">Smoking</td>
-</table>
-
-<!-- comment -->
-<table class="lf" border="1">
-  <tr>
-    <th class="lf">Comment</th>
-  </tr>
-</table>
-<table class="lf" border="1">
-  <tr>
-    <td class="lf">
+<!-- Comment -->
+  <div>
+    <br><hr class="listingruler">
+    <label class="listinglabel">Comment </label>
       <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
-    </td>
-  </tr>
-</table>
+  </div>
 
 <br>
   <!-- button for form submission usage-->
