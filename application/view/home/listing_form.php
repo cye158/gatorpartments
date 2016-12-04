@@ -241,7 +241,7 @@
 <h2>Post A Listing</h2>
 
 <!-- error messages -->
-<?php echo nl2br($address1Err);?>
+<?php echo <font color='red'>nl2br($address1Err)</font>;?>
 <?php echo nl2br($address2Err);?>
 <?php echo nl2br($cityErr);?>
 <?php echo nl2br($stateErr);?>
