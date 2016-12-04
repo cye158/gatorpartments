@@ -1671,7 +1671,7 @@ label.listinglabel{
     display: inline-block;
     float: left;
     clear: left;
-    width: 100px;
+    width: 200px;
     text-align: right;
     font-size: 1.8rem;
 }
