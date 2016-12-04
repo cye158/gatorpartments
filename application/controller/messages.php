@@ -1,6 +1,20 @@
 <?php
 class Messages extends Controller
-{
+{   
+    public function contactLandlord($listingId)
+    {
+	if ($_SESSION['loggedIn']) {
+	    $landlordId = $this->messageModel->getLandlordId($listingId);
+            $landlordUserName = $this->messageModel->getUserName($landlordId);
+
+	    // load view
+     	    require APP . 'view/_templates/header.php';
+            require APP . 'view/user/writeMessage.php';
+	    require APP . 'view/_templates/footer.php';
+	   
+	}
+    }
+
     public function addMessage()
     {
 	if ($_SESSION['loggedIn']) {
