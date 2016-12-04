@@ -24,8 +24,8 @@ class MessageModel
 
     //creates a message onto message table in DB
     //Takes in user's id, receipient's id, and message content
-    public function addMessage($userId, $toId, $content, $listingId)
-    {	
+    public function addMessage($userId, $toId, $conten)
+    {	$listingId = $_SESSION['listingId'];
 	$sql = "INSERT INTO message (userId, toId, content, listingId, created_date) VALUES (:userId, :toId, :content, :listingId, Now())";
 	$query = $this->db->prepare($sql);
 	$parameters = array(':userId' => $userId, ':toId' => $toId, ':content' => $content, ':listingId' => $listingId);
@@ -72,6 +72,16 @@ class MessageModel
       $query->execute($parameters);
       return $query->fetch();
   }
+
+  public function getLandlordId($listingId)
+  {
+      $sql = "select landlord_id from listing where id=:listingId";
+      $query = $this->db->prepare($sql);
+      $parameters = array(':listingId' => $listingId);
+
+      $query->execute($parameters);
+      return $query->fetch()->landlord_id;
+  }  
 }
 ?>
 
