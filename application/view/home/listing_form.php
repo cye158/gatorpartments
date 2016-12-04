@@ -23,7 +23,8 @@
 
     if (empty($_POST["address2"]))
     {
-    $address2Err = "Address 2: Address is required\r\n";
+    /* address 2 can be empty depending on the condition of which the complex is */
+    /*$address2Err = "Address 2: Address is required\r\n";*/
     } else {
       $address2 = $_POST['address2'];
 
@@ -322,7 +323,7 @@
   </div>
   <div>
     <!-- complex term price -->
-    <label class="listinglabel">Complex *</label>
+    <label class="listinglabel">Type Of Rental *</label>
       <select name="complex">
         <option value=""></option>
         <option value="apartment">apartment</option>
@@ -370,25 +371,14 @@
       </select>
   </div>
 
-<!-- utilities -->
-<table class="lf" border="1">
-  <tr>
-    <th class="lf">Utilities Provided</th>
-  </tr>
-</table>
-<table class="lf" border="1">
-  <tr>
-    <td class="lf">
-      <input type="checkbox" name="electricity" value="electricity">Electricity
-    </td>
-    <td class="lf">
-      <input type="checkbox" name="gas" value="gas">Gas
-    </td>
-    <td class="lf">
-      <input type="checkbox" name="water" value="water">Water
-    </td>
-  </tr>
-</table>
+<!--  Utilities -->
+  <div>
+    <label class="listinglabel">Utilities Included </label>
+    <input type="checkbox" name="electricity" value="electricity">Electricity
+    <input type="checkbox" name="gas" value="gas">Gas
+    <input type="checkbox" name="water" value="water">Water
+  </div>
+
 
 <!-- accomodations -->
 <table class="lf" border="1">
