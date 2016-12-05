@@ -66,7 +66,7 @@
 						<li><a href="<?php echo URL;?>home/index" class="first">LOGO</a></li>
 
 						<!-- Post a Listing -->
-						<li><a href="<?php echo URL;?>home/listing_form">Post</a></li>
+						<li><a href="<?php echo URL;?>user/checkLoginStatus">Post</a></li>
 
 						<!-- Search bar -->
 						<li>
@@ -99,7 +99,7 @@
                   <li class="dropdown">
                     <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
                     <div class="dropdown-menu">
-                      <form action="<?php echo URL;?>user/authenticateLogin" method="post">
+                      <form action="<?php echo URL?>user/authenticateLogin" method="post">
                         <input type="text" name="username" placeholder="Username or email" size="30" /><br class="visible-xs"/>
                         <input type="password" name="password" placeholder="Password" size="30" /><br class="visible-xs"/>
                         <input id="remember_me" type="checkbox" name="remember_me" value="1" />

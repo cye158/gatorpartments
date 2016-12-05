@@ -1,8 +1,7 @@
 <?php
 
 session_start();
-?>
-<?php
+
 class Controller
 {
     /**
@@ -66,4 +65,5 @@ class Controller
         setlocale(LC_MONETARY, 'en_US.utf8');
         return money_format("%.0n",$price);
     }
+
 }
