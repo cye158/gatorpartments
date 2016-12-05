@@ -256,14 +256,14 @@
 <form method="post" action="<?php echo URL;?>home/listing_form">
 
   <div><table>
-	<tr> 
+	<tr>
         <!-- address -->
         <td><label class="listinglabel">Address 1 *</label><input class="listingtext" type="text" name="address1"></></td></tr>
         <tr><td><label class="listinglabel">Address 2 *</label><input class="listingtext" type="text" name="address2"></></td></tr>
         <!-- city state zipcode table -->
         <tr><td><label class="listinglabel">City *</label><input class="listingtext" type="text" name="city"></></td></tr>
-  
-  
+
+
         <tr><td><label class="listinglabel">State *</label>&nbsp;<select class="listingform" name="state">
           <option value=""></option>
           <option value="AL">AL</option>
@@ -317,8 +317,8 @@
           <option value="WI">WI</option>
           <option value="WY">WY</option>
         </select></></td></tr>
-  
-  
+
+
         <tr><td><label class="listinglabel">Zip Code *</label><input class="listingtext" type="text" name="zip_code"></>
         <br><hr class="listingruler"></td></tr>
     <!-- complex term price -->
@@ -368,15 +368,15 @@
       </select></td></tr>
 
 <!--  Utilities -->
- 
+
     <tr><td><br><hr class="listingruler">
     <label class="listinglabel">Utilities Included </label></td></tr>
     <tr><td><input type="checkbox" name="electricity" value="electricity">Electricity</td></tr>
     <tr><td><input type="checkbox" name="gas" value="gas">Gas</td></tr>
     <tr><td><input type="checkbox" name="water" value="water">Water</td></tr>
-  
+
 <!-- Accomodations -->
- 
+
    <tr><td> <br><hr class="listingruler">
     <label class="listinglabel">Building Accomodations </label></td>
       <tr><td><input type="checkbox" name="elevator" value="elevator">Elevator</td></tr>
@@ -385,7 +385,7 @@
       <tr><td><input type="checkbox" name="parking" value="parking">Parking</td></tr>
       <tr><td><input type="checkbox" name="pool" value="pool">Pool</td></tr>
       <tr><td><input type="checkbox" name="wheelchair" value="wheelchair accesibility">Wheelchair Accessibility</td></tr>
-  
+
 
 <!-- Restrictions -->
   <tr><td>
@@ -394,7 +394,7 @@
       <tr><td><input type="checkbox" name="cats" value="cats">Cats</td></tr>
       <tr><td><input type="checkbox" name="dogs" value="dogs">Dogs</td></tr>
       <tr><td><input type="checkbox" name="smoking" value="smoking">Smoking</td></tr>
-  
+
 
 <!-- Comment -->
   <tr><td>
@@ -410,4 +410,3 @@
 </div>
 
 </form>
-
