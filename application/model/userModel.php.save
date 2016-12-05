@@ -24,8 +24,8 @@ class UserModel {
     $query->bindParam(':email', $email);
     $query->bindParam(':username', $username);
     
-    // hash the password and stores into the db
-    $password1 = password_hash($password, PASSWORD_DEFAULT);
+    // hash the password using sha256 and stores into the db
+    $password1 = hash('sha256', $password);
     $query->bindParam(':password', $password1);
 
     $query->bindParam(':isLandlord', $isLandlord);
@@ -33,40 +33,44 @@ class UserModel {
 
     $query->execute();
 
-    header("Location:" . URL . "backendTest/success");
+    header("Location:" . URL . "home/index", true, 401);
     exit();
   }
 
   //Compares the argument's username and password in DB
   //If matches, we load user info into sessions for persistent data
   public function login($username, $password) {
-    $sql = "SELECT * FROM user WHERE username=:username";
+    $sql = "SELECT * FROM user WHERE username=:username AND password=:password ;";
     $query = $this->db->prepare($sql); 
     $query->bindParam(':username', $username);
+    // hash the password using sha256 and compares with the hashed pw in db
+    $password1 = hash('sha256', $password);
+    $query->bindParam(':password', $password1);
     $query->execute();
     $result = $query->fetch();
-    $dbPassword = $result->password;
 
-    //If passwords match 
-    if(password_verify($password, $dbPassword)){
-      // Creates a session to store the users ID, and make them always log in upon visiting the site
+    //If the username's and password match, result will have an item.
+    //If result is blank, then no match is found.
+    if(!$result) {
+      //If login fails, we redirect to home and exit() so php does not keep executing.
+      $_SESSION['loggedIn'] = false;
+      header("Location:" . URL . "home/index", true, 401);
+      exit();
+    } else {
+      // Creates a session to store the users ID, and make them always log in upon visiting the site 
       $_SESSION['userId'] = $result->id;
       $_SESSION['username'] = $result->username;
-      $_SESSION['fullName'] = $result->full_name;
+      $_SESSION['name'] = $result->name;
       $_SESSION['email'] = $result->email;
       $_SESSION['isLandlord'] = $result->isLandlord;
       $_SESSION['isStudent'] = $result->isStudent;
       $_SESSION['loggedIn'] = true;
 
-
-      header("Location:" . URL . "backendTest/success");
-      exit();
-    } else {
-      $_SESSION['loggedIn'] = false;
-      header("Location:" . URL . "backendTest/failed");
-      exit();
+      // start redirect to page user was at previ
+      echo "<meta http-equiv=\"refresh\" content=\"5;url=".$_SERVER['HTTP_REFERER']."\"/>";
+      echo "Successfully logged in! Please wait 5s before redirect......";
+      }
     }
-  }
 
 
   //Logs user out of site, killing session cookies

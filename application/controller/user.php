@@ -31,6 +31,14 @@ class User extends Controller {
   }
 
   public function login(){
+
+    if(isset($_POST['submitLogin'])){
+     $username = $_POST['username'];
+     $password = $_POST['password'];
+
+     $this->userModel->login($username, $password);
+    }
+
     require APP . "view/_templates/header.php";
     require APP . "view/user/login.php";
     require APP . "view/_templates/footer.php";

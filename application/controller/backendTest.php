@@ -44,6 +44,14 @@ class BackendTest extends Controller{
   }
 
   public function login(){
+
+    if(isset($_POST['submitLogin'])){
+     $username = $_POST['username'];
+     $password = $_POST['password'];
+
+     $this->userModel->login($username, $password);
+    }
+    
     require APP . "view/backendTest/header.php";
     require APP . "view/backendTest/login.php";
     require APP . "view/backendTest/footer.php";
