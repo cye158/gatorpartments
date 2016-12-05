@@ -255,15 +255,16 @@
 
 <form method="post" action="<?php echo URL;?>home/listing_form">
 
-  <div>
+  <div><table>
+	<tr> 
         <!-- address -->
-        <label class="listinglabel">Address 1 *</label><input class="listingtext" type="text" name="address1"></>
-        <label class="listinglabel">Address 2 *</label><input class="listingtext" type="text" name="address2"></>
+        <td><label class="listinglabel">Address 1 *</label><input class="listingtext" type="text" name="address1"></></td></tr>
+        <tr><td><label class="listinglabel">Address 2 *</label><input class="listingtext" type="text" name="address2"></></td></tr>
         <!-- city state zipcode table -->
-        <label class="listinglabel">City *</label><input class="listingtext" type="text" name="city"></>
-  </div>
-  <div>
-        <label class="listinglabel">State *</label>&nbsp;<select class="listingform" name="state">
+        <tr><td><label class="listinglabel">City *</label><input class="listingtext" type="text" name="city"></></td></tr>
+  
+  
+        <tr><td><label class="listinglabel">State *</label>&nbsp;<select class="listingform" name="state">
           <option value=""></option>
           <option value="AL">AL</option>
           <option value="AK">AK</option>
@@ -315,34 +316,30 @@
           <option value="WV">WV</option>
           <option value="WI">WI</option>
           <option value="WY">WY</option>
-        </select></>
-  </div>
-  <div>
-        <label class="listinglabel">Zip Code *</label><input class="listingtext" type="text" name="zip_code"></>
-        <br><hr class="listingruler">
-  </div>
-  <div>
+        </select></></td></tr>
+  
+  
+        <tr><td><label class="listinglabel">Zip Code *</label><input class="listingtext" type="text" name="zip_code"></>
+        <br><hr class="listingruler"></td></tr>
     <!-- complex term price -->
-    <label class="listinglabel">Type Of Rental *</label>
+    <tr><td><label class="listinglabel">Type Of Rental *</label>
       <select name="complex">
         <option value=""></option>
         <option value="apartment">apartment</option>
         <option value="condo">condo</option>
         <option value="single home">single home</option>
         <option value="town home">town home</option>
-      </select>
-    <label class="listinglabel">Term *</label>
+      </select></td></tr>
+    <tr><td><label class="listinglabel">Term *</label>
       <select name="term">
         <option value=""></option>
         <option value="lease">lease</option>
         <option value="month to month">month to month</option>
-      </select>
-    <label class="listinglabel">Price *</label><input class="listingtext" type="text" name="price"></>
-  </div>
-  <div>
+      </select></td></tr>
+    <tr><td><label class="listinglabel">Price *</label><input class="listingtext" type="text" name="price"></></td></tr>
     <!-- square feet bedroom bath -->
-    <label class="listinglabel">Square Feet *</label><input class="listingtext" type="text" name="feet"></>
-    <label class="listinglabel"># Of Bedroom(s) *</label>
+    <tr><td><label class="listinglabel">Square Feet *</label><input class="listingtext" type="text" name="feet"></></td></tr>
+    <tr><td><label class="listinglabel"># Of Bedroom(s) *</label>
       <select name="bedroom">
         <option value=""></option>
         <option value="studio">studio</option>
@@ -352,8 +349,8 @@
         <option value="4">4</option>
         <option value="5">5</option>
         <option value="6">6</option>
-      </select>
-    <label class="listinglabel"># Of Bath(s) *</label>
+      </select></td></tr>
+    <tr><td><label class="listinglabel"># Of Bath(s) *</label>
       <select name="bath">
         <option value=""></option>
         <option value="0.5">0.5</option>
@@ -368,47 +365,49 @@
         <option value="5">5</option>
         <option value="5.5">5.5</option>
         <option value="6">6</option>
-      </select>
-  </div>
+      </select></td></tr>
 
 <!--  Utilities -->
-  <div>
-    <br><hr class="listingruler">
-    <label class="listinglabel">Utilities Included </label>
-    <input type="checkbox" name="electricity" value="electricity">Electricity
-    <input type="checkbox" name="gas" value="gas">Gas
-    <input type="checkbox" name="water" value="water">Water
-  </div>
+ 
+    <tr><td><br><hr class="listingruler">
+    <label class="listinglabel">Utilities Included </label></td></tr>
+    <tr><td><input type="checkbox" name="electricity" value="electricity">Electricity</td></tr>
+    <tr><td><input type="checkbox" name="gas" value="gas">Gas</td></tr>
+    <tr><td><input type="checkbox" name="water" value="water">Water</td></tr>
+  
 <!-- Accomodations -->
-  <div>
-    <br><hr class="listingruler">
-    <label class="listinglabel">Building Accomodations </label>
-      <input type="checkbox" name="elevator" value="elevator">Elevator
-      <input type="checkbox" name="laundry" value="laundry room">Laundry Room
-      <input type="checkbox" name="outdoor" value="outdoor space">Outdoor Space
-      <input type="checkbox" name="parking" value="parking">Parking
-      <input type="checkbox" name="pool" value="pool">Pool
-      <input type="checkbox" name="wheelchair" value="wheelchair accesibility">Wheelchair Accessibility
-  </div>
+ 
+   <tr><td> <br><hr class="listingruler">
+    <label class="listinglabel">Building Accomodations </label></td>
+      <tr><td><input type="checkbox" name="elevator" value="elevator">Elevator</td></tr>
+      <tr><td><input type="checkbox" name="laundry" value="laundry room">Laundry Room</td></tr>
+      <tr><td><input type="checkbox" name="outdoor" value="outdoor space">Outdoor Space</td></tr>
+      <tr><td><input type="checkbox" name="parking" value="parking">Parking</td></tr>
+      <tr><td><input type="checkbox" name="pool" value="pool">Pool</td></tr>
+      <tr><td><input type="checkbox" name="wheelchair" value="wheelchair accesibility">Wheelchair Accessibility</td></tr>
+  
 
 <!-- Restrictions -->
-  <div>
+  <tr><td>
     <br><hr class="listingruler">
-    <label class="listinglabel">Building Restrictions </label>
-      <input type="checkbox" name="cats" value="cats">Cats
-      <input type="checkbox" name="dogs" value="dogs">Dogs
-      <input type="checkbox" name="smoking" value="smoking">Smoking
-  </div>
+    <label class="listinglabel">Building Restrictions </label></td></tr>
+      <tr><td><input type="checkbox" name="cats" value="cats">Cats</td></tr>
+      <tr><td><input type="checkbox" name="dogs" value="dogs">Dogs</td></tr>
+      <tr><td><input type="checkbox" name="smoking" value="smoking">Smoking</td></tr>
+  
 
 <!-- Comment -->
-  <div>
+  <tr><td>
     <br><hr class="listingruler">
-    <label class="listinglabel">Comment </label>
-      <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
-  </div>
+    <label class="listinglabel">Comment </label></td></tr>
+      <tr><td><textarea name="comment" rows="5" cols="80"><?php echo $comment;?></textarea></td></tr>
 
-<br>
+<tr><td>
   <!-- button for form submission usage-->
-  <input type="submit" name="Post" value="Post">
+  <input type="submit" name="Post" value="Post"></td></tr>
+</table>
+
+</div>
 
 </form>
+
