@@ -14,8 +14,8 @@
             <tbody>
         
             <?php foreach ($messages as $message) { ?>
-              <?php echo $message->username; ?>
-	      <?php echo $message->listingId; ?> 
+             <?php //echo $message->username; ?>
+	     <?php //echo $message->listingId; ?> 
                 <tr>
                    <td><?php if (isset($message->username)) echo htmlspecialchars($message->username, ENT_QUOTES, 'UTF-8'); ?></td>
                    <td><?php if (isset($message->content)) echo htmlspecialchars($message->content, ENT_QUOTES, 'UTF-8'); ?></td>
