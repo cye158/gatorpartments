@@ -329,7 +329,7 @@
         <br><hr class="listingruler"></td></tr>
     <!-- complex term price -->
     <tr><td><label class="listinglabel">Type Of Rental *</label>
-      <select name="complex">
+      <select class="listingform" name="complex">
         <option value=""></option>
         <option value="apartment">apartment</option>
         <option value="condo">condo</option>
@@ -337,7 +337,7 @@
         <option value="town home">town home</option>
       </select></td></tr>
     <tr><td><label class="listinglabel">Term *</label>
-      <select name="term">
+      <select class="listingform" name="term">
         <option value=""></option>
         <option value="lease">lease</option>
         <option value="month to month">month to month</option>
