@@ -93,14 +93,5 @@ class Home extends Controller
         require APP . 'view/_templates/footer.php';
     }
 
-<<<<<<< HEAD
-=======
-    public function addMessage()
-    {
-	// load views
-	      require APP . 'view/user/writeMessage.php';
-    }
->>>>>>> clarence-dev
-}
 
 ?>
