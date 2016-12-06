@@ -49,7 +49,7 @@ class Home extends Controller
       	}
         // load views
         require APP . 'view/_templates/header.php';
-        require APP . 'view/home/index.php';
+        require APP . 'view/home/index.html';
         require APP . 'view/_templates/footer.php';
     }
 
@@ -61,9 +61,9 @@ class Home extends Controller
       require APP . 'view/_templates/footer.php';
     }
 
+    //Individual Listing Page
+    public function property(){
 
-    public function property($id)
-    {
     	if(isset($id)){
     	   $listing = $this->listingModel->getListingById($id);
 
@@ -74,7 +74,7 @@ class Home extends Controller
             }
 	// load views
         require APP . 'view/_templates/header.php';
-        require APP . 'view/home/property.php';
+        require APP . 'view/home/property.html';
         require APP . 'view/_templates/footer.php';
     }
 
@@ -93,6 +93,14 @@ class Home extends Controller
         require APP . 'view/_templates/footer.php';
     }
 
+<<<<<<< HEAD
+=======
+    public function addMessage()
+    {
+	// load views
+	      require APP . 'view/user/writeMessage.php';
+    }
+>>>>>>> clarence-dev
 }
 
 ?>
