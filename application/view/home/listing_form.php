@@ -346,7 +346,7 @@
     <!-- square feet bedroom bath -->
     <tr><td><label class="listinglabel">Square Feet *</label><input class="listingtext" type="text" name="feet"></></td></tr>
     <tr><td><label class="listinglabel"># Of Bedroom(s) *</label>
-      <select name="bedroom">
+      <select class="listingform" name="bedroom">
         <option value=""></option>
         <option value="studio">studio</option>
         <option value="1">1</option>
@@ -357,7 +357,7 @@
         <option value="6">6</option>
       </select></td></tr>
     <tr><td><label class="listinglabel"># Of Bath(s) *</label>
-      <select name="bath">
+      <select class="listingform" name="bath">
         <option value=""></option>
         <option value="0.5">0.5</option>
         <option value="1">1</option>
