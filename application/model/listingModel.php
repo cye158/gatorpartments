@@ -131,7 +131,7 @@ class ListingModel
     if(!file_exists(SITE_ROOT.'/images')) {
       echo "Attempting to create folder at: " . SITE_ROOT.'/images';
       mkdir(SITE_ROOT.'/images', 0777, true);
-      echo "If mkdir returns permission error, read the comments in the code on how to workaround it in the function"
+      echo "If mkdir returns permission error, read the comments in the code on how to workaround it in the function";
     }
 
     // Check if image file is a actual iamge or fake image
