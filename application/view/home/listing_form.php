@@ -247,10 +247,10 @@
 <h2>Post A Listing</h2>
 
 <!-- error messages -->
-<strong><font size="5" color="red"><?php echo nl2br($address1Err);?></font></strong>
-<strong><font size="5" color="red"><?php echo nl2br($address2Err);?></font></strong>
-<strong><font size="5" color="red"><?php echo nl2br($cityErr);?></font></strong>
-<strong><font size="5" color="red"><?php echo nl2br($stateErr);?></font></strong>
+<strong><font size="1" color="red"><?php echo nl2br($address1Err);?></font></strong>
+<strong><font size="2" color="red"><?php echo nl2br($address2Err);?></font></strong>
+<strong><font size="3" color="red"><?php echo nl2br($cityErr);?></font></strong>
+<strong><font size="4" color="red"><?php echo nl2br($stateErr);?></font></strong>
 <strong><font size="5" color="red"><?php echo nl2br($zip_codeErr);?></font></strong>
 <strong><font size="5" color="red"><?php echo nl2br($complexErr);?></font></strong>
 <strong><font size="5" color="red"><?php echo nl2br($termErr);?></font></strong>
