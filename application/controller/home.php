@@ -92,6 +92,6 @@ class Home extends Controller
         require APP . 'view/home/typography.html';
         require APP . 'view/_templates/footer.php';
     }
-
+}
 
 ?>
