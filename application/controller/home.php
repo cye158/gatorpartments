@@ -49,7 +49,7 @@ class Home extends Controller
       	}
         // load views
         require APP . 'view/_templates/header.php';
-        require APP . 'view/home/index.html';
+        require APP . 'view/home/test.html';
         require APP . 'view/_templates/footer.php';
     }
 
@@ -89,7 +89,7 @@ class Home extends Controller
     public function addMessage()
     {
 	// load views
-	require APP . 'view/user/writeMessage.php';
+	      require APP . 'view/user/writeMessage.php';
     }
 }
 
