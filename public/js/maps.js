@@ -1,3 +1,5 @@
+var map;
+
 $(function myMap() {
   var mapCanvas = document.getElementById('gmaps');
   var mapOptions = {
