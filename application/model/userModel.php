@@ -36,28 +36,7 @@ class UserModel {
     header("Location:" . URL . "backendTest/success");
     exit();
   }
-/*
 
-    //Checks if the username and hashed password matches
-    //If yes, it will store user's information into Sessions
-    public function login($username, $password) {
-        $sql = "SELECT * FROM user WHERE username=:username AND password=:password ;";
-        $query = $this->db->prepare($sql);
-        $query->bindParam(':username', $username);
-        // hash the password using sha256 and compares with the hashed pw in db
-       $password1 = hash('sha256', $password);
-        $query->bindParam(':password', $password1);
-        $query->execute();
-
-        $result = $query->fetch();
-        // print_r($result);
-
-        // checks if username and password are the same
-        if(!$result) {
-	    // return false, outputs error message
-	    echo "<meta http-equiv=\"refresh\" content=\"5;url=".$_SERVER['HTTP_REFERER']."\"/>";
-             echo "Error, username or password does not match";
- */
   //Compares the argument's username and password in DB
   //If matches, we load user info into sessions for persistent data
   public function login($username, $password) {
@@ -67,7 +46,6 @@ class UserModel {
     $query->execute();
     $result = $query->fetch();
     $dbPassword = $result->password;
-
 
     //If passwords match
     if(password_verify($password, $dbPassword)){
@@ -124,7 +102,7 @@ class UserModel {
       exit();
     }
   }
-}
+
   //Return user's id
   public function getUserId(){
     if(isset($_SESSION['userId'])){
