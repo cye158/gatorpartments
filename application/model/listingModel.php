@@ -116,5 +116,63 @@ class ListingModel
     return $query->fetchAll();
   }
 
+  public function uploadImage() {
+    define('SITE_ROOT', realpath(dirname(__FILE__)));
+    // $fileSize is the max file size of an image, measured in bytes
+    $fileSize = 500000;
+    $target_dir = "/images/" . $_SESSION['username'];
+    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+    $uploadOk = 1;
+    $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
+
+    // if mkdir gives permission error, user must chmod folder path to 777
+    // chmod -R 777 SITE_ROOT
+    // The chmod provided above doesn't allow me to delete the folder created, have not found a workaround for it yet
+    if(!file_exists(SITE_ROOT.'/images')) {
+      echo "Attempting to create folder at: " . SITE_ROOT.'/images';
+      mkdir(SITE_ROOT.'/images', 0777, true);
+      echo "If mkdir returns permission error, read the comments in the code on how to workaround it in the function";
+    }
+
+    // Check if image file is a actual iamge or fake image
+    if(isset($_POST["submit"])) {
+      $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+      if($check !== false) {
+        echo "File is an image - " . $check["mime"] . ".";
+        $uploadOk = 1;
+      } else {
+        echo "File is not an image.";
+        $uploadOk = 0;
+      }
+    }
+
+    // if file exists, append a number, such as (1), to the end to workaround existing file error
+    if(file_exists($target_file)) {
+      $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]) . "(1)";
+    }
+
+    // Check file size
+    if($_FILES["fileToUpload"]["size"] > $fileSize) {
+      echo "Sorry, your file is too large.";
+      $uploadOk = 0;
+    }
+
+    // Allow only certain file formats pertaining to images
+    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
+      echo "Sorry, only JPG, JPEG,PNG, & GIF files are allowed.";
+      $uploadOk = 0;
+    }
+
+    // Check if image is okay and meets all the criterias before uploading
+    if($uploadOk == 0) {
+      echo "Sorry, your file was no uploaded.";
+    } else {
+      if(move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], SITE_ROOT.$target_file)) {
+        echo "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded";
+      } else {
+        echo "Sorry, there was an error uploading your file.";
+      }
+    }
+  }
 }
 ?>

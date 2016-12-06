@@ -1,7 +1,19 @@
 <?php
-class User extends Controller {
+//Use to test Back End functions
+//It will have good examples for front-end on how to use these functions
+class BackendTest extends Controller{
 
+  public function index(){
+    $listing = $this->listingModel->getListingByMinPrice(2000);
+
+    require APP . "view/backendTest/header.php";
+    require APP . "view/backendTest/index.php";
+    require APP . "view/backendTest/footer.php";
+  }
+
+  //Creates an account and inputs data into DB
   public function register(){
+
     //If the submitRegister button is clicked
     if(isset($_POST['submitRegister'])){
       $fullName = $_POST['fullName'];
@@ -23,11 +35,12 @@ class User extends Controller {
       }
 
       $this->userModel->register($fullName, $phoneNumber, $email, $username, $password, $checkboxLandlord, $checkboxStudent);
+
     }
 
-    require APP . "view/_templates/header.php";
-    require APP . "view/user/register.php";
-    require APP . "view/_templates/footer.php";
+    require APP . "view/backendTest/header.php";
+    require APP . "view/backendTest/register.php";
+    require APP . "view/backendTest/footer.php";
   }
 
   public function login(){
@@ -38,15 +51,20 @@ class User extends Controller {
 
      $this->userModel->login($username, $password);
     }
-
-    require APP . "view/_templates/header.php";
-    require APP . "view/user/login.php";
-    require APP . "view/_templates/footer.php";
+    
+    require APP . "view/backendTest/header.php";
+    require APP . "view/backendTest/login.php";
+    require APP . "view/backendTest/footer.php";
   }
 
-	public function checkLoginStatus() {
-	    $this->userModel->checkLoginStatus();
-	}
+  public function success(){
+    require APP . "view/backendTest/success.php";
+  }
 
-    }
+  public function failed(){
+    require APP . "view/backendTest/failed.php";
+  }
+
+
+}
 ?>
