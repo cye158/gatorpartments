@@ -1,5 +1,5 @@
-#gmaps {
- width: 500px;
- height: 500px;
- background green;
+#map {
+ width: 400px !important;
+ height: 400px !important;
+ background-color: green !important;
 }
