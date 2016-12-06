@@ -98,6 +98,5 @@ class Home extends Controller
 	     // load views
 	      require APP . 'view/user/writeMessage.php';
     }
-
-
+}
 ?>
