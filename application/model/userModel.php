@@ -120,7 +120,7 @@ class UserModel {
 
   public function checkLoginStatus() {
     if(!isset($_SESSION) || $_SESSION['loggedIn'] == false || !$_SESSION['isLandlord']) {
-      header("Location: " . URL . "backendTest/register");
+      header("Location: " . URL . "user/login");
       exit();
     }
   }
