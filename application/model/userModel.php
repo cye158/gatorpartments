@@ -124,9 +124,9 @@ class UserModel {
       exit();
     }
   }
-}
+
   //Return user's id
-  public function getUserId(){
+  public function getUserId() {
     if(isset($_SESSION['userId'])){
       return $_SESSION['userId'];
     }
