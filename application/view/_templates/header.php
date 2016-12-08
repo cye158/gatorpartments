@@ -76,7 +76,7 @@
 
 									<!-- Search bar -->
 									<li>
-										<a style=" border-right: 2px solid grey; border-left: none;height: 2.6em; padding-left: 1em; padding-right: 1em;">
+										<a style=" border-right: 2px solid grey; border-left: none;height: 2.7em; padding-left: 1em; padding-right: 1em;margin-top: -1px;">
 											<form name="searchbox" method="post" action="<?php echo URL;?>home/listings" style="padding-left: 0.25em;">
 												<input type="search" name="searchBarInput" textarea="" placeholder=" Search by location (eg. 94132, or Holloway Avenue)" size="60" maxlength="600px" style="border-radius: 7.5px;color: black; font-size: 1.1em;padding-bottom: .225em;">
 												<input type="submit" value="Search" name="submitSearch" style="height: 1.5em; background-color: darkgrey;border-radius: 9px;font-size: 1.25em;">
