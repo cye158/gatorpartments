@@ -20,12 +20,12 @@
 
 <body>
 
-	<div class="container">
+	<div class="container-fluid" style="height: 50em;">
 		<div class="row">
 
-
-			<div class="row"><!-- start header -->
-				<div class="col-sm-4 col-xs-6 logo">
+			<!-- start header -->
+			<div class="row" style="height: 4em;">
+				<div class="col-sm-4 col-xs-6 logo" style="height: inherit;">
 					<a href="<?php echo URL;?>home/index">
 						<div class="row">
 							<div class="col-sm-3 hidden-xs logo-img">
@@ -38,17 +38,19 @@
 						</div>
 					</a>
 				</div>
-				<div class="col-sm-4 col-xs-6 customer_service pull-right text-right">
+				<div class="col-sm-4 col-xs-6 customer_service pull-right text-right" style="height: inherit;">
 					<h4 class="phone"><span class="hidden-xs">Customer service: </span>0800 8475 548</h4>
 					<h4><small>24 hours a day, 7 days a week</small></h4>
 				</div>
-			</div><!-- end header -->
+			</div>
+			<!-- end header -->
 
-			<div class="row"><!-- start nav -->
-				<div class="col-sm-12">
+			<!-- start nav -->
+			<div class="row">
+				<div class="col-sm-12" style="height: 3em;">
 
-					<nav class="navbar navbar-inverse" role="navigation" style="border-radius: 5px;">
-						<div class="navbar-inner" style="border-radius: 5px;">
+					<nav class="navbar navbar-inverse" role="navigation" style="border-radius: 5px; border: 1px solid grey;">
+						<div class="navbar-inner" style="border-radius: 5px;height: 2.85em; border-bottom: 4px solid grey;">
 							<!-- Brand and toggle get grouped for better mobile display -->
 							<div class="navbar-header">
 								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -62,31 +64,32 @@
 
 							<!-- Collect the nav links, forms, and other content for toggling -->
 							<div class="collapse navbar-collapse navbar-ex1-collapse">
-								<ul class="nav navbar-nav">
+								<ul class="nav navbar-nav center">
 
 									<!-- Inbox button -->
-									<li><a href="<?php echo URL;?>home/messaging" class="first" style="padding-top: 0.85em; font-size: 1.25em;">Inbox</a></li>
+									<li><a href="<?php echo URL;?>home/messaging" class="first" style="width: 5em; padding-top: 0.6em; font-size: 1.25em; color: black; border-right: 2px solid grey; border-left: none;">Inbox</a></li>
 									<!-- /Inbox button -->
 
 									<!-- Post a Listing -->
-									<li><a href="<?php echo URL;?>home/listing_form" style="padding-top: 0.85em; font-size: 1.25em;">Post</a></li>
+									<li><a href="<?php echo URL;?>home/listing_form" style="width: 5em; padding-top: 0.6em; font-size: 1.25em;color: black; border-right: 2px solid grey; border-left: none;">Post</a></li>
+									<!-- /Post a Listing -->
 
 									<!-- Search bar -->
 									<li>
-										<a>
+										<a style=" border-right: 2px solid grey; border-left: none;height: 2.6em; padding-left: 1em; padding-right: 1em;">
 											<form name="searchbox" method="post" action="<?php echo URL;?>home/listings" style="padding-left: 0.25em;">
-												<input type="search" name="searchBarInput" textarea="" placeholder=" Search by location (eg. 94132, or Holloway Avenue)" size="60" maxlength="600px" style="border-radius: 7.5px;color: black; font-size: 1.25em;">
-												<input type="submit" value="Search" name="submitSearch" style="background-color: green; border-radius: 7.5px; font-size: 1.25em;">
+												<input type="search" name="searchBarInput" textarea="" placeholder=" Search by location (eg. 94132, or Holloway Avenue)" size="60" maxlength="600px" style="border-radius: 7.5px;color: black; font-size: 1.1em;padding-bottom: .225em;">
+												<input type="submit" value="Search" name="submitSearch" style="height: 1.5em; background-color: darkgrey;border-radius: 9px;font-size: 1.25em;">
 											</form>
 										</a>
 									</li>
 									<li></li>
 								</ul>
 
-								<ul class="nav navbar-nav navbar-right">
+								<ul class="nav navbar-nav navbar-right" style="height: 2.75em;">
 
 									<li class="dropdown">
-										<a class="dropdown-toggle" href="#" data-toggle="dropdown" style="padding-top: 0.85em; font-size: 1.25em;">Sign Up<strong class="caret"></strong></a>
+										<a class="dropdown-toggle" href="#" data-toggle="dropdown" style="height: 2.05em; width: 5em; padding-top: 0.6em; font-size: 1.25em; color: black; border-right: none; border-left: 2px solid grey;">Sign Up<strong class="caret"></strong></a>
 										<div class="dropdown-menu">
 											<form action="<?php echo URL;?>user/register" method="post">
 												<input type="text" name="username" placeholder="Username" size="30">
@@ -100,7 +103,7 @@
 									</li>
 
 									<li class="dropdown">
-										<a class="dropdown-toggle" href="#" data-toggle="dropdown" style="padding-top: 0.85em; font-size: 1.25em;">Sign In <strong class="caret"></strong></a>
+										<a class="dropdown-toggle" href="#" data-toggle="dropdown" style="width: 5em; padding-top: 0.6em; font-size: 1.25em; color: black; border-right: none; border-left: 2px solid grey;">Sign In <strong class="caret"></strong></a>
 										<div class="dropdown-menu">
 											<form action="<?php echo URL;?>user/authenticateLogin" method="post">
 												<input type="text" name="username" placeholder="Username or email" size="30"><br class="visible-xs">
