@@ -37,109 +37,88 @@ class UserModel {
     exit();
   }
 
-  //Checks if the username and hashed password matches
-  //If yes, it will store user's information into Sessions
+  //Compares the argument's username and password in DB
+  //If matches, we load user info into sessions for persistent data
   public function login($username, $password) {
-    $sql = "SELECT * FROM user WHERE username=:username AND password=:password ;";
+    $sql = "SELECT * FROM user WHERE username=:username";
     $query = $this->db->prepare($sql);
     $query->bindParam(':username', $username);
-    // hash the password using sha256 and compares with the hashed pw in db
-    $password1 = hash('sha256', $password);
-    $query->bindParam(':password', $password1);
     $query->execute();
-
     $result = $query->fetch();
-    // print_r($result);
+    $dbPassword = $result->password;
 
-    // checks if username and password are the same
-    if(!$result) {
-      // return false, outputs error message
-      echo "<meta http-equiv=\"refresh\" content=\"5;url=".$_SERVER['HTTP_REFERER']."\"/>";
-      echo "Error, username or password does not match";
+    //If passwords match
+    if(password_verify($password, $dbPassword)){
+      // Creates a session to store the users ID, and make them always log in upon visiting the site
+      $_SESSION['userId'] = $result->id;
+      $_SESSION['username'] = $result->username;
+      $_SESSION['fullName'] = $result->full_name;
+      $_SESSION['email'] = $result->email;
+      $_SESSION['isLandlord'] = $result->isLandlord;
+      $_SESSION['isStudent'] = $result->isStudent;
+      $_SESSION['loggedIn'] = true;
+
+
+      header("Location:" . URL . "backendTest/success");
+      exit();
+    } else {
+      $_SESSION['loggedIn'] = false;
+      header("Location:" . URL . "backendTest/failed");
+      exit();
+    }
+  }
+
+
+  //Logs user out of site, killing session cookies
+  public function logout() {
+    // code obtained from : http://php.net/manual/en/function.session-destroy.php
+    // Unset all of the session variables.
+    $_SESSION = array();
+
+    // If it's desired to kill the session, also delete the session cookie.
+    // Note: This will destroy the session, and not just the session data!
+    if (ini_get("session.use_cookies")) {
+      $params = session_get_cookie_params();
+      setcookie(session_name(), '', time() - 42000,
+      $params["path"], $params["domain"],
+      $params["secure"], $params["httponly"]);
     }
 
-      //Compares the argument's username and password in DB
-      //If matches, we load user info into sessions for persistent data
-      public function login($username, $password) {
-        $sql = "SELECT * FROM user WHERE username=:username";
-        $query = $this->db->prepare($sql);
-        $query->bindParam(':username', $username);
-        $query->execute();
-        $result = $query->fetch();
-        $dbPassword = $result->password;
+    // Destroy the session.
+    session_destroy();
+  }
 
-        //If passwords match
-        if(password_verify($password, $dbPassword)){
-          // Creates a session to store the users ID, and make them always log in upon visiting the site
-          $_SESSION['userId'] = $result->id;
-          $_SESSION['username'] = $result->username;
-          $_SESSION['fullName'] = $result->full_name;
-          $_SESSION['email'] = $result->email;
-          $_SESSION['isLandlord'] = $result->isLandlord;
-          $_SESSION['isStudent'] = $result->isStudent;
-          $_SESSION['loggedIn'] = true;
+  public function checkStatus($userId) {
+  }
 
+  public function displayMessage($message) {
+    echo $message;
+    // return $message;
+  }
 
-          header("Location:" . URL . "backendTest/success");
-          exit();
-        } else {
-          $_SESSION['loggedIn'] = false;
-          header("Location:" . URL . "backendTest/failed");
-          exit();
-        }
-      }
-
-
-      //Logs user out of site, killing session cookies
-      public function logout() {
-        // code obtained from : http://php.net/manual/en/function.session-destroy.php
-        // Unset all of the session variables.
-        $_SESSION = array();
-
-        // If it's desired to kill the session, also delete the session cookie.
-        // Note: This will destroy the session, and not just the session data!
-        if (ini_get("session.use_cookies")) {
-          $params = session_get_cookie_params();
-          setcookie(session_name(), '', time() - 42000,
-          $params["path"], $params["domain"],
-          $params["secure"], $params["httponly"]);
-        }
-
-        // Destroy the session.
-        session_destroy();
-      }
-
-      public function checkStatus($userId) {
-      }
-
-      public function displayMessage($message) {
-        echo $message;
-        // return $message;
-      }
-
-      public function checkLoginStatus() {
-        if(!isset($_SESSION) || $_SESSION['loggedIn'] == false || !$_SESSION['isLandlord']) {
-          header("Location: " . URL . "backendTest/register");
-          exit();
-        }
-      }
-
-      //Return user's id
-      public function getUserId(){
-        if(isset($_SESSION['userId'])){
-          return $_SESSION['userId'];
-        }
-
-        return null;
-      }
-
-      public function getUserName(){
-        if(isset($_SESSION['userName'])){
-          return $_SESSION['userName'];
-        }
-
-        return null;
-      }
-
+  public function checkLoginStatus() {
+    if(!isset($_SESSION) || $_SESSION['loggedIn'] == false || !$_SESSION['isLandlord']) {
+      header("Location: " . URL . "backendTest/register");
+      exit();
     }
-    ?>
+  }
+
+  //Return user's id
+  public function getUserId(){
+    if(isset($_SESSION['userId'])){
+      return $_SESSION['userId'];
+    }
+
+    return null;
+  }
+
+  public function getUserName(){
+    if(isset($_SESSION['userName'])){
+      return $_SESSION['userName'];
+    }
+
+    return null;
+  }
+
+}
+?>
