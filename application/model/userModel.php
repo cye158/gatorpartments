@@ -36,7 +36,6 @@ class UserModel {
     header("Location:" . URL . "backendTest/success");
     exit();
   }
-  /*
 
   //Checks if the username and hashed password matches
   //If yes, it will store user's information into Sessions
@@ -67,7 +66,6 @@ class UserModel {
     $query->execute();
     $result = $query->fetch();
     $dbPassword = $result->password;
-
 
     //If passwords match
     if(password_verify($password, $dbPassword)){
