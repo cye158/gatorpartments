@@ -27,10 +27,17 @@
   line-height: 1 !important;
 }
 
+.thumb_info {
+  padding: 0.5em;
+  padding-left: 2em;
+  padding-right: 3em;
+}
+
 .thumb {
   display: block !important;
   position: relative !important;
-  padding: 5px !important;
+  margin-left: 5px;
+  padding: 3px !important;
   background-color: white !important;
   border: 2px solid #dddddd !important;
   border-radius: 3px !important;
@@ -48,6 +55,15 @@ div.centermid {
     justify-content: center;
 }
 
+.mini_property_wrapper {
+  margin-top: 0.5em;
+}
+
+#hr {
+  margin-top: 0.5em;
+  margin-bottom: 0em;
+  border-top: 2.5px solid darkgray;  
+}
 
 #owl-demo .item img{
     display: block;

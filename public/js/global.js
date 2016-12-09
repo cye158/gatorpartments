@@ -1,5 +1,5 @@
 $(function() {
-	
+
 	$('#criteria').collapse('hide');
 	$('#filters').collapse('hide');
 	$('#location').collapse('hide');
@@ -9,21 +9,21 @@ $(function() {
 		show: false
 		}).css({
 		width: '651px',
-		height: '470px',	
-		'margin-left': function () { 
-			return -($(this).width() / 2); 
+		height: '470px',
+		'margin-left': function () {
+			return -($(this).width() / 2);
 		}
 	});
-	
+
 	// Setup drop down menu
 	$('.dropdown-toggle').dropdown();
-	
+
 	// Fix input element click problem
 	$('.dropdown-menu input, .dropdown-menu label').click(function(e) {
 		e.stopPropagation();
 	});
 
-	
+
 	if($('#carousel-home').length == 1) {
 		$('#carousel-loader').hide();
 		$('.showcase').show();
@@ -60,18 +60,18 @@ $(function() {
 			speed_change:			true, /* Set to true to prevent users from swithing more then one slide at once. */
 			viewline:				false /* If set to true content_width, thumbnails, transition and dynamic_height will be disabled. As for dynamic height you need to set the width and height of js/jquery.aw-showcase/images in the source. */
 		});
-		
+
 		$("#carousel-home").hover(
 			function () {
 				$('.showcase-arrow-previous, .showcase-arrow-next').fadeIn();
-			}, 
+			},
 			function () {
 				$('.showcase-arrow-previous, .showcase-arrow-next').fadeOut();
 			}
 		);
-		
-		
-		
+
+
+
 	}
 
 	if($('#showcase-loader').length == 1) {
@@ -79,7 +79,7 @@ $(function() {
 		$('#owl-demo').show();
 		$('#owl-thumbnails').show();
 		 $("#owl-demo").owlCarousel({
-		 
+
 		navigation : false, // Show next and prev buttons
 		slideSpeed : 300,
 		paginationSpeed : 400,
@@ -87,12 +87,12 @@ $(function() {
 		pagination:false,
 		autoPlay: true
 		});
-		
+
 
  var owl = $("#owl-gallery");
- 
+
 owl.owlCarousel({
-		 
+
 
 		pagination:false,
 		 items : 4
@@ -102,9 +102,9 @@ owl.owlCarousel({
 		// itemsDesktopSmall : false,
 		// itemsTablet: false,
 		// itemsMobile : false
-		 
+
 		});
- 
+
 	// Custom Navigation Events
 	$("#owl-gallery a").click(function(){
 		owl_goTo($(this).data('slide'));
@@ -115,18 +115,18 @@ owl.owlCarousel({
 	$(".owl-prev").click(function(){
 		owl.trigger('owl.prev');
 	})
-	}  
+	}
 
 
 	$('.property_sold').badger('Just sold');
 	$('.premium_property').eq(0).badger('new home');
 	$('.premium_property').eq(1).badger('under offer');
 	$('.premium_property').eq(2).badger('special offer');
-	
+
 	//theme switcher
     $('#theme_switcher ul li a').bind('click',
         function(e) {
-            $("#switch_style").attr("href", "css/"+$(this).data('theme')+".css");    		
+            $("#switch_style").attr("href", "css/"+$(this).data('theme')+".css");
             return false;
         }
     );
@@ -134,8 +134,8 @@ owl.owlCarousel({
 	Response.ready(responsive_actions)  // call fn on ready
 	Response.ready(responsive_large)  // call fn on ready
 	Response.resize(responsive_actions) // call fn on resize
-    
-    
+
+
 
 });
 
@@ -166,7 +166,7 @@ function initializeHomeMap() {
 	google.maps.event.addListener(home_map, 'click', function() {
 		window.location.href = "map_properties.html";
 	});
-	
+
 }
 
 google.maps.event.addDomListener(window, 'load', initializeHomeMap);
@@ -176,7 +176,7 @@ var map;
 function initializePropertiesMap() {
 	if($('#map_canvas').length == 0)
 		return;
-	var myLatlng = new google.maps.LatLng(51.461311,-0.303742);
+	var myLatlng = new google.maps.LatLng(122.4782,37.7219);
 	var myOptions = {
 		zoom: 13,
 		center: myLatlng,
@@ -184,7 +184,7 @@ function initializePropertiesMap() {
 	}
 	var infowindow = new google.maps.InfoWindow();
 	var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-	$.each(map_locations, function(key, value) { 
+	$.each(map_locations, function(key, value) {
 		var marker = new google.maps.Marker({
 			position: new google.maps.LatLng(value['lat'], value['lng']),
 			map: map,
@@ -193,7 +193,7 @@ function initializePropertiesMap() {
 			streetViewControl:true,
 			title: value['title']
 		});
-		
+
 		var link = "link";
 		google.maps.event.addListener( marker, 'click', function() {
 			// Setting the content of the InfoWindow
@@ -201,10 +201,10 @@ function initializePropertiesMap() {
 			infowindow.setContent(content );
 			infowindow.open(map, marker);
 		});
-		
+
 	});
-	
-	
+
+
 }
 
 google.maps.event.addDomListener(window, 'load', initializePropertiesMap);
@@ -219,13 +219,13 @@ function responsive_large() {
 		if($('#people_viewing').length > 0) {
 			setTimeout(function(){$.sticky($('#people_viewing').html())},3000);
 		}
-		
+
 		if($('#contact_agent').length > 0) {
 			$('#contact_agent').css('width', $('#contact_agent').width());
 			$('#contact_agent').portamento();
 		}
     }
-    else 
+    else
     {
         // 0->768
     }
@@ -244,7 +244,7 @@ function responsive_actions () {
     {
        // 1200+
 		responsive_common()
-    }    
+    }
     else if ( Response.band(992) )
     {
         // 992+
@@ -255,7 +255,7 @@ function responsive_actions () {
         // 768+
 		responsive_common()
     }
-    else 
+    else
     {
         // 0->768
 		setTimeout(function() {
