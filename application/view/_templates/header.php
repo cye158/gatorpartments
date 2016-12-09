@@ -39,8 +39,8 @@
 					</a>
 				</div>
 				<div class="col-sm-4 col-xs-6 customer_service pull-right text-right">
-					<h4 class="phone"><span class="hidden-xs">Customer service: </span>0800 8475 548</h4>
-					<h4><small>24 hours a day, 7 days a week</small></h4>
+					<h4 class="phone"><span class="hidden-xs">Hensil Hall 206 </span>CSC 648.01</h4>
+					<h4><small>M: 5:35PM - 8:25PM		T-Su: Closed</small></h4>
 				</div>
 			</div><!-- end header -->
 
@@ -85,32 +85,11 @@
 
 								<ul class="nav navbar-nav navbar-right">
 
-									<li class="dropdown">
-										<a class="dropdown-toggle" href="#" data-toggle="dropdown" style="padding-top: 0.85em; font-size: 1.25em;">Sign Up<strong class="caret"></strong></a>
-										<div class="dropdown-menu">
-											<form action="<?php echo URL;?>user/register" method="post">
-												<input type="text" name="username" placeholder="Username" size="30">
-												<input type="text" name="name" placeholder="Full name" size="30">
-												<input type="text" name="email" placeholder="Email" size="30">
-												<input type="password" name="password" placeholder="Password" size="30">
-
-												<input class="btn btn-primary" type="submit" name="commit" value="Sign Up">
-											</form>
-										</div>
+									<li>
+								          <a href="<?php echo URL . 'user/login';?>">Log in</a>
 									</li>
-
-									<li class="dropdown">
-										<a class="dropdown-toggle" href="#" data-toggle="dropdown" style="padding-top: 0.85em; font-size: 1.25em;">Sign In <strong class="caret"></strong></a>
-										<div class="dropdown-menu">
-											<form action="<?php echo URL;?>user/authenticateLogin" method="post">
-												<input type="text" name="username" placeholder="Username or email" size="30"><br class="visible-xs">
-												<input type="password" name="password" placeholder="Password" size="30"><br class="visible-xs">
-												<input id="remember_me" type="checkbox" name="remember_me" value="1">
-												<label class="string optional"> Remember me</label>
-
-												<input class="btn btn-primary" type="submit" name="commit" value="Sign In">
-											</form>
-										</div>
+									<li>
+									  <a href="<?php echo URL . 'user/register';?>">Register</a>
 									</li>
 
 								</ul>
