@@ -39,8 +39,8 @@
 					</a>
 				</div>
 				<div class="col-sm-4 col-xs-6 customer_service pull-right text-right">
-					<h4 class="phone"><span class="hidden-xs">Customer service: </span>0800 8475 548</h4>
-					<h4><small>24 hours a day, 7 days a week</small></h4>
+					<h4 class="phone"><span class="hidden-xs">Hensil Hall 206 </span>CSC 648.01</h4>
+					<h4><small>M: 5:35PM - 8:25PM		T-Su: Closed</small></h4>
 				</div>
 			</div><!-- end header -->
 
