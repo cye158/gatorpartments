@@ -33,7 +33,7 @@ class UserModel {
 
     $query->execute();
 
-    header("Location:" . URL . "backendTest/success");
+    header("Location:" . URL . "home/index");
     exit();
   }
 
@@ -59,7 +59,7 @@ class UserModel {
       $_SESSION['loggedIn'] = true;
 
 
-      header("Location:" . URL . "backendTest/success");
+      header("Location:" . URL . "home/index");
       exit();
     } else {
       $_SESSION['loggedIn'] = false;
