@@ -81,6 +81,15 @@ class MessageModel
 
       $query->execute($parameters);
       return $query->fetch()->landlord_id;
+  }
+
+  public  function showMessages($userId){
+	$sql = "select * from message where userid = :userId or toid = :userId order by listingid";
+        $query = $this->db->prepare($sql);
+        $parameters =  array(':userId' => $userId, ':userId' => $userId);
+
+        $query->execute($parameters);
+        return $query->fetchAll();
   }  
 }
 ?>
