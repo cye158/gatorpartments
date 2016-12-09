@@ -56,6 +56,7 @@ class UserModel {
   // return false, outputs error message
   echo "<meta http-equiv=\"refresh\" content=\"5;url=".$_SERVER['HTTP_REFERER']."\"/>";
   echo "Error, username or password does not match";
+}
   */
   //Compares the argument's username and password in DB
   //If matches, we load user info into sessions for persistent data
