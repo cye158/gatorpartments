@@ -70,5 +70,15 @@ class Messages extends Controller
           require APP . 'view/_templates/footer.php';
       }
   }
+
+  public function showMessages() {
+      if ($_SESSION['loggedIn']) {
+            $userId = $_SESSION['userId'];
+            $messages = $this->messageModel->showMessages($userId);
+            
+            // load views
+	    // please load your views
+      }
+  }
 }
 ?>
