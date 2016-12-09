@@ -65,16 +65,16 @@
 								<ul class="nav navbar-nav">
 
 									<!-- Inbox button -->
-									<li><a href="//sfsuswe.com/~cye0105/gatorpartments/home/messaging" class="first" style="padding-top: 0.85em; font-size: 1.25em;">Inbox</a></li>
+									<li><a href="<?php echo URL;?>home/messaging" class="first" style="padding-top: 0.85em; font-size: 1.25em;">Inbox</a></li>
 									<!-- /Inbox button -->
 
 									<!-- Post a Listing -->
-									<li><a href="//sfsuswe.com/~cye0105/gatorpartments/home/listing_form" style="padding-top: 0.85em; font-size: 1.25em;">Post</a></li>
+									<li><a href="<?php echo URL;?>home/listing_form" style="padding-top: 0.85em; font-size: 1.25em;">Post</a></li>
 
 									<!-- Search bar -->
 									<li>
 										<a>
-											<form name="searchbox" method="post" action="//sfsuswe.com/~cye0105/gatorpartments/home/listings" style="padding-left: 0.25em;">
+											<form name="searchbox" method="post" action="<?php echo URL;?>home/listings" style="padding-left: 0.25em;">
 												<input type="search" name="searchBarInput" textarea="" placeholder=" Search by location (eg. 94132, or Holloway Avenue)" size="60" maxlength="600px" style="border-radius: 7.5px;color: black; font-size: 1.25em;">
 												<input type="submit" value="Search" name="submitSearch" style="background-color: green; border-radius: 7.5px; font-size: 1.25em;">
 											</form>
@@ -88,7 +88,7 @@
 									<li class="dropdown">
 										<a class="dropdown-toggle" href="#" data-toggle="dropdown" style="padding-top: 0.85em; font-size: 1.25em;">Sign Up<strong class="caret"></strong></a>
 										<div class="dropdown-menu">
-											<form action="//sfsuswe.com/~cye0105/gatorpartments/user/register" method="post">
+											<form action="<?php echo URL;?>user/register" method="post">
 												<input type="text" name="username" placeholder="Username" size="30">
 												<input type="text" name="name" placeholder="Full name" size="30">
 												<input type="text" name="email" placeholder="Email" size="30">
@@ -102,7 +102,7 @@
 									<li class="dropdown">
 										<a class="dropdown-toggle" href="#" data-toggle="dropdown" style="padding-top: 0.85em; font-size: 1.25em;">Sign In <strong class="caret"></strong></a>
 										<div class="dropdown-menu">
-											<form action="//sfsuswe.com/~cye0105/gatorpartments/user/authenticateLogin" method="post">
+											<form action="<?php echo URL;?>user/authenticateLogin" method="post">
 												<input type="text" name="username" placeholder="Username or email" size="30"><br class="visible-xs">
 												<input type="password" name="password" placeholder="Password" size="30"><br class="visible-xs">
 												<input id="remember_me" type="checkbox" name="remember_me" value="1">
