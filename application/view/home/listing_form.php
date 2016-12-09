@@ -6,24 +6,39 @@
   }
 
   //defined variables for gatorpartment post
-  $addressErr = $cityErr = $stateErr = $zip_codeErr = $complexErr = $termErr = $priceErr = $feetErr = $bedroomErr = $bathErr = "";
-  $address = $city = $state = $zip_code = $complex = $term = $price = $feet = $bedroom = $bath = $electricity = $water = $gas = $parking = $laundry = $elevator = $wheelchair = $outdoor = $pool = $smoking = $dogs = $cats = $comment = "";
+  $address1Err = $address2Err = $cityErr = $stateErr = $zip_codeErr = $complexErr = $termErr = $priceErr = $feetErr = $bedroomErr = $bathErr = "";
+  $address1 = $address2 = $city = $state = $zip_code = $complex = $term = $price = $feet = $bedroom = $bath = $electricity = $water = $gas = $parking = $laundry = $elevator = $wheelchair = $outdoor = $pool = $smoking = $dogs = $cats = $comment = "";
 
 
   if(isset($_POST['Post']))
   {
     // address conditions
-    if (empty($_POST["address"]))
+    if (empty($_POST["address1"]))
     {
-    $addressErr = "Address: Address is required\r\n";
+    $address1Err = "Address 1: Address is required\r\n";
     } else {
-      $address = $_POST['address'];
+      $address1 = $_POST['address1'];
 
       // check if address only contains letters, numbers, and whitespace
-      if (!preg_match("/^[a-zA-Z0-9 ]*$/",$address)) {
-      $addressErr = "Address: Only letters, numbers, and white space allowed\r\n";
+      if (!preg_match("/^[a-zA-Z0-9. ]*$/",$address1)) {
+      $address1Err = "Address 1: Only letters, numbers, periods and white space allowed\r\n";
       } else {
-        echo nl2br($address."\n");
+        echo nl2br($address1."\n");
+      }
+    }
+
+    if (empty($_POST["address2"]))
+    {
+    /* address 2 can be empty depending on the condition of which the complex is */
+    /*$address2Err = "Address 2: Address is required\r\n";*/
+    } else {
+      $address2 = $_POST['address2'];
+
+      // check if address only contains letters, numbers, and whitespace
+      if (!preg_match("/^[a-zA-Z0-9. ]*$/",$address2)) {
+      $address2Err = "Address 2: Only letters, numbers, periods and white space allowed\r\n";
+      } else {
+        echo nl2br($address2."\n");
       }
     }
 
@@ -106,7 +121,10 @@
 
       if (!preg_match("/^[0-9]*$/",$feet)) {
         $feetErr = "Square Feet: Only numbers\r\n";
-      } else {
+      } else if ($feet > 20000) {
+        $feetErr = "Square Feet: Only complexes smaller than 20,000 feet";
+      }
+      else {
         echo nl2br($feet."\n");
       }
     }
@@ -229,218 +247,172 @@
 <h2>Post A Listing</h2>
 
 <!-- error messages -->
-<?php echo nl2br($addressErr);?>
-<?php echo nl2br($cityErr);?>
-<?php echo nl2br($stateErr);?>
-<?php echo nl2br($zip_codeErr);?>
-<?php echo nl2br($complexErr);?>
-<?php echo nl2br($termErr);?>
-<?php echo nl2br($priceErr);?>
-<?php echo nl2br($feetErr);?>
-<?php echo nl2br($bedroomErr);?>
-<?php echo nl2br($bathErr);?>
+<strong><font size="4" color="red"><?php echo nl2br($address1Err);?></font></strong>
+<strong><font size="4" color="red"><?php echo nl2br($address2Err);?></font></strong>
+<strong><font size="4" color="red"><?php echo nl2br($cityErr);?></font></strong>
+<strong><font size="4" color="red"><?php echo nl2br($stateErr);?></font></strong>
+<strong><font size="4" color="red"><?php echo nl2br($zip_codeErr);?></font></strong>
+<strong><font size="4" color="red"><?php echo nl2br($complexErr);?></font></strong>
+<strong><font size="4" color="red"><?php echo nl2br($termErr);?></font></strong>
+<strong><font size="4" color="red"><?php echo nl2br($priceErr);?></font></strong>
+<strong><font size="4" color="red"><?php echo nl2br($feetErr);?></font></strong>
+<strong><font size="4" color="red"><?php echo nl2br($bedroomErr);?></font></strong>
+<strong><font size="4" color="red"><?php echo nl2br($bathErr);?></font></strong>
 
 <form method="post" action="<?php echo URL;?>home/listing_form">
 
-<!-- address table -->
-<table class="lf" border="1">
-  <tr>
-    <th class="lf">Address *</th>
-  </tr>
-  <tr>
-    <td class="lf">
-      <input type="text" name="address"></>
-    </td>
-  </tr>
-</table>
+  <div><table>
+	<tr>
+        <!-- address -->
+        <td><label class="listinglabel">Address 1 *</label><input class="listingtext" type="text" name="address1"></></td></tr>
+        <tr><td><label class="listinglabel">Address 2 *</label><input class="listingtext" type="text" name="address2"></></td></tr>
+        <!-- city state zipcode table -->
+        <tr><td><label class="listinglabel">City *</label><input class="listingtext" type="text" name="city"></></td></tr>
 
-<!-- city state zipcode table -->
-<table class="lf" border="1">
-  <tr>
-    <th class="lf">City *</th>
-    <th class="lf">State *</th>
-    <th class="lf">Zip Code *</th>
-  </tr>
-  <tr>
-    <td class="lf">
-      <input type="text" name="city"></>
-    </td>
-    <td class="lf">
-      <select name="state">
-        <option value=""></option>
-        <option value="AL">AL</option>
-        <option value="AK">AK</option>
-        <option value="AZ">AZ</option>
-        <option value="AR">AR</option>
-        <option value="CA">CA</option>
-        <option value="CO">CO</option>
-        <option value="CT">CT</option>
-        <option value="DE">DE</option>
-        <option value="FL">FL</option>
-        <option value="GA">GA</option>
-        <option value="HI">HI</option>
-        <option value="ID">ID</option>
-        <option value="IL">IL</option>
-        <option value="IN">IN</option>
-        <option value="IA">IA</option>
-        <option value="KS">KS</option>
-        <option value="KY">KY</option>
-        <option value="LA">LA</option>
-        <option value="ME">ME</option>
-        <option value="MD">MD</option>
-        <option value="MA">MA</option>
-        <option value="MI">MI</option>
-        <option value="MN">MN</option>
-        <option value="MS">MS</option>
-        <option value="MO">MO</option>
-        <option value="MT">MT</option>
-        <option value="NE">NE</option>
-        <option value="NV">NV</option>
-        <option value="NH">NH</option>
-        <option value="NJ">NJ</option>
-        <option value="NM">NM</option>
-        <option value="NY">NY</option>
-        <option value="NC">NC</option>
-        <option value="ND">ND</option>
-        <option value="OH">OH</option>
-        <option value="OK">OK</option>
-        <option value="OR">OR</option>
-        <option value="PA">PA</option>
-        <option value="RI">RI</option>
-        <option value="SC">SC</option>
-        <option value="SD">SD</option>
-        <option value="TN">TN</option>
-        <option value="TX">TX</option>
-        <option value="UT">UT</option>
-        <option value="VT">VT</option>
-        <option value="VA">VA</option>
-        <option value="WA">WA</option>
-        <option value="WV">WV</option>
-        <option value="WI">WI</option>
-        <option value="WY">WY</option>
-      </select></>
-    </td>
-    <td class="lf">
-      <input type="text" name="zip_code"></>
-    </td>
-  </tr>
-</table>
 
-<!-- complex term price table -->
-<table class="lf" border="1">
-  <tr>
-    <th class="lf">Complex *</th>
-    <th class="lf">Term *</th>
-    <th class="lf">Price *</th>
-  </tr>
-  <tr>
-    <td class="lf">
-      <select name="complex">
+        <tr><td><label class="listinglabel">State *</label>&nbsp;<select class="listingform" name="state">
+          <option value=""></option>
+          <option value="AL">AL</option>
+          <option value="AK">AK</option>
+          <option value="AZ">AZ</option>
+          <option value="AR">AR</option>
+          <option value="CA">CA</option>
+          <option value="CO">CO</option>
+          <option value="CT">CT</option>
+          <option value="DE">DE</option>
+          <option value="FL">FL</option>
+          <option value="GA">GA</option>
+          <option value="HI">HI</option>
+          <option value="ID">ID</option>
+          <option value="IL">IL</option>
+          <option value="IN">IN</option>
+          <option value="IA">IA</option>
+          <option value="KS">KS</option>
+          <option value="KY">KY</option>
+          <option value="LA">LA</option>
+          <option value="ME">ME</option>
+          <option value="MD">MD</option>
+          <option value="MA">MA</option>
+          <option value="MI">MI</option>
+          <option value="MN">MN</option>
+          <option value="MS">MS</option>
+          <option value="MO">MO</option>
+          <option value="MT">MT</option>
+          <option value="NE">NE</option>
+          <option value="NV">NV</option>
+          <option value="NH">NH</option>
+          <option value="NJ">NJ</option>
+          <option value="NM">NM</option>
+          <option value="NY">NY</option>
+          <option value="NC">NC</option>
+          <option value="ND">ND</option>
+          <option value="OH">OH</option>
+          <option value="OK">OK</option>
+          <option value="OR">OR</option>
+          <option value="PA">PA</option>
+          <option value="RI">RI</option>
+          <option value="SC">SC</option>
+          <option value="SD">SD</option>
+          <option value="TN">TN</option>
+          <option value="TX">TX</option>
+          <option value="UT">UT</option>
+          <option value="VT">VT</option>
+          <option value="VA">VA</option>
+          <option value="WA">WA</option>
+          <option value="WV">WV</option>
+          <option value="WI">WI</option>
+          <option value="WY">WY</option>
+        </select></></td></tr>
+
+
+        <tr><td><label class="listinglabel">Zip Code *</label><input class="listingtext" type="text" name="zip_code"></>
+        <br><hr class="listingruler"></td></tr>
+    <!-- complex term price -->
+    <tr><td><label class="listinglabel">Type Of Rental *</label>
+      <select class="listingform" name="complex">
         <option value=""></option>
         <option value="apartment">apartment</option>
         <option value="condo">condo</option>
         <option value="single home">single home</option>
         <option value="town home">town home</option>
-      </select>
-    </td>
-    <td class="lf">
-      <select name="term">
+      </select></td></tr>
+    <tr><td><label class="listinglabel">Term *</label>
+      <select class="listingform" name="term">
         <option value=""></option>
         <option value="lease">lease</option>
         <option value="month to month">month to month</option>
-      </select>
-    </td>
-    <td class="lf">
-      <input type="text" name="price"></>
-    </td>
-  </tr>
-</table>
+      </select></td></tr>
+    <tr><td><label class="listinglabel">Price *</label><input class="listingtext" type="text" name="price"></></td></tr>
+    <!-- square feet bedroom bath -->
+    <tr><td><label class="listinglabel">Square Feet *</label><input class="listingtext" type="text" name="feet"></></td></tr>
+    <tr><td><label class="listinglabel"># Of Bedroom(s) *</label>
+      <select class="listingform" name="bedroom">
+        <option value=""></option>
+        <option value="studio">studio</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select></td></tr>
+    <tr><td><label class="listinglabel"># Of Bath(s) *</label>
+      <select class="listingform" name="bath">
+        <option value=""></option>
+        <option value="0.5">0.5</option>
+        <option value="1">1</option>
+        <option value="1.5">1.5</option>
+        <option value="2">2</option>
+        <option value="2.5">2.5</option>
+        <option value="3">3</option>
+        <option value="3.5">3.5</option>
+        <option value="4">4</option>
+        <option value="4.5">4.5</option>
+        <option value="5">5</option>
+        <option value="5.5">5.5</option>
+        <option value="6">6</option>
+      </select></td></tr>
 
-<!-- square feet bedroom bath -->
-<table class="lf" border="1">
-  <tr>
-    <th class="lf">Square Feet *</th>
-    <th class="lf"># Of Bedroom(s) *</th>
-    <th class="lf"># Of Bath(s) *</th>
-  </tr>
-  <tr>
-    <td class="lf">
-      <input type="text" name="feet"></>
-    </td>
-    <td class="lf">
-      <input type="text" name="bedroom"></>
-    </td>
-    <td class="lf">
-      <input type="text" name="bath"></>
-    </td>
-  </tr>
-</table>
+<!--  Utilities -->
 
-<!-- utilities -->
-<table class="lf" border="1">
-  <tr>
-    <th class="lf">Utilities Provided</th>
-  </tr>
-</table>
-<table class="lf" border="1">
-  <tr>
-    <td class="lf">
-      <input type="checkbox" name="electricity" value="electricity">Electricity
-    </td>
-    <td class="lf">
-      <input type="checkbox" name="gas" value="gas">Gas
-    </td>
-    <td class="lf">
-      <input type="checkbox" name="water" value="water">Water
-    </td>
-  </tr>
-</table>
+    <tr><td><br><hr class="listingruler">
+    <label class="listinglabel">Utilities Included </label></td></tr>
+    <tr><td><input type="checkbox" name="electricity" value="electricity">Electricity</td></tr>
+    <tr><td><input type="checkbox" name="gas" value="gas">Gas</td></tr>
+    <tr><td><input type="checkbox" name="water" value="water">Water</td></tr>
 
-<!-- accomodations -->
-<table class="lf" border="1">
-<tr>
-  <th class="lf">Building Accomodations</th>
-</tr>
-</table>
-<table class="lf" border="1">
-<tr>
-  <td class="lf"><input type="checkbox" name="elevator" value="elevator">Elevator</td>
-  <td class="lf"><input type="checkbox" name="laundry" value="laundry room">Laundry Room</td>
-  <td class="lf"><input type="checkbox" name="outdoor" value="outdoor space">Outdoor Space</td>
-  <td class="lf"><input type="checkbox" name="parking" value="parking">Parking</td>
-  <td class="lf"><input type="checkbox" name="pool" value="pool">Pool</td>
-  <td class="lf"><input type="checkbox" name="wheelchair" value="wheelchair accesibility">Wheelchair Accessibility</td>
-</tr>
-</table>
+<!-- Accomodations -->
 
-<!-- restrictions -->
-<table class="lf" border="1">
-<tr>
-  <th class="lf">Building Restrictions</th>
-</tr>
-</table>
-<table class="lf" border="1">
-  <td class="lf"><input type="checkbox" name="cats" value="cats">Cats</td>
-  <td class="lf"><input type="checkbox" name="dogs" value="dogs">Dogs</td>
-  <td class="lf"><input type="checkbox" name="smoking" value="smoking">Smoking</td>
-</table>
+   <tr><td> <br><hr class="listingruler">
+    <label class="listinglabel">Building Accomodations </label></td>
+      <tr><td><input type="checkbox" name="elevator" value="elevator">Elevator</td></tr>
+      <tr><td><input type="checkbox" name="laundry" value="laundry room">Laundry Room</td></tr>
+      <tr><td><input type="checkbox" name="outdoor" value="outdoor space">Outdoor Space</td></tr>
+      <tr><td><input type="checkbox" name="parking" value="parking">Parking</td></tr>
+      <tr><td><input type="checkbox" name="pool" value="pool">Pool</td></tr>
+      <tr><td><input type="checkbox" name="wheelchair" value="wheelchair accesibility">Wheelchair Accessibility</td></tr>
 
-<!-- comment -->
-<table class="lf" border="1">
-  <tr>
-    <th class="lf">Comment</th>
-  </tr>
-</table>
-<table class="lf" border="1">
-  <tr>
-    <td class="lf">
-      <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
-    </td>
-  </tr>
-</table>
 
-<br>
+<!-- Restrictions -->
+  <tr><td>
+    <br><hr class="listingruler">
+    <label class="listinglabel">Building Restrictions </label></td></tr>
+      <tr><td><input type="checkbox" name="cats" value="cats">Cats</td></tr>
+      <tr><td><input type="checkbox" name="dogs" value="dogs">Dogs</td></tr>
+      <tr><td><input type="checkbox" name="smoking" value="smoking">Smoking</td></tr>
+
+
+<!-- Comment -->
+  <tr><td>
+    <br><hr class="listingruler">
+    <label class="listinglabel">Comment </label></td></tr>
+      <tr><td><textarea name="comment" rows="5" cols="80"><?php echo $comment;?></textarea></td></tr>
+
+<tr><td>
   <!-- button for form submission usage-->
-  <input type="submit" name="Post" value="Post">
+  <input type="submit" name="Post" value="Post"></td></tr>
+</table>
+
+</div>
 
 </form>
