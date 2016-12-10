@@ -3,7 +3,7 @@ var map;
 $(function myMap() {
   var mapCanvas = document.getElementById('map');
   var mapOptions = {
-    center: new google.maps.LatLng(51.5, -0.2), zoom: 15
+    center: new google.maps.LatLng(37.7216195, -122.4750845), zoom: 15
   };
     var mapMarker = new google.maps.Marker({
           position: mapOptions,
