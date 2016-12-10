@@ -68,59 +68,59 @@
 
 									<!-- Inbox button -->
 									<li><a id="navbar-btn" href="<?php echo URL;?>home/messaging" class="first">Inbox</a></li>
-										<!-- /Inbox button -->
+									<!-- /Inbox button -->
 
-										<!-- Post a Listing -->
-										<li><a id="navbar-btn" href="<?php echo URL;?>home/listing_form">Post</a></li>
+									<!-- Post a Listing -->
+									<li><a id="navbar-btn" href="<?php echo URL;?>home/listing_form">Post</a></li>
 
-										<!-- Search bar -->
-										<li>
-											<a style="height: 2.85em;border-right: 2.5px solid #444444;border-left: none;padding-left: 1em;padding-right: 1em;">
-												<form name="searchbox" method="post" action="<?php echo URL;?>home/listings">
-													<input type="search" name="searchBarInput" textarea="" placeholder=" Search by zip, or location (eg. 94132, or Holloway Avenue)" size="60" maxlength="600px" style="border-radius: 7.5px;color: black; font-size: 1.1em;padding-bottom: .225em; background-color: #dddddd;">
-													<input id="search-icon" type="image" src="<?php echo URL;?>img/search-icon.svg" name="submitSearch">
-												</form>
-											</a>
-										</li>
-										<li></li>
-									</ul>
+									<!-- Search bar -->
+									<li>
+										<a style="height: 2.85em;border-right: 2.5px solid #444444;border-left: none;padding-left: 1em;padding-right: 1em;">
+											<form name="searchbox" method="post" action="<?php echo URL;?>home/listings">
+												<input type="search" name="searchBarInput" textarea="" placeholder=" Search by zip, or location (eg. 94132, or Holloway Avenue)" size="60" maxlength="600px" style="border-radius: 7.5px;color: black; font-size: 1.1em;padding-bottom: .225em; background-color: #dddddd;">
+												<input type="submit" value="Search" name="submitSearch" style="color: #eee;background-color: #809262;border-radius: 9px;font-size: 1.125em;">
+											</form>
+										</a>
+									</li>
+									<li></li>
+								</ul>
 
-									<ul class="nav navbar-nav navbar-right" style="height: 2.75em;">
+								<ul class="nav navbar-nav navbar-right" style="height: 2.75em;">
 
-										<li class="dropdown">
-											<a class="dropdown-toggle center" id="navbar-btn2" href="#" data-toggle="dropdown">Sign Up<strong class="caret"></strong></a>
-											<div class="dropdown-menu">
-												<form action="<?php echo URL;?>user/register" method="post">
-													<input type="text" name="username" placeholder="Username" size="30">
-													<input type="text" name="name" placeholder="Full name" size="30">
-													<input type="text" name="email" placeholder="Email" size="30">
-													<input type="password" name="password" placeholder="Password" size="30">
+									<li class="dropdown">
+										<a class="dropdown-toggle center" id="navbar-btn2" href="#" data-toggle="dropdown">Sign Up<strong class="caret"></strong></a>
+										<div class="dropdown-menu">
+											<form action="<?php echo URL;?>user/register" method="post">
+												<input type="text" name="username" placeholder="Username" size="30">
+												<input type="text" name="name" placeholder="Full name" size="30">
+												<input type="text" name="email" placeholder="Email" size="30">
+												<input type="password" name="password" placeholder="Password" size="30">
 
-													<input class="btn btn-primary" type="submit" name="commit" value="Sign Up">
-												</form>
-											</div>
-										</li>
+												<input class="btn btn-primary" type="submit" name="commit" value="Sign Up">
+											</form>
+										</div>
+									</li>
 
-										<li class="dropdown">
-											<a class="dropdown-toggle center" id="navbar-btn2" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
-											<div class="dropdown-menu">
-												<form action="<?php echo URL;?>user/authenticateLogin" method="post">
-													<input type="text" name="username" placeholder="Username or email" size="30"><br class="visible-xs">
-													<input type="password" name="password" placeholder="Password" size="30"><br class="visible-xs">
-													<input id="remember_me" type="checkbox" name="remember_me" value="1">
-													<label class="string optional"> Remember me</label>
+									<li class="dropdown">
+										<a class="dropdown-toggle center" id="navbar-btn2" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+										<div class="dropdown-menu">
+											<form action="<?php echo URL;?>user/authenticateLogin" method="post">
+												<input type="text" name="username" placeholder="Username or email" size="30"><br class="visible-xs">
+												<input type="password" name="password" placeholder="Password" size="30"><br class="visible-xs">
+												<input id="remember_me" type="checkbox" name="remember_me" value="1">
+												<label class="string optional"> Remember me</label>
 
-													<input class="btn btn-primary" type="submit" name="commit" value="Sign In">
-												</form>
-											</div>
-										</li>
+												<input class="btn btn-primary" type="submit" name="commit" value="Sign In">
+											</form>
+										</div>
+									</li>
 
-									</ul>
+								</ul>
 
-								</div>
-								<!-- /.navbar-collapse -->
 							</div>
-						</nav>
+							<!-- /.navbar-collapse -->
+						</div>
+					</nav>
 
-					</div>
 				</div>
+			</div>
