@@ -79,8 +79,16 @@ div.centermid {
   font-size: 1.25em !important;
   border-right: 2.5px solid #444444 !important;
   border-left: none !important;
+}
 
-
+#navbar-btn2{
+  color: #dddddd !important;
+  height: 2.3em !important;
+  width: 5em !important;
+  padding-top: 0.5em !important;
+  font-size: 1.25em !important;
+  border-left: 2.5px solid #444444 !important;
+  border-right: none !important;
 }
 
 #search-icon {

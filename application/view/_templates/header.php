@@ -78,7 +78,7 @@
 											<a style="height: 2.85em;border-right: 2.5px solid #444444;border-left: none;padding-left: 1em;padding-right: 1em;">
 												<form name="searchbox" method="post" action="<?php echo URL;?>home/listings">
 													<input type="search" name="searchBarInput" textarea="" placeholder=" Search by zip, or location (eg. 94132, or Holloway Avenue)" size="60" maxlength="600px" style="border-radius: 7.5px;color: black; font-size: 1.1em;padding-bottom: .225em; background-color: #dddddd;">
-													<input id="search-icon" src=url("/img/search-icon.png") type="submit" name="submitSearch">
+													<input id="search-icon" type="image" src="<?php echo URL;?>img/search-icon.png" name="submitSearch">
 												</form>
 											</a>
 										</li>
@@ -88,7 +88,7 @@
 									<ul class="nav navbar-nav navbar-right" style="height: 2.75em;">
 
 										<li class="dropdown">
-											<a class="dropdown-toggle center" id="navbar-btn" href="#" data-toggle="dropdown">Sign Up<strong class="caret"></strong></a>
+											<a class="dropdown-toggle center" id="navbar-btn2" href="#" data-toggle="dropdown">Sign Up<strong class="caret"></strong></a>
 											<div class="dropdown-menu">
 												<form action="<?php echo URL;?>user/register" method="post">
 													<input type="text" name="username" placeholder="Username" size="30">
@@ -102,7 +102,7 @@
 										</li>
 
 										<li class="dropdown">
-											<a class="dropdown-toggle center" id="navbar-btn" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+											<a class="dropdown-toggle center" id="navbar-btn2" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
 											<div class="dropdown-menu">
 												<form action="<?php echo URL;?>user/authenticateLogin" method="post">
 													<input type="text" name="username" placeholder="Username or email" size="30"><br class="visible-xs">
