@@ -80,7 +80,7 @@
 											<a style="height: 2.85em;border-right: 2.5px solid #444444;border-left: none;padding-left: 1em;padding-right: 1em;">
 												<form name="searchbox" method="post" action="<?php echo URL;?>home/listings">
 													<input type="search" name="searchBarInput" textarea="" placeholder=" Search by zip, or location (eg. 94132, or Holloway Avenue)" size="60" maxlength="600px" style="border-radius: 7.5px;color: black; font-size: 1.1em;padding-bottom: .225em; background-color: #dddddd;">
-													<input type="image" id="search-icon" name="submitSearch>
+													<input type="submit" id="search-icon" name="submitSearch>
 												</form>
 											</a>
 										</li>
