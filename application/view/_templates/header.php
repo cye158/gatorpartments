@@ -12,6 +12,9 @@
 	<link  href="<?php echo URL;?>css/search-result.css" rel="stylesheet">
 	<link href="<?php echo URL;?>css/theme.css" rel="stylesheet">
 	<link href="<?php echo URL;?>css/gator.css" rel="stylesheet">
+	<script type="text/javascript" src="<?php echo URL;?>js/global.js"></script>
+	<script type="text/javascript" src="<?php echo URL;?>js/maps.js"></script>
+
 	<!--[if lt IE 9]>
 	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
