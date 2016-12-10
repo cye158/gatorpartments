@@ -3,6 +3,10 @@
   width: ;
 }
 
+.form-control {
+  margin-top: -4px !important;
+}
+
 .well-map {
   min-height: 20px;
   padding: 0px;
@@ -93,6 +97,12 @@ div.centermid {
   padding: 2.5px;
   border: 1.5px solid #888;
   border-radius: 30px;
+}
+
+#filter-form {
+  margin-top: 1.5em !important;
+  margin-right: 0.5em !important;
+  margin-left: -0.5em !important;
 }
 
 #hr {
