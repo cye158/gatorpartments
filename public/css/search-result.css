@@ -83,10 +83,10 @@ div.centermid {
 
 }
 
-#search-icon {
+.search-icon {
   background-repeat: no-repeat;
   background-size: 27.5px 27.5px;
-  background-image: url("https://integrityhr.com/wp-content/uploads/2015/11/IHR_search_icon-200x200.png");
+  background: url(/img/search-icon.png);
   background-position: center center;
   margin-left: 2.5px;
   padding: 2.5px;
