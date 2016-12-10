@@ -40,7 +40,7 @@
 				</div>
 				<div class="col-sm-4 col-xs-6 customer_service pull-right text-right">
 					<h4 class="phone"><span class="hidden-xs">Hensil Hall 206 </span>CSC 648.01</h4>
-					<h4><small>M: 5:35PM - 8:25PM		T-Su: Closed</small></h4>
+					<h4><small>M: 5:35PM - 8:25PM<br>T-Su: Closed</small></h4>
 				</div>
 			</div><!-- end header -->
 
