@@ -14,13 +14,6 @@
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
-@media (min-width: 992px) and (max-width: 4000px) {
-    .col-sm-3l {
-        float: right;
-        color:red;
-    }
-}
-
 .thumb_property {
   display: block !important;
   margin-bottom: 1px !important;
@@ -64,20 +57,21 @@ div.centermid {
 }
 
 .navbar-inverse {
-  background-color: #333 !important;
+  background-color: #444 !important;
+  border: 0 !important;
 }
 
 .navbar-inner {
-  border-bottom: 2px solid #111222 !important;
+  border: 1px solid #999 !important;
 }
 
 #navbar-btn{
   color: #dddddd !important;
   height: 2.3em !important;
   width: 5em !important;
-  padding-top: 0.5em !important;
+  padding-top: 0.65em !important;
   font-size: 1.25em !important;
-  border-right: 2.5px solid #444444 !important;
+  border-right: 1px solid #999 !important;
   border-left: none !important;
 }
 
@@ -85,9 +79,9 @@ div.centermid {
   color: #dddddd !important;
   height: 2.3em !important;
   width: 5.5em !important;
-  padding-top: 0.5em !important;
+  padding-top: 0.65em !important;
   font-size: 1.25em !important;
-  border-left: 2.5px solid #444444 !important;
+  border-left: 1px solid #999 !important;
   border-right: none !important;
 }
 
@@ -104,7 +98,7 @@ div.centermid {
 #hr {
   margin-top: 0.5em;
   margin-bottom: 0em;
-  border-top: 2.5px solid darkgray;
+  border-top: 2.5px solid #999;
 }
 
 #owl-demo .item img{

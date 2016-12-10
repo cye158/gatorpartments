@@ -52,8 +52,8 @@
 			<div class="row">
 				<div class="col-sm-12" style="height: 3em;">
 
-					<nav class="navbar navbar-inverse" role="navigation" style="border-radius: 0px;border: 2px solid #444444;">
-						<div style="border-radius: 0px;height: 2.85em;border: 2px solid #444444;" class="navbar-inner">
+					<nav class="navbar navbar-inverse" role="navigation">
+						<div class="navbar-inner">
 							<!-- Brand and toggle get grouped for better mobile display -->
 							<div class="navbar-header">
 								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -80,8 +80,8 @@
 									<li>
 										<a style="height: 2.85em;border-right: 2.5px solid #444444;border-left: none;padding-left: 1em;padding-right: 1em;">
 											<form name="searchbox" method="post" action="<?php echo URL;?>home/listings">
-												<input type="search" name="searchBarInput" textarea="" placeholder=" Search by zip, or location (eg. 94132, or Holloway Avenue)" size="60" maxlength="600px" style="border-radius: 7.5px;color: black; font-size: 1.1em;padding-bottom: .225em; background-color: #dddddd;">
-												<input type="submit" value="Search" name="submitSearch" style="color: #eee;background-color: #809262;border-radius: 9px;font-size: 1.125em;">
+												<input type="search" name="searchBarInput" textarea="" placeholder="Enter location (eg. 94132, or 19th Avenue)" size="41" maxlength="37.5px" style="border-radius: 2px;color: black;font-size: 1.1em;padding-top: .225em;background-color: #dddddd;">
+												<input type="submit" value="Search" name="submitSearch" style="color: #eee;background-color: #809262;border-radius: 2px;font-size: 1.125em;">
 											</form>
 										</a>
 									</li>
