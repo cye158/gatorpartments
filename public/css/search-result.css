@@ -83,17 +83,6 @@ div.centermid {
 
 }
 
-#search-icon {
-  background: url(/img/search-icon.png) no-repeat;
-  background-size: 27.5px 27.5px;
-  background-position: center center;
-  background-color: #555;
-  margin-left: 2.5px;
-  padding: 2.5px;
-  border: 1.5px solid #888;
-  border-radius: 30px;
-}
-
 #hr {
   margin-top: 0.5em;
   margin-bottom: 0em;
