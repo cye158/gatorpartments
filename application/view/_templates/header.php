@@ -23,7 +23,7 @@
 
 <body>
 
-	<div class="container-fluid" style="height: 50em;">
+	<div class="container" style="height: 50em;">
 		<div class="row">
 
 			<!-- start header -->
