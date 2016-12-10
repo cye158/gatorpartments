@@ -83,11 +83,16 @@ div.centermid {
 
 }
 
-.search-icon {
+#search-icon {
   background-repeat: no-repeat;
-  background-size: 40px 40px;
-  background-image: url("https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-512.png");
+  background-size: 27.5px 27.5px;
+  background-image: url("https://integrityhr.com/wp-content/uploads/2015/11/IHR_search_icon-200x200.png");
   background-position: center center;
+  margin-left: 2.5px;
+  padding: 2.5px;
+  border: 1.5px solid #888;
+  border-radius: 30px;
+  background-color: #555;"
 }
 
 #hr {
