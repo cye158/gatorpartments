@@ -96,9 +96,13 @@ class UserModel {
     // return $message;
   }
 
+  // used to check whether user fulfills the criteria before entering "post listing" page
   public function checkLoginStatus() {
     if(!isset($_SESSION) || $_SESSION['loggedIn'] == false || !$_SESSION['isLandlord']) {
-      header("Location: " . URL . "backendTest/register");
+      header("Location: " . URL . "user/login");
+      exit();
+    } elseif(!$_SESSION['isLandlord']) {
+      header("Location: " . URL . "user/not%landlord%page");
       exit();
     }
   }
