@@ -72,7 +72,7 @@ div.centermid {
   border: 1px solid #999 !important;
 }
 
-#navbar-btn{
+#navbar-btn {
   color: #dddddd !important;
   height: 2.3em !important;
   width: 4.75em !important;
@@ -81,42 +81,42 @@ div.centermid {
   border: 1px solid #999 !important;
 }
 
-#search-input-v {
-  color: black;
-  font-size: 1.1em;
-  background-color: #eee;
-  margin-left: 4.75em;
-  height: 2em;
+.search-input-v {
+  color: black !important;
+  font-size: 1.1em !important;
+  background-color: #eee !important;
+  margin-left: 4.75em !important;
+  height: 2em !important;
 }
 
-#search-btn-v {
-  color: #eee;
-  background-color: #809262;
-  font-size: 1.125em;
-  margin-left: -26.15em;
-  font-weight: bold;
-  width: 5.25em;
-  border: 3px outset #ddd;
+.search-btn-v {
+  color: #eee !important;
+  background-color: #809262 !important;
+  font-size: 1.125em !important;
+  margin-left: -26.15em !important;
+  font-weight: bold !important;
+  width: 5.25em !important;
+  border: 3px outset #ddd !important;
 }
 
-#search-input-h {
-  border-radius: 2px;
-  color: black;
-  font-size: 1.1em;
-  padding-top: .225em;
-  background-color: #eee;
+.search-input-h {
+  border-radius: 2px !important;
+  color: black !important;
+  font-size: 1.1em !important;
+  padding-top: .225em !important;
+  background-color: #eee !important;
   padding-right: 50px;
   height: 2em;
 }
 
-#search-btn-h {
-  color: #eee;
+.search-btn-h {
+  color: #eee !important;
   background-color: #809262;
-  border-radius: 2px;
-  font-size: 1.125em;
-  margin-left: -62px;
-  font-weight: bold;
-  height: 2em;
+  border-radius: 2px !important;
+  font-size: 1.125em !important;
+  margin-left: -62px !important;
+  font-weight: bold !important;
+  height: 2em !important;
 }
 
 #search-icon {
