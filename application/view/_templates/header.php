@@ -69,7 +69,7 @@
 									<!-- /Inbox button -->
 
 									<!-- Post a Listing -->
-									<li><a href="<?php echo URL;?>home/listing_form" style="padding-top: 0.85em; font-size: 1.25em;">Post</a></li>
+									<li><a href="<?php echo URL;?>user/checkLoginStatus" style="padding-top: 0.85em; font-size: 1.25em;">Post</a></li>
 
 									<!-- Search bar -->
 									<li>
