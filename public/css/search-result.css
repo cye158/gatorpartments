@@ -81,6 +81,11 @@ div.centermid {
   border: 1px solid #999 !important;
 }
 
+.search {
+  border:0;
+  padding-top: 0;
+}
+
 .search-input-v {
   color: black !important;
   font-size: 1.1em !important;

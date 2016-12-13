@@ -84,14 +84,14 @@
 
 									<!-- Search -->
 									<li>
-									<a class="visible-xs" style="border:0; padding-top: 0;">
+									<a class="visible-xs search">
 										<form name="searchbox" method="post" action="<?php echo URL;?>home/listings">
 											<input class="search-input-v" type="search" name="searchBarInput" textarea="" placeholder="Enter location (eg. 94132, or 19th Avenue)" size="45" maxlength="50">
 											<input class="search-btn-v" value="Search" name="submitSearch" type="submit">
 										</form>
 									</a>
 
-									<a class="hidden-xs" style="border: 0;">
+									<a class="hidden-xs search" style="margin-top: 0.325em;"">
 										<form name="searchbox" method="post" action="<?php echo URL;?>home/listings">
 											<input class="search-input-h" type="search" name="searchBarInput" textarea="" placeholder="Enter location (eg. 94132, or 19th Avenue)" size="48" maxlength="50">
 											<input class="search-btn-h" type="submit" value="Search" name="submitSearch" >
