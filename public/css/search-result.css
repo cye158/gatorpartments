@@ -82,8 +82,8 @@ div.centermid {
 }
 
 .search {
-  border:0;
-  padding-top: 0;
+  border:0 !important;
+  padding-top: 0 !important;
 }
 
 .search-input-v {
@@ -110,8 +110,8 @@ div.centermid {
   font-size: 1.1em !important;
   padding-top: .225em !important;
   background-color: #eee !important;
-  padding-right: 50px;
-  height: 2em;
+  padding-right: 50px !important;
+  height: 2em !important;
 }
 
 .search-btn-h {
@@ -119,7 +119,7 @@ div.centermid {
   background-color: #809262;
   border-radius: 2px !important;
   font-size: 1.125em !important;
-  margin-left: -62px !important;
+  margin-left: -61px !important;
   font-weight: bold !important;
   height: 2em !important;
 }
