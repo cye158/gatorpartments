@@ -105,6 +105,8 @@ div.centermid {
   font-weight: bold !important;
   width: 5.25em !important;
   border: 3px outset #ddd !important;
+  margin-left: -5.25em !important;
+  height: 2em !important;
 }
 
 .search-input-h {
