@@ -9,6 +9,11 @@
   margin-top: -4px !important;
 }
 
+.cont {
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
 .well-map {
   min-height: 20px;
   padding: 0px;

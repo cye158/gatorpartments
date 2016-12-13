@@ -22,7 +22,7 @@
 </head>
 
 <body>
-	<div class="container" style="padding-left: 17px; padding-right: 16px;">
+	<div class="container cont">
 		<div class="row">
 
 			<!-- start header -->
