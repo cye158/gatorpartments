@@ -151,7 +151,7 @@ function initializeHomeMap() {
 		return;
 	var myOptions = {
 		zoom: 5,
-		center: new google.maps.LatLng(54.5260, -4.2220),
+		center: new google.maps.LatLng(37.7219, 122.4782),
 		mapTypeId: google.maps.MapTypeId.ROADMAP,
 		draggable: false,
 		disableDoubleClickZoom: false,

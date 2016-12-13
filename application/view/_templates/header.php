@@ -27,7 +27,7 @@
 		<div class="row">
 
 			<!-- start header -->
-			<div class="row" style="height: 4em;"><!-- start header -->
+			<div class="row" style="height: 4em;">
 				<div class="col-sm-4 col-xs-6 logo" style="height: inherit;">
 					<a href="<?php echo URL;?>home/index">
 						<div class="row">
@@ -41,10 +41,14 @@
 						</div>
 					</a>
 				</div>
-				<div class="col-sm-4 col-xs-6 customer_service pull-right text-right" style="height: inherit;">
-					<h4 class="phone"><span class="hidden-xs">Customer service: </span>0800 8475 548</h4>
-					<h4><small>24 hours a day, 7 days a week</small></h4>
+
+				<!-- Customer Service -->
+				<div class="col-sm-4 col-xs-6 customer_service pull-right text-right">
+					<h4 class="phone"><span class="hidden-xs">Hensil Hall 206 </span>CSC 648.01</h4>
+					<h4><small>M: 5:35PM - 8:25PM<br>T-Su: Closed</small></h4>
 				</div>
+				<!-- /Customer Service -->
+
 			</div>
 			<!-- end header -->
 
@@ -54,6 +58,7 @@
 
 					<nav class="navbar navbar-inverse" role="navigation">
 						<div class="navbar-inner">
+
 							<!-- Brand and toggle get grouped for better mobile display -->
 							<div class="navbar-header">
 								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -67,6 +72,7 @@
 
 							<!-- Collect the nav links, forms, and other content for toggling -->
 							<div class="navbar-collapse navbar-ex1-collapse collapse">
+
 								<ul class="nav navbar-nav center">
 
 									<!-- Inbox button -->
@@ -74,7 +80,8 @@
 									<!-- /Inbox button -->
 
 									<!-- Post a Listing -->
-									<li><a id="navbar-btn" href="<?php echo URL;?>home/listing_form">Post</a></li>
+									<li><a id="navbar-btn" href="<?php echo URL;?>user/checkLoginStatus">Post</a></li>
+									<!-- /Post a Listing -->
 
 									<!-- Search bar -->
 									<li>
@@ -85,38 +92,20 @@
 											</form>
 										</a>
 									</li>
-									<li></li>
+									<!-- /Search -->
+
 								</ul>
+
 
 								<ul class="nav navbar-nav navbar-right" style="height: 2.75em;">
 
-									<li class="dropdown">
-										<a class="dropdown-toggle center" id="navbar-btn2" href="#" data-toggle="dropdown">Sign Up<strong class="caret"></strong></a>
-										<div class="dropdown-menu">
-											<form action="<?php echo URL;?>user/register" method="post">
-												<input type="text" name="username" placeholder="Username" size="30">
-												<input type="text" name="name" placeholder="Full name" size="30">
-												<input type="text" name="email" placeholder="Email" size="30">
-												<input type="password" name="password" placeholder="Password" size="30">
+									<!-- Login -->
+									<li><a href="<?php echo URL . 'user/login';?>">Log in</a></li>
+									<!-- /Login -->
 
-												<input class="btn btn-primary" type="submit" name="commit" value="Sign Up">
-											</form>
-										</div>
-									</li>
-
-									<li class="dropdown">
-										<a class="dropdown-toggle center" id="navbar-btn2" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
-										<div class="dropdown-menu">
-											<form action="<?php echo URL;?>user/authenticateLogin" method="post">
-												<input type="text" name="username" placeholder="Username or email" size="30"><br class="visible-xs">
-												<input type="password" name="password" placeholder="Password" size="30"><br class="visible-xs">
-												<input id="remember_me" type="checkbox" name="remember_me" value="1">
-												<label class="string optional"> Remember me</label>
-
-												<input class="btn btn-primary" type="submit" name="commit" value="Sign In">
-											</form>
-										</div>
-									</li>
+									<!-- Register -->
+									<li><a href="<?php echo URL . 'user/register';?>">Register</a></li>
+									<!-- /Register -->
 
 								</ul>
 
