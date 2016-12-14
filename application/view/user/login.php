@@ -10,19 +10,19 @@
 	<!-- Username  -->
 	<div class="form-group">
 	  <label>Username</label>
-	  <input class="form-control" type="text" name="username">
+	  <input class="form-control" type="text" name="username" required>
 	</div>
 
 	<!-- Password -->
 	<div class="form-group">
 	  <label>Password</label>
-	  <input class="form-control" type="password" name="password1">
+	  <input class="form-control" type="password" name="password1" required>
 	</div>
 
 	<!-- Confirm Password -->
 	<div class="form-group">
 	  <label>Confirm Password</label>
-	  <input class="form-control" type="password" name="password">
+	  <input class="form-control" type="password" name="password" required>
 	</div>
 
 	<!-- Login Button -->
@@ -34,3 +34,7 @@
     </div>
   </div>
 </div>
+<script>
+
+
+</script>

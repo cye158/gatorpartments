@@ -17,8 +17,9 @@ class UserModel {
   //Inserts the arguments into user table in DB
   //The password is hashed and then stored in DB
   public function register($fullName, $phoneNumber, $email, $username, $password, $isLandlord, $isStudent) {
-    $sql = "INSERT INTO user (full_name, phone_number, email, username, password, isLandlord, isStudent) VALUES (:fullName, :phoneNumber, :email, :username, :password, :isLandlord, :isStudent)";
+    $sql = "INSERT INTO user (full_name, phone_number, email, username, password, isLandlord, isStudent, landlord_id) VALUES (:fullName, :phoneNumber, :email, :username, :password, :isLandlord, :isStudent, :landlordId)";
     $query = $this->db->prepare($sql);
+
     $query->bindParam(':fullName', $fullName);
     $query->bindParam(':phoneNumber', $phoneNumber);
     $query->bindParam(':email', $email);
@@ -30,6 +31,13 @@ class UserModel {
 
     $query->bindParam(':isLandlord', $isLandlord);
     $query->bindParam(':isStudent', $isStudent);
+
+    if($isLandlord){
+      $landlordId = $this->generateLandlordId();
+      $query->bindParam(':landlordId', $landlordId);
+    } else {
+      $query->bindParam(':landlordId', 0);
+    }
 
     $query->execute();
 
@@ -122,6 +130,44 @@ class UserModel {
     }
 
     return null;
+  }
+
+  //Generates a 6 digit random number for User ID
+  public function generateUserId(){
+
+    //This do while loop will keep looping if an id already exists on the database
+    //If it doesn't, the randomly generated number will be our new ID
+    do {
+    $id = mt_rand(1, 999999);
+
+    $sql = "SELECT id FROM user WHERE id=:id";
+    $query = $this->db->prepare($sql);
+    $query->bindParam(":id", $id);
+    $query->execute();
+    $result = $query->fetch();
+
+    } while($result);
+
+    return $id;
+  }
+
+  //Generates a 6 digit random number for landlord ID
+  public function generateLandlordId(){
+
+    //This do while loop will keep looping if an id already exists on the database
+    //If it doesn't, the randomly generated number will be our new ID
+    do {
+    $landlordId = mt_rand(1, 999999);
+
+    $sql = "SELECT landlord_id FROM user WHERE landlord_id=:landlord_id";
+    $query = $this->db->prepare($sql);
+    $query->bindParam(":landlord_id", $landlordId);
+    $query->execute();
+    $result = $query->fetch();
+
+    } while($result);
+
+    return $landlordId;
   }
 
 }

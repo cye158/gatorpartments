@@ -4,7 +4,7 @@
 class BackendTest extends Controller{
 
   public function index(){
-    $listing = $this->listingModel->getListingByMinPrice(2000);
+    $id = $this->userModel->generateID();
 
     require APP . "view/backendTest/header.php";
     require APP . "view/backendTest/index.php";
@@ -65,6 +65,11 @@ class BackendTest extends Controller{
     require APP . "view/backendTest/failed.php";
   }
 
+  public function post(){
+    require APP . "view/_templates/header.php";
+    require APP . "view/backendTest/post.php";
+    require APP . "view/_templates/footer.php";
+  }
 
 }
 ?>
