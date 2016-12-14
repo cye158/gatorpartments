@@ -24,15 +24,11 @@
     <script type="text/javascript" src="<?php echo URL;?>js/sticky/sticky.min.js"></script>
 
     <script type="text/javascript" src="<?php echo URL;?>js/portamento-min.js"></script>
-    <script type="text/javascript" src="<?php echo URL;?>js/global.js"></script>
 
     <script type="text/javascript" src="<?php echo URL;?>js/search-result.js"></script>
 
 	  <link  href="<?php echo URL;?>css/maps.css" rel="stylesheet">
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
-    <script type="text/javascript" src="<?php echo URL;?>js/maps.js"></script>
-
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbTAiniS56gZ1ZGGWK9oU1mZ2S0488wJs&callback=initMap"></script>
-
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap"></script>
+    
 </body>
 </html>

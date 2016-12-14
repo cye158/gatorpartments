@@ -11,7 +11,7 @@
 *      . $row->zip_code ;
 *  }
 *
-*  $listing data field, 
+*  $listing data field,
 *    id, title, room_size, price, description, address_1, address_2, city, state, zip_code, landlord_id,
 *    phone, image_main, images.
 *
@@ -77,7 +77,7 @@ class ListingModel
     $query->execute();
     return $query->fetchAll();
   }
-  
+
   //Get all listing by Lowest Price first
   public function getListingByLowestPrice()
   {
@@ -86,7 +86,7 @@ class ListingModel
     $query->execute();
     return $query->fetchAll();
   }
-  
+
   //Get all listing by Highest Price first
   public function getListingByHighestPrice()
   {
@@ -95,7 +95,7 @@ class ListingModel
     $query->execute();
     return $query->fetchAll();
   }
-  
+
   //Gets listings given a minimum price
   public function getListingByMinPrice($minPrice)
   {
@@ -105,7 +105,7 @@ class ListingModel
     $query->execute();
     return $query->fetchAll();
   }
-  
+
   //Gets listing given max price
   public function getListingByMaxPrice($maxPrice)
   {
