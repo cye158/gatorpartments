@@ -1,4 +1,3 @@
-
     <!-- JQuery Minified -->
     <script type="text/javascript" src="<?php echo URL;?>js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="<?php echo URL;?>js/response.min.js"></script>
@@ -30,5 +29,18 @@
 	  <link  href="<?php echo URL;?>css/maps.css" rel="stylesheet">
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap"></script>
     
+    
+    <!-- Begin Google Analytics code -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88972547-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- End Google Analytics code -->
 </body>
 </html>
