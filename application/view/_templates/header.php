@@ -76,17 +76,17 @@
 								<ul class="nav navbar-nav center hidden-xs">
 
 									<!-- Inbox button -->
-									<li><a id="navbar-btn" href="//sfsuswe.com/~cye0105/gatorpartments/home/messaging" class="first">Inbox</a></li>
+									<li><a id="navbar-btn" href="<?php echo URL;?>home/messaging" class="first">Inbox</a></li>
 									<!-- /Inbox button -->
 
 									<!-- Post a Listing -->
-									<li><a id="navbar-btn" href="//sfsuswe.com/~cye0105/gatorpartments/user/checkLoginStatus">Post</a></li>
+									<li><a id="navbar-btn" href="<?php echo URL;?>user/checkLoginStatus">Post</a></li>
 									<!-- /Post a Listing -->
 
 									<!-- Search -->
 									<li>
 										<a class="hidden-xs search" style="margin-top: 0.325em;">
-											<form name="searchbox" method="post" action="//sfsuswe.com/~cye0105/gatorpartments/home/listings">
+											<form name="searchbox" method="post" action="<?php echo URL;?>home/listings">
 												<input class="search-input-h" type="search" name="searchBarInput" textarea="" placeholder="Enter location (eg. 94132, or 19th Avenue)" size="48" maxlength="50">
 												<input class="search-btn-h" type="submit" value="Search" name="submitSearch">
 											</form>
@@ -99,11 +99,11 @@
 								<ul class="nav navbar-nav navbar-right center hidden-xs">
 
 									<!-- Login -->
-									<li><a id="navbar-btn" href="//sfsuswe.com/~cye0105/gatorpartments/user/login">Log in</a></li>
+									<li><a id="navbar-btn" href="<?php echo URL;?>user/login">Log in</a></li>
 									<!-- /Login -->
 
 									<!-- Register -->
-									<li><a id="navbar-btn" href="//sfsuswe.com/~cye0105/gatorpartments/user/register">Register</a></li>
+									<li><a id="navbar-btn" href="<?php echo URL;?>user/register">Register</a></li>
 									<!-- /Register -->
 
 								</ul>
@@ -114,19 +114,19 @@
 								<ul class="nav navbar-nav center visible-xs">
 
 									<!-- Inbox button -->
-									<li style="display: inline-block;"><a id="navbar-btn" href="//sfsuswe.com/~cye0105/gatorpartments/home/messaging" class="first" style="display: inline-block;">Inbox</a></li>
+									<li style="display: inline-block;"><a id="navbar-btn" href="<?php echo URL;?>home/messaging" class="first" style="display: inline-block;">Inbox</a></li>
 									<!-- /Inbox button -->
 
 									<!-- Post a Listing -->
-									<li style="display: inline-block;"><a id="navbar-btn" href="//sfsuswe.com/~cye0105/gatorpartments/user/checkLoginStatus" style="display: inline-block;">Post</a></li>
+									<li style="display: inline-block;"><a id="navbar-btn" href="<?php echo URL;?>user/checkLoginStatus" style="display: inline-block;">Post</a></li>
 									<!-- /Post a Listing -->
 
 									<!-- Login -->
-									<li style="display: inline-block;"><a id="navbar-btn" href="//sfsuswe.com/~cye0105/gatorpartments/user/login">Log in</a></li>
+									<li style="display: inline-block;"><a id="navbar-btn" href="<?php echo URL;?>user/login">Log in</a></li>
 									<!-- /Login -->
 
 									<!-- Register -->
-									<li style="display: inline-block;"><a id="navbar-btn" href="//sfsuswe.com/~cye0105/gatorpartments/user/register">Register</a></li>
+									<li style="display: inline-block;"><a id="navbar-btn" href="<?php echo URL;?>user/register">Register</a></li>
 									<!-- /Register -->
 
 								</ul>
@@ -136,7 +136,7 @@
 									<!-- Search -->
 									<li style="display: inline-block;margin-top:0.5em;">
 										<a class="search">
-											<form name="searchbox" method="post" action="//sfsuswe.com/~cye0105/gatorpartments/home/listings">
+											<form name="searchbox" method="post" action="<?php echo URL;?>home/listings">
 												<input class="search-input-v" type="search" name="searchBarInput" textarea="" placeholder="Enter location (eg. 94132, or 19th Avenue)" size="47" maxlength="50">
 												<input class="search-btn-v" value="Search" name="submitSearch" type="submit">
 											</form>
