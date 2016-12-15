@@ -1,9 +1,12 @@
-#map {
-  height: 380px;
-  width: ;
+.map-wrapper {
+  height: 70vmin !important;
+  border: 1px solid grey !important;
 }
 
-
+#map {
+  height: 100%;
+  width: 100%;
+}
 
 .form-control {
   margin-top: -4px !important;
@@ -26,22 +29,27 @@
 }
 
 .thumb_property {
-  display: block !important;
+  height: 10.5em !important;
   margin-bottom: 1px !important;
   line-height: 1 !important;
 }
 
 .thumb_info {
-  padding: 0.5em;
-  padding-left: 2em;
-  padding-right: 3em;
+  padding-left: 1em;
+}
+
+.thumb_info > p {
+  margin: 0;
+}
+
+.thumb_info > a {
+  text-decoration: underline;
 }
 
 .thumb {
   display: block !important;
   position: relative !important;
-  margin-left: 5px;
-  padding: 3px !important;
+  padding: 1px !important;
   background-color: white !important;
   border: 2px solid #dddddd !important;
   border-radius: 3px !important;
@@ -49,8 +57,10 @@
 }
 
 .thumb a > img {
-  height: 25vh !important;
+  height: auto !important;
+  width: 100% !important;
   object-fit: fill !important;
+  image-rendering: pixelated;
 }
 
 div.centermid {
@@ -61,6 +71,8 @@ div.centermid {
 
 .mini_property_wrapper {
   margin-top: 0.5em;
+  padding-left: 2px !important;
+  padding-right: 2px !important;
 }
 
 .nav a:hover {
@@ -128,6 +140,34 @@ div.centermid {
   height: 2em !important;
 }
 
+.recent-list {
+  border-radius: 0px !important;
+  border: 1px solid grey !important;
+  background: #cdcdcd !important;
+  margin: 0 !important;
+  padding: 0.25em !important;
+}
+
+.scroll-list {
+  height: 100vmin !important;
+  overflow: scroll !important;
+  border-radius: 0px !important;
+  border: 1px solid grey !important;
+  margin-bottom: 0px !important;
+  background: #eee !important;
+}
+
+.ad {
+  width: 100% !important;
+  height: 29.375vmin !important;
+  background-color: white !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 0px !important;
+  border: 3px double grey !important;
+  padding: 0px !important;
+}
+
 #search-icon {
   background-size: 27.5px 27.5px;
   background-position: center center;
@@ -147,11 +187,17 @@ div.centermid {
 #hr {
   margin-top: 0.5em;
   margin-bottom: 0em;
-  border-top: 2.5px solid #999;
+  border-top: 2.5px solid #aaa;
 }
 
 #owl-demo .item img{
     display: block;
     width: 100%;
     height: auto;
+}
+
+footer {
+  border-top: 1px solid grey !important;
+  text-decoration: overline !important;
+  margin-top: 0.15em !important;
 }
