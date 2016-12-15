@@ -3,6 +3,17 @@
   width: ;
 }
 
+
+
+.form-control {
+  margin-top: -4px !important;
+}
+
+.cont {
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
 .well-map {
   min-height: 20px;
   padding: 0px;
@@ -14,23 +25,23 @@
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
-@media (min-width: 992px) and (max-width: 4000px) {
-    .col-sm-3l {
-        float: right;
-        color:red;
-    }
-}
-
 .thumb_property {
   display: block !important;
   margin-bottom: 1px !important;
   line-height: 1 !important;
 }
 
+.thumb_info {
+  padding: 0.5em;
+  padding-left: 2em;
+  padding-right: 3em;
+}
+
 .thumb {
   display: block !important;
   position: relative !important;
-  padding: 5px !important;
+  margin-left: 5px;
+  padding: 3px !important;
   background-color: white !important;
   border: 2px solid #dddddd !important;
   border-radius: 3px !important;
@@ -48,6 +59,96 @@ div.centermid {
     justify-content: center;
 }
 
+.mini_property_wrapper {
+  margin-top: 0.5em;
+}
+
+.nav a:hover {
+  color: none ;
+}
+
+.navbar-inverse {
+  background-color: #444 !important;
+  border: 0 !important;
+  margin-bottom: 0.1em;
+}
+
+.navbar-inner {
+  border: 1px solid #999 !important;
+}
+
+#navbar-btn {
+  color: #dddddd !important;
+  height: 2.3em !important;
+  width: 4.75em !important;
+  padding-top: 0.65em !important;
+  font-size: 1.25em !important;
+  border: 1px solid #999 !important;
+}
+
+.search {
+  border:0 !important;
+  padding-top: 0 !important;
+}
+
+.search-input-v {
+  color: black !important;
+  font-size: 1.1em !important;
+  background-color: #eee !important;
+  height: 2em !important;
+}
+
+.search-btn-v {
+  color: #eee !important;
+  background-color: #809262 !important;
+  font-size: 1.125em !important;
+  font-weight: bold !important;
+  border: 3px outset #ddd !important;
+  margin-left: -4em !important;
+  height: 2em !important;
+}
+
+.search-input-h {
+  border-radius: 2px !important;
+  color: black !important;
+  font-size: 1.1em !important;
+  padding-top: .225em !important;
+  background-color: #eee !important;
+  padding-right: 50px !important;
+  height: 2em !important;
+}
+
+.search-btn-h {
+  color: #eee !important;
+  background-color: #809262;
+  border-radius: 2px !important;
+  font-size: 1.125em !important;
+  margin-left: -61px !important;
+  font-weight: bold !important;
+  height: 2em !important;
+}
+
+#search-icon {
+  background-size: 27.5px 27.5px;
+  background-position: center center;
+  background-color: #555;
+  margin-left: 2.5px;
+  padding: 2.5px;
+  border: 1.5px solid #888;
+  border-radius: 30px;
+}
+
+#filter-form {
+  margin-top: 1.5em !important;
+  margin-right: 0.5em !important;
+  margin-left: -0.5em !important;
+}
+
+#hr {
+  margin-top: 0.5em;
+  margin-bottom: 0em;
+  border-top: 2.5px solid #999;
+}
 
 #owl-demo .item img{
     display: block;

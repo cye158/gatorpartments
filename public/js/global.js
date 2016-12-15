@@ -176,7 +176,7 @@ var map;
 function initializePropertiesMap() {
 	if($('#map_canvas').length == 0)
 		return;
-	var myLatlng = new google.maps.LatLng(51.461311,-0.303742);
+	var myLatlng = new google.maps.LatLng(122.4782,37.7219);
 	var myOptions = {
 		zoom: 13,
 		center: myLatlng,

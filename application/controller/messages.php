@@ -1,6 +1,9 @@
 <?php
 class Messages extends Controller
-{   
+{    
+    /*
+    * this function is to get the landlord id  from the listing id
+    */ 
     public function contactLandlord($listingId)
     {
 	if ($_SESSION['loggedIn']) {
@@ -14,7 +17,10 @@ class Messages extends Controller
 	   
 	}
     }
-
+   
+    /*
+    * this function is to write a new message from the user
+    */
     public function addMessage()
     {
 	if ($_SESSION['loggedIn']) {
@@ -28,7 +34,11 @@ class Messages extends Controller
 	header('Location: ' . URL . 'home');
      }
     }
-
+  
+   /*
+   * this function is to show all the messages from the user sent to others,
+   *  just as sent box
+   */
    public function showToMessage()
    {
 	if ($_SESSION['loggedIn']) {
@@ -46,6 +56,10 @@ class Messages extends Controller
 	}
    }
 
+   /* 
+   * this function is to show all the messages sent from others,
+   * just as inbox
+   */
    public function showFromMessage()
    {
 	if ($_SESSION['loggedIn']) {
@@ -59,6 +73,9 @@ class Messages extends Controller
 	}
    }
 
+  /*
+  * this function is for mile's controller: home/messaging function
+  */
   public function showMessageDetail($messageId)
   {
       if ($_SESSION['loggedIn']) {
@@ -68,6 +85,19 @@ class Messages extends Controller
           require APP . 'view/_templates/header.php';
           require APP . 'view/home/messageDetail.php';
           require APP . 'view/_templates/footer.php';
+      }
+  }
+
+  /* this function is to show all the messages related to the user, no matter it is sent to the user or sent from the user
+  * sort by the listing id
+  */
+  public function showMessages() {
+      if ($_SESSION['loggedIn']) {
+            $userId = $_SESSION['userId'];
+            $messages = $this->messageModel->showMessages($userId);
+            
+            // load views
+	    // please load your views
       }
   }
 }

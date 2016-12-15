@@ -11,7 +11,7 @@
 *      . $row->zip_code ;
 *  }
 *
-*  $listing data field, 
+*  $listing data field,
 *    id, title, room_size, price, description, address_1, address_2, city, state, zip_code, landlord_id,
 *    phone, image_main, images.
 *
@@ -77,7 +77,7 @@ class ListingModel
     $query->execute();
     return $query->fetchAll();
   }
-  
+
   //Get all listing by Lowest Price first
   public function getListingByLowestPrice()
   {
@@ -86,7 +86,7 @@ class ListingModel
     $query->execute();
     return $query->fetchAll();
   }
-  
+
   //Get all listing by Highest Price first
   public function getListingByHighestPrice()
   {
@@ -95,7 +95,7 @@ class ListingModel
     $query->execute();
     return $query->fetchAll();
   }
-  
+
   //Gets listings given a minimum price
   public function getListingByMinPrice($minPrice)
   {
@@ -105,7 +105,7 @@ class ListingModel
     $query->execute();
     return $query->fetchAll();
   }
-  
+
   //Gets listing given max price
   public function getListingByMaxPrice($maxPrice)
   {
@@ -120,57 +120,68 @@ class ListingModel
     define('SITE_ROOT', realpath(dirname(__FILE__)));
     // $fileSize is the max file size of an image, measured in bytes
     $fileSize = 500000;
-    $target_dir = "/images/" . $_SESSION['username'];
-    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-    $uploadOk = 1;
-    $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
+    $target_dir = "/images/";
+    $totalImages = count($_FILES["fileToUpload"]["name"]);
 
     // if mkdir gives permission error, user must chmod folder path to 777
     // chmod -R 777 SITE_ROOT
     // The chmod provided above doesn't allow me to delete the folder created, have not found a workaround for it yet
     if(!file_exists(SITE_ROOT.'/images')) {
-      echo "Attempting to create folder at: " . SITE_ROOT.'/images';
+      echo "Attempting to create folder at: <br>" . SITE_ROOT.'/images';
       mkdir(SITE_ROOT.'/images', 0777, true);
-      echo "If mkdir returns permission error, read the comments in the code on how to workaround it in the function";
+      echo "If mkdir returns permission error, read the comments in the code on how to workaround it in the function <br>";
     }
 
-    // Check if image file is a actual iamge or fake image
-    if(isset($_POST["submit"])) {
-      $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-      if($check !== false) {
-        echo "File is an image - " . $check["mime"] . ".";
-        $uploadOk = 1;
-      } else {
-        echo "File is not an image.";
+    // loop through incase there are multiple file uploads
+    for($i = 0; $i < $totalImages; $i++) {
+      $target_file = $target_dir . $_FILES["fileToUpload"]["name"][$i];
+      $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
+      $uploadOk = 1;
+
+      // check if the file already exists in the server, if so output error message and stop upload
+      if(file_exists(SITE_ROOT . $target_dir . $_FILES["fileToUpload"]["name"][$i])) {
+        echo "File already exists! <br>";
         $uploadOk = 0;
       }
-    }
 
-    // if file exists, append a number, such as (1), to the end to workaround existing file error
-    if(file_exists($target_file)) {
-      $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]) . "(1)";
-    }
+      // Check if image file is a actual iamge or fake image
+      if(isset($_POST["submit"])) {
+        $check = getimagesize($_FILES["fileToUpload"]["tmp_name"][$i]);
+        if($check !== false) {
+          echo "File is an image - " . $check["mime"] . ". <br>";
+          $uploadOk = 1;
+        } else {
+          echo "File is not an image. <br>";
+          $uploadOk = 0;
+        }
+      }
 
-    // Check file size
-    if($_FILES["fileToUpload"]["size"] > $fileSize) {
-      echo "Sorry, your file is too large.";
-      $uploadOk = 0;
-    }
+      // if file exists, append a number, such as (1), to the end to workaround existing file error
+      //if(file_exists($target_file)) {
+        //$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"][$i]) . "(1)";
+      //}
 
-    // Allow only certain file formats pertaining to images
-    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
-      echo "Sorry, only JPG, JPEG,PNG, & GIF files are allowed.";
-      $uploadOk = 0;
-    }
+      // Check file size
+      if($_FILES["fileToUpload"]["size"][$i] > $fileSize) {
+        echo "Sorry, your file is too large. <br>";
+        $uploadOk = 0;
+      }
 
-    // Check if image is okay and meets all the criterias before uploading
-    if($uploadOk == 0) {
-      echo "Sorry, your file was no uploaded.";
-    } else {
-      if(move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], SITE_ROOT.$target_file)) {
-        echo "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded";
+      // Allow only certain file formats pertaining to images
+      if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
+        echo "Sorry, only JPG, JPEG,PNG, & GIF files are allowed. <br>";
+        $uploadOk = 0;
+      }
+
+      // Check if image is okay and meets all the criterias before uploading
+      if($uploadOk == 0) {
+        echo "Sorry, your file was no uploaded. <br>";
       } else {
-        echo "Sorry, there was an error uploading your file.";
+        if((move_uploaded_file($_FILES["fileToUpload"]["tmp_name"][$i], SITE_ROOT.$target_file))) {
+          echo "The file " . basename($_FILES["fileToUpload"]["name"][$i]) . " has been uploaded <br>";
+        } else {
+          echo "Sorry, there was an error uploading your file. <br>";
+        }
       }
     }
   }
