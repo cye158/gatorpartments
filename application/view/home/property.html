@@ -114,16 +114,16 @@
 	<div class="col-sm-4 col-xs-4 row">
 
 		<!-- map -->
-		<div class="row">
-			<div id="map" class="center" style="height: 29.6em; border: 1px solid grey;"> Map is placed here</div>
+    <div class="row map-wrapper">
+			<!-- <div id="map" class="center">Map is placed here</div> -->
+			<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d12623.667835684188!2d-122.47502909999997!3d37.721627000000005!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1481834287641" id="map"></iframe>
 		</div>
-
 		<!-- /map -->
 
 		<!-- ads -->
 		<div class="row">
-			<div class="col-sm-12 col-xs-6 nopadding" style=" width: 100%; height: 14.9em; background-color: white; align-items: center; justify-content: center; border-radius: 0px; border: 3px double grey; padding:0px;">
-				<img src="http://tcsfoodblog.weebly.com/uploads/7/5/1/1/7511954/3255171.png" style="height: 100%; width:100%;">
+			<div class="col-sm-12 col-xs-6 ad">
+				<img src="https://hannahmorley.files.wordpress.com/2012/11/screen-shot-2012-11-29-at-00-49-49.png" style="height: 100%; width:100%;">
 			</div>
 		</div>
 		<!-- /ads -->
@@ -135,7 +135,7 @@
 <!-- /details,map & ads -->
 
 <!-- footer -->
-<footer style="border-top: 1px solid grey;">
+<footer>
 
 	<div class="col-xs-6">
 		<p>
@@ -156,4 +156,6 @@
 </footer>
 <!-- /footer -->
 
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<!-- google maps -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbTAiniS56gZ1ZGGWK9oU1mZ2S0488wJs&callback=initMap"></script>
+<!-- /google maps -->

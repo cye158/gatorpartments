@@ -130,7 +130,7 @@
 						<!-- filter btn -->
 						<div class="row">
 							<div class="col-sm-12" style="margin-top: 5px;">
-								<span><button class="btn btn-success pull-right" type="submit" style="border: 2px outset snow; border-radius: 2px;font-size: 1.125em; padding-top: 3px; padding-bottom: 3px;width: 90%;">Filter</button></span>
+								<span><button class="btn btn-filter pull-right" type="submit" style="border: 2px outset snow; border-radius: 2px;font-size: 1.125em; padding-top: 3px; padding-bottom: 3px;width: 90%;">Filter</button></span>
 							</div>
 						</div>
 						<!-- /filter btn -->
@@ -144,7 +144,7 @@
 	<!-- /filterOption -->
 
 	<!-- listing -->
-	<div class="col-sm-6 col-xs-6" style="border-radius: 0px; margin-bottom: 0px;">
+	<div class="col-xs-6" style="border-radius: 0px; margin-bottom: 0px;">
 
 		<div class="well col-xs-12" style="border-radius: 0px;border: 1px solid grey; background: #cdcdcd; margin: 0;padding: 0.25em; padding-left: em;">
 			<ul class="col-xs-4 navbar-left" style="margin: 0;font-weight: bold;">Listings </ul>
@@ -152,14 +152,15 @@
 
 		</div>
 
-		<div class="col-sm-12" style="overflow: scroll; height: 42em; border-radius: 0px; border: 1px solid grey;margin-bottom: 0px; background: #eee;">
+		<div class="col-sm-12 scroll-list">
 
+			<!-- property -->
 			<div class="mini_property_wrapper">
 				<div class="row">
 					<div class="col-sm-12">
 
 						<!-- property IMG-->
-						<div class="col-sm-6 thumb thumb_property center">
+						<div class="col-xs-6 thumb thumb_property center">
 							<a href="<?php echo URL;?>/home/property" class="img_holder">
 								<img src="<?php echo URL;?>img/listings/1/1-1.jpg" alt="">
 							</a>
@@ -167,9 +168,15 @@
 						<!-- /property IMG-->
 
 						<!-- property Info-->
-						<div class="col-sm-offset-6 thumb_info">
-							<h3>Price : $750.00</h3><br>
-							<p><a href="<?php echo URL;?>/home/property">4 bedroom house</a><br>The Frontyard, Richmond, TW10</p>
+						<div class="col-xs-6 thumb_info">
+							<h3>Price : $750.00</h3>
+							<p><button href="<?php echo URL;?>/home/property">Available Now</button></p>
+							<br>
+							<p>
+								<p>4 Bedroom House</p>
+								<p>The Frontyard, Richmond, TW10</p>
+								<a href="<?php echo URL;?>/home/property">more info...</a>
+							</p>
 						</div>
 						<!-- /property Info-->
 
@@ -177,13 +184,14 @@
 				</div>
 				<div class="row"><hr id="hr"></div>
 			</div>
+			<!-- /property -->
 
 			<div class="mini_property_wrapper">
 				<div class="row">
 					<div class="col-sm-12">
 
 						<!-- property IMG-->
-						<div class="col-sm-6 thumb thumb_property center">
+						<div class="col-xs-6 thumb thumb_property center">
 							<a href="<?php echo URL;?>/home/property" class="img_holder">
 								<img src="<?php echo URL;?>img/listings/2/2-1.jpg" alt="">
 							</a>
@@ -191,9 +199,15 @@
 						<!-- /property IMG-->
 
 						<!-- property Info-->
-						<div class="col-sm-offset-6 thumb_info">
-							<h3>Price : $500.00</h3><br>
-							<p><a href="<?php echo URL;?>/home/property">3 bedroom house</a><br>The Vineyard, Richmond, WT10</p>
+						<div class="col-xs-6 thumb_info">
+							<h3>Price : $550.00</h3>
+							<p><button href="<?php echo URL;?>/home/property">Available Now</button></p>
+							<br>
+							<p>
+								<p>4 Bedroom House</p>
+								<p>The Frontyard, Richmond, TW10</p>
+								<a href="<?php echo URL;?>/home/property">more info...</a>
+							</p>
 						</div>
 						<!-- /property Info-->
 
@@ -207,7 +221,7 @@
 					<div class="col-sm-12">
 
 						<!-- property IMG-->
-						<div class="col-sm-6 thumb thumb_property center">
+						<div class="col-xs-6 thumb thumb_property center">
 							<a href="<?php echo URL;?>/home/property" class="img_holder">
 								<img src="<?php echo URL;?>img/listings/5/5-1.jpg" alt="">
 							</a>
@@ -215,9 +229,15 @@
 						<!-- /property IMG-->
 
 						<!-- property Info-->
-						<div class="col-sm-offset-6 thumb_info">
-							<h3>Price : $550.00</h3><br>
-							<p><a href="<?php echo URL;?>/home/property">2 bedroom house</a><br>The Graveyard, Richmond, WT10</p>
+						<div class="col-xs-6 thumb_info">
+							<h3>Price : $700.00</h3>
+							<p><button href="<?php echo URL;?>/home/property">Available Now</button></p>
+							<br>
+							<p>
+								<p>4 Bedroom House</p>
+								<p>The Frontyard, Richmond, TW10</p>
+								<a href="<?php echo URL;?>/home/property">more info...</a>
+							</p>
 						</div>
 						<!-- /property Info-->
 
@@ -233,7 +253,7 @@
 					<div class="col-sm-12">
 
 						<!-- property IMG-->
-						<div class="col-sm-6 thumb thumb_property">
+						<div class="col-xs-6 thumb thumb_property">
 							<a href="<?php echo URL;?>/home/property" class="img_holder">
 								<img src="<?php echo URL;?>img/listings/3/3-5.jpg" alt="">
 							</a>
@@ -241,9 +261,15 @@
 						<!-- /property IMG-->
 
 						<!-- property Info-->
-						<div class="col-sm-offset-6 thumb_info">
-							<h3>Price : $489.00</h3><br>
-							<p><a href="<?php echo URL;?>/home/property">1 bedroom house</a><br>The Backyard, Richmond, WT10</p>
+						<div class="col-xs-6 thumb_info">
+							<h3>Price : $650.00</h3>
+							<p><button href="<?php echo URL;?>/home/property">Available Now</button></p>
+							<br>
+							<p>
+								<p>4 Bedroom House</p>
+								<p>The Frontyard, Richmond, TW10</p>
+								<a href="<?php echo URL;?>/home/property">more info...</a>
+							</p>
 						</div>
 						<!-- /property Info-->
 
@@ -253,7 +279,6 @@
 			</div>
 
 		</div>
-
 
 	</div>
 	<!-- /listing -->
@@ -262,15 +287,15 @@
 	<div class="col-sm-4 col-xs-4 row">
 
 		<!-- map -->
-		<div class="row">
-			<div id="map" class="center" style="height: 29.6em; border: 1px solid grey;"> Map is placed here</div>
+		<div class="row map-wrapper">
+			<!-- <div id="map" class="center">Map is placed here</div> -->
+			<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d12623.667835684188!2d-122.47502909999997!3d37.721627000000005!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1481834287641" id="map"></iframe>
 		</div>
-
 		<!-- /map -->
 
 		<!-- ads -->
 		<div class="row">
-			<div class="col-sm-12 col-xs-6 nopadding" style=" width: 100%; height: 14.9em; background-color: white; align-items: center; justify-content: center; border-radius: 0px; border: 3px double grey; padding:0px;">
+			<div class="col-sm-12 col-xs-6 ad">
 				<img src="http://tcsfoodblog.weebly.com/uploads/7/5/1/1/7511954/3255171.png" style="height: 100%; width:100%;">
 			</div>
 		</div>
@@ -283,7 +308,7 @@
 <!-- /filter,map,listing,ads -->
 
 <!-- footer -->
-<footer style="border-top: 1px solid grey;">
+<footer>
 
 	<div class="col-xs-6">
 		<p>
@@ -303,3 +328,7 @@
 
 </footer>
 <!-- /footer -->
+
+<!-- google maps -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbTAiniS56gZ1ZGGWK9oU1mZ2S0488wJs&callback=initMap"></script>
+<!-- /google maps -->
