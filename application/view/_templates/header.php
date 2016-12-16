@@ -90,7 +90,7 @@
 												<!-- php -->
 												<?php
 												session_start();
-												if ($_POST['submitSearch']){}
+												if ($_POST['submitSearch']){
 													if ( ($_POST['location'] != "") && ($_POST['location'] != "0") && (is_numeric('location') || is_string('location')) ){
 														$_SESSION['location_session'] = $_POST['location'];
 													}
