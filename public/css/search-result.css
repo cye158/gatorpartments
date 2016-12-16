@@ -12,6 +12,15 @@
   margin-top: -4px !important;
 }
 
+.filter-list {
+  overflow: scroll;
+  height: 99.125vmin;
+  border-radius: 0px;
+  border: 1px solid grey;
+  margin-bottom: 0px;
+  background: #bbb;
+}
+
 .cont {
   padding-left: 16px !important;
   padding-right: 16px !important;
@@ -63,13 +72,21 @@
   image-rendering: pixelated;
 }
 
+
 .thumb_info p > button {
-  border: 2px solid #888;
-  border-radius: 5px;
-  padding: 3px;
-  background-color: #609b62;
-  color:white;
+  border: 2px solid #888 !important;
+  border-radius: 5px !important;
+  padding: 3px !important;
+  background-color: #609b62 !important;
+  color: white !important;
 }
+
+.msg-btn {
+  color: white !important;
+  background-color: grey !important;
+  width: 7.5em !important;
+}
+
 
 div.centermid {
     display: flex;
@@ -148,7 +165,7 @@ div.centermid {
   height: 2em !important;
 }
 
-.recent-list {
+.title-list {
   border-radius: 0px !important;
   border: 1px solid grey !important;
   background: #cdcdcd !important;
@@ -159,6 +176,14 @@ div.centermid {
 .scroll-list {
   height: 100vmin !important;
   overflow: scroll !important;
+  border-radius: 0px !important;
+  border: 1px solid grey !important;
+  margin-bottom: 0px !important;
+  background: #eee !important;
+}
+
+.property-list {
+  height: 100vmin !important;
   border-radius: 0px !important;
   border: 1px solid grey !important;
   margin-bottom: 0px !important;
@@ -180,6 +205,12 @@ div.centermid {
   color: #fff !important;
   background-color: #809262  !important;
   border-color: #ddd !important;
+  border: 2px outset snow !important;
+  border-radius: 2px !important;
+  font-size: 1.125em !important;
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
+  width: 100% !important;
 }
 
 #search-icon {
