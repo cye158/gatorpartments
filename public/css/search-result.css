@@ -15,9 +15,6 @@
 .filter-list {
   overflow: scroll;
   height: 99.125vmin;
-  border-radius: 0px;
-  border: 1px solid grey;
-  margin-bottom: 0px;
   background: #bbb;
 }
 
@@ -212,6 +209,10 @@ div.centermid {
   width: 100% !important;
 }
 
+.form-horizontal.mini .form-group {
+    margin-top: 10px !important;
+}
+
 #search-icon {
   background-size: 27.5px 27.5px;
   background-position: center center;
@@ -224,8 +225,8 @@ div.centermid {
 
 #filter-form {
   margin-top: 1.5em !important;
-  margin-right: 0.5em !important;
-  margin-left: -0.5em !important;
+  margin-right: -0.25em !important;
+  margin-left: -0.25em !important;
 }
 
 #hr {
