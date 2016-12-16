@@ -95,8 +95,7 @@
 														$_SESSION['location_session'] = $_POST['location'];
 													}
 												}
-												$location_session = $_SESSION['location_session']
-												echo ($location_session);
+												$location_session = $_SESSION['location_session'];
 												?>
 												<!-- /php -->
 												<input class="search-input-h" type="search" name="location" placeholder="Enter location (eg. 94132, or 19th Avenue)" size="48" maxlength="50" value="<?php
