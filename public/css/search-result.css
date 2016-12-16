@@ -169,6 +169,15 @@ div.centermid {
   padding: 0.25em !important;
 }
 
+.title-filter {
+  border-radius: 0px !important;
+  border: 3px solid grey !important;
+  background: #888 !important;
+  margin: 0 !important;
+  padding: 0.25em !important;
+  font-weight: bold !important;
+}
+
 .scroll-list {
   height: 100vmin !important;
   overflow: scroll !important;
