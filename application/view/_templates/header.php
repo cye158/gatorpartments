@@ -135,7 +135,7 @@
 
 									<!-- Search -->
 									<li style="display: inline-block;margin-top:0.5em;">
-										<a class="search">
+										<a class="search row">
 											<form name="searchbox" method="post" action="<?php echo URL;?>home/listings">
 												<input class="search-input-v" type="search" name="searchBarInput" textarea="" placeholder="Enter location (eg. 94132, or 19th Avenue)" size="47" maxlength="50">
 												<input class="search-btn-v" value="Search" name="submitSearch" type="submit">
