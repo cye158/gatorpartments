@@ -14,7 +14,7 @@
 
 .filter-list {
   overflow: scroll;
-  height: 100vmin;
+  height: 99.5vmin;
   background: #bbb;
   border: 1px solid #888
 }
