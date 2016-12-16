@@ -104,7 +104,7 @@
 														echo ($location_session);
 													}
 												/> -->
-												
+
 												<input class="search-btn-h" type="submit" value="Search" name="submitSearch">
 
 											</form>
@@ -155,7 +155,7 @@
 									<li style="display: inline-block;margin-top:0.5em;">
 										<a class="search row">
 											<form name="searchbox" method="post" action="<?php echo URL;?>home/listings">
-												<input class="search-input-v" type="text" name="location" placeholder="Enter location (eg. 94132, or 19th Avenue)" size="47" maxlength="50" value="<?php echo location ; ?>" />
+												<input class="search-input-v" type="text" name="location" placeholder="Enter location (eg. 94132, or 19th Avenue)" size="47" maxlength="50" value="">
 												<input class="search-btn-v" value="submit" name="submitSearch" type="submit" />
 											</form>
 										</a>
