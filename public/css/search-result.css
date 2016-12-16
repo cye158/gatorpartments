@@ -14,8 +14,9 @@
 
 .filter-list {
   overflow: scroll;
-  height: 99.125vmin;
+  height: 100vmin;
   background: #bbb;
+  border: 1px solid #888
 }
 
 .cont {
@@ -171,7 +172,7 @@ div.centermid {
 
 .title-filter {
   border-radius: 0px !important;
-  border: 3px solid grey !important;
+  border: 3px solid #666 !important;
   background: #888 !important;
   margin: 0 !important;
   padding: 0.25em !important;
