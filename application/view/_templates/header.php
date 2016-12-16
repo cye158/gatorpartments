@@ -87,23 +87,20 @@
 										<a class="hidden-xs search" style="margin-top: 0.325em;">
 											<form name="searchbox" method="post" action="<?php echo URL;?>home/listings">
 
-												<!-- php -->
 												<?php
-												session_start();
-												if ($_POST['submitSearch']){
-													if ( ($_POST['location'] != "") && ($_POST['location'] != "0") && (is_numeric('location') || is_string('location')) ){
-														$_SESSION['location_session'] = $_POST['location'];
+													if ($_POST['submitSearch']){
+														if ( ($_POST['location'] != "") && ($_POST['location'] != "0") && (is_numeric('location') || is_string('location')) ){
+															$_SESSION['location_session'] = $_POST['location'];
+														}
 													}
-												}
-												$location_session = $_SESSION['location_session'];
+													$location_session = $_SESSION['location_session'];
 												?>
-												<!-- /php -->
-												<input class="search-input-h" type="search" name="location" placeholder="Enter location (eg. 94132, or 19th Avenue)" size="48" maxlength="50" value="<?php
-												if ($location_session == ""){
-													echo ("0");
-												}else {
-													echo ($location_session);
-												}
+												<input class="search-input-h" type="text" name="location" placeholder="Enter location (eg. 94132, or 19th Avenue)" size="48" maxlength="50" value="<?php
+													if ($location_session == ""){
+														echo ("0");
+													}else {
+														echo ($location_session);
+													}
 												?>
 												"/>
 												<input class="search-btn-h" type="submit" value="Search" name="submitSearch">
