@@ -1702,9 +1702,6 @@ input[type="checkbox"] {
   /* IE8-9 */
   line-height: normal;
 }
-input.[type="checkbox"].lf{
-  border-right: 10px;
-}
 input[type="file"] {
   display: block;
 }
