@@ -380,7 +380,7 @@
 
 <tr><td>
   <!-- button for form submission usage-->
-  <input type="submit" name="Post" value="Post"></td></tr>
+  <input type="submit" name="Post" value="Post" style="float: right;"></td></tr>
 </table>
 
 </div>
