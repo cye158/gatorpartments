@@ -152,6 +152,9 @@ input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
+input[type="checkbox"]{
+  padding-right: 25px;
+}
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
