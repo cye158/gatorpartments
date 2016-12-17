@@ -380,15 +380,11 @@
 
 <tr><td>
   <!-- button for form submission usage-->
-  <input type="submit" name="Cancel" value="Cancel" style="float: left;"></td></tr>
-  <a class="btn btn-success" href="index"> cancel </a>
-<tr><td>
+  <a class="btn btn-success" href="index" style="float: left;">Cancel</a></td>
+<td>
   <input class="btn btn-success" type="submit" name="Post" value="Post" style="float: right;"></td></tr>
 </table>
 
 </div>
 
-</form>
-<form action="http://google.com">
-    <input type="submit" value="Go to Google" />
 </form>
