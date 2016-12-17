@@ -28,6 +28,7 @@
     <script type="text/javascript" src="<?php echo URL;?>js/portamento-min.js"></script>
 
     <script type="text/javascript" src="<?php echo URL;?>js/search-result.js"></script>
+    <script type="text/javascript" src="<?php echo URL;?>js/maps.js"></script>
 
     <!-- Begin Google Analytics code -->
     <script>

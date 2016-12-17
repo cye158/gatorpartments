@@ -1,4 +1,4 @@
-$( function initMap() {
+function initMap() {
   var location = {lat: 37.723894, lng: -122.4782};
   var gmap = new google.maps.Map(document.getElementById('gmap'), {
     zoom: 15,
@@ -8,4 +8,4 @@ $( function initMap() {
     position: location,
     map: gmap
   });
-});
+}
