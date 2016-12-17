@@ -350,27 +350,27 @@
 <!--  Utilities -->
     <tr><td><br><hr class="listingruler">
     <label class="listinglabel">Utilities Included </label></td></tr>
-    <tr><td><input type="checkbox" name="electricity" value="electricity">Electricity</td></tr>
-    <tr><td><input type="checkbox" name="gas" value="gas">Gas</td></tr>
-    <tr><td><input type="checkbox" name="water" value="water">Water</td></tr>
+    <tr><td><input type="checkbox" name="electricity" value="electricity" style="margin-right: 10px;">Electricity</td></tr>
+    <tr><td><input type="checkbox" name="gas" value="gas" style="margin-right: 10px;">Gas</td></tr>
+    <tr><td><input type="checkbox" name="water" value="water" style="margin-right: 10px;">Water</td></tr>
 
 <!-- Accomodations -->
    <tr><td> <br><hr class="listingruler">
     <label class="listinglabel">Building Accomodations </label></td>
-      <tr><td><input type="checkbox" name="elevator" value="elevator">Elevator</td></tr>
-      <tr><td><input type="checkbox" name="laundry" value="laundry room">Laundry Room</td></tr>
-      <tr><td><input type="checkbox" name="outdoor" value="outdoor space">Outdoor Space</td></tr>
-      <tr><td><input type="checkbox" name="parking" value="parking">Parking</td></tr>
-      <tr><td><input type="checkbox" name="pool" value="pool">Pool</td></tr>
-      <tr><td><input type="checkbox" name="wheelchair" value="wheelchair accesibility">Wheelchair Accessibility</td></tr>
+      <tr><td><input type="checkbox" name="elevator" value="elevator" style="margin-right: 10px;">Elevator</td></tr>
+      <tr><td><input type="checkbox" name="laundry" value="laundry room" style="margin-right: 10px;">Laundry Room</td></tr>
+      <tr><td><input type="checkbox" name="outdoor" value="outdoor space" style="margin-right: 10px;">Outdoor Space</td></tr>
+      <tr><td><input type="checkbox" name="parking" value="parking" style="margin-right: 10px;">Parking</td></tr>
+      <tr><td><input type="checkbox" name="pool" value="pool" style="margin-right: 10px;">Pool</td></tr>
+      <tr><td><input type="checkbox" name="wheelchair" value="wheelchair accesibility" style="margin-right: 10px;">Wheelchair Accessibility</td></tr>
 
 <!-- Restrictions -->
   <tr><td>
     <br><hr class="listingruler">
     <label class="listinglabel">Building Restrictions </label></td></tr>
-      <tr><td><input type="checkbox" name="cats" value="cats" style="padding-right: 10px;">Cats</td></tr>
-      <tr><td><input type="checkbox" name="dogs" value="dogs">Dogs</td></tr>
-      <tr><td><input type="checkbox" name="smoking" value="smoking">Smoking</td></tr>
+      <tr><td><input type="checkbox" name="cats" value="cats" style="margin-right: 10px;">Cats</td></tr>
+      <tr><td><input type="checkbox" name="dogs" value="dogs" style="margin-right: 10px;">Dogs</td></tr>
+      <tr><td><input type="checkbox" name="smoking" value="smoking" style="margin-right: 10px;">Smoking</td></tr>
 
 <!-- Comment -->
   <tr><td>
