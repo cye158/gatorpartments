@@ -20,3 +20,27 @@ header{
 .red{
   color:red;
 }
+
+.alert{
+  padding:5px;
+  margin-bottom:0;
+}
+
+.usernameInvalidInput{
+
+  display:none;
+
+}
+
+.inputSuccess{
+
+  display:none;
+
+}
+
+.inputFail{
+  display:none;
+}
+
+
+

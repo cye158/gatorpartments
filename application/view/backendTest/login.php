@@ -10,7 +10,10 @@
 	<!-- Username  -->
 	<div class="form-group">
 	  <label>Username</label>
-	  <input class="form-control" type="text" name="username">
+            <span class="usernameValidInput alert alert-success glyphicon glyphicon-ok" aria-hidden="true"></span>
+            <span class="usernameInvalidInput alert alert-danger" aria-hidden="true">Error - Field cannot be empty</span>
+
+  	    <input id="username" class="form-control gatorForm" type="text" name="username">
 	</div>
 
 	<!-- Password -->
@@ -34,3 +37,16 @@
     </div>
   </div>
 </div>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script>
+
+  $(function(){
+    $('#username').blur(function(){
+      if(!$(this).val()){
+        $('.usernameInvalidInput').show();
+      }
+    });
+
+  });
+
+</script>
