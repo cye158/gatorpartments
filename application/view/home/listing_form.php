@@ -368,7 +368,7 @@
   <tr><td>
     <br><hr class="listingruler">
     <label class="listinglabel">Building Restrictions </label></td></tr>
-      <tr><td><input type="checkbox" name="cats" value="cats" style="padding-right: 100px;">Cats</td></tr>
+      <tr><td><input type="checkbox" name="cats" value="cats">Cats</td></tr>
       <tr><td><input type="checkbox" name="dogs" value="dogs">Dogs</td></tr>
       <tr><td><input type="checkbox" name="smoking" value="smoking">Smoking</td></tr>
 
