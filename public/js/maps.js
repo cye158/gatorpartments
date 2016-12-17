@@ -1,15 +1,11 @@
-$(function myMap() {
-  var mapCanvas = document.getElementById('map');
-  var mapOptions = {
-    center: new google.maps.LatLng(37.7216195, -122.4750845),
-    zoom: 10
-  };
-
-  var mapMarker = new google.maps.Marker({
-    position: mapOptions,
-    map: mapCanvas
+$( function initMap() {
+  var location = {lat: 37.723894, lng: -122.4782};
+  var gmap = new google.maps.Map(document.getElementById('gmap'), {
+    zoom: 15,
+    center: location
   });
-
-  var map = new google.maps.Map(mapCanvas, mapOptions, mapMarker);
-
+  var marker = new google.maps.Marker({
+    position: location,
+    map: gmap
+  });
 });
