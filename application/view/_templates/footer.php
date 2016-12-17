@@ -1,5 +1,5 @@
-<div class="container">SFSU/FAU/Fulda
-Software Engineering Project, Fall 2016. For Demonstration Only</div>
+    <div class="container">SFSU/FAU/Fulda
+    Software Engineering Project, Fall 2016. For Demonstration Only</div>
 
     <!-- JQuery Minified -->
     <script type="text/javascript" src="<?php echo URL;?>js/jquery-1.11.0.min.js"></script>
@@ -31,8 +31,8 @@ Software Engineering Project, Fall 2016. For Demonstration Only</div>
 
 	  <link  href="<?php echo URL;?>css/maps.css" rel="stylesheet">
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap"></script>
-
-
+    
+    
     <!-- Begin Google Analytics code -->
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
