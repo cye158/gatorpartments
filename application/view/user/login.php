@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4 ">
-      <form class="form-horizontal" action="<?php echo URL . 'controller/user';?>" method="post">
+      <form class="form-horizontal" action="<?php echo URL . 'controller/user.php';?>" method="post">
 	<div class="page-header green">
 	  <h1 class="text-center">Log In</h1>
 	</div>
