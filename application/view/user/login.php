@@ -13,15 +13,15 @@
 	  <input class="form-control" type="text" name="username" required>
 	</div>
 
-	<!-- Password -->
+	<!-- Password --> <!--
 	<div class="form-group">
 	  <label>Password</label>
 	  <input class="form-control" type="password" name="password1" required>
-	</div>
+	</div> -->
 
 	<!-- Confirm Password -->
 	<div class="form-group">
-	  <label>Confirm Password</label>
+	  <label>Password</label>
 	  <input class="form-control" type="password" name="password" required>
 	</div>
 
