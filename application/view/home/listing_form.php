@@ -383,7 +383,7 @@
   <input type="submit" name="Cancel" value="Cancel" style="float: left;"></td></tr>
   <a class="btn btn-success" href="index"> cancel </a>
 <tr><td>
-  <input type="submit" name="Post" value="Post" style="float: right;"></td></tr>
+  <input class="btn btn-success" type="submit" name="Post" value="Post" style="float: right;"></td></tr>
 </table>
 
 </div>
