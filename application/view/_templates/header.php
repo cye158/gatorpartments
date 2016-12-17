@@ -12,6 +12,9 @@
 	<link  href="<?php echo URL;?>css/search-result.css" rel="stylesheet">
 	<link href="<?php echo URL;?>css/theme.css" rel="stylesheet">
 	<link href="<?php echo URL;?>css/gator.css" rel="stylesheet">
+	<script type="text/javascript" src="<?php echo URL;?>js/global.js"></script>
+	<script type="text/javascript" src="<?php echo URL;?>js/maps.js"></script>
+
 	<!--[if lt IE 9]>
 	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -19,39 +22,45 @@
 </head>
 
 <body>
-
-	<div class="container">
+	<div class="container cont">
 		<div class="row">
 
-
-			<div class="row"><!-- start header -->
+			<!-- start header -->
+			<div class="row">
 				<div class="col-sm-4 col-xs-6 logo">
 					<a href="<?php echo URL;?>home/index">
 						<div class="row">
 							<div class="col-sm-3 hidden-xs logo-img">
-								<img src="<?php echo URL;?>css/images/Home-green-48.png" alt=""/>
+								<img src="<?php echo URL;?>css/images/Home-green-48.png" alt="">
 
 							</div>
 							<div class="col-sm-9 logo-text">
-								<h1><small>Team 4</small><br />Gatorpartments</h1>
+								<h1><small>Team 4</small><br>Gatorpartments</h1>
 							</div>
 						</div>
 					</a>
 				</div>
+
+				<!-- Customer Service -->
 				<div class="col-sm-4 col-xs-6 customer_service pull-right text-right">
-					<h4 class="phone"><span class="hidden-xs">Hensil Hall 206 </span>CSC 648.01</h4>
-					<h4><small>M: 5:35PM - 8:25PM<br>T-Su: Closed</small></h4>
+					<h4 class="phone"><span>Hensil Hall 206 CSC 648.01</span></h4>
+					<h4><small>M: 5:35PM - 8:25PM; T-Su: Closed</small></h4>
 				</div>
-			</div><!-- end header -->
+				<!-- /Customer Service -->
 
-			<div class="row"><!-- start nav -->
-				<div class="col-sm-12">
+			</div>
+			<!-- end header -->
 
-					<nav class="navbar navbar-inverse" role="navigation" style="border-radius: 5px;">
-						<div class="navbar-inner" style="border-radius: 5px;">
+			<!-- start nav -->
+			<div class="row">
+				<div class="col-sm-12" style="">
+
+					<nav class="navbar navbar-inverse" role="navigation">
+						<div class="navbar-inner">
+
 							<!-- Brand and toggle get grouped for better mobile display -->
 							<div class="navbar-header">
-								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-ex1-collapse">
 									<span class="sr-only">Toggle navigation</span>
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
@@ -61,40 +70,85 @@
 							</div>
 
 							<!-- Collect the nav links, forms, and other content for toggling -->
-							<div class="collapse navbar-collapse navbar-ex1-collapse">
-								<ul class="nav navbar-nav">
+							<div class="navbar-collapse navbar-ex1-collapse collapse in">
+
+								<!--**** Large Viewport ****-->
+								<ul class="nav navbar-nav center hidden-xs">
 
 									<!-- Inbox button -->
-									<li><a href="<?php echo URL;?>home/messaging" class="first" style="padding-top: 0.85em; font-size: 1.25em;">Inbox</a></li>
+									<li><a id="navbar-btn" href="<?php echo URL;?>home/messaging" class="first">Inbox</a></li>
 									<!-- /Inbox button -->
 
 									<!-- Post a Listing -->
-									<li><a href="<?php echo URL;?>user/checkLoginStatus" style="padding-top: 0.85em; font-size: 1.25em;">Post</a></li>
+									<li><a id="navbar-btn" href="<?php echo URL;?>user/checkLoginStatus">Post</a></li>
+									<!-- /Post a Listing -->
 
-									<!-- Search bar -->
+									<!-- Search -->
 									<li>
-										<a>
-											<form name="searchbox" method="post" action="<?php echo URL;?>home/listings" style="padding-left: 0.25em;">
-												<input type="search" name="searchBarInput" textarea="" placeholder=" Search by location (eg. 94132, or Holloway Avenue)" size="60" maxlength="600px" style="border-radius: 7.5px;color: black; font-size: 1.25em;">
-												<input type="submit" value="Search" name="submitSearch" style="background-color: green; border-radius: 7.5px; font-size: 1.25em;">
+										<a class="hidden-xs search" style="margin-top: 0.325em;">
+											<form name="searchbox" method="post" action="<?php echo URL;?>home/listings">
+												<input class="search-input-h" type="search" name="searchBarInput" textarea="" placeholder="Enter location (eg. 94132, or 19th Avenue)" size="48" maxlength="50">
+												<input class="search-btn-h" type="submit" value="Search" name="submitSearch">
 											</form>
 										</a>
 									</li>
-									<li></li>
-								</ul>
-
-								<ul class="nav navbar-nav navbar-right">
-
-									<li>
-								          <a href="<?php echo URL . 'user/login';?>">Log in</a>
-									</li>
-									<li>
-									  <a href="<?php echo URL . 'user/register';?>">Register</a>
-									</li>
+									<!-- /Search -->
 
 								</ul>
 
-							</div><!-- /.navbar-collapse -->
+								<ul class="nav navbar-nav navbar-right center hidden-xs">
+
+									<!-- Login -->
+									<li><a id="navbar-btn" href="<?php echo URL;?>user/login">Log in</a></li>
+									<!-- /Login -->
+
+									<!-- Register -->
+									<li><a id="navbar-btn" href="<?php echo URL;?>user/register">Register</a></li>
+									<!-- /Register -->
+
+								</ul>
+								<!--***** /Large Viewport ****-->
+
+
+								<!--***** Small Viewport ****-->
+								<ul class="nav navbar-nav center visible-xs">
+
+									<!-- Inbox button -->
+									<li style="display: inline-block;"><a id="navbar-btn" href="<?php echo URL;?>home/messaging" class="first" style="display: inline-block;">Inbox</a></li>
+									<!-- /Inbox button -->
+
+									<!-- Post a Listing -->
+									<li style="display: inline-block;"><a id="navbar-btn" href="<?php echo URL;?>user/checkLoginStatus" style="display: inline-block;">Post</a></li>
+									<!-- /Post a Listing -->
+
+									<!-- Login -->
+									<li style="display: inline-block;"><a id="navbar-btn" href="<?php echo URL;?>user/login">Log in</a></li>
+									<!-- /Login -->
+
+									<!-- Register -->
+									<li style="display: inline-block;"><a id="navbar-btn" href="<?php echo URL;?>user/register">Register</a></li>
+									<!-- /Register -->
+
+								</ul>
+
+								<ul class="nav navbar-nav center visible-xs">
+
+									<!-- Search -->
+									<li style="display: inline-block;margin-top:0.5em;">
+										<a class="search">
+											<form name="searchbox" method="post" action="<?php echo URL;?>home/listings">
+												<input class="search-input-v" type="search" name="searchBarInput" textarea="" placeholder="Enter location (eg. 94132, or 19th Avenue)" size="47" maxlength="50">
+												<input class="search-btn-v" value="Search" name="submitSearch" type="submit">
+											</form>
+										</a>
+									</li>
+									<!-- /Search -->
+
+								</ul>
+								<!--***** /Small Viewport ****-->
+
+							</div>
+							<!-- /.navbar-collapse -->
 						</div>
 					</nav>
 

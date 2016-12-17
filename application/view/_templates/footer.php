@@ -1,3 +1,5 @@
+    <div class="container">SFSU/FAU/Fulda
+    Software Engineering Project, Fall 2016. For Demonstration Only</div>
 
     <!-- JQuery Minified -->
     <script type="text/javascript" src="<?php echo URL;?>js/jquery-1.11.0.min.js"></script>
@@ -24,15 +26,24 @@
     <script type="text/javascript" src="<?php echo URL;?>js/sticky/sticky.min.js"></script>
 
     <script type="text/javascript" src="<?php echo URL;?>js/portamento-min.js"></script>
-    <script type="text/javascript" src="<?php echo URL;?>js/global.js"></script>
 
     <script type="text/javascript" src="<?php echo URL;?>js/search-result.js"></script>
 
 	  <link  href="<?php echo URL;?>css/maps.css" rel="stylesheet">
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
-    <script type="text/javascript" src="<?php echo URL;?>js/maps.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap"></script>
+    
+    
+    <!-- Begin Google Analytics code -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbTAiniS56gZ1ZGGWK9oU1mZ2S0488wJs&callback=initMap"></script>
+  ga('create', 'UA-88972547-1', 'auto');
+  ga('send', 'pageview');
 
+</script>
+    <!-- End Google Analytics code -->
 </body>
 </html>
