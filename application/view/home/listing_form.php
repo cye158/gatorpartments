@@ -380,6 +380,7 @@
 
 <tr><td>
   <!-- button for form submission usage-->
+  <input type="submit" name="Cancel" value="Cancel" style="float: left;"></td></tr>
   <input type="submit" name="Post" value="Post" style="float: right;"></td></tr>
 </table>
 
