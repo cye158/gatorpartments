@@ -1,3 +1,6 @@
+    <div class="container">SFSU/FAU/Fulda
+    Software Engineering Project, Fall 2016. For Demonstration Only</div>
+
     <!-- JQuery Minified -->
     <script type="text/javascript" src="<?php echo URL;?>js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="<?php echo URL;?>js/response.min.js"></script>
