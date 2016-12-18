@@ -13,6 +13,12 @@
  ?>
 
  <div class="col-md-3">Property column</div>
+ <?php echo('\<ul\>');
+ foreach($messages as $message){
+   echo('\<li\>' . $listings[$index]->title);
+ }
+ echo('\</ul\>');
+ ?>
  <div class="col-md-3">Message from column</div>
  <div class="col-md-4">Message content column</div>
 <table id="table">
