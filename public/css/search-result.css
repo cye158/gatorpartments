@@ -79,9 +79,10 @@
 }
 
 .thumb > h3 {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: absolute  !important;
+  top: 0  !important;
+  left: 0  !important;
+  margin: 0 !important;
   border: 2px solid #888 !important;
   border-radius: 5px !important;
   padding: 3px !important;
@@ -91,7 +92,7 @@
 
 .thumb_info > ad {
   height: 100%;
-  width:100%;
+  width: 100%;
 }
 
 .msg-btn {
@@ -142,8 +143,8 @@ div.centermid {
 }
 
 .search-small-vport {
-  display: inline-block;
-  margin-top:0.5em;
+  display: inline-block  !important;
+  margin-top: 0.5em  !important;
 }
 
 .search-input-v {
