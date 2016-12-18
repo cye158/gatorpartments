@@ -20,7 +20,7 @@
    echo('<li>' . $listings[$index]->title . '</li>');
    echo('</a>');
  }
- echo('\</ul\>');
+ echo('</ul>');
  ?>
  <div class="col-md-3">Message from column</div>
  <div class="col-md-4">Message content column</div>
