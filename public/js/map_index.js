@@ -6,7 +6,6 @@ function initMap() {
     ['Park Merced Office', 37.7183, -122.4810, 1],
     ['866 Junipero Serra Blvd', 37.722308, -122.473073, 2],
     ['Building B', 37.725122, -122.476012, 3],
-    ['76 Denslowe Dr', 37.723501, -122.474658, 4],
   ];
 
   /* below functions process the input locations above */

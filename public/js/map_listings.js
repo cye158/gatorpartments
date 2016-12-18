@@ -1,10 +1,9 @@
 /*- THIS IS ONLY FOR THE LISTINGS PAGE -*/
 function listMap() {
 
-  //-- listing array
+  //****- add the data input inside locations here eg. -> [ 'location_info', 'lat', 'lng', 'id#' ]
   var locations = [
-    //****- input eg. -> [ 'location txt', 'lat', 'lng', 'id#' ]
-    ['Park Merced Office', 37.7183, 122.4810, 1],
+    ['Park Merced Office', 37.7183, -122.4810, 1],
     ['866 Junipero Serra Blvd', 37.722308, -122.473073, 2],
     ['Building B', 37.725122, -122.476012, 3],
     ['76 Denslowe Dr', 37.723501, -122.474658, 4],

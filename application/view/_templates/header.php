@@ -74,8 +74,9 @@
 								<ul class="nav navbar-nav center hidden-xs">
 
 									<!-- Inbox button -->
+
 									<li>
-										<a id="navbar-btn" href="<?php echo URL;?>home/messaging" class="first">Inbox</a>
+										<a id="navbar-btn" href="<?php echo URL;?>messages/showMessages" class="first">Inbox</a>
 									</li>
 									<!-- /Inbox button -->
 
