@@ -96,13 +96,13 @@
   width: 100% !important;
 }
 
-.property-desc > .msg-btn {
+.msg-btn {
   color: white !important;
   width: 7.5em !important;
   background-color: #609b62 !important;
 }
 
-.property-desc > .cncl-btn {
+.cncl-btn {
   color: white !important;
   width: 7.5em !important;
   background-color: grey !important;
