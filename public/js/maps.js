@@ -1,45 +1,81 @@
 
 
 var locations = [
-      ['Bondi Beach', -33.890542, 151.274856, 5],
-      ['Coogee Beach', -33.923036, 151.259052, 4],
-      ['Cronulla Beach', -34.028249, 151.157507, 3],
-      ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
-      ['Maroubra Beach', -33.950198, 151.259302, 1]
-    ];
+  ['Bondi Beach', -33.890542, 151.274856, 5],
+  ['Coogee Beach', -33.923036, 151.259052, 4],
+  ['Cronulla Beach', -34.028249, 151.157507, 3],
+  ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
+  ['Maroubra Beach', -33.950198, 151.259302, 1]
+];
 
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 5,
-      center: new google.maps.LatLng(-33.92, 151.25),
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+var map = new google.maps.Map(document.getElementById('map'), {
+  zoom: 5,
+  center: new google.maps.LatLng(-33.92, 151.25),
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+});
+
+var infowindow = new google.maps.InfoWindow();
+
+var marker, i;
+
+for (i = 0; i < locations.length; i++) {
+  marker = new google.maps.Marker({
+    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+    map: map
+  });
+
+  google.maps.event.addListener(marker, 'click', (function(marker, i) {
+    return function() {
+      infowindow.setContent(locations[i][0]);
+      infowindow.open(map, marker);
+    }
+  })(marker, i));
+}
+
+
+/** map on index **/
+function initMap() {
+
+ //-- listing array
+  var locations = [
+    //input eg. -> [ 'location txt', 'lat', 'lng', 'id#' ]
+    ['Park Merced Office', 37.7183, 122.4810, 1],
+    ['866 Junipero Serra Blvd', 37.722308, -122.473073, 2],
+    ['Building B', 37.725122, -122.476012, 3],
+    ['76 Denslowe Dr', 37.723501, -122.474658, 4],
+  ];
+
+  //-- center at SFSU
+  var map = new google.maps.Map(document.getElementById('gmap'), {
+    zoom: 15,
+    center: new google.maps.LatLng(37.723894, -122.4782),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
+
+  var infowindow = new google.maps.InfoWindow();
+
+  var marker, i;
+
+  for (i = 0; i < locations.length; i++) {
+    marker = new google.maps.Marker({
+      position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+      map: map
     });
 
-    var infowindow = new google.maps.InfoWindow();
+    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+      return function() {
+        infowindow.setContent(locations[i][0]);
+        infowindow.open(map, marker);
+      }
+    })(marker, i));
+  }
 
-    var marker, i;
-
-    for (i = 0; i < locations.length; i++) {
-      marker = new google.maps.Marker({
-        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        map: map
-      });
-
-      google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        return function() {
-          infowindow.setContent(locations[i][0]);
-          infowindow.open(map, marker);
-        }
-      })(marker, i));
-    }
-
-function initMap() {
-  var location = {lat: 37.723894, lng: -122.4782};
-  var gmap = new google.maps.Map(document.getElementById('gmap'), {
-    zoom: 15,
-    center: location
-  });
-  var marker = new google.maps.Marker({
-    position: location,
-    map: gmap
-  });
 }
+/** /map on index **/
+
+/*
+var marker = new google.maps.Marker({
+position: sfsu,
+map: gmap
+});
+*/
