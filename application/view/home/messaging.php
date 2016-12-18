@@ -1,3 +1,16 @@
+<?php
+  if(isset($_SESSION['isLandlord'])){
+    $inboxType = 'landlord';
+    echo("Landlord inbox.");
+  }
+  elseif (isset($_SESSION['isStudent'])) {
+    $inboxType = 'student';
+    echo("Student inbox.");
+  }
+  else{
+    echo("No user type is defined.");
+  }
+ ?>
 <table id="table">
   <tr>
     <th id="property">Property</th>
