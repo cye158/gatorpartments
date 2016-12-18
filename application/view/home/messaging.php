@@ -25,13 +25,20 @@ else{
     ?></div>
     <div class="col-md-3 list-group">Message from column<br>
       <?php
-        echo('<a href="' . URL . 'messages/showMessageDetail' . $message->id . '" class="list-group-item list-group-item-action">');
-        echo $messageUserNames[$index];
-        $index++;
-        echo('</a>');
+      echo('<a href="' . URL . 'messages/showMessageDetail' . $message->id . '" class="list-group-item list-group-item-action">');
+      echo $messageUserNames[$index];
+      $index++;
+      echo('</a>');
       ?>
     </div>
-    <div class="col-md-4 list-group">Message content column</div>
+    <div class="col-md-4 panel">Message content column
+      <br />
+      <div class="panel-body" id="messageContentBox">
+        <?php
+          echo('Message content goes here.');
+        ?>
+      </div>
+    </div>
   </div>
   <br>
   <hr />
