@@ -30,8 +30,8 @@
 
   <script type="text/javascript" src="<?php echo URL;?>js/search-result.js"></script>
 
-	  <link  href="<?php echo URL;?>css/maps.css" rel="stylesheet">
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap"></script>
+<!-- //	  <link  href="<?php echo URL;?>css/maps.css" rel="stylesheet">
+    //<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap"></script> -->
     <!-- Begin Google Analytics code -->
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
