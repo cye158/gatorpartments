@@ -13,12 +13,12 @@
  ?>
 
  <div class="col-md-3">Property column</div>
- <?php echo('\<ul\>');
+ <?php echo('<ul>');
  $index = 0;
  foreach($messages as $message){
-   echo('\<a href=\"' . URL . 'messages/showMessageDetail' . $message->id . '\" alt=\"Message ID' . $message->id . '\"/\>');
-   echo('\<li\>' . $listings[$index]->title);
-   echo('\<\/a\>');
+   echo('<a href=\"' . URL . 'messages/showMessageDetail' . $message->id . '\" alt=\"Message ID' . $message->id . '\"/>');
+   echo('<li>' . $listings[$index]->title);
+   echo('</a>');
  }
  echo('\</ul\>');
  ?>
