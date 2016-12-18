@@ -1,6 +1,6 @@
-var i = j = 0;
-function initMap() {
 
+function initMap() {
+  var i = j = 0;
   //-- listing array
   var locations_index = [
     //****- inputs can be placed here eg. -> [ 'location txt', 'lat', 'lng', 'id#' ]
