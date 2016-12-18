@@ -93,13 +93,7 @@ class Messages extends Controller
   */
   public function showMessages() {
 
-    if (!isset($_SESSION['loggedIn'])){
-      require APP . 'view/_templates/header.php';
-      require APP . 'user/login.php';
-      require APP . 'view/_templates/footer.php';
-    }
-    
-    if ($_SESSION['loggedIn']) {
+    if (isset($_SESSION['loggedIn'])) {
       $userId = $_SESSION['userId'];
       $messages = $this->messageModel->showMessages($userId);
       $listings;
@@ -117,6 +111,9 @@ class Messages extends Controller
       require APP . 'view/home/messaging.php';
       require APP . 'view/_templates/footer.php';
 
+    }
+    else{
+      echo('Please \<a href=\"' . URL . 'user/login\"\>login \<\/a\>to view messages.');
     }
   }
 
