@@ -91,7 +91,7 @@
   font-size: 1.125em !important;
 }
 
-ad > img {
+.ad > img {
   height: 100% !important;
   width: 100% !important;
 }
@@ -247,7 +247,6 @@ div.centermid {
 }
 
 .ad {
-  width: 100% !important;
   height: 30.375vmin !important;
   background-color: white !important;
   align-items: center !important;
