@@ -92,6 +92,13 @@ class Messages extends Controller
   * sort by the listing id
   */
   public function showMessages() {
+
+    if (!isset($_SESSION['loggedIn'])){
+      require APP . 'view/_templates/header.php';
+      require APP . 'user/login.php';
+      require APP . 'view/_templates/footer.php';
+    }
+    
     if ($_SESSION['loggedIn']) {
       $userId = $_SESSION['userId'];
       $messages = $this->messageModel->showMessages($userId);
