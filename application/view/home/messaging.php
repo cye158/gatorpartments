@@ -24,6 +24,7 @@ else{
   ?></div>
   <div class="col-md-3">Message from column</div>
   <div class="col-md-4">Message content column</div>
+  <hr />
   <table id="table">
     <tr>
       <th id="property">Property</th>
