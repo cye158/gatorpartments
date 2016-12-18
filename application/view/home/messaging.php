@@ -28,6 +28,7 @@ else{
         echo('<a href="' . URL . 'messages/showMessageDetail' . $message->id . '" class="list-group-item list-group-item-action">');
         echo $messageUserNames[$index];
         $index++;
+        echo('</a>');
       ?>
     </div>
     <div class="col-md-4 list-group">Message content column</div>
