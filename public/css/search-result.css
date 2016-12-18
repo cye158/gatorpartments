@@ -1,3 +1,8 @@
+
+.small-vport {
+  display: inline-block;
+}
+
 .form-control {
   margin-top: -4px !important;
 }
@@ -60,6 +65,10 @@
   image-rendering: pixelated;
 }
 
+.index-list {
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
 
 .thumb_info p > button {
   border: 2px solid #888 !important;
@@ -67,6 +76,22 @@
   padding: 3px !important;
   background-color: #609b62 !important;
   color: white !important;
+}
+
+.thumb > h3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 2px solid #888 !important;
+  border-radius: 5px !important;
+  padding: 3px !important;
+  background-color: #609b62 !important;
+  color: white !important;
+}
+
+.thumb_info > ad {
+  height: 100%;
+  width:100%;
 }
 
 .msg-btn {
@@ -111,8 +136,14 @@ div.centermid {
 }
 
 .search {
-  border:0 !important;
+  margin-top: 0.325em !important;
+  border: 0 !important;
   padding-top: 0 !important;
+}
+
+.search-small-vport {
+  display: inline-block;
+  margin-top:0.5em;
 }
 
 .search-input-v {
