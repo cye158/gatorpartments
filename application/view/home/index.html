@@ -144,22 +144,9 @@
 	<div class="col-sm-5 row">
 
 		<!-- map -->
-		<div id="gmap" class="row map-wrapper">
-			<div >
-				<script>
-				function initMap() {
-					var location = {lat: 37.723894, lng: -122.4782};
-					var gmap = new google.maps.Map(document.getElementById('gmap'), {
-						zoom: 15,
-						center: location
-					});
-					var marker = new google.maps.Marker({
-						position: location,
-						map: gmap
-					});
-				}
-				</script>
-			</div>
+		<div class="row map-wrapper">
+			<!-- <div id="map" class="center">Map is placed here</div> -->
+			<iframe id="map" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBmG5gSNpeh2GZCZws3X5PnAyi_kEwkpTg&q=SanFranciscoStateUniversity,SanFrancisco+CA" allowfullscreen></iframe>
 		</div>
 		<!-- /map -->
 
@@ -200,5 +187,5 @@
 <!-- /footer -->
 
 <!-- google maps -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbTAiniS56gZ1ZGGWK9oU1mZ2S0488wJs&callback=initMap" async defer></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbTAiniS56gZ1ZGGWK9oU1mZ2S0488wJs&callback=initMap"></script>
 <!-- /google maps -->
