@@ -115,6 +115,21 @@ class UserModel {
     }
   }
 
+  //Checks if a username exists in the database
+  public function checkUsernameExist($username){
+    $sql = "SELECT username FROM user WHERE username=:username";
+    $query = $this->db->prepare($sql);
+    $query->bindParam(':username', $username);
+    $query->execute();
+    $result = $query->fetch();
+
+    if($result){
+      return "true";
+    } else {
+      return "false";
+    }
+  }
+
   //Return user's id
   public function getUserId() {
     if(isset($_SESSION['userId'])){

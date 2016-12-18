@@ -2,7 +2,7 @@
 
 <?php
 
-  echo $id;
+  echo $this->userModel->checkUsernameExist("Alice");
 
 ?>
 
