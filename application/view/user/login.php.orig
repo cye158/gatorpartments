@@ -3,7 +3,7 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4 ">
-      <form class="form-horizontal" action="<?php echo URL . 'user/login';?>" method="post">
+      <form class="form-horizontal" action="<?php echo URL . 'controller/user.php';?>" method="post">
 	<div class="page-header green">
 	  <h1 class="text-center">Log In</h1>
 	</div>
@@ -14,9 +14,18 @@
 	  <input class="form-control" type="text" name="username" required>
 	</div>
 
-	<!-- Password -->
+	<!-- Password --> <!--
 	<div class="form-group">
 	  <label>Password</label>
+<<<<<<< HEAD
+	  <input class="form-control" type="password" name="password1" required>
+	</div> -->
+
+	<!-- Confirm Password -->
+	<div class="form-group">
+	  <label>Password</label>
+=======
+>>>>>>> b1856130f6034614ef9ff5335cd8b34b5ad4be4d
 	  <input class="form-control" type="password" name="password" required>
 	</div>
 

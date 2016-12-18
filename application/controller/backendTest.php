@@ -3,9 +3,13 @@
 //It will have good examples for front-end on how to use these functions
 class BackendTest extends Controller{
 
-  public function index(){
-    $id = $this->userModel->generateID();
+  public function check(){
 
+  echo "Hello";
+
+  }
+
+  public function index(){
     require APP . "view/backendTest/header.php";
     require APP . "view/backendTest/index.php";
     require APP . "view/backendTest/footer.php";
