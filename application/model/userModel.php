@@ -94,6 +94,8 @@ class UserModel {
 
     // Destroy the session.
     session_destroy();
+
+    header("Location: " . URL . "home/index");
   }
 
   public function checkStatus($userId) {
@@ -113,6 +115,20 @@ class UserModel {
       header("Location: " . URL . "user/not%landlord%page");
       exit();
     }
+  }
+
+  public function isLoggedIn(){
+    if(isset($_SESSION['loggedIn'])){
+      if($_SESSION['loggedIn'] == '' || $_SESSION['loggedIn'] == false){
+        return false;
+      }
+    }
+
+    if(!(isset($_SESSION['loggedIn']))){
+      return false;
+    }
+
+    return true;
   }
 
   //Checks if a username exists in the database
