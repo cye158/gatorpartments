@@ -6,10 +6,10 @@ function initMap() {
     ['Park Merced Office', 37.7183, -122.4810, 1],
     ['866 Junipero Serra Blvd', 37.722308, -122.473073, 2],
     ['Building B', 37.725122, -122.476012, 3],
-    ['Koopa Castle', 37.925122, -121.476012, 4],
-    ['Super Pretty House', 38.725122, -123.476012, 5],
-    ['Super Tiny House', 36.025122, -12.576012, 6],
-    ['Disneyland House', 37.765122, -122.479012, 7],
+    ['Koopa Castle', 37.726466, -122.477187, 4],
+    ['Super Pretty House', 37.721442, -122.474097, 5],
+    ['Super Tiny House', 37.723275, -122.472524, 6],
+    ['Disneyland House', 37.722189, -122.47364, 7],
   ];
 
   /* below functions process the input locations above */
