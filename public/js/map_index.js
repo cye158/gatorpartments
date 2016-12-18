@@ -23,7 +23,8 @@ function initMap() {
   for (i = 0; i < locations.length; i++) {
     marker = new google.maps.Marker({
       position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-      map: map
+      map: map,
+      icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + locations[i][3] + '|005500|ffffff'
     });
 
     google.maps.event.addListener(marker, 'click', (function(marker, i) {
