@@ -12,9 +12,9 @@
   }
  ?>
 
- <div class="col-md-2">Property column</div>
- <div class="col-md-2">Message from column</div>
- <div class="col-md-4">Message content column</div>
+ <div class="col-md-3">Property column</div>
+ <div class="col-md-3">Message from column</div>
+ <div class="col-md-5">Message content column</div>
 <table id="table">
   <tr>
     <th id="property">Property</th>
