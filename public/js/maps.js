@@ -1,5 +1,5 @@
 /*- map for index page only -*/
-function indexMap() {
+function initMap() {
 
   //-- listing array
   var locations = [
