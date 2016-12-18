@@ -13,30 +13,32 @@ else{
 ?>
 <hr />
 <div class="panel">
-  <div class="col-md-3 list-group">Property column<br>
-    <?php
-    $index = 0;
-    foreach($messages as $message){
-      echo('<a href="' . URL . 'messages/showMessageDetail' . $message->id . '" class="list-group-item list-group-item-action">');
-      echo($listings[$index]->title);
-      echo('</a>');
-    }
-
-    ?></div>
-    <div class="col-md-3 list-group">Message from column<br>
+  <div class="panel-body">
+    <div class="col-md-3 list-group">Property column<br>
       <?php
-      echo('<a href="' . URL . 'messages/showMessageDetail' . $message->id . '" class="list-group-item list-group-item-action">');
-      echo $messageUserNames[$index];
-      $index++;
-      echo('</a>');
-      ?>
-    </div>
-    <div class="col-md-4 panel">Message content column
-      <br />
-      <div class="panel-body" id="messageContentBox">
+      $index = 0;
+      foreach($messages as $message){
+        echo('<a href="' . URL . 'messages/showMessageDetail' . $message->id . '" class="list-group-item list-group-item-action">');
+        echo($listings[$index]->title);
+        echo('</a>');
+      }
+
+      ?></div>
+      <div class="col-md-3 list-group">Message from column<br>
         <?php
-          echo('Message content goes here.');
+        echo('<a href="' . URL . 'messages/showMessageDetail' . $message->id . '" class="list-group-item list-group-item-action">');
+        echo $messageUserNames[$index];
+        $index++;
+        echo('</a>');
         ?>
+      </div>
+      <div class="col-md-4 panel">Message content column
+        <br />
+        <div class="panel-body" id="messageContentBox">
+          <?php
+          echo('Message content goes here.');
+          ?>
+        </div>
       </div>
     </div>
   </div>
