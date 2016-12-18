@@ -1,6 +1,6 @@
 
 .small-vport {
-  display: inline-block;
+  display: inline-block !important;
 }
 
 .form-control {
