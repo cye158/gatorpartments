@@ -29,9 +29,7 @@
 
   <script type="text/javascript" src="<?php echo URL;?>js/search-result.js"></script>
   <script type="text/javascript" src="<?php echo URL;?>js/maps.js"></script>
-  <!-- google maps -->
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBB0tVY_PUrlqdB87rV6X9jhEW-aTcX91o&callback=initMap"></script>
-  <!-- /google maps -->
+
 
   <!-- Begin Google Analytics code -->
   <script>
