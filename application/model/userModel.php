@@ -124,9 +124,9 @@ class UserModel {
     $result = $query->fetch();
 
     if($result){
-      return "true";
+      return 1;
     } else {
-      return "false";
+      return 0;
     }
   }
 
