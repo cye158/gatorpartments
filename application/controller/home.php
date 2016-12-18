@@ -26,12 +26,6 @@ class Home extends Controller
     }
     public function listings()
     {
-        if(isset($_POST['submitSearch'])){
-            $keyword = $_POST['inputLocation'];
-            $listing = $this->listingModel->getListingBySearch($keyword);
-        } else {
-            $listing = $this->listingModel->getAllListing();
-        }
         // load views
         require APP . 'view/_templates/header.php';
         require APP . 'view/home/listings.php';
