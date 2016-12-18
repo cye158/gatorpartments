@@ -6,7 +6,7 @@ function propMap() {
 
   //-- center at coordinates
   var map = new google.maps.Map(document.getElementById('gmap'), {
-    zoom: 10,
+    zoom: 20,
     center: new google.maps.LatLng(locations[1], locations[2]),
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });

@@ -12,7 +12,7 @@ function listMap() {
 
   //-- center at SFSU
   var map = new google.maps.Map(document.getElementById('gmap'), {
-    zoom: 15,
+    zoom: 12,
     center: new google.maps.LatLng(37.723894, -122.4782),
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });

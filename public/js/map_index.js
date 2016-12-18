@@ -3,7 +3,7 @@ function initMap() {
 
   //****- add the data input inside locations here eg. -> [ 'location_info', 'lat', 'lng', 'id#' ]
   var locations = [
-    ['Park Merced Office', 37.7183, 122.4810, 1],
+    ['Park Merced Office', 37.7183, -122.4810, 1],
     ['866 Junipero Serra Blvd', 37.722308, -122.473073, 2],
     ['Building B', 37.725122, -122.476012, 3],
     ['76 Denslowe Dr', 37.723501, -122.474658, 4],
@@ -12,7 +12,7 @@ function initMap() {
   /* no need to edit this */
   //-- center at SFSU
   var map = new google.maps.Map(document.getElementById('gmap'), {
-    zoom: 15,
+    zoom: 12,
     center: new google.maps.LatLng(37.723894, -122.4782),
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
