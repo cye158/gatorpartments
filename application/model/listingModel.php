@@ -116,35 +116,36 @@ class ListingModel
     return $query->fetchAll();
   }
 
+  // this function requires user to have an existing folder path with chmod 777 for the images folder
   public function uploadImage() {
-    define('SITE_ROOT', realpath(dirname(__FILE__)));
+    // file path to server to store image is hardcoded here, change if necessary
+    define('SITE_ROOT', '/home/rliu123/public_html/test/gatorpartments/public/images/');
     // $fileSize is the max file size of an image, measured in bytes
-    $fileSize = 500000;
-    $target_dir = "/images/";
+    $fileSize = 5000000;
     $totalImages = count($_FILES["fileToUpload"]["name"]);
 
     // if mkdir gives permission error, user must chmod folder path to 777
     // chmod -R 777 SITE_ROOT
     // The chmod provided above doesn't allow me to delete the folder created, have not found a workaround for it yet
-    if(!file_exists(SITE_ROOT.'/images')) {
-      echo "Attempting to create folder at: <br>" . SITE_ROOT.'/images';
-      mkdir(SITE_ROOT.'/images', 0777, true);
+    if(!file_exists(SITE_ROOT)) {
+      echo "Attempting to create folder at: <br>" . SITE_ROOT;
+      mkdir(SITE_ROOT, 0777, true);
       echo "If mkdir returns permission error, read the comments in the code on how to workaround it in the function <br>";
     }
 
     // loop through incase there are multiple file uploads
     for($i = 0; $i < $totalImages; $i++) {
-      $target_file = $target_dir . $_FILES["fileToUpload"]["name"][$i];
+      $target_file = $_FILES["fileToUpload"]["name"][$i];
       $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
       $uploadOk = 1;
 
       // check if the file already exists in the server, if so output error message and stop upload
-      if(file_exists(SITE_ROOT . $target_dir . $_FILES["fileToUpload"]["name"][$i])) {
+      if(file_exists(SITE_ROOT . $_FILES["fileToUpload"]["name"][$i])) {
         echo "File already exists! <br>";
         $uploadOk = 0;
       }
 
-      // Check if image file is a actual iamge or fake image
+      // Check if image file is a actual image or fake image
       if(isset($_POST["submit"])) {
         $check = getimagesize($_FILES["fileToUpload"]["tmp_name"][$i]);
         if($check !== false) {
