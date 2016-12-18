@@ -14,6 +14,7 @@
 
  <div class="col-md-3">Property column</div>
  <?php echo('\<ul\>');
+ $index = 0;
  foreach($messages as $message){
    echo('\<li\>' . $listings[$index]->title);
  }
