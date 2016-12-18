@@ -13,11 +13,11 @@ else{
 ?>
 <hr />
 <div class="col-md-3">Property column<br>
-  <?php echo('<ul>');
+  <?php echo('<ul class="list-group">');
   $index = 0;
   foreach($messages as $message){
     echo('<a href="' . URL . 'messages/showMessageDetail' . $message->id . '" alt="Message ID' . $message->id . '"/>');
-    echo('<li>' . $listings[$index]->title . '</li>');
+    echo('<li class="list-group-item">' . $listings[$index]->title . '</li>');
     echo('</a>');
   }
   echo('</ul>');
