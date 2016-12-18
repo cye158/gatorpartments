@@ -113,6 +113,10 @@
   margin: 0px 0 10px 0 !important;
 }
 
+.property-desc > button {
+  margin: 0 !important;
+}
+
 .property-col {
   border-radius: 0px !important;
   margin-bottom: 0px !important;
