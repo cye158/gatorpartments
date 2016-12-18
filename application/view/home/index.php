@@ -20,7 +20,7 @@
 							<div class="col-xs-6 thumb thumb_property center">
 								<a href="<?php echo URL . '/home/property/' . $row->id ;?>" class="img_holder">
 									<img src="<?php echo IMAGE_PATH . "/" . $row->image_main ;?>" alt="">
-									<a><button onclick="<?php echo 'location.href =' . URL . '/home/property/' . $row->id ;?>"><?php echo $row->id ;?></button></a>
+									<a><button onclick="location.href = '<?php echo URL . '/home/property/' . $row->id ;?>"><?php echo $row->id ;?></button></a>
 								</a>
 							</div>
 							<!-- /property IMG-->
