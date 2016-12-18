@@ -144,9 +144,9 @@
 	<div class="col-sm-5 row">
 
 		<!-- map -->
-		<div class="row map-wrapper">
-			<div id="gmap">
-				<style>
+		<div id="gmap" class="row map-wrapper">
+			<div >
+				<script>
 				function initMap() {
 					var location = {lat: 37.723894, lng: -122.4782};
 					var gmap = new google.maps.Map(document.getElementById('gmap'), {
@@ -158,7 +158,7 @@
 						map: gmap
 					});
 				}
-				</style>
+				</script>
 			</div>
 		</div>
 		<!-- /map -->
