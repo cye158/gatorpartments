@@ -16,7 +16,8 @@ function propMap() {
 
   var marker = new google.maps.Marker({
     position: new google.maps.LatLng(location[1], location[2]),
-    map: map
+    map: map,
+    icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + locations[i][3] + '|005500|ffffff'
   });
 
   google.maps.event.addListener(marker, 'click', (function(marker) {
