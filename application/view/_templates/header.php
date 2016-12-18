@@ -12,9 +12,8 @@
 	<link  href="<?php echo URL;?>css/search-result.css" rel="stylesheet">
 	<link href="<?php echo URL;?>css/theme.css" rel="stylesheet">
 	<link href="<?php echo URL;?>css/gator.css" rel="stylesheet">
-	<script type="text/javascript" src="<?php echo URL;?>js/global.js"></script>
-	<script type="text/javascript" src="<?php echo URL;?>js/maps.js"></script>
-
+	<link href="<?php echo URL;?>css/maps.css" rel="stylesheet">
+	<!-- <script type="text/javascript" src="<!?php echo URL;?>js/global.js"></script> -->
 	<!--[if lt IE 9]>
 	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -75,16 +74,21 @@
 								<ul class="nav navbar-nav center hidden-xs">
 
 									<!-- Inbox button -->
-									<li><a id="navbar-btn" href="<?php echo URL;?>messages/showMessages" class="first">Inbox</a></li>
+
+									<li>
+										<a id="navbar-btn" href="<?php echo URL;?>messages/showMessages" class="first">Inbox</a>
+									</li>
 									<!-- /Inbox button -->
 
 									<!-- Post a Listing -->
-									<li><a id="navbar-btn" href="<?php echo URL;?>user/checkLoginStatus">Post</a></li>
+									<li>
+										<a id="navbar-btn" href="<?php echo URL;?>user/checkLoginStatus">Post</a>
+									</li>
 									<!-- /Post a Listing -->
 
 									<!-- Search -->
 									<li>
-										<a class="hidden-xs search" style="margin-top: 0.325em;">
+										<a class="hidden-xs search">
 											<form name="searchbox" method="post" action="<?php echo URL;?>home/listings">
 
 												<!--<php
@@ -96,7 +100,7 @@
 													$location_session = $_SESSION['location_session'];
 												/> -->
 
-												<input class="search-input-h" type="text" name="location" placeholder="Enter location (eg. 94132, or 19th Avenue)" size="48" maxlength="50" value="">
+												<input class="search-input-h" type="text" name="inputLocation" placeholder="Enter location (eg. 94132, or 19th Avenue)" size="48" maxlength="50" value="">
 												<!--<php
 													if ($location_session == ""){
 														echo ("0");
@@ -117,11 +121,15 @@
 								<ul class="nav navbar-nav navbar-right center hidden-xs">
 
 									<!-- Login -->
-									<li><a id="navbar-btn" href="<?php echo URL;?>user/login">Log in</a></li>
+									<li>
+										<a id="navbar-btn" href="<?php echo URL;?>user/login">Log in</a>
+									</li>
 									<!-- /Login -->
 
 									<!-- Register -->
-									<li><a id="navbar-btn" href="<?php echo URL;?>user/register">Register</a></li>
+									<li>
+										<a id="navbar-btn" href="<?php echo URL;?>user/register">Register</a>
+									</li>
 									<!-- /Register -->
 
 								</ul>
@@ -132,19 +140,27 @@
 								<ul class="nav navbar-nav center visible-xs">
 
 									<!-- Inbox button -->
-									<li style="display: inline-block;"><a id="navbar-btn" href="<?php echo URL;?>home/messaging" class="first" style="display: inline-block;">Inbox</a></li>
+									<li class="small-vport">
+										<a id="navbar-btn" href="<?php echo URL;?>home/messaging" class="first">Inbox</a>
+									</li>
 									<!-- /Inbox button -->
 
 									<!-- Post a Listing -->
-									<li style="display: inline-block;"><a id="navbar-btn" href="<?php echo URL;?>user/checkLoginStatus" style="display: inline-block;">Post</a></li>
+									<li class="small-vport">
+										<a id="navbar-btn" href="<?php echo URL;?>user/checkLoginStatus">Post</a>
+									</li>
 									<!-- /Post a Listing -->
 
 									<!-- Login -->
-									<li style="display: inline-block;"><a id="navbar-btn" href="<?php echo URL;?>user/login">Log in</a></li>
+									<li class="small-vport">
+										<a id="navbar-btn" href="<?php echo URL;?>user/login">Log in</a>
+									</li>
 									<!-- /Login -->
 
 									<!-- Register -->
-									<li style="display: inline-block;"><a id="navbar-btn" href="<?php echo URL;?>user/register">Register</a></li>
+									<li class="small-vport">
+										<a id="navbar-btn" href="<?php echo URL;?>user/register">Register</a>
+									</li>
 									<!-- /Register -->
 
 								</ul>
@@ -152,11 +168,11 @@
 								<ul class="nav navbar-nav center visible-xs">
 
 									<!-- Search -->
-									<li style="display: inline-block;margin-top:0.5em;">
+									<li class="search-small-vport">
 										<a class="search row">
 											<form name="searchbox" method="post" action="<?php echo URL;?>home/listings">
-												<input class="search-input-v" type="text" name="location" placeholder="Enter location (eg. 94132, or 19th Avenue)" size="47" maxlength="50" value="">
-												<input class="search-btn-v" value="submit" name="submitSearch" type="submit" />
+												<input class="search-input-v" type="text" name="location" placeholder="Enter location (eg. 94132, or 19th Avenue)" size="48" maxlength="50" value="">
+												<input class="search-btn-v" type="submit" value="Search" name="submitSearch">
 											</form>
 										</a>
 									</li>
