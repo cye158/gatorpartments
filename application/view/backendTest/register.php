@@ -10,8 +10,8 @@
         <div class="form-group">
           <label>Full Name</label>
           <span id="nameSuccess" class="inputSuccess alert alert-success glyphicon glyphicon-ok"></span>
-          <span id="emptyName" class="inputFail alert alert-danger">Full name cannot be empty</span>
-          <span id="invalidName" class="inputFail alert alert-danger">Invalid input, only alphabet letters allowed</span>
+          <span id="nameEmpty" class="inputFail alert alert-danger">Full name cannot be empty</span>
+          <span id="nameInvalid" class="inputFail alert alert-danger">Only alphabet characters allowed</span>
           <input id="fullName" class="form-control" type="text" name="fullName">
         </div>
 
@@ -19,23 +19,30 @@
 	<div class="form-group">
 	  <label>Phone Number (ex. 999-999-9999)</label>
           <span id="phoneNumberSuccess" class="inputSuccess alert alert-success glyphicon glyphicon-ok"></span>
-          <span id="emptyPhoneNumber" class="inputFail alert alert-danger">Phone number cannot be empty</span>
-          <span id="invalidPhoneNumber" class="inputFail alert alert-danger">Invalid Inputs</span> 
+          <span id="phoneNumberEmpty" class="inputFail alert alert-danger">Phone number cannot be empty</span>
+          <span id="phoneNumberInvalid" class="inputFail alert alert-danger">Invalid Inputs</span> 
 	  <input id="phoneNumber" class="form-control" type="tel" name="phoneNumber">
 	</div>
 
 	<!-- Email -->
         <div class="form-group">
           <label>Email</label>
-          <span class="inputSuccess alert alert-success glyphicon glyphicon-ok"></span>
-          <input class="form-control" type="email" name="email">
+          <span id="emailSuccess" class="inputSuccess alert alert-success glyphicon glyphicon-ok"></span>
+          <span id="emailEmpty" class="inputFail alert alert-danger">Email cannot be empty</span>
+          <span id="emailInvalid" class="inputFail alert alert-danger">Invalid Email</span>
+          <input id="email" class="form-control" type="email" name="email">
         </div>
 
 	<!-- Username -->
         <div class="form-group">
           <label>Username</label>
-          <span class="inputSuccess alert alert-success glyphicon glyphicon-ok"></span>
-          <input class="form-control" type="text" name="username">
+          <span id="usernameSuccess" class="inputSuccess alert alert-success glyphicon glyphicon-ok"></span>
+          <span id="usernameEmpty" class="inputFail alert alert-danger">Username cannot be empty</span>
+          <span id="usernameInvalid" class="inputFail alert alert-danger">Invalid Username</span>
+          <span id="usernameInvalidLength" class="inputFail alert alert-danger">Username must be atleast 6 characters</span>
+          <span id="usernameTaken" class="inputFail alert alert-danger">Username is already taken</span>
+          <input id="username" class="form-control" type="text" name="username">
+          <p>Username must only contain alphanumeric characters, minimum of 4 characters</p>
         </div>
 
 	<!-- Password -->
@@ -83,46 +90,105 @@
 <script>
   $(function(){
 
-    //Input Error Checking for Full Name Field
+    //Full Name Validation
     $('#fullName').blur(function(){
-      $('#emptyName').hide();
-      $('#invalidName').hide();
+      $('#nameEmpty').hide();
+      $('#nameInvalid').hide();
       $('#nameSuccess').hide();
 
       //Checks if field is empty
       if(!$(this).val()){
-        $('#emptyName').show();
+        $('#nameEmpty').show();
       } else
 
       //Checks that only alphabet letters are allowed
-      if( !($(this).val().match(/[a-z]/i)) ){
-        $('#invalidName').show();
+      if( !($(this).val().match( /^[a-zA-Z]*$/ )) ){
+        $('#nameInvalid').show();
       } else
 
       $('#nameSuccess').show();
 
     });
 
-    //Input Error Checking for Phone Number Field
+    //Phone Number Validation
     $('#phoneNumber').blur(function(){
-      $('#emptyPhoneNumber').hide();
-      $('#invalidPhoneNumber').hide();
+      $('#phoneNumberEmpty').hide();
+      $('#phoneNumberInvalid').hide();
       $('#phoneNumberSuccess').hide();
 
       //Checks if field is empty
       if(!$(this).val()){
-        $('#emptyPhoneNumber').show();
+        $('#phoneNumberEmpty').show();
       } else
 
       //Checks that only alphabet letters are allowed
       if( !($(this).val().match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im)) ){
-        $('#invalidPhoneNumber').show();
+        $('#phoneNumberInvalid').show();
       } else
 
       $('#phoneNumberSuccess').show();
 
     });
 
+    //Email Validation
+    $('#email').blur(function(){
+      $('#emailSuccess').hide();
+      $('#emailEmpty').hide();
+      $('#emailInvalid').hide();
+
+      //If field is empty, display "Email cannot be empty"
+      if( !$(this).val() ){
+        $('#emailEmpty').show();
+      } else 
+
+      //If field is not a valid Email string
+      if( !$(this).val().match( /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ ) ){
+        $('#emailInvalid').show();
+      } else
+
+      $('#emailSuccess').show();
+
+    });
+
+    //Username Validation
+    $('#username').blur(function(){
+      $('#usernameSuccess').hide();
+      $('#usernameEmpty').hide();
+      $('#usernameInvalid').hide();
+      $('#usernameTaken').hide();
+      $('#usernameInvalidLength').hide();
+
+      //If username is empty, display error
+      if( !$(this).val() ){
+        $('#usernameEmpty').show();
+      } else
+
+      //If username contains invalid characters, non alphanumeric characters, display error
+      if( !$(this).val().match(/^[a-z0-9]+$/i) ){
+        $('#usernameInvalid').show();
+      } else
+
+      //If username contains less than 6 characters, display errors
+      if( $(this).val().length < 4 ){
+        $('#usernameInvalidLength').show();
+      } else
+
+      //Check if username already exists in database
+      var username = $(this).val();
+      var usernameExistUrl = "<?php echo URL . 'user/checkUsernameExist/' ;?>" + username ;
+      var usernameExist;
+      $.get(usernameExistUrl, function(data){
+        usernameExist = data;
+      });
+
+      if(usernameExist){
+        $('#usernameTaken').show();
+      } else
+
+      $('#usernameSuccess').show();
+
+
+    });
 
 
 

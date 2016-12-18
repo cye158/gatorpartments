@@ -47,5 +47,10 @@ class User extends Controller {
   public function checkLoginStatus() {
     $this->userModel->checkLoginStatus();
   }
+
+  public function checkUsernameExist($username){
+    echo $this->userModel->checkUsernameExist($username);
+  }
+
 }
 ?>

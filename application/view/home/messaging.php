@@ -4,16 +4,15 @@
     <th id="messsageFrom">Message from:</th>
     <th id="selectMessage">Click to select message</th>
   </tr>
+  <?php $index = 0; ?>
+  <?php foreach ($messages as $message) { ?>
+
   <tr>
-    <td headers="property"><a onclick="displayMessage(1);">1505 Holloway Avenue</a></td>
-    <td headers="messsageFrom" id="message0001"><a onclick="displayMessage(1);">Johnny Appleseed</a></td>
-    <td headers="selectMessage" id="message0001"><input type="button" value="Display message" onClick="displayMessage(1)"></td>
+    <td headers="property"><a onclick="displayMessage(2);"><?php echo $listings[$index]->title; ?></a></td>
+    <td headers="messageFrom" id="message0002"><a onclick="displayMessage(2);"><?php echo $messageUserNames[$index]; $index++; ?></a></td>
+    <td headers="selectMessage" id="message0001"><a href="<?php echo URL . 'messages/showMessageDetail/' . $message->id ;?>"  class="btn btn-primary">Display Message</a></td>
   </tr>
-  <tr><?php $messageID = 2 ;?>
-    <td headers="property"><a onclick="displayMessage(2);">1505 Holloway Avenue</a></td>
-    <td headers="messageFrom" id="message0002"><a onclick="displayMessage(2);">Jane Estudiante</a></td>
-    <td headers="selectMessage" id="message0001"><a href="<?php echo URL . 'messages/showMessageDetail/' . $messageID ;?>"  class="btn btn-primary">Display Message</a></td>
-  </tr>
+  <?php  } ?>
 
 </table>
 <table>
