@@ -20,7 +20,7 @@
 							<div class="col-xs-6 thumb thumb_property center">
 								<a href="<?php echo URL . '/home/property/' . $row->id ;?>" class="img_holder">
 									<img src="<?php echo IMAGE_PATH . "/" . $row->image_main ;?>" alt="">
-									<a><button onclick="<?php echo "location.href =" . echo URL . '/home/property/' . $row->id ;?>"><?php echo $row->id ;?></button></a>
+									<a><button onclick="<?php echo 'location.href =' . URL . '/home/property/' . $row->id ;?>"><?php echo $row->id ;?></button></a>
 								</a>
 							</div>
 							<!-- /property IMG-->
@@ -28,7 +28,7 @@
 							<!-- property Info-->
 							<div class="col-xs-6 thumb_info">
 								<h3>Price: <?php echo $this->formatPrice($row->price) ;?></h3>
-								<p><button onclick="<?php echo 'location.href =' . echo URL . '/home/property/' . $row->id ;?>">Available now</button></p>
+								<p><button onclick="location.href = '<?php echo URL . '/home/property/' . $row->id ;?>">Available now</button></p>
 								<br>
 								<p>
 									<p><?php echo $row->room_size ;?></p>
