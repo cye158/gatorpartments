@@ -2,7 +2,7 @@
 <div class="row">
 
 	<!-- filterOption -->
-	<div class="col-sm-2 filter-col">
+	<div class="col-sm-2" style="margin-left: 15px; padding:0;">
 		<div class="row" style="padding-left: 1.1em;">
 
 			<div class="well center title-filter">
@@ -96,7 +96,7 @@
 						<div class="form-group">
 							<label class="col-xs-4 control-label">Price:</label>
 							<div class="col-xs-8">
-								<div class="row col-sm-12 col-xs-12" style="padding-bottom: 10px;">
+								<div class="row col-sm-12 col-xs-12" style="margin-bottom: 10px;">
 									<select class="form-control col-sm-12">
 										<option selected="selected" value="">Min</option>
 										<option value="100">100</option>
@@ -132,7 +132,7 @@
 						<!-- filter btn -->
 						<div class="row">
 							<div class="col-sm-12 filter-pos">
-								<button class="btn btn-filter center" type="submit">Filter</button>
+								<button class="btn btn-filter center" type="submit">Apply filter</button>
 							</div>
 						</div>
 						<!-- /filter btn -->
@@ -149,7 +149,7 @@
 	<div class="col-sm-6 listing-col">
 
 		<div class="well col-xs-12 title-list">
-			<ul class="col-xs-4 navbar-left" style="margin: 0;font-weight: bold;">Listings </ul>
+			<ul class="col-xs-4 navbar-left" style="margin: 0;font-weight: bold;">Listings: </ul>
 			<ul class="col-xs-8 navbar-right text-right show-result">Showing results for Search</ul>
 
 		</div>
@@ -157,151 +157,73 @@
 		<div class="col-sm-12 scroll-list">
 
 			<!-- property -->
-			<div class="mini_property_wrapper">
-				<div class="row">
-					<div class="col-sm-12">
+			<?php foreach($listing as $row) { ?>
+				<div class="mini_property_wrapper">
+					<div class="row">
+						<div class="col-sm-12">
 
-						<!-- property IMG-->
-						<div class="col-xs-6 thumb thumb_property center">
-							<a href="<?php echo URL;?>/home/property" class="img_holder">
-								<img src="<?php echo URL;?>img/listings/1/1-1.jpg" alt="">
-							</a>
+							<!-- property IMG-->
+							<div class="col-xs-6 thumb thumb_property center">
+								<a href="<?php echo URL . '/home/property/' . $row->id ;?>" class="img_holder">
+									<img src="<?php echo IMAGE_PATH . "/" . $row->image_main ;?>" alt="">
+									<a><button onclick="location.href = '<?php echo URL . '/home/property/' . $row->id ;?>"><?php echo $row->id ;?></button></a>
+								</a>
+							</div>
+							<!-- /property IMG-->
+
+							<!-- property Info-->
+							<div class="col-xs-6 thumb_info">
+								<h3>Price: <?php echo $this->formatPrice($row->price) ;?></h3>
+								<p><button onclick="location.href = '<?php echo URL . '/home/property/' . $row->id ;?>">Available now</button></p>
+								<br>
+								<p>
+									<p><?php echo $row->room_size ;?></p>
+									<p>
+										<?php echo $row->address_1 ;?>
+										<?php echo $row->address_2 ;?>
+										<?php echo $row->city ;?>
+										<?php echo $row->state . ", " ;?>
+										<?php echo $row->zip_code ;?>
+									</p>
+									<a href="<?php echo URL . '/home/property/' . $row->id ;?>">more info...</a>
+								</p>
+							</div>
+							<!-- /property Info-->
+
 						</div>
-						<!-- /property IMG-->
-
-						<!-- property Info-->
-						<div class="col-xs-6 thumb_info">
-							<h3>Price : $750.00</h3>
-							<p><button href="<?php echo URL;?>/home/property">Available Now</button></p>
-							<br>
-							<p>
-								<p>4 Bedroom House</p>
-								<p>The Frontyard, Richmond, TW10</p>
-								<a href="<?php echo URL;?>/home/property">more info...</a>
-							</p>
-						</div>
-						<!-- /property Info-->
-
 					</div>
+					<div class="row"><hr id="hr"></div>
 				</div>
-				<div class="row"><hr id="hr"></div>
+				<?php } ?>
+				<!-- /property -->
+
 			</div>
-			<!-- /property -->
-
-			<div class="mini_property_wrapper">
-				<div class="row">
-					<div class="col-sm-12">
-
-						<!-- property IMG-->
-						<div class="col-xs-6 thumb thumb_property center">
-							<a href="<?php echo URL;?>/home/property" class="img_holder">
-								<img src="<?php echo URL;?>img/listings/2/2-1.jpg" alt="">
-							</a>
-						</div>
-						<!-- /property IMG-->
-
-						<!-- property Info-->
-						<div class="col-xs-6 thumb_info">
-							<h3>Price : $550.00</h3>
-							<p><button href="<?php echo URL;?>/home/property">Available Now</button></p>
-							<br>
-							<p>
-								<p>4 Bedroom House</p>
-								<p>The Frontyard, Richmond, TW10</p>
-								<a href="<?php echo URL;?>/home/property">more info...</a>
-							</p>
-						</div>
-						<!-- /property Info-->
-
-					</div>
-				</div>
-				<div class="row"><hr id="hr"></div>
-			</div>
-
-			<div class="mini_property_wrapper">
-				<div class="row">
-					<div class="col-sm-12">
-
-						<!-- property IMG-->
-						<div class="col-xs-6 thumb thumb_property center">
-							<a href="<?php echo URL;?>/home/property" class="img_holder">
-								<img src="<?php echo URL;?>img/listings/5/5-1.jpg" alt="">
-							</a>
-						</div>
-						<!-- /property IMG-->
-
-						<!-- property Info-->
-						<div class="col-xs-6 thumb_info">
-							<h3>Price : $700.00</h3>
-							<p><button href="<?php echo URL;?>/home/property">Available Now</button></p>
-							<br>
-							<p>
-								<p>4 Bedroom House</p>
-								<p>The Frontyard, Richmond, TW10</p>
-								<a href="<?php echo URL;?>/home/property">more info...</a>
-							</p>
-						</div>
-						<!-- /property Info-->
-
-
-
-					</div>
-				</div>
-				<div class="row"><hr id="hr"></div>
-			</div>
-
-			<div class="mini_property_wrapper">
-				<div class="row">
-					<div class="col-sm-12">
-
-						<!-- property IMG-->
-						<div class="col-xs-6 thumb thumb_property">
-							<a href="<?php echo URL;?>/home/property" class="img_holder">
-								<img src="<?php echo URL;?>img/listings/3/3-5.jpg" alt="">
-							</a>
-						</div>
-						<!-- /property IMG-->
-
-						<!-- property Info-->
-						<div class="col-xs-6 thumb_info">
-							<h3>Price : $650.00</h3>
-							<p><button href="<?php echo URL;?>/home/property">Available Now</button></p>
-							<br>
-							<p>
-								<p>4 Bedroom House</p>
-								<p>The Frontyard, Richmond, TW10</p>
-								<a href="<?php echo URL;?>/home/property">more info...</a>
-							</p>
-						</div>
-						<!-- /property Info-->
-
-					</div>
-				</div>
-				<div class="row"><hr id="hr"></div>
-			</div>
-
 		</div>
-
+		<div class="row"><hr id="hr"></div>
 	</div>
-	<!-- /listing -->
 
-	<!-- map & ads -->
-	<div class="col-sm-4 row">
+</div>
 
-		<!-- map -->
-		<div class="row map-wrapper">
-			<div id="gmap"></div>
-		</div>
-		<!-- /map -->
+</div>
+<!-- /listing -->
 
-		<!-- ads -->
-			<div class="col-sm-12 col-xs-6 ad">
-				<img src="http://tcsfoodblog.weebly.com/uploads/7/5/1/1/7511954/3255171.png">
-			</div>
-		<!-- /ads -->
+<!-- map & ads -->
+<div class="col-sm-4 row">
 
+	<!-- map -->
+	<div class="row map-wrapper">
+		<div id="gmap"></div>
 	</div>
-	<!-- /map & ads -->
+	<!-- /map -->
+
+	<!-- ads -->
+	<div class="col-sm-12 col-xs-6 ad">
+		<img src="http://tcsfoodblog.weebly.com/uploads/7/5/1/1/7511954/3255171.png">
+	</div>
+	<!-- /ads -->
+
+</div>
+<!-- /map & ads -->
 
 </div>
 <!-- /filter,map,listing,ads -->
