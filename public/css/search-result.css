@@ -78,8 +78,8 @@
   color: white !important;
 }
 
-.thumb > button {
-  position: absolute  !important;
+.thumb a > button {
+  position: absolute !important;
   top: 0  !important;
   left: 0  !important;
   margin: 0 !important;
