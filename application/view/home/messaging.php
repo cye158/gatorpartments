@@ -16,8 +16,8 @@
  <?php echo('<ul>');
  $index = 0;
  foreach($messages as $message){
-   echo('<a href=\"' . URL . 'messages/showMessageDetail' . $message->id . '\" alt=\"Message ID' . $message->id . '\"/>');
-   echo('<li>' . $listings[$index]->title);
+   echo('<a href="' . URL . 'messages/showMessageDetail' . $message->id . '" alt="Message ID' . $message->id . '"/>');
+   echo('<li>' . $listings[$index]->title . '</li>');
    echo('</a>');
  }
  echo('\</ul\>');
