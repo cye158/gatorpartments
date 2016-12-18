@@ -217,8 +217,10 @@
 	<!-- /map -->
 
 	<!-- ads -->
-	<div class="col-sm-12 col-xs-6 ad">
-		<img src="http://tcsfoodblog.weebly.com/uploads/7/5/1/1/7511954/3255171.png">
+	<div class="row">
+		<div class="col-sm-12 col-xs-6 ad">
+			<img src="http://tcsfoodblog.weebly.com/uploads/7/5/1/1/7511954/3255171.png">
+		</div>
 	</div>
 	<!-- /ads -->
 

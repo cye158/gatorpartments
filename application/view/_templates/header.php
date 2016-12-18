@@ -99,7 +99,7 @@
 													$location_session = $_SESSION['location_session'];
 												/> -->
 
-												<input class="search-input-h" type="text" name="location" placeholder="Enter location (eg. 94132, or 19th Avenue)" size="48" maxlength="50" value="">
+												<input class="search-input-h" type="text" name="inputLocation" placeholder="Enter location (eg. 94132, or 19th Avenue)" size="48" maxlength="50" value="">
 												<!--<php
 													if ($location_session == ""){
 														echo ("0");

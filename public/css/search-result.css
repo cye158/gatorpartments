@@ -9,7 +9,7 @@
 
 .filter-list {
   overflow: scroll !important;
-  height: 99.375vmin !important;
+  height: 99.5vmin !important;
   background: #bbb !important;
   border: 1px solid #888 !important;
 }
@@ -91,7 +91,7 @@
   font-size: 1.125em !important;
 }
 
-.thumb_info > ad > img {
+ad > img {
   height: 100% !important;
   width: 100% !important;
 }
@@ -243,12 +243,12 @@ div.centermid {
 .listing-col {
   border-radius: 0px !important;
   margin-bottom: 0px !important;
-  padding-right: 0 !important;
+  padding-left: 0 !important;
 }
 
 .ad {
   width: 100% !important;
-  height: 30.75vmin !important;
+  height: 30.375vmin !important;
   background-color: white !important;
   align-items: center !important;
   justify-content: center !important;
@@ -309,8 +309,8 @@ div.centermid {
 }
 
 #filter-form {
-  margin-right: -0.25em !important;
-  margin-left: -0.25em !important;
+  margin-right: -0.5em !important;
+  margin-left: -0.5em !important;
 }
 
 #hr {
