@@ -1,6 +1,6 @@
 #gmap {
- width: 400px;
- height: 400px;
+ width: 100%;
+ height: 100%;
 }
 .map-wrapper {
   height: 74vmin !important;

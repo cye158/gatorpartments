@@ -11,26 +11,33 @@
 		<div class="col-sm-12 scroll-list">
 
 			<!-- property -->
+			<?php foreach($listing as $row){ ?>
 			<div class="mini_property_wrapper">
 				<div class="row">
 					<div class="col-sm-12">
 
 						<!-- property IMG-->
 						<div class="col-xs-6 thumb thumb_property center">
-							<a href="<?php echo URL;?>/home/property" class="img_holder">
-								<img src="<?php echo URL;?>img/listings/1/1-1.jpg" alt="">
+							<a href="<?php echo URL . '/home/property/' . $row->id ;?>" class="img_holder">
+								<img src="<?php echo IMAGE_PATH . "/" . $row->image_main ;?>" alt="">
 							</a>
 						</div>
 						<!-- /property IMG-->
 
 						<!-- property Info-->
 						<div class="col-xs-6 thumb_info">
-							<h3>Price : $750.00</h3>
+							<h3>Price : <?php echo $this->formatPrice($row->price) ;?></h3>
 							<p><button href="<?php echo URL;?>/home/property">Available Now</button></p>
 							<br>
 							<p>
-								<p>4 Bedroom House</p>
-								<p>The Frontyard, Richmond, TW10</p>
+								<p><?php echo $row->room_size ;?></p>
+								<p>
+									<?php echo $row->address_1 ;?>
+									<?php echo $row->address_2 ;?>
+									<?php echo $row->city ;?>
+									<?php echo $row->state . ", " ;?>
+									<?php echo $row->zip_code ;?>
+								</p>
 								<a href="<?php echo URL;?>/home/property">more info...</a>
 							</p>
 						</div>
@@ -40,102 +47,10 @@
 				</div>
 				<div class="row"><hr id="hr"></div>
 			</div>
+			<?php } ?>
 			<!-- /property -->
 
-			<div class="mini_property_wrapper">
-				<div class="row">
-					<div class="col-sm-12">
-
-						<!-- property IMG-->
-						<div class="col-xs-6 thumb thumb_property center">
-							<a href="<?php echo URL;?>/home/property" class="img_holder">
-								<img src="<?php echo URL;?>img/listings/2/2-1.jpg" alt="">
-							</a>
-						</div>
-						<!-- /property IMG-->
-
-						<!-- property Info-->
-						<div class="col-xs-6 thumb_info">
-							<h3>Price : $550.00</h3>
-							<p><button href="<?php echo URL;?>/home/property">Available Now</button></p>
-							<br>
-							<p>
-								<p>4 Bedroom House</p>
-								<p>The Frontyard, Richmond, TW10</p>
-								<a href="<?php echo URL;?>/home/property">more info...</a>
-							</p>
-						</div>
-						<!-- /property Info-->
-
-					</div>
-				</div>
-				<div class="row"><hr id="hr"></div>
-			</div>
-
-			<div class="mini_property_wrapper">
-				<div class="row">
-					<div class="col-sm-12">
-
-						<!-- property IMG-->
-						<div class="col-xs-6 thumb thumb_property center">
-							<a href="<?php echo URL;?>/home/property" class="img_holder">
-								<img src="<?php echo URL;?>img/listings/5/5-1.jpg" alt="">
-							</a>
-						</div>
-						<!-- /property IMG-->
-
-						<!-- property Info-->
-						<div class="col-xs-6 thumb_info">
-							<h3>Price : $700.00</h3>
-							<p><button href="<?php echo URL;?>/home/property">Available Now</button></p>
-							<br>
-							<p>
-								<p>4 Bedroom House</p>
-								<p>The Frontyard, Richmond, TW10</p>
-								<a href="<?php echo URL;?>/home/property">more info...</a>
-							</p>
-						</div>
-						<!-- /property Info-->
-
-
-
-					</div>
-				</div>
-				<div class="row"><hr id="hr"></div>
-			</div>
-
-			<div class="mini_property_wrapper">
-				<div class="row">
-					<div class="col-sm-12">
-
-						<!-- property IMG-->
-						<div class="col-xs-6 thumb thumb_property">
-							<a href="<?php echo URL;?>/home/property" class="img_holder">
-								<img src="<?php echo URL;?>img/listings/3/3-5.jpg" alt="">
-							</a>
-						</div>
-						<!-- /property IMG-->
-
-						<!-- property Info-->
-						<div class="col-xs-6 thumb_info">
-							<h3>Price : $650.00</h3>
-							<p><button href="<?php echo URL;?>/home/property">Available Now</button></p>
-							<br>
-							<p>
-								<p>4 Bedroom House</p>
-								<p>The Frontyard, Richmond, TW10</p>
-								<a href="<?php echo URL;?>/home/property">more info...</a>
-							</p>
-						</div>
-						<!-- /property Info-->
-
-					</div>
-				</div>
-				<div class="row"><hr id="hr"></div>
-			</div>
-
 		</div>
-
 
 	</div>
 	<!-- /listing -->
@@ -145,8 +60,7 @@
 
 		<!-- map -->
 		<div class="row map-wrapper">
-			<!-- <div id="map" class="center">Map is placed here</div> -->
-			<iframe id="map" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBmG5gSNpeh2GZCZws3X5PnAyi_kEwkpTg&q=SanFranciscoStateUniversity,SanFrancisco+CA" allowfullscreen></iframe>
+			<div id="gmap"></div>
 		</div>
 		<!-- /map -->
 
