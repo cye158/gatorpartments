@@ -11,6 +11,10 @@
     echo("No user type is defined.");
   }
  ?>
+
+ <div class="col-md-3">Property column</div>
+ <div class="col-md-3">Message from column</div>
+ <div class="col-md-6">Message content column</div>
 <table id="table">
   <tr>
     <th id="property">Property</th>
