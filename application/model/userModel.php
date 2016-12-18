@@ -36,7 +36,7 @@ class UserModel {
       $landlordId = $this->generateLandlordId();
       $query->bindParam(':landlordId', $landlordId);
     } else {
-      $query->bindParam(':landlordId', 0);
+      $query->bindValue(':landlordId', 0);
     }
 
     $query->execute();
@@ -117,6 +117,7 @@ class UserModel {
     }
   }
 
+  //Checks if user is logged in
   public function isLoggedIn(){
     if(isset($_SESSION['loggedIn'])){
       if($_SESSION['loggedIn'] == '' || $_SESSION['loggedIn'] == false){
@@ -129,6 +130,19 @@ class UserModel {
     }
 
     return true;
+  }
+
+  //Checks if user is Landlord
+  public function isLandlord(){
+    if(isset($_SESSION['isLandlord'])){
+      if($_SESSION['isLandlord'])
+        return true;
+    }
+
+    if(!(isset($_SESSION['isLandlord']))){
+      return false;
+    }
+    return false;
   }
 
   //Checks if a username exists in the database

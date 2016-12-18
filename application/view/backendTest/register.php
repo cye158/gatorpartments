@@ -109,10 +109,12 @@
       //Checks that only alphabet letters are allowed
       if( !($(this).val().match( /^[a-zA-Z]*$/ )) ){
         $('#nameInvalid').show();
-      } else
+      } else {
 
       formError++;
       $('#nameSuccess').show();
+
+      }
 
     });
 
@@ -130,11 +132,12 @@
       //Checks that only alphabet letters are allowed
       if( !($(this).val().match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im)) ){
         $('#phoneNumberInvalid').show();
-      } else
+      } else {
       
       formError++;
       $('#phoneNumberSuccess').show();
 
+      }
     });
 
     //Email Validation
@@ -151,11 +154,12 @@
       //If field is not a valid Email string
       if( !$(this).val().match( /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ ) ){
         $('#emailInvalid').show();
-      } else
+      } else {
 
       formError++;
       $('#emailSuccess').show();
 
+      }
     });
 
     //Username Validation
@@ -200,10 +204,12 @@
       //If username contains less than 6 characters, display errors
       if( $(this).val().length < 4 ){
         $('#usernameInvalidLength').show();
-      } else
+      } else {
 
       formError++;
       $('#usernameSuccess').show();
+
+      }
 
       //Check if username already exists in database
       var username = $(this).val();
@@ -241,31 +247,29 @@
 
       if($(this).val().length < 6) {
         $('#prePasswordInvalidLength').show();
-      } else
+      } else {
 
       formError++; 
       $('#prePasswordSuccess').show();
 
+      }
     });
 
     //Password Validation
     $('#password').blur(function(){
       $('#passwordSuccess').hide();
-      $('#pasaswordInvalid').hide();
+      $('#passwordInvalid').hide();
+
       if(!($(this).val() == $('#prePassword').val())){
         $('#passwordInvalid').show();
-      } else
+      } else {
 
       formError++;
       $('#passwordSuccess').show();
 
+      }
     });
 
-    if(!(formError == 6)){
-      $('#submitRegister').addClass('disabled');
-    } else {
-      $('#submitRegister').removeClass('disabled');
-    }
 
   });
 
