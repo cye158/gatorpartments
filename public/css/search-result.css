@@ -1,13 +1,3 @@
-.map-wrapper {
-  height: 74vmin !important;
-  border: 1px solid grey !important;
-}
-
-#map {
-  height: 100% !important;
-  width: 100% !important;
-}
-
 .form-control {
   margin-top: -4px !important;
 }

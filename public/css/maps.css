@@ -2,3 +2,7 @@
  width: 400px;
  height: 400px;
 }
+.map-wrapper {
+  height: 74vmin !important;
+  border: 1px solid grey !important;
+}
