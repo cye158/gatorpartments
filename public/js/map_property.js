@@ -2,7 +2,7 @@
 function propMap() {
 
   //****- inputs should be placed here eg. -> [ 'location txt', 'lat', 'lng', 'id#' ]
-  var locations = ['Park Merced Office', 37.7183, 122.4810, 1];
+  var locations = ['Park Merced Office', 37.7183, -122.4810, 1];
 
   //-- center at coordinates
   var map = new google.maps.Map(document.getElementById('gmap'), {
