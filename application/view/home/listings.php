@@ -253,5 +253,5 @@
 <!-- /footer -->
 
 <!-- google maps -->
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBB0tVY_PUrlqdB87rV6X9jhEW-aTcX91o&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBB0tVY_PUrlqdB87rV6X9jhEW-aTcX91o&callback=listMap"></script>
 <!-- /google maps -->
