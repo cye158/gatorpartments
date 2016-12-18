@@ -42,7 +42,7 @@ class Home extends Controller
     public function index()
     {
       	if(isset($_POST['submitSearch'])){
-      	    $keyword = $_POST['searchBarInput'];
+      	    $keyword = $_POST['inputLocation'];
       	    $listing = $this->listingModel->getListingBySearch($keyword);
       	} else {
       	    $listing = $this->listingModel->getAllListing();
@@ -74,7 +74,7 @@ class Home extends Controller
             }
 	// load views
         require APP . 'view/_templates/header.php';
-        require APP . 'view/home/property.html';
+        require APP . 'view/home/property.php';
         require APP . 'view/_templates/footer.php';
     }
 
