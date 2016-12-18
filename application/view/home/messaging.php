@@ -12,18 +12,20 @@ else{
 }
 ?>
 <hr />
-<div class="col-md-3">Property column<br>
-  <?php echo('<ul class="list-group">');
-  $index = 0;
-  foreach($messages as $message){
-    echo('<a href="' . URL . 'messages/showMessageDetail' . $message->id . '" alt="Message ID' . $message->id . '"/>');
-    echo('<li class="list-group-item">' . $listings[$index]->title . '</li>');
-    echo('</a>');
-  }
-  echo('</ul>');
-  ?></div>
-  <div class="col-md-3">Message from column</div>
-  <div class="col-md-4">Message content column</div>
+<div class="panel">
+  <div class="col-md-3 list-group">Property column<br>
+    <?php
+    $index = 0;
+    foreach($messages as $message){
+      echo('<a href="' . URL . 'messages/showMessageDetail' . $message->id . '" class="list-group-item list-group-item-action">');
+      echo($listings[$index]->title);
+      echo('</a>');
+    }
+
+    ?></div>
+    <div class="col-md-3">Message from column</div>
+    <div class="col-md-4">Message content column</div>
+  </div>
   <br>
   <hr />
   <table id="table">
