@@ -9,7 +9,7 @@ function initMap() {
     ['76 Denslowe Dr', 37.723501, -122.474658, 4],
   ];
 
-  /* no need to edit this */
+  /* below functions process the input locations above */
   //-- center at SFSU
   var map = new google.maps.Map(document.getElementById('gmap'), {
     zoom: 14,
