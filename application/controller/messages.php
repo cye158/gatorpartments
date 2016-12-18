@@ -95,10 +95,23 @@ class Messages extends Controller
       if ($_SESSION['loggedIn']) {
             $userId = $_SESSION['userId'];
             $messages = $this->messageModel->showMessages($userId);
+            $listings;
+            $messageUserNames;
+            $index = 0;
+            foreach ($messages as $message) {
+                $listings[$index] = $this->messageModel->getListing($message->listingId);
+	        $messageUserNames[$index] = $this->messageModel->getUsername($message->userId);
+                $index++;
+            }
             
             // load views
-	    // please load your views
+            // please load your views
+            require APP . 'view/_templates/header.php';
+            require APP . 'view/home/messaging.php';
+            require APP . 'view/_templates/footer.php';
+
       }
   }
+
 }
 ?>
