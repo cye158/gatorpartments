@@ -27,7 +27,7 @@
 
 						<!-- property Info-->
 						<div class="col-xs-6 thumb_info">
-							<h3><?php $row->id Price: <?php echo $this->formatPrice($row->price) ;?></h3>
+							<h3>Price: <?php echo $this->formatPrice($row->price) ;?></h3>
 							<a><button onlclick="location.href = '<?php echo URL . '/home/property/' . $row->id ;?>">Available Now</button></a>
 							<br>
 							<p>
