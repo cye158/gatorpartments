@@ -185,5 +185,46 @@ class ListingModel
       }
     }
   }
+  //Inserts listing into DB
+  public function postListing($landlordId, $address1, $address2, $city, $state, $zipCode, $rentalType,$term, $price, $squareFeet, $roomSize, $bathSize, $electricity, $gas, $water, $elevator, $laundry,$outdoor, $parking, $pool, $wheelchair, $cats, $dogs, $smoking, $comments){
+
+    $sql = "INSERT into listing";
+    $sql .= "(landlord_id, address_1, address_2, city, state, zip_code, rental_type, term, price,";
+    $sql .= "square_feet, room_size, bath_size, electricity, gas, water, elevator, laundry, outdoor,";
+    $sql .= "parking, pool, wheelchair, cats, dogs, smoking, comments)";
+    $sql .= "VALUES";
+    $sql .= "(:landlordId, :address1, :address2, :city, :state, :zipCode, :rentalType, :term, :price,";
+    $sql .= ":squareFeet, :roomSize, :bathSize, :electricity, :gas, :water, :elevator, :laundry,";
+    $sql .= ":outdoor, :parking, :pool, :wheelchair, :cats, :dogs, :smoking, :comments)";
+
+    $query = $this->db->prepare($sql);
+    $query->bindParam(':landlordId',$landlordId);
+    $query->bindParam(':address1',$address1);
+    $query->bindParam(':address2',$address2);
+    $query->bindParam(':city',$city);
+    $query->bindParam(':state',$state);
+    $query->bindParam(':zipCode',$zipCode);
+    $query->bindParam(':rentalType',$rentalType);
+    $query->bindParam(':term', $term);
+    $query->bindParam(':price', $price);
+    $query->bindParam(':squareFeet',$squareFeet);
+    $query->bindParam(':roomSize',$roomSize);
+    $query->bindParam(':bathSize',$bathSize);
+    $query->bindParam(':electricity', $electricity);
+    $query->bindParam(':gas', $gas);
+    $query->bindParam(':water',$water);
+    $query->bindParam(':elevator',$elevator);
+    $query->bindParam(':laundry',$laundry);
+    $query->bindParam(':outdoor',$outdoor);
+    $query->bindParam(':parking',$parking);
+    $query->bindParam(':pool',$pool);
+    $query->bindParam(':wheelchair',$wheelchair);
+    $query->bindParam(':cats',$cats);
+    $query->bindParam(':dogs',$dogs);
+    $query->bindParam(':smoking',$smoking);
+    $query->bindParam(':comments',$comments);
+    $query->execute();
+  }
+
 }
 ?>

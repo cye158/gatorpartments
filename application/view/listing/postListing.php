@@ -11,7 +11,7 @@
   $address1Err = $address2Err = $cityErr = $stateErr = $zip_codeErr = $complexErr = $termErr = $priceErr = $feetErr = $bedroomErr = $bathErr = '';
   $address1 = $address2 = $city = $state = $zip_code = $complex = $term = $price = $feet = $bedroom = $bath = $electricity = $water = $gas = $parking = $laundry = $elevator = $wheelchair = $outdoor = $pool = $smoking = $dogs = $cats = $comment = '';
 
-  if (isset($_POST['Post'])) {
+  if (isset($_POST['submitPost'])) {
       // address conditions
     if (empty($_POST['address1'])) {
         $address1Err = "Address 1: Address is required\r\n";
@@ -135,7 +135,8 @@
     // number of bath conditions
     if (empty($_POST['bath'])) {
         $bathErr = "Bath: Bath is required\r\n";
-    } else {
+    }
+    /* else {
         $bath = $_POST['bath'];
 
         if (!preg_match('/[0-9]+\.([5]+)/', $bath)) {
@@ -143,7 +144,7 @@
         } else {
             echo nl2br($bath."\n");
         }
-    }
+    }*/
 
     // utiltiies
       // electricity
@@ -234,7 +235,7 @@
 <strong><font size="4" color="red"><?php echo nl2br($bedroomErr); ?></font></strong>
 <strong><font size="4" color="red"><?php echo nl2br($bathErr); ?></font></strong>
 
-<form method="post" action="<?php echo URL; ?>home/listing_form">
+<form method="post" action="<?php echo URL; ?>home/post">
 
   <div><table>
 	<tr>
@@ -376,11 +377,11 @@
   <tr><td>
     <br><hr class="listingruler">
     <label class="listinglabel">Comment </label></td></tr>
-      <tr><td><textarea name="comment" rows="5" cols="80"><?php echo $comment; ?></textarea></td></tr>
+      <tr><td><textarea name="comment" rows="5" cols="80"></textarea></td></tr>
 
 <tr><td>
   <!-- button for form submission usage-->
-  <input type="submit" name="Post" value="Post"></td></tr>
+  <input type="submit" name="submitPost" value="Post"></td></tr>
 </table>
 
 </div>
