@@ -35,7 +35,7 @@ else{
         //echo('<a href="#" onclick="setContentBox(' . $message->content . ')" class="list-group-item list-group-item-action">');
         echo $messageUserNames[$index];
         $index++;
-        /echo('</a>');
+        //echo('</a>');
       }
       ?>
     </div>
