@@ -94,6 +94,8 @@ class UserModel {
 
     // Destroy the session.
     session_destroy();
+
+    header("Location: " . URL . "home/index");
   }
 
   public function checkStatus($userId) {
@@ -115,6 +117,20 @@ class UserModel {
     }
   }
 
+  public function isLoggedIn(){
+    if(isset($_SESSION['loggedIn'])){
+      if($_SESSION['loggedIn'] == '' || $_SESSION['loggedIn'] == false){
+        return false;
+      }
+    }
+
+    if(!(isset($_SESSION['loggedIn']))){
+      return false;
+    }
+
+    return true;
+  }
+
   //Checks if a username exists in the database
   public function checkUsernameExist($username){
     $sql = "SELECT username FROM user WHERE username=:username";
@@ -124,9 +140,9 @@ class UserModel {
     $result = $query->fetch();
 
     if($result){
-      return "true";
+      return 1;
     } else {
-      return "false";
+      return 0;
     }
   }
 
