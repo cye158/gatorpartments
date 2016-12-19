@@ -113,7 +113,7 @@ class Messages extends Controller
 
     }
     else{
-      echo('Please \<a href=\"' . URL . 'user/login\"\>login \<\/a\>to view messages.');
+      echo('Please <a href="' . URL . 'user/login">login </a>to view messages.');
     }
   }
 
