@@ -113,5 +113,17 @@ class Messages extends Controller
       }
   }
 
+  public function contactBack($userName, $listingId) {
+	if ($_SESSION['loggedIn']) {
+	   
+            $landlordUserName = $userName;
+
+	    // load view
+     	    require APP . 'view/_templates/header.php';
+            require APP . 'view/user/writeMessage.php';
+	    require APP . 'view/_templates/footer.php';
+	   
+	}
+  }
 }
 ?>
