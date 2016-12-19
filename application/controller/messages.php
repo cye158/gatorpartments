@@ -6,7 +6,7 @@ class Messages extends Controller
   */
   public function contactLandlord($listingId)
   {
-    if ($_SESSION['loggedIn']) {
+    if (isset($_SESSION['loggedIn'])) {
       $landlordId = $this->messageModel->getLandlordId($listingId);
       $landlordUserName = $this->messageModel->getUserName($landlordId);
 
@@ -15,6 +15,9 @@ class Messages extends Controller
       require APP . 'view/user/writeMessage.php';
       require APP . 'view/_templates/footer.php';
 
+    }
+    else{
+      header('Location: ' . URL . 'user/login');
     }
   }
 
