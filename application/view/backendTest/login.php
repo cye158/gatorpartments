@@ -2,6 +2,15 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4 ">
+
+      <?php
+        if(isset($errors)) {
+          foreach($errors as $errorMsg) {
+            echo $errorMsg;
+          }
+        }
+      ?>
+
       <form class="form-horizontal" action="<?php echo URL . 'backendTest/login';?>" method="post">
 	<div class="page-header">
 	  <h1 class="text-center">Log In</h1>
