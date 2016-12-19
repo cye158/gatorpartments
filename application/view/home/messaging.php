@@ -30,7 +30,7 @@ if(isset($_POST['toname'])){
         <a onclick="setContentBox( <?php echo "'" . $messageUserNames[$index] . "','";
         echo $message->content . "','" . $message->listingId;
         echo "'"; ?>)" class="list-group-item list-group-item-action">
-          <?php echo($listings[$index]->title);
+          <?php echo($listings[$index]->address_1);
             ?>
         </a>
         <?php } ?>
