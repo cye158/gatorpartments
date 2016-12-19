@@ -68,19 +68,19 @@ class Home extends Controller
     }
 
     //Individual Listing Page
-    public function property(){
+    public function property($listingId){
 
-    	if(isset($id)){
-    	   $listing = $this->listingModel->getListingById($id);
+    	if(isset($listingId)){
+    	   $listing = $this->listingModel->getListingByListingId($listingId);
 
-    	   $images = $this->listingModel->getImagesArray($listing->images);
+    	   $images = $this->listingModel->getAllImages($listingId);
 
            $_SESSION['listingId'] =  $listing->id;
 
             }
 	// load views
         require APP . 'view/_templates/header.php';
-        require APP . 'view/home/property.html';
+        require APP . 'view/home/property.php';
         require APP . 'view/_templates/footer.php';
     }
 

@@ -1,53 +1,45 @@
 
 <!-- details,map & ads -->
-<div class="row" style="height: 100%;">
+<div class="row">
 
 
   <!-- property details -->
-  <div class="col-sm-8" style="border-radius: 0px; margin-bottom: 0px;">
+  <div class="col-sm-8 property-col">
 
     <div class="well center title-list">
       <ul style="margin: 0;font-weight: bold;">Property Description</ul>
     </div>
 
-    <div class="col-sm-12 property-list" style="overflow:scroll;">
+    <div class="col-sm-12 property-list">
       <div class="row" style="margin-top: 10px;">
         <div class="col-sm-5 col-xs-8">
-          <h3>2 Bedroom Townhouse</h3>
-          <h6>Queens Road</h6>
+          <h3><?php echo $listing->room_size ;?></h3>
+          <h6><?php echo $listing->address_1 ;?></h6>
+          <h6><?php echo $listing->city . " " .  $listing->zip_code . ", " . $listing->state;?></h6>
         </div>
         <div class="col-sm-3 col-xs-4 text-right pull-right">
-          <h2 class="text-right">$ 1,000</h2>
+          <h2 class="text-right"><?php echo $this->formatPrice($listing->price) ;?></h2>
         </div>
       </div>
 
-      <div class="centermid" style="padding-top: 0.5em; padding-bottom: 0.5em;">
+      <div class="centermid carousel-slide">
         <div style="background-color: white;" data-ride="carousel" class="carousel slide" id="myCarousel">
           <!-- Indicators -->
           <ol class="carousel-indicators" style="bottom: 0px;">
-            <li data-target="#myCarousel" data-slide-to="0" class=""></li>
-            <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-            <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+          <?php $count2 = 0; ?>
+          <?php foreach($images as $image){ ?>
+            <li data-target="#myCarousel" data-slide-to="<?php echo $count2 ;?>" class=""></li>
+          <?php $count2++; } ?>
           </ol>
 
           <!-- Wrapper for slides -->
-          <div class="carousel-inner center" role="listbox" style="max-height: 45vh;">
-            <div class="item">
-              <img src="<?php echo URL;?>/img/listings/1/1-1.jpg" alt="Chania">
+          <div class="carousel-inner center carousel-height" role="listbox">
+            <?php $count = 0 ;?>
+            <?php foreach($images as $image){  ?>
+            <div class="item <?php if($count == 0){echo "active";} ?>">
+              <img class="img-responsive"  src="<?php echo IMAGE_PATH . $image->image ;?>">
             </div>
-
-            <div class="item">
-              <img src="<?php echo URL;?>/img/listings/1/1-2.jpg" alt="Chania">
-            </div>
-
-            <div class="item active">
-              <img src="<?php echo URL;?>/img/listings/1/1-3.jpg" alt="Flower">
-            </div>
-
-            <div class="item">
-              <img src="<?php echo URL;?>/img/listings/1/1-4.jpg" alt="Flower">
-            </div>
+            <?php $count++; } ?>
           </div>
 
           <!-- Left and right controls -->
@@ -66,39 +58,33 @@
       <div class="row">
         <div class="col-sm-12 visible">
           <div class="row">
-            <div class="col-xs-10">
+            <div class="col-xs-9">
               <h4>Features:</h4>
               <div class=" col-xs-6">
                 <ul>
-                  <li>2 Bedrooms</li>
-                  <li>10ft Garden</li>
+                  <li><?php echo $listing->room_size; ?></li>
+                  <li><?php echo $listing->bath_size; ?></li>
                 </ul>
               </div>
               <div class="col-xs-6">
                 <ul>
-                  <li>Street Parking</li>
-                  <li>1 bedroom suit</li>
+                  <li><?php echo $listing->square_feet . " Square Foot" ;?></li>
+                  <li><?php echo "1 Year " . $listing->term ;?></li>
                 </ul>
               </div>
 
             </div>
 
-            <div class="col-xs-2">
+            <div class="col-xs-3 property-desc">
               <ul>
-               <?php $eachListing->id = 1; ?>         
-                 <form action="<?php echo URL . 'messages/contactLandlord/' . $eachListing->id ;?>" method = "POST" id="form1">
-                </form> 
-                <button class="b b0 navbar-right msg-btn" style="background-color: #609b62;" type="submit" form="form1" name="submit_contact"><h4>Message</h4></button>
+                <button class="b b0 navbar-right msg-btn" onclick="location.href = '<?php echo URL . 'messages/showMessages' . $eachListing->id ;?>"><h4>Message</h4></button>
                 <br>
-                <button class="b b0 navbar-right msg-btn" style="background-color: grey;"><h5>Back to Search</h5></button>
+                <button class="b b0 navbar-right cncl-btn" onclick="location.href = '<?php echo URL . 'home/listings' ;?>"><h5>Back to Search</h5></button>
               </ul>
             </div>
           </div>
-          <p style="text-align: justify; margin: 0px 0 10px 0;">
-            Reflecting the status of this desirable destination a 1/2 bedroom townhouses at Terrace Yard offers contemporary living in unmatched style and elegance. With a high specification throughout, secure private undercroft parking behind remotely controlled access gates and Berkeley's quest for excellence, these are homes of unparalleled appeal. Imposing, contemporary architecture sets the scene for the sleek style of the interiors at Terrace Yard, where form blends perfectly with function to create homes beautifully designed for modern living. Living areas have been designed as fluid spaces, seamlessly linking rooms to provide an environment that's perfect for entertaining and family life alike.
-          </p>
-          <p style="text-align: justify; margin: 0px 0 10px 0;">
-            The kitchens feature Italian designer furniture, reflecting the cutting edge, contemporary architecture. Stone worktops, glass back panelling, mood lighting and a comprehensive range of Siemens appliances enhance the appeal of this functional space creating an ultimate environment of luxury living.
+          <p>
+            <?php echo $listing->comments ?>
           </p>
         </div>
       </div>
@@ -113,15 +99,14 @@
 
     <!-- map -->
     <div class="row map-wrapper">
-      <!-- <div id="map" class="center">Map is placed here</div> -->
-      <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d12623.667835684188!2d-122.47502909999997!3d37.721627000000005!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1481834287641" id="map"></iframe>
+      <div id="gmap"></div>
     </div>
     <!-- /map -->
 
     <!-- ads -->
     <div class="row">
       <div class="col-sm-12 ad">
-        <img src="https://hannahmorley.files.wordpress.com/2012/11/screen-shot-2012-11-29-at-00-49-49.png" style="height: 100%; width:100%;">
+        <img src="https://hannahmorley.files.wordpress.com/2012/11/screen-shot-2012-11-29-at-00-49-49.png">
       </div>
     </div>
     <!-- /ads -->
@@ -155,5 +140,6 @@
 <!-- /footer -->
 
 <!-- google maps -->
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbTAiniS56gZ1ZGGWK9oU1mZ2S0488wJs&callback=initMap"></script>
+<script type="text/javascript" src="<?php echo URL;?>js/map_property.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBB0tVY_PUrlqdB87rV6X9jhEW-aTcX91o&callback=propMap"></script>
 <!-- /google maps -->

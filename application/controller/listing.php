@@ -5,6 +5,7 @@ class Listing extends Controller
   public function postListing(){
 
     if( (isset($_POST['submitPost'])) && ($this->userModel->isLandlord()) ){
+      $listingId = $this->listingModel->generateListingId();
       $landlordId = $_SESSION['landlordId'];
       $address1 = $_POST['address1'];
 
@@ -101,8 +102,17 @@ class Listing extends Controller
       } else {
         $comments = NULL;
       }
-
-      $this->listingModel->postListing($landlordId, $address1, $address2, $city, $state, $zipCode, $rentalType, $term, $price, $squareFeet, $roomSize, $bathSize, $electricity, $gas, $water, $elevator, $laundry, $outdoor, $parking, $pool, $wheelchair, $cats, $dogs, $smoking, $comments );
+      //Insert a Listing into DB
+      $this->listingModel->postListing($listingId, $landlordId, $address1, $address2, $city, $state, $zipCode, $rentalType, $term, $price, $squareFeet, $roomSize, $bathSize, $electricity, $gas, $water, $elevator, $laundry, $outdoor, $parking, $pool, $wheelchair, $cats, $dogs, $smoking, $comments );
+      //Insert images into image table
+      $this->listingModel->uploadImage($listingId);
+      //Get all images from DB
+      $result = $this->listingModel->getAllImages($listingId);
+      //Assign first image to image_main
+      $this->listingModel->setMainImage($listingId, $result[0]->image);
+      //Reroute to Success page
+      header("Location:" . URL . 'listing/postSuccess');
+      exit();
     }
 
     if($this->userModel->isLandlord()){
@@ -114,6 +124,12 @@ class Listing extends Controller
       header("Location:" . URL . 'problem/landlordError' );
       exit();
     }
+  }
+
+  public function postSuccess(){
+    require APP . 'view/_templates/header.php';
+    require APP . 'view/listing/postSuccess.php';
+    require APP . 'view/_templates/footer.php';
   }
 
 } //End Class
