@@ -44,6 +44,10 @@ class User extends Controller {
     require APP . "view/_templates/footer.php";
   }
 
+  public function logout(){
+    $this->userModel->logout();
+  }
+
   public function checkLoginStatus() {
     $this->userModel->checkLoginStatus();
   }

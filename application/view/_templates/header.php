@@ -83,7 +83,13 @@
 
 									<!-- Post a Listing -->
 									<li>
-										<a id="navbar-btn" href="<?php echo URL;?>user/checkLoginStatus">Post</a>
+										<a id="navbar-btn" href="<?php if($_SESSION['isLandlord']){
+														echo URL . "home/post" ;
+														} else {
+														  echo URL . "home/login";
+														}
+                                                                                                         ?>">
+										Post</a>
 									</li>
 									<!-- /Post a Listing -->
 
@@ -120,7 +126,7 @@
 								</ul>
 
 								<ul class="nav navbar-nav navbar-right center hidden-xs">
-
+                                                                        <?php if(!($this->userModel->isLoggedIn())){ ?>
 									<!-- Login -->
 									<li>
 										<a id="navbar-btn" href="<?php echo URL;?>user/login">Log in</a>
@@ -132,6 +138,11 @@
 										<a id="navbar-btn" href="<?php echo URL;?>user/register">Register</a>
 									</li>
 									<!-- /Register -->
+									<?php } else {  ?>
+									<li>
+										<a id="navbar-btn"  href="<?php echo URL . 'user/logout' ;?>">Logout</a>
+									</li>
+									<?php } ?>
 
 								</ul>
 								<!--***** /Large Viewport ****-->

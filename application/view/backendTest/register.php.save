@@ -58,7 +58,7 @@
         <!-- Confirm Password -->
         <div class="form-group">
           <label>Confirm Password</label>
-          <span id="passwordSuccess" class="inputSuccess alert alert-success glyphicon glyphicon-ok"></span>
+          <span id="passwordSuccess" class="inputSuccess alert alert-success glyphicon glyhpicon-ok"></span>
           <span id="passwordInvalid" class="inputFail alert alert-danger">Password does not match</span>
           <input id="password" class="form-control" type="password" name="password">
         </div>
@@ -83,7 +83,7 @@
 
 	<!--  Submit Button -->
         <div class="form-group pull-right">
-          <button id="submitRegister" class="btn btn-success" type="submit"name="submitRegister">Submit</button>
+          <button class="btn btn-success" type="submit"name="submitRegister">Submit</button>
         </div>
 
       </div><!-- End Col -->
@@ -94,7 +94,6 @@
 <script>
   $(function(){
 
-    var formError = 0;
     //Full Name Validation
     $('#fullName').blur(function(){
       $('#nameEmpty').hide();
@@ -111,7 +110,6 @@
         $('#nameInvalid').show();
       } else
 
-      formError++;
       $('#nameSuccess').show();
 
     });
@@ -131,8 +129,7 @@
       if( !($(this).val().match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im)) ){
         $('#phoneNumberInvalid').show();
       } else
-      
-      formError++;
+
       $('#phoneNumberSuccess').show();
 
     });
@@ -153,7 +150,6 @@
         $('#emailInvalid').show();
       } else
 
-      formError++;
       $('#emailSuccess').show();
 
     });
@@ -165,27 +161,6 @@
       $('#usernameInvalid').hide();
       $('#usernameTaken').hide();
       $('#usernameInvalidLength').hide();
-
-      //Check if username already exists in database
-      var username = $(this).val();
-      var usernameExistUrl = "<?php echo URL . 'user/checkUsernameExist/' ;?>" + username ;
-
-      function getData(){
-        return $.ajax({
-          url:usernameExistUrl,
-          type: 'GET'
-        });
-      }
-
-      function handleData(data){
-        console.log(data);
-        if(data == 1){
-          $('#usernameTaken').show();
-        }
-      }
-
-      getData().done(handleData);
-
 
       //If username is empty, display error
       if( !$(this).val() ){
@@ -202,70 +177,28 @@
         $('#usernameInvalidLength').show();
       } else
 
-      formError++;
       $('#usernameSuccess').show();
 
       //Check if username already exists in database
-      var username = $(this).val();
+     /* var username = $(this).val();
       var usernameExistUrl = "<?php echo URL . 'user/checkUsernameExist/' ;?>" + username ;
-
-      function getData(){
-        return $.ajax({
-          url:usernameExistUrl,
-          type: 'GET'
-        });
-      }
-
-      function handleData(data){
+      $.get(usernameExistUrl,function(data){
         console.log(data);
-        if(data == 1){
-          $('#usernameSuccess').hide();
+        if(data == "true"){
           $('#usernameTaken').show();
         }
-      }
 
-      getData().done(handleData);
-
-
-    });
-
-    //PrePassword Validation
-    $('#prePassword').blur(function(){
-      $('#prePasswordEmpty').hide();
-      $('#prePasswordInvalidLength').hide();
-      $('#prePasswordSuccess').hide();
-
-      if( !$(this).val() ){
-        $('#prePasswordEmpty').show();
-      } else
-
-      if($(this).val().length < 6) {
-        $('#prePasswordInvalidLength').show();
-      } else
-
-      formError++; 
-      $('#prePasswordSuccess').show();
+        if(data == "false"){
+          $('#usernameSuccess').show();
+        }
+      });*/ 
 
     });
 
     //Password Validation
-    $('#password').blur(function(){
-      $('#passwordSuccess').hide();
-      $('#pasaswordInvalid').hide();
-      if(!($(this).val() == $('#prePassword').val())){
-        $('#passwordInvalid').show();
-      } else
+  
 
-      formError++;
-      $('#passwordSuccess').show();
 
-    });
-
-    if(!(formError == 6)){
-      $('#submitRegister').addClass('disabled');
-    } else {
-      $('#submitRegister').removeClass('disabled');
-    }
 
   });
 
