@@ -85,8 +85,8 @@
 
             <div class="col-xs-2">
               <ul>
-               <?php $eachListing->id = 1; ?>         
-                 <form action="<?php echo URL . 'messages/contactLandlord/' . $eachListing->id ;?>" method = "POST" id="form1">
+               <?php $listingid = 1; ?>         
+                 <form action="<?php echo URL . 'messages/contactLandlord/' . $listingid ;?>" method = "POST" id="form1">
                 </form> 
                 <button class="b b0 navbar-right msg-btn" style="background-color: #609b62;" type="submit" form="form1" name="submit_contact"><h4>Message</h4></button>
                 <br>
