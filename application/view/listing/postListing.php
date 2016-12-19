@@ -227,13 +227,13 @@
 <strong><font size="4" color="red"><?php echo nl2br($bedroomErr); ?></font></strong>
 <strong><font size="4" color="red"><?php echo nl2br($bathErr); ?></font></strong> -->
 
-<form method="post" action="<?php echo URL; ?>listing/postListing">
+<form method="post" action="<?php echo URL; ?>listing/postListing" enctype="multipart/form-data">
 
   <div><table>
 	<tr>
     <!-- address -->
     <td><label class="listinglabel">Address 1 *</label><input class="listingtext" type="text" name="address1"></></td></tr>
-    <tr><td><label class="listinglabel">Address 2 *</label><input class="listingtext" type="text" name="address2"></></td></tr>
+    <tr><td><label class="listinglabel">Address 2 </label><input class="listingtext" type="text" name="address2"></></td></tr>
     <!-- city state zipcode table -->
     <tr><td><label class="listinglabel">City *</label><input class="listingtext" type="text" name="city"></></td></tr>
 
@@ -316,22 +316,22 @@
       <select class="listingform" name="roomSize">
         <option value=""></option>
         <option value="studio">Studio</option>
-        <option value="1">1 Bedroom</option>
-        <option value="2">2 Bedrrom</option>
-        <option value="3">3 Bedroom</option>
-        <option value="4">4+ Bedroom</option>
+        <option value="1 Bedroom">1 Bedroom</option>
+        <option value="2 Bedroom">2 Bedrrom</option>
+        <option value="3 Bedroom">3 Bedroom</option>
+        <option value="4 Bedroom">4+ Bedroom</option>
       </select></td></tr>
     <tr><td><label class="listinglabel"># Of Bath(s) *</label>
       <select class="listingform" name="bathSize">
         <option value=""></option>
-        <option value="0.5">0.5</option>
-        <option value="1">1</option>
-        <option value="1.5">1.5</option>
-        <option value="2">2</option>
-        <option value="2.5">2.5</option>
-        <option value="3">3</option>
-        <option value="3.5">3.5</option>
-        <option value="4">4+</option>
+        <option value="0.5 Bath">0.5 Bath</option>
+        <option value="1 Bath">1 Bath</option>
+        <option value="1.5 Bath">1.5 Bath</option>
+        <option value="2 Bath">2 Bath</option>
+        <option value="2.5 Bath">2.5 Bath</option>
+        <option value="3 Bath">3 Bath</option>
+        <option value="3.5 Bath">3.5 Bath</option>
+        <option value="4+ Bath">4+ Bath</option>
       </select></td></tr>
 
 <!--  Utilities -->
@@ -355,9 +355,9 @@
   <tr><td>
     <br><hr class="listingruler">
     <label class="listinglabel">Building Restrictions </label></td></tr>
-      <tr><td><input type="checkbox" name="cats" value="cats">Cats</td></tr>
-      <tr><td><input type="checkbox" name="dogs" value="dogs">Dogs</td></tr>
-      <tr><td><input type="checkbox" name="smoking" value="smoking">Smoking</td></tr>
+      <tr><td><input type="checkbox" name="cats" value="1">No Cats</td></tr>
+      <tr><td><input type="checkbox" name="dogs" value="1">No Dogs</td></tr>
+      <tr><td><input type="checkbox" name="smoking" value="1">No Smoking</td></tr>
 
 <!-- Comment -->
   <tr><td>
@@ -365,11 +365,23 @@
     <label class="listinglabel">Comment </label></td></tr>
       <tr><td><textarea name="comments" rows="5" cols="80"></textarea></td></tr>
 
+<!-- Upload images -->
+  <tr><td>
+    <br><hr class="listingruler">
+    <label class="listinglabel">Upload Images </label></td></tr>
+      <tr><td>Select image to upload:
+    <input type="file" name="fileToUpload[]" id="fileToUpload" multiple="multiple"/></td></tr>
+
+
 <tr><td>
+  <!-- Cancel Button-->
+  <a href="<?php echo URL . 'home/index' ;?>" class="btn btn-danger">Cancel</a>
+
   <!-- button for form submission usage-->
-  <input type="submit" name="submitPost" value="Post"></td></tr>
+  <input class="btn btn-success pull-right"type="submit" name="submitPost" value="Post"></td></tr>
 </table>
 
 </div>
 
 </form>
+

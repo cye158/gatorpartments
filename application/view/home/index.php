@@ -11,16 +11,18 @@
 		<div class="col-sm-12 scroll-list">
 
 			<!-- property -->
+                        <?php $count = 0; ?>
 			<?php foreach($listing as $row) { ?>
+                        <?php $count++; ?>
 				<div class="mini_property_wrapper">
 					<div class="row">
 						<div class="col-sm-12">
 
 							<!-- property IMG-->
 							<div class="col-xs-6 thumb thumb_property center">
-								<a href="<?php echo URL . '/home/property/' . $row->id ;?>" class="img_holder">
-									<img src="<?php echo IMAGE_PATH . "/" . $row->image_main ;?>" alt="">
-									<a><button onclick="location.href = '<?php echo URL . '/home/property/' . $row->id ;?>"><?php echo $row->id ;?></button></a>
+								<a href="<?php echo URL . '/home/property/' . $row->listing_id ;?>" class="img_holder">
+									<img src="<?php echo IMAGE_PATH . $row->image_main ;?>" alt="">
+									<a><button onclick="location.href = '<?php echo URL . '/home/property/' . $row->listing_id ;?>"><?php echo $count ;?></button></a>
 								</a>
 							</div>
 							<!-- /property IMG-->
@@ -28,7 +30,7 @@
 							<!-- property Info-->
 							<div class="col-xs-6 thumb_info">
 								<h3>Price: <?php echo $this->formatPrice($row->price) ;?></h3>
-								<p><button onclick="location.href = '<?php echo URL . '/home/property/' . $row->id ;?>">Available now</button></p>
+								<p><button onclick="location.href = '<?php echo URL . '/home/property/' . $row->listing_id ;?>">Available now</button></p>
 								<br>
 								<p>
 									<p><?php echo $row->room_size ;?></p>
@@ -39,7 +41,7 @@
 										<?php echo $row->state . ", " ;?>
 										<?php echo $row->zip_code ;?>
 									</p>
-									<a href="<?php echo URL . '/home/property/' . $row->id ;?>">more info...</a>
+									<a href="<?php echo URL . '/home/property/' . $row->listing_id ;?>">more info...</a>
 								</p>
 							</div>
 							<!-- /property Info-->
