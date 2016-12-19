@@ -66,10 +66,10 @@ if(isset($_POST['toname'])){
           Reply to message.<br />
           <form action="<?php echo URL . 'messages/addMessage'; ?>" method="post">
             Reply to: <input type="text" name="toname" id="toname" style="float:right;" readonly><br>
-            <textarea class="form-control" rows="5" id="messageResponse" name="content"></textarea>
+            <textarea class="form-control" rows="5" id="content" name="content"></textarea>
               <span style="float:right;">
                 <input type="submit" name="submit_add_message" value="Send" style="float:right;">
-                <input type="hidden" name="listingId" id="listing">
+                <input type="hidden" name="listingId" id="listingId">
               </span>
             </form>
           </div>
