@@ -77,18 +77,13 @@
 
 									<li>
 										<a id="navbar-btn" href="<?php if(isset($_SESSION['loggedIn'])){echo URL . 'messages/showMessages';}
-										else{echo URL . 'user/login';}?>" class="first">Inbox</a>
+										else{echo URL . 'problem/loggedInError';}?>" class="first">Inbox</a>
 									</li>
 									<!-- /Inbox button -->
 
 									<!-- Post a Listing -->
 									<li>
-										<a id="navbar-btn" href="<?php if($this->userModel->isLandlord()){
-														echo URL . "listing/postListing" ;
-														} else {
-														  echo URL . "user/login" ;
-														}
-                                                                                                         ?>">
+										<a id="navbar-btn" href="<?php echo URL . "listing/postListing" ; ?>">
 										Post</a>
 									</li>
 									<!-- /Post a Listing -->
