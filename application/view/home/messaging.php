@@ -27,7 +27,7 @@ if(isset($_POST['toname'])){
       <?php
       $index = 0;
       foreach($messages as $message){ ?>
-        <a onclick="setContentBox( <?php echo "'" . $messageUserNames[$index] . "','" . $message->content . "'"; ?>)" class="list-group-item list-group-item-action">
+        <a onclick="setContentBox( <?php echo "'" . $messageUserNames[$index] . "','" . $message->content . "','" $listingId . "'"; ?>)" class="list-group-item list-group-item-action">
           <?php echo($listings[$index]->title); ?>
         </a>
         <?php } ?>
@@ -39,7 +39,7 @@ if(isset($_POST['toname'])){
         <?php
         $index = 0;
         foreach($messages as $message){ ?>
-          <a onclick="setContentBox(<?php echo "'" . $messageUserNames[$index] . "','" . $message->content . "'"; ?>)" class="list-group-item list-group-item-action">
+          <a onclick="setContentBox(<?php echo "'" . $messageUserNames[$index] . "','" . $message->content . "','" $listingId . "'"; ?>)" class="list-group-item list-group-item-action">
             <?php echo $messageUserNames[$index];
             $index++; ?>
           </a>
@@ -64,6 +64,7 @@ if(isset($_POST['toname'])){
             <textarea class="form-control" rows="5" id="messageResponse" name="content"></textarea>
               <span style="float:right;">
                 <input type="submit" name="submit_add_message" value="Send" style="float:right;">
+                <input type="hidden" name="listingId" id="listing">
               </span>
             </form>
           </div>
@@ -72,9 +73,10 @@ if(isset($_POST['toname'])){
       <br>
 
       <script type="text/javascript">
-      function setContentBox(messageRecipient,messageText){
+      function setContentBox(messageRecipient,messageText,listing){
         document.getElementById("toname").value = messageRecipient;
         document.getElementById("messageContentBox").innerHTML = messageText;
+        document.getElementById("listingId").value = listing;
       }
 
       </script>
