@@ -6,6 +6,7 @@
         <div class="page-header">
           <h1 class="text-center">Create an Account</h1>
         </div>
+
 	<!-- Full Name -->
         <div class="form-group">
           <label>Full Name</label>
@@ -32,7 +33,7 @@
           <span id="emailInvalid" class="inputFail alert alert-danger">Invalid Email</span>
           <input id="email" class="form-control" type="email" name="email">
         </div>
-
+        <hr>
 	<!-- Username -->
         <div class="form-group">
           <label>Username</label>

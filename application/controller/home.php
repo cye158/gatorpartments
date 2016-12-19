@@ -36,7 +36,7 @@ class Home extends Controller
 	if($this->userModel->isLandlord()){
         // load views
         require APP . 'view/_templates/header.php';
-        require APP . 'view/home/listing_form.php';
+        require APP . 'view/home/postListing.php';
         require APP . 'view/_templates/footer.php';
         }  else {
            require APP . 'view/_templates/header.php';

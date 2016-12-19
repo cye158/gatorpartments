@@ -83,7 +83,7 @@
 									<!-- Post a Listing -->
 									<li>
 										<a id="navbar-btn" href="<?php if($this->userModel->isLandlord()){
-														echo URL . "home/post" ;
+														echo URL . "listing/postListing" ;
 														} else {
 														  echo URL . "user/login" ;
 														}
