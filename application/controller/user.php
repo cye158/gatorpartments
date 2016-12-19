@@ -90,10 +90,17 @@ $phoneNumber = $_POST['phoneNumber'];
   public function login(){
 
     if(isset($_POST['submitLogin'])){
-     $username = $_POST['username'];
-     $password = $_POST['password'];
+      $username = $_POST['username'];
+      $password = $_POST['password'];
 
-     $this->userModel->login($username, $password);
+      if(!($this->userModel->login($username, $password))) {
+        $errors = [];
+        array_push($errors, "invalid username and/or password");
+
+        require APP . "view/_templates/header.php";
+        require APP . "view/user/login.php";
+        require APP . "view/_templates/footer.php";
+      }
     }
 
     require APP . "view/_templates/header.php";
