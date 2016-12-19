@@ -23,7 +23,7 @@ if(isset($_POST['toname'])){
 ?>
 <div class="panel">
   <div class="panel-body">
-    <div class="col-md-3 list-group">Property column<br>
+    <div class="col-md-3 list-group"><b>Property</b><br>
       <?php
       $index = 0;
       foreach($messages as $message){ ?>
@@ -38,7 +38,7 @@ if(isset($_POST['toname'])){
 
 
       </div>
-      <div class="col-md-3 list-group">Message from column<br>
+      <div class="col-md-3 list-group"><b>Message from</b><br>
         <?php
         $index = 0;
         foreach($messages as $message){ ?>
@@ -51,7 +51,7 @@ if(isset($_POST['toname'])){
           <?php } ?>
 
         </div>
-        <div class="col-md-4 panel">Message content column
+        <div class="col-md-4 panel"><b>Message content</b>
           <br />
           <div class="panel-body" id="messageContentBox">
             <?php
