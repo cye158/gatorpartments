@@ -66,6 +66,9 @@ class UserModel {
       $_SESSION['isStudent'] = $result->isStudent;
       $_SESSION['loggedIn'] = true;
 
+      if($result->isLandlord){
+        $_SESSION['landlordId'] = $result->landlord_id;
+      }
 
       header("Location:" . URL . "home/index");
       exit();

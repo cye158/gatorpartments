@@ -7,7 +7,7 @@
     }
 
     public function upload() {
-      $this->listingModel->uploadImage();
+      $this->listingModel->uploadImage(1);
     }
   }
 ?>

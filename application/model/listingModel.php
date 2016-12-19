@@ -62,6 +62,17 @@ class ListingModel
     return $query->fetch();
   }
 
+  //Gets listing by listing's listing_id
+  public function getListingByListingId($listingId)
+  {
+    $sql = "SELECT * FROM listing WHERE listing_id=:listingId";
+    $query = $this->db->prepare($sql);
+    $query->bindParam(':listingId', $listingId);
+    $query->execute();
+    return $query->fetch();
+  }
+
+
   //Given strings, it will put it in an array
   public function getImagesArray($string)
   {
@@ -116,39 +127,39 @@ class ListingModel
     return $query->fetchAll();
   }
 
-  public function uploadImage() {
-    define('SITE_ROOT', realpath(dirname(__FILE__)));
+  public function uploadImage($listindId) {
+    //define('SITE_ROOT', realpath(dirname(__FILE__)));
     // $fileSize is the max file size of an image, measured in bytes
-    $fileSize = 500000;
-    $target_dir = "/images/";
+    define('IMAGES_FOLDER', __DIR__ . '/../../public/images/');
+    // define('IMAGES_FOLDER', '/home/nhan/public_html/gatorpartments/public/images/');
+    $fileSize = 5000000;
     $totalImages = count($_FILES["fileToUpload"]["name"]);
 
     // if mkdir gives permission error, user must chmod folder path to 777
     // chmod -R 777 SITE_ROOT
     // The chmod provided above doesn't allow me to delete the folder created, have not found a workaround for it yet
-    if(!file_exists(SITE_ROOT.'/images')) {
-      echo "Attempting to create folder at: <br>" . SITE_ROOT.'/images';
-      mkdir(SITE_ROOT.'/images', 0777, true);
+    if(!file_exists(IMAGES_FOLDER)) {
+      echo "Attempting to create folder at: <br>" . IMAGES_FOLDER;
+      mkdir(IMAGES_FOLDER, 0777, true);
       echo "If mkdir returns permission error, read the comments in the code on how to workaround it in the function <br>";
     }
 
     // loop through incase there are multiple file uploads
     for($i = 0; $i < $totalImages; $i++) {
-      $target_file = $target_dir . $_FILES["fileToUpload"]["name"][$i];
+      $target_file = $_FILES["fileToUpload"]["name"][$i];
       $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
       $uploadOk = 1;
 
       // check if the file already exists in the server, if so output error message and stop upload
-      if(file_exists(SITE_ROOT . $target_dir . $_FILES["fileToUpload"]["name"][$i])) {
+      if(file_exists(IMAGES_FOLDER . $_FILES["fileToUpload"]["name"][$i])) {
         echo "File already exists! <br>";
         $uploadOk = 0;
       }
 
       // Check if image file is a actual iamge or fake image
-      if(isset($_POST["submit"])) {
+      if(isset($_POST["submitPost"])) {
         $check = getimagesize($_FILES["fileToUpload"]["tmp_name"][$i]);
         if($check !== false) {
-          echo "File is an image - " . $check["mime"] . ". <br>";
           $uploadOk = 1;
         } else {
           echo "File is not an image. <br>";
@@ -168,17 +179,21 @@ class ListingModel
       }
 
       // Allow only certain file formats pertaining to images
-      if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
+      if($imageFileType != "JPG" && $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
         echo "Sorry, only JPG, JPEG,PNG, & GIF files are allowed. <br>";
         $uploadOk = 0;
       }
+      //Rename files with ext
+      $temp = explode(".", $_FILES["fileToUpload"]["name"][$i]);
+      $newfilename = time() . $i . '.' . end($temp);
 
       // Check if image is okay and meets all the criterias before uploading
       if($uploadOk == 0) {
         echo "Sorry, your file was no uploaded. <br>";
       } else {
-        if((move_uploaded_file($_FILES["fileToUpload"]["tmp_name"][$i], SITE_ROOT.$target_file))) {
-          echo "The file " . basename($_FILES["fileToUpload"]["name"][$i]) . " has been uploaded <br>";
+        if((move_uploaded_file($_FILES["fileToUpload"]["tmp_name"][$i], IMAGES_FOLDER.$newfilename))) {
+          //inserts image name into db
+          $this->insertImage($newfilename, $listindId);
         } else {
           echo "Sorry, there was an error uploading your file. <br>";
         }
@@ -186,18 +201,19 @@ class ListingModel
     }
   }
   //Inserts listing into DB
-  public function postListing($landlordId, $address1, $address2, $city, $state, $zipCode, $rentalType,$term, $price, $squareFeet, $roomSize, $bathSize, $electricity, $gas, $water, $elevator, $laundry,$outdoor, $parking, $pool, $wheelchair, $cats, $dogs, $smoking, $comments){
+  public function postListing($listingId, $landlordId, $address1, $address2, $city, $state, $zipCode, $rentalType,$term, $price, $squareFeet, $roomSize, $bathSize, $electricity, $gas, $water, $elevator, $laundry,$outdoor, $parking, $pool, $wheelchair, $cats, $dogs, $smoking, $comments){
 
     $sql = "INSERT into listing";
-    $sql .= "(landlord_id, address_1, address_2, city, state, zip_code, rental_type, term, price,";
+    $sql .= "(listing_id, landlord_id, address_1, address_2, city, state, zip_code, rental_type, term, price,";
     $sql .= "square_feet, room_size, bath_size, electricity, gas, water, elevator, laundry, outdoor,";
     $sql .= "parking, pool, wheelchair, cats, dogs, smoking, comments)";
     $sql .= "VALUES";
-    $sql .= "(:landlordId, :address1, :address2, :city, :state, :zipCode, :rentalType, :term, :price,";
+    $sql .= "(:listingId, :landlordId, :address1, :address2, :city, :state, :zipCode, :rentalType, :term, :price,";
     $sql .= ":squareFeet, :roomSize, :bathSize, :electricity, :gas, :water, :elevator, :laundry,";
     $sql .= ":outdoor, :parking, :pool, :wheelchair, :cats, :dogs, :smoking, :comments)";
 
     $query = $this->db->prepare($sql);
+    $query->bindParam(':listingId', $listingId);
     $query->bindParam(':landlordId',$landlordId);
     $query->bindParam(':address1',$address1);
     $query->bindParam(':address2',$address2);
@@ -223,6 +239,53 @@ class ListingModel
     $query->bindParam(':dogs',$dogs);
     $query->bindParam(':smoking',$smoking);
     $query->bindParam(':comments',$comments);
+    $query->execute();
+  }
+
+  //Insert images into DB
+  public function insertImage($image, $listingId){
+    $sql = "INSERT INTO image (image, listing_id) VALUES (:image, :listingId)";
+    $query = $this->db->prepare($sql);
+    $query->bindParam(':image', $image);
+    $query->bindParam(':listingId', $listingId);
+    $query->execute();
+  }
+
+  //Generates a 6 digit random number for Listing ID
+  public function generateListingId(){
+
+    //This do while loop will keep looping if an id already exists on the database
+    //If it doesn't, the randomly generated number will be our new ID
+    do {
+    $listingId = mt_rand(1, 999999);
+
+    $sql = "SELECT listing_id FROM listing WHERE listing_id = :listingId";
+    $query = $this->db->prepare($sql);
+    $query->bindParam(":listingId", $listingId);
+    $query->execute();
+    $result = $query->fetch();
+
+    } while($result);
+
+    return $listingId;
+  }
+
+  //Gets all images of a listing id
+  public function getAllImages($listingId){
+    $sql="SELECT * FROM image WHERE listing_id = :listingId";
+    $query = $this->db->prepare($sql);
+    $query->bindParam(':listingId', $listingId);
+    $query->execute();
+    $result = $query->fetchAll();
+    return $result;
+  }
+
+  //Sets an image to be main thumbnail image
+  public function setMainImage($listingId, $image){
+    $sql="UPDATE listing SET image_main = :image WHERE listing_id = :listingId";
+    $query = $this->db->prepare($sql);
+    $query->bindParam(':listingId', $listingId);
+    $query->bindParam(':image', $image);
     $query->execute();
   }
 

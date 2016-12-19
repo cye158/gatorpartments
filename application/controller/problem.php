@@ -16,11 +16,22 @@ class Problem extends Controller
      * PAGE: index
      * This method handles the error page that will be shown when a page is not found
      */
-    public function index()
-    {
-        // load views
-        require APP . 'view/_templates/header.php';
-        require APP . 'view/problem/index.php';
-        require APP . 'view/_templates/footer.php';
-    }
+  public function index(){
+    // load views
+    require APP . 'view/_templates/header.php';
+    require APP . 'view/problem/index.php';
+    require APP . 'view/_templates/footer.php';
+  }
+
+  public function landlordError(){
+    require APP . 'view/_templates/header.php';
+    require APP . 'view/problem/landlordError.php';
+    require APP . 'view/_templates/footer.php';
+  }
+
+  public function loggedInError(){
+    require APP . 'view/_templates/header.php';
+    require APP . 'view/problem/loggedInError.php';
+    require APP . 'view/_templates/footer.php';
+  }
 }

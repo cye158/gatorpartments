@@ -108,7 +108,7 @@
       } else
 
       //Checks that only alphabet letters are allowed
-      if( !($(this).val().match( /^[a-zA-Z]*$/ )) ){
+      if( !($(this).val().match( /^[a-zA-Z ]*$/ )) ){
         $('#nameInvalid').show();
       } else {
 

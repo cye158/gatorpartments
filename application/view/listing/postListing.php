@@ -1,12 +1,5 @@
 <?php
-
 /*
-  // if user is not logged in, they cannot post listing. redirect to login page
-  if (!isset($_SESSION) || $_SESSION['loggedIn'] == false || !$_SESSION['isLandlord']) {
-      // redirect to register/login page?
-  }
-*/
-
   //defined variables for gatorpartment post
   $address1Err = $address2Err = $cityErr = $stateErr = $zip_codeErr = $complexErr = $termErr = $priceErr = $feetErr = $bedroomErr = $bathErr = '';
   $address1 = $address2 = $city = $state = $zip_code = $complex = $term = $price = $feet = $bedroom = $bath = $electricity = $water = $gas = $parking = $laundry = $elevator = $wheelchair = $outdoor = $pool = $smoking = $dogs = $cats = $comment = '';
@@ -27,8 +20,8 @@
     }
 
       if (empty($_POST['address2'])) {
-          /* address 2 can be empty depending on the condition of which the complex is */
-    /*$address2Err = "Address 2: Address is required\r\n";*/
+          // address 2 can be empty depending on the condition of which the complex is 
+    //$address2Err = "Address 2: Address is required\r\n";
       } else {
           $address2 = $_POST['address2'];
 
@@ -75,11 +68,11 @@
         }
     }
 
-    // complex conditions
-    if (empty($_POST['complex'])) {
-        $complexErr = "Complex: Type of complex is required\r\n";
+    // rental type conditions
+    if (empty($_POST['rentalType'])) {
+        $complexErr = "Type of Rental required\r\n";
     } else {
-        $complex = $_POST['complex'];
+        $complex = $_POST['rentalType'];
         echo nl2br($complex."\n");
     }
 
@@ -136,7 +129,7 @@
     if (empty($_POST['bath'])) {
         $bathErr = "Bath: Bath is required\r\n";
     }
-    /* else {
+     else {
         $bath = $_POST['bath'];
 
         if (!preg_match('/[0-9]+\.([5]+)/', $bath)) {
@@ -144,7 +137,7 @@
         } else {
             echo nl2br($bath."\n");
         }
-    }*/
+    }
 
     // utiltiies
       // electricity
@@ -217,12 +210,11 @@
         $comment = $_POST['comment'];
         echo nl2br($comment."\n");
     }
-  }
+  }*/
 ?>
 
 <h2>Post A Listing</h2>
-
-<!-- error messages -->
+<!-- error messages
 <strong><font size="4" color="red"><?php echo nl2br($address1Err); ?></font></strong>
 <strong><font size="4" color="red"><?php echo nl2br($address2Err); ?></font></strong>
 <strong><font size="4" color="red"><?php echo nl2br($cityErr); ?></font></strong>
@@ -233,15 +225,15 @@
 <strong><font size="4" color="red"><?php echo nl2br($priceErr); ?></font></strong>
 <strong><font size="4" color="red"><?php echo nl2br($feetErr); ?></font></strong>
 <strong><font size="4" color="red"><?php echo nl2br($bedroomErr); ?></font></strong>
-<strong><font size="4" color="red"><?php echo nl2br($bathErr); ?></font></strong>
+<strong><font size="4" color="red"><?php echo nl2br($bathErr); ?></font></strong> -->
 
-<form method="post" action="<?php echo URL; ?>home/post">
+<form method="post" action="<?php echo URL; ?>listing/postListing" enctype="multipart/form-data">
 
   <div><table>
 	<tr>
     <!-- address -->
     <td><label class="listinglabel">Address 1 *</label><input class="listingtext" type="text" name="address1"></></td></tr>
-    <tr><td><label class="listinglabel">Address 2 *</label><input class="listingtext" type="text" name="address2"></></td></tr>
+    <tr><td><label class="listinglabel">Address 2 </label><input class="listingtext" type="text" name="address2"></></td></tr>
     <!-- city state zipcode table -->
     <tr><td><label class="listinglabel">City *</label><input class="listingtext" type="text" name="city"></></td></tr>
 
@@ -300,11 +292,11 @@
       <option value="WY">WY</option>
     </select></></td></tr>
 
-    <tr><td><label class="listinglabel">Zip Code *</label><input class="listingtext" type="text" name="zip_code"></>
+    <tr><td><label class="listinglabel">Zip Code *</label><input class="listingtext" type="text" name="zipCode"></>
     <br><hr class="listingruler"></td></tr>
     <!-- complex term price -->
     <tr><td><label class="listinglabel">Type Of Rental *</label>
-      <select class="listingform" name="complex">
+      <select class="listingform" name="rentalType">
         <option value=""></option>
         <option value="apartment">apartment</option>
         <option value="condo">condo</option>
@@ -319,71 +311,77 @@
       </select></td></tr>
     <tr><td><label class="listinglabel">Price *</label><input class="listingtext" type="text" name="price"></></td></tr>
     <!-- square feet bedroom bath -->
-    <tr><td><label class="listinglabel">Square Feet *</label><input class="listingtext" type="text" name="feet"></></td></tr>
+    <tr><td><label class="listinglabel">Square Feet *</label><input class="listingtext" type="text" name="squareFeet"></></td></tr>
     <tr><td><label class="listinglabel"># Of Bedroom(s) *</label>
-      <select class="listingform" name="bedroom">
+      <select class="listingform" name="roomSize">
         <option value=""></option>
-        <option value="studio">studio</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
+        <option value="studio">Studio</option>
+        <option value="1 Bedroom">1 Bedroom</option>
+        <option value="2 Bedroom">2 Bedrrom</option>
+        <option value="3 Bedroom">3 Bedroom</option>
+        <option value="4 Bedroom">4+ Bedroom</option>
       </select></td></tr>
     <tr><td><label class="listinglabel"># Of Bath(s) *</label>
-      <select class="listingform" name="bath">
+      <select class="listingform" name="bathSize">
         <option value=""></option>
-        <option value="0.5">0.5</option>
-        <option value="1">1</option>
-        <option value="1.5">1.5</option>
-        <option value="2">2</option>
-        <option value="2.5">2.5</option>
-        <option value="3">3</option>
-        <option value="3.5">3.5</option>
-        <option value="4">4</option>
-        <option value="4.5">4.5</option>
-        <option value="5">5</option>
-        <option value="5.5">5.5</option>
-        <option value="6">6</option>
+        <option value="0.5 Bath">0.5 Bath</option>
+        <option value="1 Bath">1 Bath</option>
+        <option value="1.5 Bath">1.5 Bath</option>
+        <option value="2 Bath">2 Bath</option>
+        <option value="2.5 Bath">2.5 Bath</option>
+        <option value="3 Bath">3 Bath</option>
+        <option value="3.5 Bath">3.5 Bath</option>
+        <option value="4+ Bath">4+ Bath</option>
       </select></td></tr>
 
 <!--  Utilities -->
     <tr><td><br><hr class="listingruler">
     <label class="listinglabel">Utilities Included </label></td></tr>
-    <tr><td><input type="checkbox" name="electricity" value="electricity">Electricity</td></tr>
-    <tr><td><input type="checkbox" name="gas" value="gas">Gas</td></tr>
-    <tr><td><input type="checkbox" name="water" value="water">Water</td></tr>
+    <tr><td><input type="checkbox" name="electricity" value="1">Electricity</td></tr>
+    <tr><td><input type="checkbox" name="gas" value="1">Gas</td></tr>
+    <tr><td><input type="checkbox" name="water" value="1">Water</td></tr>
 
 <!-- Accomodations -->
    <tr><td> <br><hr class="listingruler">
     <label class="listinglabel">Building Accomodations </label></td>
-      <tr><td><input type="checkbox" name="elevator" value="elevator">Elevator</td></tr>
-      <tr><td><input type="checkbox" name="laundry" value="laundry room">Laundry Room</td></tr>
-      <tr><td><input type="checkbox" name="outdoor" value="outdoor space">Outdoor Space</td></tr>
-      <tr><td><input type="checkbox" name="parking" value="parking">Parking</td></tr>
-      <tr><td><input type="checkbox" name="pool" value="pool">Pool</td></tr>
-      <tr><td><input type="checkbox" name="wheelchair" value="wheelchair accesibility">Wheelchair Accessibility</td></tr>
+      <tr><td><input type="checkbox" name="elevator" value="1">Elevator</td></tr>
+      <tr><td><input type="checkbox" name="laundry" value="1">Laundry Room</td></tr>
+      <tr><td><input type="checkbox" name="outdoor" value="1">Outdoor Space</td></tr>
+      <tr><td><input type="checkbox" name="parking" value="1">Parking</td></tr>
+      <tr><td><input type="checkbox" name="pool" value="1">Pool</td></tr>
+      <tr><td><input type="checkbox" name="wheelchair" value="1">Wheelchair Accessibility</td></tr>
 
 <!-- Restrictions -->
   <tr><td>
     <br><hr class="listingruler">
     <label class="listinglabel">Building Restrictions </label></td></tr>
-      <tr><td><input type="checkbox" name="cats" value="cats">Cats</td></tr>
-      <tr><td><input type="checkbox" name="dogs" value="dogs">Dogs</td></tr>
-      <tr><td><input type="checkbox" name="smoking" value="smoking">Smoking</td></tr>
+      <tr><td><input type="checkbox" name="cats" value="1">No Cats</td></tr>
+      <tr><td><input type="checkbox" name="dogs" value="1">No Dogs</td></tr>
+      <tr><td><input type="checkbox" name="smoking" value="1">No Smoking</td></tr>
 
 <!-- Comment -->
   <tr><td>
     <br><hr class="listingruler">
     <label class="listinglabel">Comment </label></td></tr>
-      <tr><td><textarea name="comment" rows="5" cols="80"></textarea></td></tr>
+      <tr><td><textarea name="comments" rows="5" cols="80"></textarea></td></tr>
+
+<!-- Upload images -->
+  <tr><td>
+    <br><hr class="listingruler">
+    <label class="listinglabel">Upload Images </label></td></tr>
+      <tr><td>Select image to upload:
+    <input type="file" name="fileToUpload[]" id="fileToUpload" multiple="multiple"/></td></tr>
+
 
 <tr><td>
+  <!-- Cancel Button-->
+  <a href="<?php echo URL . 'home/index' ;?>" class="btn btn-danger">Cancel</a>
+
   <!-- button for form submission usage-->
-  <input type="submit" name="submitPost" value="Post"></td></tr>
+  <input class="btn btn-success pull-right"type="submit" name="submitPost" value="Post"></td></tr>
 </table>
 
 </div>
 
 </form>
+
