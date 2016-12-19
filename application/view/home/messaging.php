@@ -30,7 +30,7 @@ else{
         <?php
         $index = 0;
         foreach($messages as $message){ ?>
-          <a onclick="setContentBox(<?php echo '"' . $message->content . '"'; ?>)" class="list-group-item list-group-item-action">
+          <a onclick="setContentBox(<?php echo "'" . $message->content . "'"; ?>)" class="list-group-item list-group-item-action">
             <?php echo $messageUserNames[$index];
             $index++; ?>
           </a>
