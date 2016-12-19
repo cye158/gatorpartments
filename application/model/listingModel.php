@@ -186,5 +186,13 @@ class ListingModel
       }
     }
   }
+
+  public function removeListing($listingId) {
+    $sql = "DELETE FROM listings WHERE id = :listingId";
+    $query = $this->db->prepare($sql);
+    $query->bindParam(':listingId', $listingId);
+    $query->execute();
+  }
 }
 ?>
+
