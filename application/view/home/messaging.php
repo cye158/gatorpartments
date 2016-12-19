@@ -27,10 +27,14 @@ else{
 
       </div>
       <div class="col-md-3 list-group">Message from column<br>
+        <?php
+        $index = 0;
+        foreach($messages as $message){ ?>
         <a href="#" onclick="setContentBox(<?php echo $message->content; ?>)" class="list-group-item list-group-item-action">
           <?php echo $messageUserNames[$index];
           $index++; ?>
         </a>
+        <?php } ?>
 
       </div>
       <div class="col-md-4 panel">Message content column
