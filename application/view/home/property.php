@@ -77,7 +77,9 @@
 
             <div class="col-xs-3 property-desc">
               <ul>
-                <button class="b b0 navbar-right msg-btn" onclick="location.href = '<?php echo URL . 'messages/showMessages' . $eachListing->id ;?>"><h4>Message</h4></button>
+                <form action="<?php echo URL . 'messages/contactLandlord/' . $listing->id ;?>" method = "POST" id="form1">
+                </form> 
+                <button class="b b0 navbar-right msg-btn" style="background-color: #609b62;" type="submit" form="form1" name="submit_contact"><h4>Message</h4></button>
                 <br>
                 <button class="b b0 navbar-right cncl-btn" onclick="location.href = '<?php echo URL . 'home/listings' ;?>"><h5>Back to Search</h5></button>
               </ul>
