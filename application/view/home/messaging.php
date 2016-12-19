@@ -22,19 +22,18 @@ else{
     <div class="col-md-3 list-group">Property column<br>
       <?php
       $index = 0;
-      $message;
       foreach($messages as $message){
         echo('<a href="#" onclick="setContentBox(' . $message->content . ')" class="list-group-item list-group-item-action">');
         echo($listings[$index]->title);
         echo('</a>');
-      }
 
-      echo ('</div>');
-      echo ('<div class="col-md-3 list-group">Message from column<br>');
+
+        echo ('</div>');
+        echo ('<div class="col-md-3 list-group">Message from column<br>');
 
         echo('<a href="#" onclick="setContentBox(' . $message->content . ')" class="list-group-item list-group-item-action">');
         echo $messageUserNames[$index];
-        $index++;
+        $index++;}
         echo('</a>');
         ?>
       </div>
