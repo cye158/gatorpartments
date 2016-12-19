@@ -3,10 +3,10 @@
   <!-- add message form -->
   <div class="box">
     <h3>Write message</h3>
-    <div class="panel">
-      <div class="panel-body">
+    <div class="panel-group">
+      <div class="panel panel-default">
         <form action="<?php echo URL; ?>messages/addMessage" method="POST">
-          <div class="panel-group">
+          <div class="panel-body">
             <div class="col-md-3">
               <label>Send a message to:</label><br>
               <input type="text" name="toname" value=<?php echo $landlordUserName ; ?> required readonly/>
@@ -17,7 +17,7 @@
             </div>
           </div>
           <br>
-          <div class="panel-group">
+          <div class="panel-body">
           <div class="col-md-6">
             <label>Message:</label><br>
             <textarea type="text" name="content" value="" required /></textarea>
