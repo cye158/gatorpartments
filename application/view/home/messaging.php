@@ -53,7 +53,7 @@ else{
           <form action="<?php echo URL . 'home/messaging'; ?>" method="post">
             <textarea class="form-control" rows="5" id="messageResponse"></textarea>
             <span style="float:left;">
-              <button type="cancel" name="Cancel" value="Cancel" onclick="clearReplyBox()">
+              <input type="cancel" name="Cancel" value="Cancel" onclick="clearReplyBox()">
               </span>
               <span style="float:right;">
                 <input type="submit" name="Send" value="Send" style="float:right;">
