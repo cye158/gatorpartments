@@ -11,6 +11,11 @@ elseif (isset($_SESSION['isStudent'])) {
 else{
   echo("No user type is defined.");
 }
+
+if(isset($_POST['messageResponse'])){
+  $response = $_POST['messageResponse'];
+  echo $response;
+}
 ?>
 <div class="panel">
   <div class="panel-body">
@@ -18,7 +23,7 @@ else{
       <?php
       $index = 0;
       foreach($messages as $message){ ?>
-        <a onclick="setContentBox( <?php echo '"' . $message->content . '"'; ?>)" class="list-group-item list-group-item-action">
+        <a onclick="setContentBox( <?php echo "'" . $message->content . "'"; ?>)" class="list-group-item list-group-item-action">
           <?php echo($listings[$index]->title); ?>
         </a>
         <?php } ?>
@@ -51,7 +56,7 @@ else{
         <div class="col-md-4 form-group">
           Reply to message.<br />
           <form action="<?php echo URL . 'home/messaging'; ?>" method="post">
-            <textarea class="form-control" rows="5" id="messageResponse"></textarea>
+            <textarea class="form-control" rows="5" id="messageResponse" name="messageResponse"></textarea>
               <span style="float:right;">
                 <input type="submit" name="Send" value="Send" style="float:right;">
               </span>
@@ -65,7 +70,5 @@ else{
       function setContentBox(messageText){
         document.getElementById("messageContentBox").innerHTML = messageText;
       }
-      function clearReplyBox(){
-        document.getElementById("messageResponse").innerHTML=null;
-      }
+
       </script>
