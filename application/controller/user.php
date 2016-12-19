@@ -5,7 +5,7 @@ class User extends Controller {
     //If the submitRegister button is clicked
     if(isset($_POST['submitRegister'])){
       $fullName = $_POST['fullName'];
-
+      $error = 0;
       $errors = [];
 $phoneNumber = $_POST['phoneNumber'];
       $email = $_POST['email'];
@@ -41,12 +41,12 @@ $phoneNumber = $_POST['phoneNumber'];
         array_push($errors, "your phone number is invalid! <br>");
       }
 
-      if(empty($email) {
+      if(empty($email)) {
         $error = 1;
         array_push($errors, "your email is empty! <br>");
       } elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $error = 1;
-        array_push("your email is invalid! <br>");
+        array_push($erorrs, "your email is invalid! <br>");
       }
 
       if(empty($username)) {
@@ -71,11 +71,14 @@ $phoneNumber = $_POST['phoneNumber'];
         array_push($errors, "your passwords do not match! <br>");
       }
 
-      if($errors) {
-        header("Location:" . URL . "backendTest/register");
+      if($error) {
+        require APP . "view/_templates/header.php";
+        require APP . "view/backendTest/register.php";
+        require APP . "view/_mteplates/footer.php";
         exit();
       } else {
         $this->userModel->register($fullName, $phoneNumber, $email, $username, $password, $checkboxLandlord, $checkboxStudent);
+        exit();
       }
     }
 
