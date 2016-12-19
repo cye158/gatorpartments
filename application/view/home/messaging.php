@@ -4,6 +4,9 @@
     <th id="messsageFrom">Message from:</th>
     <th id="selectMessage">Click to select message</th>
   </tr>
+  <?php if ($messages == null) { ?>
+	<?php echo  "You have No Message." ; ?>
+  <?php  } else { ?>
   <?php $index = 0; ?>
   <?php foreach ($messages as $message) { ?>
 
@@ -13,7 +16,7 @@
     <td headers="selectMessage" id="message0001"><a href="<?php echo URL . 'messages/showMessageDetail/' . $message->id ;?>"  class="btn btn-primary">Display Message</a></td>
   </tr>
   <?php  } ?>
-
+  <?php  } ?>
 </table>
 <table>
   <tr>
