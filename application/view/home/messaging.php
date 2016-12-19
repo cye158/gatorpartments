@@ -63,7 +63,7 @@ if(isset($_POST['replyTo'])){
             Reply to: <input type="text" name="replyTo" id="replyTo" style="float:right;"><br>
             <textarea class="form-control" rows="5" id="messageResponse" name="messageResponse"></textarea>
               <span style="float:right;">
-                <input type="submit" name="Send" value="Send" style="float:right;">
+                <input type="submit" name="Send" value="Send" style="float:right;" readonly>
               </span>
             </form>
           </div>
