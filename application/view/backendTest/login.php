@@ -31,12 +31,6 @@
 	  <input class="form-control" type="password" name="password1">
 	</div>
 
-	<!-- Confirm Password -->
-	<div class="form-group">
-	  <label>Confirm Password</label>
-	  <input class="form-control" type="password" name="password">
-	</div>
-
 	<!-- Login Button -->
 	<div class="form-group">
 	  <label class="sr-only">Login Button</label>
