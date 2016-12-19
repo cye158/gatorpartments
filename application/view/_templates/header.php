@@ -83,10 +83,10 @@
 
 									<!-- Post a Listing -->
 									<li>
-										<a id="navbar-btn" href="<?php if($_SESSION['isLandlord']){
-														echo URL . "home/post" ;
+										<a id="navbar-btn" href="<?php if($this->userModel->isLandlord()){
+														echo URL . "listing/postListing" ;
 														} else {
-														  echo URL . "home/login";
+														  echo URL . "user/login" ;
 														}
                                                                                                          ?>">
 										Post</a>
