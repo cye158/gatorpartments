@@ -5,10 +5,13 @@ class User extends Controller {
     //If the submitRegister button is clicked
     if(isset($_POST['submitRegister'])){
       $fullName = $_POST['fullName'];
-      $phoneNumber = $_POST['phoneNumber'];
+
+      $errors = [];
+$phoneNumber = $_POST['phoneNumber'];
       $email = $_POST['email'];
       $username = $_POST['username'];
       $password = $_POST['password'];
+      $prePassword = $_POST['prepassword'];
 
       if(isset($_POST['checkboxLandlord'])){
         $checkboxLandlord = 1;
@@ -22,7 +25,58 @@ class User extends Controller {
         $checkboxStudent = 0;
       }
 
-      $this->userModel->register($fullName, $phoneNumber, $email, $username, $password, $checkboxLandlord, $checkboxStudent);
+      if(empty($fullName)) {
+        $error = 1;
+        array_push($errors, "your full name is empty! <br>");
+      } elseif(!ctype_alpha(trim($fullName))) {
+        $error = 1;
+        array_push($errors, "your name does not consist of only alphabets! <br>");
+      }
+
+      if(empty($phoneNumber)) {
+        $error = 1;
+        array_push($errors, "your phone number is empty! <br>");
+      } elseif(!preg_match("/^(\d[\s-]?)?[\(\[\s-]{0,2}?\d{3}[\)\]\s-]{0,2}?\d{3}[\s-]?\d{4}$/i", $phoneNumber)) {
+        $error = 1;
+        array_push($errors, "your phone number is invalid! <br>");
+      }
+
+      if(empty($email) {
+        $error = 1;
+        array_push($errors, "your email is empty! <br>");
+      } elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $error = 1;
+        array_push("your email is invalid! <br>");
+      }
+
+      if(empty($username)) {
+        $error = 1;
+        array_push($errors, "your username is empty! <br>");
+      } elseif($this->userModel->checkUsernameExist($username)) {
+        $error = 1;
+        array_push($errors, "your username already exists! <br>");
+      } elseif(!preg_match("/^[A-Za-z0-9]{3,100}$/", $username)) {
+        $error = 1;
+        array_push($errors, "your username is invalid! <br>");
+      }
+
+      if(empty($password)) {
+        $error = 1;
+        array_push($errors, "your password is empty! <br>");
+      } elseif(strlen($password) < 6) {
+        $error = 1;
+        array_push($errors, "your password is less than 6 characters! <br");
+      } elseif($prePassword != $password) {
+        $error = 1;
+        array_push($errors, "your passwords do not match! <br>");
+      }
+
+      if($errors) {
+        header("Location:" . URL . "backendTest/register");
+        exit();
+      } else {
+        $this->userModel->register($fullName, $phoneNumber, $email, $username, $password, $checkboxLandlord, $checkboxStudent);
+      }
     }
 
     require APP . "view/_templates/header.php";
