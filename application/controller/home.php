@@ -80,7 +80,8 @@ class Home extends Controller
             }
 	// load views
         require APP . 'view/_templates/header.php';
-        require APP . 'view/home/property.html';
+	// please pay attention, please load property.php not property.html! otherwise the button cann't work.
+        require APP . 'view/home/property.php';
         require APP . 'view/_templates/footer.php';
     }
 
