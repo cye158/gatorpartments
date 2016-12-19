@@ -1,6 +1,4 @@
 <div class="container">
-  <h2>You are in the View: application/view/users/writeMessage.php (everything in this box comes from that file)</h2>
-  <!-- add message form -->
   <div class="box">
     <h3>Write message</h3>
     <div class="panel-group">
@@ -18,15 +16,19 @@
           </div>
           <br>
           <div class="panel-body">
-          <div class="col-md-6">
-            <label>Message:</label><br>
-            <textarea type="text" name="content" value="" rows="5" cols="50" required /></textarea>
-<br>
-            <input type="submit" name="submit_add_message" value="Send message" style="float:right;"/>
-          </div>
+            <div class="col-md-6">
+              <label>Message:</label><br>
+              <textarea type="text" name="content" value="" rows="5" cols="50" required /></textarea>
+            </div></div>
+            <br>
+            <div class="panel-body">
+              <div class="col-md-6">
+                <input type="submit" name="submit_add_message" value="Send message" style="float:right;"/>
+              </div>
+            </div>
+
+          </form>
         </div>
-        </form>
       </div>
     </div>
   </div>
-</div>
