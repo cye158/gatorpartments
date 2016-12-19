@@ -29,17 +29,17 @@
 
 							<!-- property Info-->
 							<div class="col-xs-6 thumb_info">
-								<h3>Price: <?php echo $this->formatPrice($row->price) ;?></h3>
+								<h3>Price: <?php echo htmlspecialchars($this->formatPrice($row->price)) ;?></h3>
 								<p><button onclick="location.href = '<?php echo URL . '/home/property/' . $row->listing_id ;?>">Available now</button></p>
 								<br>
 								<p>
-									<p><?php echo $row->room_size ;?></p>
+									<p><?php echo htmlspecialchars($row->room_size) ;?></p>
 									<p>
-										<?php echo $row->address_1 ;?>
-										<?php echo $row->address_2 ;?>
-										<?php echo $row->city ;?>
-										<?php echo $row->state . ", " ;?>
-										<?php echo $row->zip_code ;?>
+										<?php echo htmlspecialchars($row->address_1) ;?>
+										<?php echo htmlspecialchars($row->address_2) ;?>
+										<?php echo htmlspecialchars($row->city) ;?>
+										<?php echo htmlspecialchars($row->state) . ", " ;?>
+										<?php echo htmlspecialchars($row->zip_code) ;?>
 									</p>
 									<a href="<?php echo URL . '/home/property/' . $row->listing_id ;?>">more info...</a>
 								</p>
