@@ -12,12 +12,12 @@ else{
   echo("No user type is defined.");
 }
 
-if(isset($_POST['messageResponse'])){
-  $response = $_POST['messageResponse'];
+if(isset($_POST['content'])){
+  $response = $_POST['content'];
   echo $response;
 }
-if(isset($_POST['replyTo'])){
-  $sendTo = $_POST['replyTo'];
+if(isset($_POST['toname'])){
+  $sendTo = $_POST['toname'];
   echo $sendTo;
 }
 ?>
@@ -59,11 +59,11 @@ if(isset($_POST['replyTo'])){
         <div class="col-md-6"><br /></div>
         <div class="col-md-4 form-group">
           Reply to message.<br />
-          <form action="<?php echo URL . 'messages/showMessages'; ?>" method="post">
-            Reply to: <input type="text" name="replyTo" id="replyTo" style="float:right;" readonly><br>
-            <textarea class="form-control" rows="5" id="messageResponse" name="messageResponse"></textarea>
+          <form action="<?php echo URL . 'messages/addMessage'; ?>" method="post">
+            Reply to: <input type="text" name="toname" id="toname" style="float:right;" readonly><br>
+            <textarea class="form-control" rows="5" id="messageResponse" name="content"></textarea>
               <span style="float:right;">
-                <input type="submit" name="Send" value="Send" style="float:right;">
+                <input type="submit" name="submit_add_message" value="Send" style="float:right;">
               </span>
             </form>
           </div>
@@ -73,7 +73,7 @@ if(isset($_POST['replyTo'])){
 
       <script type="text/javascript">
       function setContentBox(messageRecipient,messageText){
-        document.getElementById("replyTo").value = messageRecipient;
+        document.getElementById("toname").value = messageRecipient;
         document.getElementById("messageContentBox").innerHTML = messageText;
       }
 
