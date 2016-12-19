@@ -60,7 +60,7 @@ if(isset($_POST['replyTo'])){
         <div class="col-md-4 form-group">
           Reply to message.<br />
           <form action="<?php echo URL . 'messages/showMessages'; ?>" method="post">
-            Reply to: <input type="text" name="replyTo" value=""><br>
+            Reply to: <input type="text" name="replyTo" value="" id="replyTo"><br>
             <textarea class="form-control" rows="5" id="messageResponse" name="messageResponse"></textarea>
               <span style="float:right;">
                 <input type="submit" name="Send" value="Send" style="float:right;">
