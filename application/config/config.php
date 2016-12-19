@@ -47,14 +47,14 @@ define('URL_PROTOCOL', '//');
 define('URL_DOMAIN', $_SERVER['HTTP_HOST']);
 define('URL_SUB_FOLDER', str_replace(URL_PUBLIC_FOLDER, '', dirname($_SERVER['SCRIPT_NAME'])));
 define('URL', URL_PROTOCOL . URL_DOMAIN . URL_SUB_FOLDER);
-
+define('IMAGE_PATH', URL . 'img/listings/');
 /**
  * Configuration for: Database
  * This is the place where you define your database credentials, database type etc.
  */
 define('DB_TYPE', 'mysql');
 define('DB_HOST', '127.0.0.1');
-define('DB_NAME', 'student_nhan');
-define('DB_USER', 'nhan');
-define('DB_PASS', 'compaq');
+define('DB_NAME', 'f16g04');
+define('DB_USER', 'f16g04');
+define('DB_PASS', 'sfsuf16swe');
 define('DB_CHARSET', 'utf8');

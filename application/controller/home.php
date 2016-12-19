@@ -5,7 +5,6 @@ class Home extends Controller
 
     public function about()
     {
-
         // load views
         require APP . 'view/_templates/header.php';
         require APP . 'view/home/about.html';
@@ -13,7 +12,6 @@ class Home extends Controller
     }
     public function compare()
     {
-
         // load views
         require APP . 'view/_templates/header.php';
         require APP . 'view/home/compare.html';
@@ -21,7 +19,6 @@ class Home extends Controller
     }
     public function contact()
     {
-
         // load views
         require APP . 'view/_templates/header.php';
         require APP . 'view/home/contact.html';
@@ -29,39 +26,60 @@ class Home extends Controller
     }
     public function listings()
     {
-
         // load views
         require APP . 'view/_templates/header.php';
         require APP . 'view/home/listings.html';
         require APP . 'view/_templates/footer.php';
     }
+    public function post()
+    {
+        // load views
+        require APP . 'view/_templates/header.php';
+        require APP . 'view/home/listing_form.php';
+        require APP . 'view/_templates/footer.php';
+    }
+    //Home page
     public function index()
     {
-
+      	if(isset($_POST['submitSearch'])){
+      	    $keyword = $_POST['inputLocation'];
+      	    $listing = $this->listingModel->getListingBySearch($keyword);
+      	} else {
+      	    $listing = $this->listingModel->getAllListing();
+      	}
         // load views
         require APP . 'view/_templates/header.php';
-        require APP . 'view/home/index.html';
+        require APP . 'view/home/index.php';
         require APP . 'view/_templates/footer.php';
     }
-    public function map_properties()
-    {
 
-        // load views
-        require APP . 'view/_templates/header.php';
-        require APP . 'view/home/map_properties.html';
-        require APP . 'view/_templates/footer.php';
-    }
-    public function property()
-    {
 
-        // load views
+
+   public function messaging(){
+      require APP . 'view/_templates/header.php';
+      require APP . 'view/home/messaging.php';
+      require APP . 'view/_templates/footer.php';
+    }
+
+    //Individual Listing Page
+    public function property(){
+
+    	if(isset($id)){
+    	   $listing = $this->listingModel->getListingById($id);
+
+    	   $images = $this->listingModel->getImagesArray($listing->images);
+
+           $_SESSION['listingId'] =  $listing->id;
+
+            }
+	// load views
         require APP . 'view/_templates/header.php';
-        require APP . 'view/home/property.html';
+        require APP . 'view/home/property.php';
         require APP . 'view/_templates/footer.php';
     }
+
     public function terms()
     {
-
         // load views
         require APP . 'view/_templates/header.php';
         require APP . 'view/home/terms.html';
@@ -69,7 +87,6 @@ class Home extends Controller
     }
     public function typography()
     {
-
         // load views
         require APP . 'view/_templates/header.php';
         require APP . 'view/home/typography.html';
