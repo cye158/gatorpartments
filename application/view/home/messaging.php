@@ -47,11 +47,12 @@ else{
         </div>
       </div>
       <div class="panel-body">
-        <div class="col-md-6 form-group">
+        <div class="col-md-6"><br /></div>
+        <div class="col-md-4 form-group">
           Reply to message.<br />
           <form action="<?php echo URL . 'home/messaging'; ?>" method="post">
           <textarea class="form-control" rows="5" id="messageResponse"></textarea>
-          <input type="submit" name="Send" value="Send">
+          <input type="submit" name="Send" value="Send" style="float:right;">
         </form>
         </div>
       </div>
