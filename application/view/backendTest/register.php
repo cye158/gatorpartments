@@ -2,6 +2,15 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3 col-md-offset-3 ">
+
+      <?php
+      if(isset($errors)) {
+        foreach ($errors as $errorMsg) {
+          echo $errorMsg;
+        }
+      }
+      ?>
+
       <form class="form-horizontal" action="<?php echo URL . 'user/register';?>" method="post">
         <div class="page-header">
           <h1 class="text-center">Create an Account</h1>
@@ -104,16 +113,16 @@
       //Checks if field is empty
       if(!$(this).val()){
         $('#nameEmpty').show();
-      } else
+      }
 
       //Checks that only alphabet letters are allowed
-      if( !($(this).val().match( /^[a-zA-Z]*$/ )) ){
+      else if( !($(this).val().match( /^[a-zA-Z]*$/ )) ){
         $('#nameInvalid').show();
-      } else
+      } else {
 
       formError++;
       $('#nameSuccess').show();
-
+      }
     });
 
     //Phone Number Validation
