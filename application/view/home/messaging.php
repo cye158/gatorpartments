@@ -26,11 +26,12 @@ else{
         echo('<a href="#" onclick="setContentBox(' . $message->content . ')" class="list-group-item list-group-item-action">');
         echo($listings[$index]->title);
         echo('</a>');
+      }
 
 
-        echo('</div>');
-        echo('<div class="col-md-3 list-group">Message from column<br>');
-
+      echo('</div>');
+      echo('<div class="col-md-3 list-group">Message from column<br>');
+      foreach($messages as $message){
         echo('<a href="#" onclick="setContentBox(' . $message->content . ')" class="list-group-item list-group-item-action">');
         echo $messageUserNames[$index];
         $index++;
