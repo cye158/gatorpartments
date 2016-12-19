@@ -16,12 +16,15 @@
               <input type="text" name="listingId" value =<?php echo $listingId ; ?> required readonly/>
             </div>
           </div>
+          <br>
+          <div class="panel-group">
           <div class="col-md-6">
             <label>Message:</label>
             <textarea type="text" name="content" value="" required /></textarea>
-
+<br>
             <input type="submit" name="submit_add_message" value="Send message" style="float:right;"/>
           </div>
+        </div>
         </form>
       </div>
     </div>
