@@ -51,20 +51,24 @@ else{
         <div class="col-md-4 form-group">
           Reply to message.<br />
           <form action="<?php echo URL . 'home/messaging'; ?>" method="post">
-          <textarea class="form-control" rows="5" id="messageResponse"></textarea>
-          <button type="cancel" name="Cancel" value="Cancel" onclick="clearReplyBox()" syle="float:left;">
-          <input type="submit" name="Send" value="Send" style="float:right;">
-        </form>
+            <textarea class="form-control" rows="5" id="messageResponse"></textarea>
+            <span style="float:left;">
+              <button type="cancel" name="Cancel" value="Cancel" onclick="clearReplyBox()">
+              </span>
+              <span style="float:right;">
+                <input type="submit" name="Send" value="Send" style="float:right;">
+              </span>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-    <br>
+      <br>
 
-    <script type="text/javascript">
-    function setContentBox(messageText){
-      document.getElementById("messageContentBox").innerHTML = messageText;
-    }
-    function clearReplyBox(){
-      document.getElementById("messageResponse").innerHTML=null;
-    }
-    </script>
+      <script type="text/javascript">
+      function setContentBox(messageText){
+        document.getElementById("messageContentBox").innerHTML = messageText;
+      }
+      function clearReplyBox(){
+        document.getElementById("messageResponse").innerHTML=null;
+      }
+      </script>
