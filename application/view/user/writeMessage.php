@@ -26,7 +26,6 @@
                 <input type="submit" name="submit_add_message" value="Send message" style="float:right;"/>
               </div>
             </div>
-
           </form>
         </div>
       </div>
