@@ -27,10 +27,10 @@ else{
         echo($listings[$index]->title);
         echo('</a>');
 
-
-        echo ('</div>');
-        echo ('<div class="col-md-3 list-group">Message from column<br>');
-
+        ?>
+        </div>
+        <div class="col-md-3 list-group">Message from column<br>
+        <? php
         echo('<a href="#" onclick="setContentBox(' . $message->content . ')" class="list-group-item list-group-item-action">');
         echo $messageUserNames[$index];
         $index++;}
