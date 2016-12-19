@@ -20,7 +20,7 @@
           <div class="panel-body">
           <div class="col-md-6">
             <label>Message:</label><br>
-            <textarea type="text" name="content" value="" required /></textarea>
+            <textarea type="text" name="content" value="" rows="5" cols="50" required /></textarea>
 <br>
             <input type="submit" name="submit_add_message" value="Send message" style="float:right;"/>
           </div>
