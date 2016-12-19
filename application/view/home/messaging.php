@@ -52,6 +52,7 @@ else{
           Reply to message.<br />
           <form action="<?php echo URL . 'home/messaging'; ?>" method="post">
           <textarea class="form-control" rows="5" id="messageResponse"></textarea>
+          <button type="cancel" name="Cancel" value="Cancel" onclick="clearReplyBox()" syle="float:left;">
           <input type="submit" name="Send" value="Send" style="float:right;">
         </form>
         </div>
@@ -62,5 +63,8 @@ else{
     <script type="text/javascript">
     function setContentBox(messageText){
       document.getElementById("messageContentBox").innerHTML = messageText;
+    }
+    function clearReplyBox(){
+      document.getElementById("messageResponse").innerHTML=null;
     }
     </script>
