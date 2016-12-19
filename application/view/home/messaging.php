@@ -1,8 +1,3 @@
-<script type="text/javascript">
-function setContentBox(messageText){
-  document.getElementById("messageContentBox").innerHTML = messageText;
-}
-</script>
 
 <?php
 if(isset($_SESSION['isLandlord'])){
@@ -26,6 +21,7 @@ else{
         <a href="#" onclick="setContentBox( <?php echo $message->content; ?>)" class="list-group-item list-group-item-action">
           <?php echo($listings[$index]->title); ?>
         </a>
+        <?php } ?>
 
 
 
@@ -35,7 +31,6 @@ else{
           <?php echo $messageUserNames[$index];
           $index++; ?>
         </a>
-        <?php } ?>
 
       </div>
       <div class="col-md-4 panel">Message content column
@@ -49,6 +44,12 @@ else{
     </div>
   </div>
   <br>
+
+  <script type="text/javascript">
+  function setContentBox(messageText){
+    document.getElementById("messageContentBox").innerHTML = messageText;
+  }
+  </script>
 
   <table id="table">
     <tr>
