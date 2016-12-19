@@ -13,12 +13,12 @@
     <div class="col-sm-12 property-list">
       <div class="row" style="margin-top: 10px;">
         <div class="col-sm-5 col-xs-8">
-          <h3><?php echo $listing->room_size ;?></h3>
-          <h6><?php echo $listing->address_1 ;?></h6>
-          <h6><?php echo $listing->city . " " .  $listing->zip_code . ", " . $listing->state;?></h6>
+          <h3><?php echo htmlspecialchars($listing->room_size) ;?></h3>
+          <h6><?php echo htmlspecialchars($listing->address_1) ;?></h6>
+          <h6><?php echo htmlspecialchars($listing->city) . " " .  htmlspecialchars($listing->zip_code) . ", " . htmlspecialchars($listing->state);?></h6>
         </div>
         <div class="col-sm-3 col-xs-4 text-right pull-right">
-          <h2 class="text-right"><?php echo $this->formatPrice($listing->price) ;?></h2>
+          <h2 class="text-right"><?php echo htmlspecialchars($this->formatPrice($listing->price)) ;?></h2>
         </div>
       </div>
 
@@ -62,14 +62,14 @@
               <h4>Features:</h4>
               <div class=" col-xs-6">
                 <ul>
-                  <li><?php echo $listing->room_size; ?></li>
-                  <li><?php echo $listing->bath_size; ?></li>
+                  <li><?php echo htmlspecialchars($listing->room_size); ?></li>
+                  <li><?php echo htmlspecialchars($listing->bath_size); ?></li>
                 </ul>
               </div>
               <div class="col-xs-6">
                 <ul>
-                  <li><?php echo $listing->square_feet . " Square Foot" ;?></li>
-                  <li><?php echo "1 Year " . $listing->term ;?></li>
+                  <li><?php echo htmlspecialchars($listing->square_feet) . " Square Foot" ;?></li>
+                  <li><?php echo htmlspecialchars($listing->term) ;?></li>
                 </ul>
               </div>
 
@@ -77,14 +77,16 @@
 
             <div class="col-xs-3 property-desc">
               <ul>
-                <button class="b b0 navbar-right msg-btn" onclick="location.href = '<?php echo URL . 'messages/showMessages' . $eachListing->id ;?>"><h4>Message</h4></button>
+                <form action="<?php echo URL . 'messages/contactLandlord/' . $listing->id ;?>" method = "POST" id="form1">
+                </form> 
+                <button class="b b0 navbar-right msg-btn" style="background-color: #609b62;" type="submit" form="form1" name="submit_contact"><h4>Message</h4></button>
                 <br>
                 <button class="b b0 navbar-right cncl-btn" onclick="location.href = '<?php echo URL . 'home/listings' ;?>"><h5>Back to Search</h5></button>
               </ul>
             </div>
           </div>
           <p>
-            <?php echo $listing->comments ?>
+            <?php echo htmlspecialchars($listing->comments) ?>
           </p>
         </div>
       </div>
