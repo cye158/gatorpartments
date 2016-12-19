@@ -2,8 +2,9 @@
 <div class="container">
 
 <?php
+echo $_SESSION['landlordId'];
 
-  $landlordId =  500002;
+/*  $landlordId =  500002;
   $address1 = "347 Eddy st";
   $address2 = "APT 63";
   $city = "San Francisco";
@@ -30,7 +31,7 @@
   $comments = "hello hello";
 
   $this->listingModel->postListing($landlordId, $address1, $address2, $city, $state, $zipCode, $rentalType, $term, $price, $squareFeet, $roomSize, $bathSize, $electricity, $gas, $water, $elevator, $laundry, $outdoor, $parking, $pool, $wheelchair, $cats, $dogs, $smoking, $comments);
-
+*/
 ?>
 
 
