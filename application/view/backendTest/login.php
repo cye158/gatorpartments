@@ -28,7 +28,7 @@
 	<!-- Password -->
 	<div class="form-group">
 	  <label>Password</label>
-	  <input class="form-control" type="password" name="password1">
+	  <input class="form-control" type="password" name="password">
 	</div>
 
 	<!-- Login Button -->
