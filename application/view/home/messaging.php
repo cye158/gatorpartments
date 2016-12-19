@@ -27,7 +27,7 @@ if(isset($_POST['replyTo'])){
       <?php
       $index = 0;
       foreach($messages as $message){ ?>
-        <a onclick="setContentBox( <?php echo "'" . $message->userId . "','" . $message->content . "'"; ?>)" class="list-group-item list-group-item-action">
+        <a onclick="setContentBox( <?php echo "'" . $messageUserNames[$index] . "','" . $message->content . "'"; ?>)" class="list-group-item list-group-item-action">
           <?php echo($listings[$index]->title); ?>
         </a>
         <?php } ?>
@@ -39,7 +39,7 @@ if(isset($_POST['replyTo'])){
         <?php
         $index = 0;
         foreach($messages as $message){ ?>
-          <a onclick="setContentBox(<?php echo "'" . $message->userId . "','" . $message->content . "'"; ?>)" class="list-group-item list-group-item-action">
+          <a onclick="setContentBox(<?php echo "'" . $messageUserNames[$index] . "','" . $message->content . "'"; ?>)" class="list-group-item list-group-item-action">
             <?php echo $messageUserNames[$index];
             $index++; ?>
           </a>
@@ -60,10 +60,10 @@ if(isset($_POST['replyTo'])){
         <div class="col-md-4 form-group">
           Reply to message.<br />
           <form action="<?php echo URL . 'messages/showMessages'; ?>" method="post">
-            Reply to: <input type="text" name="replyTo" id="replyTo" style="float:right;"><br>
+            Reply to: <input type="text" name="replyTo" id="replyTo" style="float:right;" readonly><br>
             <textarea class="form-control" rows="5" id="messageResponse" name="messageResponse"></textarea>
               <span style="float:right;">
-                <input type="submit" name="Send" value="Send" style="float:right;" readonly>
+                <input type="submit" name="Send" value="Send" style="float:right;">
               </span>
             </form>
           </div>
