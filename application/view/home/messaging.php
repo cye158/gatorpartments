@@ -1,35 +1,80 @@
-<table id="table">
-  <tr>
-    <th id="property">Property</th>
-    <th id="messsageFrom">Message from:</th>
-    <th id="selectMessage">Click to select message</th>
-  </tr>
-  <?php $index = 0; ?>
-  <?php foreach ($messages as $message) { ?>
 
-  <tr>
-    <td headers="property"><a onclick="displayMessage(2);"><?php echo $listings[$index]->title; ?></a></td>
-    <td headers="messageFrom" id="message0002"><a onclick="displayMessage(2);"><?php echo $messageUserNames[$index]; $index++; ?></a></td>
-    <td headers="selectMessage" id="message0001"><a href="<?php echo URL . 'messages/showMessageDetail/' . $message->id ;?>"  class="btn btn-primary">Display Message</a></td>
-  </tr>
-  <?php  } ?>
+<?php
+if(isset($_SESSION['isLandlord'])){
+  $inboxType = 'landlord';
+  echo("Landlord inbox.");
+}
+elseif (isset($_SESSION['isStudent'])) {
+  $inboxType = 'student';
+  echo("Student inbox.");
+}
+else{
+  echo("No user type is defined.");
+}
 
-</table>
-<table>
-  <tr>
-    <td id="messageContent">
-    </td>
-  </tr>
-</table>
+if(isset($_POST['messageResponse'])){
+  $response = $_POST['messageResponse'];
+  echo $response;
+}
+if(isset($_POST['replyTo'])){
+  $sendTo = $_POST['replyTo'];
+  echo $response;
+}
+?>
+<div class="panel">
+  <div class="panel-body">
+    <div class="col-md-3 list-group">Property column<br>
+      <?php
+      $index = 0;
+      foreach($messages as $message){ ?>
+        <a onclick="setContentBox( <?php echo "'" . $message->userId. "','" . $message->content . "'"; ?>)" class="list-group-item list-group-item-action">
+          <?php echo($listings[$index]->title); ?>
+        </a>
+        <?php } ?>
 
-<script>
- function displayMessage(messageID){
-   if(messageID==1){
-     document.getElementById("messageContent").innerHTML = "Content of message 1";
-   }
-   elseif(messageID==2){
-     document.getElementById("messageContent").innerHTML = "Conent of message 2";
-   }
 
- };
-</script>
+
+      </div>
+      <div class="col-md-3 list-group">Message from column<br>
+        <?php
+        $index = 0;
+        foreach($messages as $message){ ?>
+          <a onclick="setContentBox(<?php echo "'" . $message->userId . "','" . $message->content . "'"; ?>)" class="list-group-item list-group-item-action">
+            <?php echo $messageUserNames[$index];
+            $index++; ?>
+          </a>
+          <?php } ?>
+
+        </div>
+        <div class="col-md-4 panel">Message content column
+          <br />
+          <div class="panel-body" id="messageContentBox">
+            <?php
+            echo('Message content goes here.');
+            ?>
+          </div>
+        </div>
+      </div>
+      <div class="panel-body">
+        <div class="col-md-6"><br /></div>
+        <div class="col-md-4 form-group">
+          Reply to message.<br />
+          <form action="<?php echo URL . 'messages/showMessages'; ?>" method="post">
+            Reply to: <input type="text" name="replyTo" value="" id="replyTo"><br>
+            <textarea class="form-control" rows="5" id="messageResponse" name="messageResponse"></textarea>
+              <span style="float:right;">
+                <input type="submit" name="Send" value="Send" style="float:right;">
+              </span>
+            </form>
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <script type="text/javascript">
+      function setContentBox(messageRecipient,messageText){
+        document.getElementById("replyTo").innerHTML = messageRecipient;
+        document.getElementById("messageContentBox").innerHTML = messageText;
+      }
+
+      </script>
