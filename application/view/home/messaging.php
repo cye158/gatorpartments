@@ -28,10 +28,10 @@ if(isset($_POST['toname'])){
       $index = 0;
       foreach($messages as $message){ ?>
         <a onclick="setContentBox( <?php echo "'" . $messageUserNames[$index] . "','";
-        echo $message->content . "','" ;
+        echo $message->content . "','" . $message->listingId;
         echo "'"; ?>)" class="list-group-item list-group-item-action">
           <?php echo($listings[$index]->title);
-           echo $message->listingId ?>
+            ?>
         </a>
         <?php } ?>
 
@@ -42,7 +42,9 @@ if(isset($_POST['toname'])){
         <?php
         $index = 0;
         foreach($messages as $message){ ?>
-          <a onclick="setContentBox(<?php echo "'" . $messageUserNames[$index] . "','" . $message->content . "','" ; ?>)" class="list-group-item list-group-item-action">
+          <a onclick="setContentBox( <?php echo "'" . $messageUserNames[$index] . "','";
+          echo $message->content . "','" . $message->listingId;
+          echo "'"; ?>)" class="list-group-item list-group-item-action">
             <?php echo $messageUserNames[$index];
             $index++; ?>
           </a>
