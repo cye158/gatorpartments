@@ -73,7 +73,7 @@ if(isset($_POST['replyTo'])){
 
       <script type="text/javascript">
       function setContentBox(messageRecipient,messageText){
-        document.getElementById("replyTo").innerHTML = messageRecipient;
+        document.getElementById("replyTo").value = messageRecipient;
         document.getElementById("messageContentBox").innerHTML = messageText;
       }
 
