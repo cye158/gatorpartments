@@ -25,13 +25,10 @@ else{
       ?></div>
       <div class="col-md-3 list-group">Message from column<br>
         <?php
-        echo('<a onclick="displayContent()" class="list-group-item list-group-item-action">');
+        echo('<a href="#" onclick="displayContent()" class="list-group-item list-group-item-action">');
         echo $messageUserNames[$index];
         $index++;
         echo('</a>');
-        echo('<script type="text/javascript>"');
-        echo('function displayContent(){document.getElementById("messageContentBox").innerHTML=' . $message->content . ';}');
-        echo('</script>');
         ?>
       </div>
       <div class="col-md-4 panel">Message content column
@@ -45,39 +42,39 @@ else{
     </div>
   </div>
   <br>
-  <!--
+
   <table id="table">
-  <tr>
-  <th id="property">Property</th>
-  <th id="messsageFrom">Message from:</th>
-  <th id="selectMessage">Click to select message</th>
-</tr>-->
-<?php //$index = 0; ?>
-<?php //foreach ($messages as $message) { ?>
-  <!--
-  <tr>
-  <td headers="property"><a onclick="displayMessage(2);"><?php //echo $listings[$index]->title; ?></a></td>
-  <td headers="messageFrom" id="message0002"><a onclick="displayMessage(2);"><?php //echo $messageUserNames[$index]; $index++; ?></a></td>
-  <td headers="selectMessage" id="message0001"><a href="<?php //echo URL . 'messages/showMessageDetail/' . $message->id ;?>"  class="btn btn-primary">Display Message</a></td>
-</tr>
-<?php //  } ?>
+    <tr>
+      <th id="property">Property</th>
+      <th id="messsageFrom">Message from:</th>
+      <th id="selectMessage">Click to select message</th>
+    </tr>
+    <?php $index = 0; ?>
+    <?php foreach ($messages as $message) { ?>
 
-</table>
-<table>
-<tr>
-<td id="messageContent">
-</td>
-</tr>
-</table>
+      <tr>
+        <td headers="property"><a onclick="displayMessage(2);"><?php echo $listings[$index]->title; ?></a></td>
+        <td headers="messageFrom" id="message0002"><a onclick="displayMessage(2);"><?php echo $messageUserNames[$index]; $index++; ?></a></td>
+        <td headers="selectMessage" id="message0001"><a href="<?php echo URL . 'messages/showMessageDetail/' . $message->id ;?>"  class="btn btn-primary">Display Message</a></td>
+      </tr>
+      <?php   } ?>
 
-<script>
-function displayMessage(messageID){
-if(messageID==1){
-document.getElementById("messageContent").innerHTML = "Content of message 1";
-}
-elseif(messageID==2){
-document.getElementById("messageContent").innerHTML = "Conent of message 2";
-}
+    </table>
+    <table>
+      <tr>
+        <td id="messageContent">
+        </td>
+      </tr>
+    </table>
 
-};
-</script> -->
+    <script>
+    function displayMessage(messageID){
+      if(messageID==1){
+        document.getElementById("messageContent").innerHTML = "Content of message 1";
+      }
+      elseif(messageID==2){
+        document.getElementById("messageContent").innerHTML = "Conent of message 2";
+      }
+
+    };
+    </script>
