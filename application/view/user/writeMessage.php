@@ -18,7 +18,7 @@
           </div>
           <div class="col-md-6">
             <label>Message:</label>
-            <textarea type="text" name="content" value="" required />
+            <textarea type="text" name="content" value="" required /></textarea>
 
             <input type="submit" name="submit_add_message" value="Send message" style="float:right;"/>
           </div>
