@@ -18,7 +18,7 @@ if(isset($_POST['messageResponse'])){
 }
 if(isset($_POST['replyTo'])){
   $sendTo = $_POST['replyTo'];
-  echo $response;
+  echo $sendTo;
 }
 ?>
 <div class="panel">
