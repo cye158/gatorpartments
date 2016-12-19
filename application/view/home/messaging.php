@@ -16,6 +16,10 @@ if(isset($_POST['messageResponse'])){
   $response = $_POST['messageResponse'];
   echo $response;
 }
+if(isset($_POST['replyTo'])){
+  $sendTo = $_POST['replyTo'];
+  echo $response;
+}
 ?>
 <div class="panel">
   <div class="panel-body">
@@ -23,7 +27,7 @@ if(isset($_POST['messageResponse'])){
       <?php
       $index = 0;
       foreach($messages as $message){ ?>
-        <a onclick="setContentBox( <?php echo "'" . $message->content . "'"; ?>)" class="list-group-item list-group-item-action">
+        <a onclick="setContentBox( <?php echo "'" . $message->userId . "," . $message->content . "'"; ?>)" class="list-group-item list-group-item-action">
           <?php echo($listings[$index]->title); ?>
         </a>
         <?php } ?>
@@ -35,7 +39,7 @@ if(isset($_POST['messageResponse'])){
         <?php
         $index = 0;
         foreach($messages as $message){ ?>
-          <a onclick="setContentBox(<?php echo "'" . $message->content . "'"; ?>)" class="list-group-item list-group-item-action">
+          <a onclick="setContentBox(<?php echo "'" . $message->userId . "," . $message->content . "'"; ?>)" class="list-group-item list-group-item-action">
             <?php echo $messageUserNames[$index];
             $index++; ?>
           </a>
@@ -56,6 +60,7 @@ if(isset($_POST['messageResponse'])){
         <div class="col-md-4 form-group">
           Reply to message.<br />
           <form action="<?php echo URL . 'messages/showMessages'; ?>" method="post">
+            Reply to: <input type="text" name="replyTo" value="" readonly><br>
             <textarea class="form-control" rows="5" id="messageResponse" name="messageResponse"></textarea>
               <span style="float:right;">
                 <input type="submit" name="Send" value="Send" style="float:right;">
@@ -67,7 +72,8 @@ if(isset($_POST['messageResponse'])){
       <br>
 
       <script type="text/javascript">
-      function setContentBox(messageText){
+      function setContentBox(messageRecipient,messageText){
+        document.getElementById("replyTo").innerHTML = messageRecipient;
         document.getElementById("messageContentBox").innerHTML = messageText;
       }
 
