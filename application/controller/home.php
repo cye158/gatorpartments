@@ -31,18 +31,24 @@ class Home extends Controller
         require APP . 'view/home/listings.html';
         require APP . 'view/_templates/footer.php';
     }
-    public function listing_form()
+    public function post()
     {
+	if($this->userModel->isLandlord()){
         // load views
         require APP . 'view/_templates/header.php';
-        require APP . 'view/home/listing_form.php';
+        require APP . 'view/home/postListing.php';
         require APP . 'view/_templates/footer.php';
+        }  else {
+           require APP . 'view/_templates/header.php';
+           require APP . 'view/home/index.php';
+           require APP . 'view/_templates/footer.php';
+        }
     }
     //Home page
     public function index()
     {
       	if(isset($_POST['submitSearch'])){
-      	    $keyword = $_POST['searchBarInput'];
+      	    $keyword = $_POST['inputLocation'];
       	    $listing = $this->listingModel->getListingBySearch($keyword);
       	} else {
       	    $listing = $this->listingModel->getAllListing();
@@ -54,24 +60,30 @@ class Home extends Controller
     }
 
 
-    public function messaging(){
+
+   public function messaging(){
       require APP . 'view/_templates/header.php';
-      require APP . 'view/home/messaging.html';
+      require APP . 'view/home/messaging.php';
       require APP . 'view/_templates/footer.php';
     }
-    //Individual Listing Page
-    public function property($id)
-    {
-    	if(isset($id)){
-    	   $listing = $this->listingModel->getListingById($id);
 
-    	   $images = $this->listingModel->getImagesArray($listing->images);
+    //Individual Listing Page
+    public function property($listingId){
+
+    	if(isset($listingId)){
+    	   $listing = $this->listingModel->getListingByListingId($listingId);
+
+    	   $images = $this->listingModel->getAllImages($listingId);
+
+           $_SESSION['listingId'] =  $listing->id;
+
             }
 	// load views
         require APP . 'view/_templates/header.php';
         require APP . 'view/home/property.php';
         require APP . 'view/_templates/footer.php';
     }
+
     public function terms()
     {
         // load views

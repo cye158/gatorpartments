@@ -15,6 +15,7 @@ class Controller
     public $model = null;
     public $listingModel = null;
     public $userModel = null;
+    public $messageModel =  null;
 
     /**
      * Whenever controller is created, open a database connection too and load "the model".
@@ -50,10 +51,12 @@ class Controller
         require APP . 'model/model.php';
         require APP . 'model/listingModel.php';
 	    require APP . 'model/userModel.php';
+        require APP . 'model/messageModel.php';
         // create new "model" (and pass the database connection)
         $this->model = new Model($this->db);
         $this->listingModel = new ListingModel($this->db);
 	    $this->userModel = new UserModel($this->db);
+        $this->messageModel = new MessageModel($this->db);
     }
 
     //Formats values to look like prices
@@ -62,4 +65,5 @@ class Controller
         setlocale(LC_MONETARY, 'en_US.utf8');
         return money_format("%.0n",$price);
     }
+
 }
