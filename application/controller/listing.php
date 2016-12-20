@@ -6,7 +6,7 @@ class Listing extends Controller
 
     if( (isset($_POST['submitPost'])) && ($this->userModel->isLandlord()) ){
       $listingId = $this->listingModel->generateListingId();
-      $landlordId = $_SESSION['landlordId'];
+      $landlordId = $_SESSION['userId'];
       $address1 = $_POST['address1'];
 
       if(isset($_POST['address2'])){
