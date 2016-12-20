@@ -132,5 +132,11 @@ class Listing extends Controller
     require APP . 'view/_templates/footer.php';
   }
 
+  public function landlordListing(){
+    require APP . 'view/_templates/header.php';
+    require APP . 'view/listing/postSuccess.php';
+    require APP . 'view/_templates/footer.php';
+  }
+
 } //End Class
 ?>
