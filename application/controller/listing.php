@@ -133,8 +133,11 @@ class Listing extends Controller
   }
 
   public function landlordListing(){
+
+    $listing = $this->listingModel->getAllListingByLandlordId($_SESSION['landlordId']);
+
     require APP . 'view/_templates/header.php';
-    require APP . 'view/listing/postSuccess.php';
+    require APP . 'view/listing/landlordListing.php';
     require APP . 'view/_templates/footer.php';
   }
 

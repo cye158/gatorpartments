@@ -61,7 +61,18 @@ class Home extends Controller
 
 
 
-   public function messaging(){
+    public function messaging()
+    {
+
+      if($this->userModel->isLoggedIn()){
+        header('Location:' .  URL . 'messages/showMessages');
+	exit();
+      }
+      else {
+        header('Location:' . URL . 'problem/logInErrorMessages');
+	exit();
+      }
+
       require APP . 'view/_templates/header.php';
       require APP . 'view/home/messaging.php';
       require APP . 'view/_templates/footer.php';

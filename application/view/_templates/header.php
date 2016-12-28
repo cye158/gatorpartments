@@ -76,8 +76,7 @@
 									<!-- Inbox button -->
 
 									<li>
-										<a id="navbar-btn" href="<?php if(isset($_SESSION['loggedIn'])){echo URL . 'messages/showMessages';}
-										else{echo URL . 'problem/loggedInError';}?>" class="first">Inbox</a>
+										<a id="navbar-btn" href="<?php echo URL . 'home/messaging'; ?>" class="first">Inbox</a>
 									</li>
 									<!-- /Inbox button -->
 
