@@ -34,4 +34,11 @@ class Problem extends Controller
     require APP . 'view/problem/logInErrorMessages.php';
     require APP . 'view/_templates/footer.php';
   }
+
+  public function logInError(){
+    require APP . 'view/_templates/header.php';
+    require APP . 'view/problem/logInError.php';
+    require APP . 'view/_templates/footer.php';
+  }
+
 }
