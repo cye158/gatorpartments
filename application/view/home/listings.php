@@ -6,140 +6,18 @@
 		<div class="row" style="padding-left: 1.1em;">
 
 			<div class="well center title-filter">
-				<ul style="margin: 0;font-weight: bold;">Filter Option</ul>
+				<ul style="margin: 0;font-weight: bold;">Sort Option</ul>
 			</div>
-
-			<div class="col-sm-12 filter-list">
-				<form class="form-horizontal mini" id="filter-form">
-					<fieldset>
-
-						<div class="form-group">
-							<label class="col-xs-4 control-label">Radius:</label>
-							<div class="col-xs-8">
-								<select class="form-control col-sm-12">
-									<option>Distance</option>
-									<option>Within 1/4 mile</option>
-									<option>Within 1/2 mile</option>
-									<option>Within 1 mile</option>
-									<option>Within 3 miles</option>
-									<option>Within 5 miles</option>
-									<option>Within 10 miles</option>
-									<option>Within 15 miles</option>
-									<option>Within 20 miles</option>
-								</select>
-							</div>
-						</div>
-
-						<div class="form-group">
-							<label class="col-xs-4 control-label">Property:</label>
-							<div class="col-xs-8">
-								<select class="form-control col-sm-12">
-									<option>Any</option>
-									<option>Houses</option>
-									<option>Flats/ Apartments</option>
-								</select>
-							</div>
-						</div>
-
-						<div class="form-group">
-							<label class="col-xs-4 control-label">Bedroom:</label>
-							<div class="col-xs-8">
-								<select class="form-control col-sm-12">
-									<option>Any</option>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5+</option>
-								</select>
-							</div>
-						</div>
-
-						<div class="form-group">
-							<label class="col-xs-4 control-label">Rent:</label>
-							<div class="col-xs-8">
-								<select class="form-control col-sm-12">
-									<option>Any</option>
-									<option>Rent</option>
-								</select>
-							</div>
-						</div>
-
-						<div class="form-group">
-							<label class="col-xs-4 control-label">Extra1:</label>
-							<div class="col-xs-8">
-								<select class="form-control col-sm-12">
-									<option>Any</option>
-								</select>
-							</div>
-						</div>
-
-						<div class="form-group">
-							<label class="col-xs-4 control-label">Extra2:</label>
-							<div class="col-xs-8">
-								<select class="form-control col-sm-12">
-									<option>Any</option>
-								</select>
-							</div>
-						</div>
-
-						<div class="form-group">
-							<label class="col-xs-4 control-label">Extra3:</label>
-							<div class="col-xs-8">
-								<select class="form-control col-sm-12">
-									<option>Any</option>
-								</select>
-							</div>
-						</div>
+                        <div class="col-sm-12 filter-list">
+                                <form class="form-horizontal mini" id="filter-form">
+                                        <fieldset>
+					  <a class="btn btn-success" href="<?php echo URL . 'home/getListingByLowestPrice' ;?>">Lowest Price</a>
+					  <a class="btn btn-success" href="<?php echo URL . 'home/getListingByHighestPrice' ;?>">Highest Price</a>
 
 
-						<div class="form-group">
-							<label class="col-xs-4 control-label">Price:</label>
-							<div class="col-xs-8">
-								<div class="row col-sm-12 col-xs-12" style="padding-bottom: 10px;">
-									<select class="form-control col-sm-12">
-										<option selected="selected" value="">Min</option>
-										<option value="100">100</option>
-										<option value="200">200</option>
-										<option value="300">300</option>
-										<option value="400">400</option>
-										<option value="500">500</option>
-										<option value="1000">1000</option>
-										<option value="1500">1500</option>
-										<option value="2000">2000</option>
-										<option value="3000">3000</option>
-										<option value="5000">5000</option>
-									</select>
-								</div>
-								<div class="row col-sm-12 col-xs-12">
-									<select class="form-control col-sm-12 ">
-										<option selected="selected" value="">Max</option>
-										<option value="100">100</option>
-										<option value="200">200</option>
-										<option value="300">300</option>
-										<option value="400">400</option>
-										<option value="500">500</option>
-										<option value="1000">1000</option>
-										<option value="1500">1500</option>
-										<option value="2000">2000</option>
-										<option value="3000">3000</option>
-										<option value="5000">5000</option>
-									</select>
-								</div>
-							</div>
-						</div>
+                                        </fieldset>
+                                </form>
 
-						<!-- filter btn -->
-						<div class="row">
-							<div class="col-sm-12">
-								<button class="btn btn-filter center" type="submit">Apply filter</button>
-							</div>
-						</div>
-						<!-- /filter btn -->
-
-
-					</fieldset>
-				</form>
 			</div>
 		</div>
 	</div>
