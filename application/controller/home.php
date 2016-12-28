@@ -38,6 +38,23 @@ class Home extends Controller
         require APP . 'view/home/listings.php';
         require APP . 'view/_templates/footer.php';
     }
+
+    public function getListingByLowestPrice(){
+      $listing = $this->listingModel->getListingByLowestPrice();
+
+        require APP . 'view/_templates/header.php';
+        require APP . 'view/home/listings.php';
+        require APP . 'view/_templates/footer.php';
+    }
+
+    public function getListingByHighestPrice(){
+      $listing = $this->listingModel->getListingByHighestPrice();
+
+        require APP . 'view/_templates/header.php';
+        require APP . 'view/home/listings.php';
+        require APP . 'view/_templates/footer.php';
+    }
+
     public function post()
     {
 	if($this->userModel->isLandlord()){
