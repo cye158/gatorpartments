@@ -298,6 +298,14 @@ class ListingModel
     $query->bindParam(':image', $image);
     $query->execute();
   }
+  //Deletes listing only if the landlord owns the listing
+  public function deleteListing($landlordId, $listingId){
+    $sql = "DELETE FROM listing WHERE landlord_id = :landlordId AND listing_id = :listingId";
+    $query = $this->db->prepare($sql);
+    $query->bindParam(':landlordId',$landlordId);
+    $query->bindParam(':listingId', $listingId);
+    $query->execute();
+  }
 
 
 

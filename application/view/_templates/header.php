@@ -133,6 +133,11 @@
 									</li>
 									<!-- /Register -->
 									<?php } else {  ?>
+									<?php  if($this->userModel->isLandlord()){ ?>
+										<li>
+										    <a id="navbar-btn" href="<?php echo URL . 'listing/landlordListing' ;?>">Listings</a>
+										</li>
+									<?php	} ?>
 									<li>
 										<a id="navbar-btn"  href="<?php echo URL . 'user/logout' ;?>">Logout</a>
 									</li>
