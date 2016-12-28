@@ -40,12 +40,22 @@ class ListingModel
     return $query->fetchAll();
    }
 
+  //Gets All listings that belongs to a landlord
+  public function getAllListingByLandlordId($landlordId){
+    $sql = "SELECT * FROM listing WHERE landlord_id = :landlordId";
+    $query = $this->db->prepare($sql);
+    $query->bindParam(':landlordId', $landlordId);
+    $query->execute();
+    $result = $query->fetchAll();
+    return $result; 
+  }
+
   //Gets listings if a keyword is matched
   //Used in search button
   public function getListingBySearch($search)
   {
     $search = "%$search%";
-    $sql = "SELECT * FROM listing WHERE CONCAT_WS('', street_address, city, zip_code, title, room_size, price) LIKE :search";
+    $sql = "SELECT * FROM listing WHERE CONCAT_WS('', address_1, city, zip_code, room_size, price) LIKE :search";
     $query = $this->db->prepare($sql);
     $query->bindParam(':search', $search);
     $query->execute();
@@ -288,6 +298,16 @@ class ListingModel
     $query->bindParam(':image', $image);
     $query->execute();
   }
+  //Deletes listing only if the landlord owns the listing
+  public function deleteListing($landlordId, $listingId){
+    $sql = "DELETE FROM listing WHERE landlord_id = :landlordId AND listing_id = :listingId";
+    $query = $this->db->prepare($sql);
+    $query->bindParam(':landlordId',$landlordId);
+    $query->bindParam(':listingId', $listingId);
+    $query->execute();
+  }
+
+
 
 }
 ?>

@@ -74,7 +74,7 @@ class UserModel {
       exit();
     } else {
       $_SESSION['loggedIn'] = false;
-      header("Location:" . URL . "backendTest/failed");
+      header("Location:" . URL . "problem/loggedInError");
       exit();
     }
   }

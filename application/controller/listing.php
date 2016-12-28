@@ -132,5 +132,26 @@ class Listing extends Controller
     require APP . 'view/_templates/footer.php';
   }
 
+  public function landlordListing(){
+
+    $listing = $this->listingModel->getAllListingByLandlordId($_SESSION['landlordId']);
+
+    require APP . 'view/_templates/header.php';
+    require APP . 'view/listing/landlordListing.php';
+    require APP . 'view/_templates/footer.php';
+  }
+
+  public function deleteSuccess(){
+    require APP . 'view/_templates/header.php';
+    require APP . 'view/listing/deleteSuccess.php';
+    require APP . 'view/_templates/footer.php';
+  }
+
+  public function deleteListing($landlordId, $listingId){
+    $this->listingModel->deleteListing($landlordId, $listingId);
+    header('Location:' . URL . 'listing/deleteSuccess' );
+    exit();
+  }
+
 } //End Class
 ?>
